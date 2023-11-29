@@ -8,7 +8,7 @@ scheduling experience for the upcoming school year.
 
 # Roles
 
-| Name                      | Role                      |
+| Role                      | Name                      |
 | ------------------------- | ------------------------- |
 | Product Manager           | Name                      |
 | Project Manager           | Name                      |
