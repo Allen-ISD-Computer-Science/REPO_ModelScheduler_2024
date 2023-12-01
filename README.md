@@ -16,7 +16,7 @@ scheduling experience for the upcoming school year.
 | QA Analyst                | Name                      |
 | UI/UX Designer            | Name                      |
 | DBA                       | Name                      |
-| Engineer-Frontend (Lead)  | Name                      |
+| Engineer-Frontend (Lead)  | Helen Giordano            |
 | Engineer-Frontend (FE2)   | Name                      |
 | Engineer-Backend (Lead)   | Name                      |
 | Engineer-Backend (BE2)    | Name                      |
