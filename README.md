@@ -8,15 +8,15 @@ scheduling experience for the upcoming school year.
 
 # Roles
 
-| Role                      | Name                      |
-| ------------------------- | ------------------------- |
-| Product Manager           | Name                      |
-| Project Manager           | Name                      |
-| Release Manager           | Name                      |
-| QA Analyst                | Name                      |
-| UI/UX Designer            | Name                      |
-| DBA                       | Name                      |
-| Engineer-Frontend (Lead)  | Helen Giordano            |
-| Engineer-Frontend (FE2)   | Name                      |
-| Engineer-Backend (Lead)   | Name                      |
-| Engineer-Backend (BE2)    | Name                      |
+| Role                      | Name                      | Github                      | Digital Portfolio          |
+| ------------------------- | ------------------------- | -------------------------   | -------------------------  |
+| Product Manager           | Name                      |                             |
+| Project Manager           | Name                      |                             |
+| Release Manager           | Name                      |                             |
+| QA Analyst                | Name                      |                             |
+| UI/UX Designer            | Name                      |                             |
+| DBA                       | Name                      |                             |
+| Engineer-Frontend (Lead)  | Helen Giordano            |  hgiordano888               |  https://codermerlin.academy/users/helen-giordano/Digital%20Portfolio/index.html
+| Engineer-Frontend (FE2)   | Name                      |                             |
+| Engineer-Backend (Lead)   | Name                      |                             |
+| Engineer-Backend (BE2)    | Name                      |                             |
