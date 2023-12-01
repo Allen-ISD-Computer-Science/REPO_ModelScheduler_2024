@@ -13,7 +13,7 @@ scheduling experience for the upcoming school year.
 | Product Manager           | Name                      |                             |
 | Project Manager           | Name                      |                             |
 | Release Manager           | Name                      |                             |
-| QA Analyst                | Lucas Pham                |  a-sane-human-being         |
+| QA Analyst                | Lucas Pham                |  lucas-m-pham               |  https://codermerlin.academy/users/lucas-pham/Digital%20Portfolio/index.html
 | UI/UX Designer            | Name                      |                             |
 | DBA                       | Name                      |                             |
 | Engineer-Frontend (Lead)  | Helen Giordano            |  hgiordano888               |  https://codermerlin.academy/users/helen-giordano/Digital%20Portfolio/index.html
