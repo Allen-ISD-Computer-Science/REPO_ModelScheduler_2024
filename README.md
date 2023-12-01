@@ -12,7 +12,7 @@ scheduling experience for the upcoming school year.
 - Project Manager:
 - Release Manager: Darrion Nguyen (darrnguyen  https://codermerlin.academy/users/darrion-nguyen/Digital%20Portfolio/index.html)
 - QA Analyst: Lucas Pham (lucas-m-pham  https://codermerlin.academy/users/lucas-pham/Digital%20Portfolio/index.html)
-- UI/UX Designer: Willy Lai (swific  https://codermerlin.academy/users/willy-lai/Digital%20Portfolio.index.html)
+- UI/UX Designer: Willy Lai (swific https://codermerlin.academy/users/willy-lai/Digital%20Portfolio/index.html)
 - DBA:
 - Engineer-Frontend (Lead): Helen Giordano  (hgiordano888  https://codermerlin.academy/users/helen-giordano/Digital%20Portfolio/index.html)
 - Engineer-Frontend (FE2):
