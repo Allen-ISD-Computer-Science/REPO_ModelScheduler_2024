@@ -18,5 +18,5 @@ scheduling experience for the upcoming school year.
 | DBA                       | Name                      |                             |
 | Engineer-Frontend (Lead)  | Helen Giordano            |  hgiordano888               |  https://codermerlin.academy/users/helen-giordano/Digital%20Portfolio/index.html
 | Engineer-Frontend (FE2)   | Name                      |                             |
-| Engineer-Backend (Lead)   | Name                      |                             |
+| Engineer-Backend (Lead)   | Richard Jang              |  Richard-Jang               |  https://codermerlin.academy/users/ming-ruei-jang/Digital%20Portfolio/index.html
 | Engineer-Backend (BE2)    | Name                      |                             |
