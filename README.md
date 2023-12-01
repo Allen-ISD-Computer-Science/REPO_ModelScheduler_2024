@@ -10,7 +10,7 @@ scheduling experience for the upcoming school year.
 
 - Product Manager:
 - Project Manager:
-- Release Manager:
+- Release Manager: Darrion Nguyen (darrnguyen  https://codermerlin.academy/users/darrion-nguyen/Digital%20Portfolio/index.html)
 - QA Analyst: Lucas Pham (lucas-m-pham  https://codermerlin.academy/users/lucas-pham/Digital%20Portfolio/index.html)
 - UI/UX Designer:
 - DBA:
