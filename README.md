@@ -8,7 +8,7 @@ scheduling experience for the upcoming school year.
 
 # Roles
 
-- Product Manager:
+- Product Manager: Reynard Gunawan [Reynard-G](https://codermerlin.academy/users/reynard-gunawan/Digital%20Portfolio/index.html )
 - Project Manager:
 - Release Manager: Darrion Nguyen [darrnguyen](https://codermerlin.academy/users/darrion-nguyen/Digital%20Portfolio/index.html )
 - QA Analyst: Lucas Pham [lucas-m-pham](https://codermerlin.academy/users/lucas-pham/Digital%20Portfolio/index.html )
