@@ -8,13 +8,13 @@ scheduling experience for the upcoming school year.
 
 # Roles
 
-Product Manager:
-Project Manager:
-Release Manager:
-QA Analyst: Lucas Pham  lucas-m-pham  https://codermerlin.academy/users/lucas-pham/Digital%20Portfolio/index.html)
-UI/UX Designer:
-DBA:
-Engineer-Frontend (Lead): Helen Giordano  hgiordano888  https://codermerlin.academy/users/helen-giordano/Digital%20Portfolio/index.html
-Engineer-Frontend (FE2):
-Engineer-Backend (Lead): Richard Jang  Richard-Jang  https://codermerlin.academy/users/ming-ruei-jang/Digital%20Portfolio/index.html
-Engineer-Backend (BE2):
+- Product Manager:
+- Project Manager:
+- Release Manager:
+- QA Analyst: Lucas Pham  lucas-m-pham  https://codermerlin.academy/users/lucas-pham/Digital%20Portfolio/index.html)
+- UI/UX Designer:
+- DBA:
+- Engineer-Frontend (Lead): Helen Giordano  hgiordano888  https://codermerlin.academy/users/helen-giordano/Digital%20Portfolio/index.html
+- Engineer-Frontend (FE2):
+- Engineer-Backend (Lead): Richard Jang  Richard-Jang  https://codermerlin.academy/users/ming-ruei-jang/Digital%20Portfolio/index.html
+- Engineer-Backend (BE2):
