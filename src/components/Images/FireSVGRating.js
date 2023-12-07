@@ -1,9 +1,17 @@
+import FireFileNames from "@/constants/FireFileNames";
+
 const FireSVGRating = ({ percentage, className }) => {
-  const emptyFireSVG = "fire.svg";
-  const filledFireSVG = "filledFire.svg";
+  const emptyFireSVG = FireFileNames.EmptyFireSVG;
+  const filledFireSVG = FireFileNames.FilledFireSVG;
 
   let fireSVGs = [];
 
+  /**
+   * 0% - 0 fires
+   * 1-49% - 1 fire
+   * 50-99% - 2 fires
+   * +100% - 3 fires
+   */
   if (percentage === 0) {
     fireSVGs = [emptyFireSVG, emptyFireSVG, emptyFireSVG];
   } else if (percentage > 0 && percentage < .5) {
@@ -18,7 +26,7 @@ const FireSVGRating = ({ percentage, className }) => {
     <>
       <div className={className}>
         {fireSVGs.map((fireSVG) => (
-          <img src={fireSVG} className="h-6 w-6 mx-1" />
+          <img src={fireSVG} alt="Fire Rating" className="w-6 h-6" />
         ))}
       </div>
     </>
