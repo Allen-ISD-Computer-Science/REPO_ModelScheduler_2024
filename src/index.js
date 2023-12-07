@@ -2,6 +2,7 @@ import './index.css';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { NextUIProvider } from "@nextui-org/react";
 
 import Home from './pages/index';
 import Classes from './pages/classes';
@@ -16,7 +17,11 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <NextUIProvider>
+      <main className="dark text-foreground bg-background">
+        <RouterProvider router={router} />
+      </main>
+    </NextUIProvider>
   </React.StrictMode>
 );
 
