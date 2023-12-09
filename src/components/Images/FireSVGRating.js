@@ -1,6 +1,7 @@
 import FireFileNames from "@/constants/FireFileNames";
 
 const FireSVGRating = ({ percentage, className }) => {
+  const percentageFloat = parseFloat(percentage);
   const emptyFireSVG = FireFileNames.EmptyFireSVG;
   const filledFireSVG = FireFileNames.FilledFireSVG;
 
@@ -12,13 +13,13 @@ const FireSVGRating = ({ percentage, className }) => {
    * 50-99% - 2 fires
    * +100% - 3 fires
    */
-  if (percentage === 0) {
+  if (percentageFloat === 0) {
     fireSVGs = [emptyFireSVG, emptyFireSVG, emptyFireSVG];
-  } else if (percentage > 0 && percentage < .5) {
+  } else if (percentageFloat > 0 && percentageFloat < .5) {
     fireSVGs = [filledFireSVG, emptyFireSVG, emptyFireSVG];
-  } else if (percentage >= .5 && percentage < 1) {
+  } else if (percentageFloat >= .5 && percentageFloat < 1) {
     fireSVGs = [filledFireSVG, filledFireSVG, emptyFireSVG];
-  } else if (percentage >= 1) {
+  } else if (percentageFloat >= 1) {
     fireSVGs = [filledFireSVG, filledFireSVG, filledFireSVG];
   }
 
