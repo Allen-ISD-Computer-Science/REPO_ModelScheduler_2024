@@ -26,8 +26,8 @@ const FireSVGRating = ({ percentage, className }) => {
   return (
     <>
       <div className={className}>
-        {fireSVGs.map((fireSVG) => (
-          <img src={fireSVG} alt="Fire Rating" className="w-6 h-6" />
+        {fireSVGs.map((fireSVG, index) => (
+          <img key={index} src={fireSVG} alt="Fire Rating" className="w-6 h-6" />
         ))}
       </div>
     </>

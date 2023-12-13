@@ -5,25 +5,31 @@ import { Chip } from "@nextui-org/chip";
 import numberToOrdinal from "@/utils/numberToOrdinal";
 import { FireSVGRating } from "@/components/Images";
 
-const ClassCard = ({ name, classCode, periods, location, totalSeats, numStudents, className }) => {
+const ClassCard = ({ name, classCode, periods, location, totalSeats, numStudents, className, ...props }) => {
   const percentFull = (numStudents / totalSeats).toFixed(2);
 
   return (
     <>
       <Card
         isPressable
+        disableRipple
         className={className}
+        {...props}
       >
         <CardBody>
-          <p className="text-2xl font-bold">{name}</p>
+          <p className="text-2xl font-bold mb-1">{name}</p>
 
           <p className="absolute top-2 right-2 text-sm font-bold text-gray-500">{classCode}</p>
 
-          {/* Chip for location and periods */}
-          <div className="flex items-center">
-            <Chip color={ClassLocationChipColors[location]} radius="sm" variant="bordered" className="my-2">{location}</Chip>
-            {periods.map((period) => (
-              <Chip color="default" radius="sm" variant="bordered" className="ml-2">{numberToOrdinal(period)}</Chip>
+          <div className="flex items-center flex-wrap">
+            {/* Location */}
+            <Chip color={ClassLocationChipColors[location]} radius="sm" variant="bordered" className="mr-2 mb-2">{location}</Chip>
+            
+            {/* Periods */}
+            {periods.map((period, index) => (
+              <Chip key={index} color="default" radius="sm" variant="bordered" className="mr-2 mb-2">
+                {numberToOrdinal(period)}
+              </Chip>
             ))}
           </div>
 
