@@ -95,13 +95,13 @@ const Classes = () => {
       <ClassesLayout>
         {/* Left side (List of all classes excluding added) */}
         <div className="flex justify-between h-screen w-full">
-          <div className="flex flex-col justify-center h-5/6 w-1/3 ml-12 my-6 self-start self-center">
+          <div className="flex flex-col justify-center h-5/6 w-5/12 lg:w-1/3 ml-12 my-6 self-start self-center">
             <div className="flex flex-row justify-between gap-2 mb-4">
               {/* Search bar */}
-              <SearchBar classes={exampleTestClasses} setClasses={setClasses} className="self-center w-3/4" />
+              <SearchBar classes={exampleTestClasses} setClasses={setClasses} className="self-center w-1/2 lg:w-2/3" />
 
               {/* Filter */}
-              <FilterButton classes={exampleTestClasses} setClasses={setClasses} className="self-center w-1/4 text-gray-400" />
+              <FilterButton classes={exampleTestClasses} setClasses={setClasses} className="self-center w-1/2 lg:w-1/3 text-gray-400" />
             </div>
 
             {/* List of classes */}
@@ -150,7 +150,7 @@ const Classes = () => {
           </div>
 
           {/* Right side (Added classes) */}
-          <div className="flex flex-col justify-center h-5/6 w-1/3 mr-12 my-6 self-end self-center">
+          <div className="flex flex-col justify-center h-5/6 w-5/12 lg:w-1/3 mr-12 my-6 self-end self-center">
             <Card className="h-full bg-background/50 bg-default-100 overflow-y-auto">
               {exampleTestClasses
                 .filter((classObj) => selectedClasses.includes(classObj.id)) // Filter out classes that have not been added
