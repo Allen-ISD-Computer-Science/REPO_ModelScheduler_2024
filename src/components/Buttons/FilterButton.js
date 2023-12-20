@@ -127,7 +127,7 @@ const FilterButton = ({ classes, setClasses, ...props }) => {
               </ModalBody>
 
               <ModalFooter>
-                <Button color="danger" onPress={onClose}>Cancel</Button>
+                <Button color="danger" variant="ghost" onPress={onClose}>Cancel</Button>
               </ModalFooter>
             </>
           )}

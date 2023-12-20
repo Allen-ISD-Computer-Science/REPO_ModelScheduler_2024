@@ -26,7 +26,7 @@ const App = () => {
     <React.StrictMode>
       <NextUIProvider>
         <SelectedClassesContext.Provider value={{ selectedClasses, setSelectedClasses }}>
-          <main className="dark text-foreground bg-background">
+          <main>
             <RouterProvider router={router} />
           </main>
         </SelectedClassesContext.Provider>

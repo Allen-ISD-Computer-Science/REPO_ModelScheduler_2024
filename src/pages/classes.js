@@ -7,6 +7,7 @@ import { ClassesLayout } from "@/components/Layout";
 import { ClassCard } from "@/components/Cards";
 import { SearchBar } from "@/components/Buttons";
 import { FilterButton } from "@/components/Buttons";
+import { ScheduleButton } from "@/components/Buttons";
 
 import SelectedClassesContext from '@/context/selectedClasses';
 
@@ -120,7 +121,7 @@ const Classes = () => {
                       numStudents={classObj.numStudents}
                       className={`m-2 border-2 overflow-visible hover:border-gray-500 hover:transition hover:duration-300 ${classSelectedID === classObj.id ? 'border-stone-300' : 'border-transparent'}`}
                       style={{ width: '-webkit-fill-available' }} // Hacky way, fix later
-                      onClick={() => handleClassSelect(classObj.id)}
+                      onPress={() => handleClassSelect(classObj.id)}
                     />
                   ))}
               </ScrollShadow>
@@ -134,19 +135,27 @@ const Classes = () => {
               variant="ghost"
               isDisabled={classSelectedID === null || selectedClasses.includes(classSelectedID)}
               className="my-6 mx-8"
-              onClick={() => handleAddClass(classSelectedID)} // Add class ID to selectedClasses
+              onPress={() => handleAddClass(classSelectedID)} // Add class ID to selectedClasses
             >
               Add class
             </Button>
+
             <Button
               color="danger"
               variant="ghost"
               isDisabled={classSelectedID === null || !selectedClasses.includes(classSelectedID)}
               className="my-6 mx-8"
-              onClick={() => handleRemoveClass()} // Remove class ID from selectedClasses
+              onPress={() => handleRemoveClass()} // Remove class ID from selectedClasses
             >
               Remove class
             </Button>
+
+            <ScheduleButton
+              selectedClasses={selectedClasses}
+              color="primary"
+              variant="ghost"
+              className="my-6 mx-8"
+            />
           </div>
 
           {/* Right side (Added classes) */}
@@ -163,7 +172,7 @@ const Classes = () => {
                     totalSeats={classObj.totalSeats}
                     numStudents={classObj.numStudents}
                     className={`m-2 border-2 hover:border-gray-500 hover:transition hover:duration-300 ${classSelectedID === classObj.id ? 'border-gray-500' : 'border-transparent'}`}
-                    onClick={() => handleClassSelect(classObj.id)}
+                    onPress={() => handleClassSelect(classObj.id)}
                   />
                 ))}
             </Card>
