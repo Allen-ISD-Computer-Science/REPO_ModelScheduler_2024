@@ -17,7 +17,11 @@ const router = createBrowserRouter([
   { path: "/", element: <Home />, },
   { path: "/classes", element: <Classes />, },
   { path: "/scheduler", element: <Scheduler />, },
-]);
+],
+  {
+    basename: process.env.PUBLIC_URL ? `${process.env.PUBLIC_URL}/` : "/",
+  }
+);
 
 const App = () => {
   const [selectedClasses, setSelectedClasses] = useState([]);

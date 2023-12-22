@@ -8,7 +8,7 @@ const SearchBar = ({ classes, setClasses, ...props }) => {
 
   useEffect(() => {
     // Filter classes based on search query
-    const filteredClasses = classes.filter((classObj) => classObj.name.toLowerCase().includes(searchQuery.toLowerCase()));
+    const filteredClasses = classes.filter((classObj) => classObj.courseName.toLowerCase().includes(searchQuery.toLowerCase()));
     setClasses(filteredClasses);
   }, [searchQuery, classes, setClasses]);
 

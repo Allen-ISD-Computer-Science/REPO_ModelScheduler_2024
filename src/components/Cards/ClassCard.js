@@ -5,7 +5,7 @@ import { Chip } from "@nextui-org/chip";
 import numberToOrdinal from "@/utils/numberToOrdinal";
 import { FireSVGRating } from "@/components/Images";
 
-const ClassCard = ({ name, classCode, periods, location, totalSeats, numStudents, className, ...props }) => {
+const ClassCard = ({ courseName, courseCode, periods, location, totalSeats, numStudents, className, ...props }) => {
   const percentFull = (numStudents / totalSeats).toFixed(2);
 
   return (
@@ -17,9 +17,9 @@ const ClassCard = ({ name, classCode, periods, location, totalSeats, numStudents
         {...props}
       >
         <CardBody>
-          <p className="text-2xl font-bold mb-1">{name}</p>
+          <p className="text-2xl font-bold mb-1">{courseName}</p>
 
-          <p className="absolute top-2 right-2 text-sm font-bold text-gray-500">{classCode}</p>
+          <p className="absolute top-2 right-2 text-sm font-bold text-gray-500">{courseCode}</p>
 
           <div className="flex items-center flex-wrap">
             {/* Location */}

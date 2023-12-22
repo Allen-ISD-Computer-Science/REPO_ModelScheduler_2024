@@ -10,63 +10,7 @@ import { FilterButton } from "@/components/Buttons";
 import { ScheduleButton } from "@/components/Buttons";
 
 import SelectedClassesContext from '@/context/selectedClasses';
-
-const exampleTestClasses = [
-  {
-    id: 1,
-    name: "Accounting I",
-    classCode: "BM1ACA",
-    periods: [2, 3, 4],
-    location: "AHS",
-    totalSeats: 30,
-    numStudents: 20
-  },
-  {
-    id: 2,
-    name: "Accounting II",
-    classCode: "BM1A2A",
-    periods: [3],
-    location: "AHS",
-    totalSeats: 32,
-    numStudents: 12
-  },
-  {
-    id: 3,
-    name: "AC/DC Electronics",
-    classCode: "TA1EAA",
-    periods: [1],
-    location: "STEAM",
-    totalSeats: 34,
-    numStudents: 49
-  },
-  {
-    id: 4,
-    name: "AP Biology",
-    classCode: "SC1BAA",
-    periods: [2, 4, 5, 7],
-    location: "AHS",
-    totalSeats: 36,
-    numStudents: 0
-  },
-  {
-    id: 5,
-    name: "AP Physics 1",
-    classCode: "SC1PAA",
-    periods: [3, 5],
-    location: "STEAM",
-    totalSeats: 52,
-    numStudents: 30
-  },
-  {
-    id: 6,
-    name: "DC Composition I",
-    classCode: "EN1DCA",
-    periods: [1, 2, 3, 4, 5, 6, 7, 8],
-    location: "CTC",
-    totalSeats: 12,
-    numStudents: 20
-  },
-];
+import exampleTestClasses from "@/temp_data.json";
 
 const Classes = () => {
   const [classSelectedID, setClassSelectedID] = useState(null);
@@ -113,12 +57,12 @@ const Classes = () => {
                   .map((classObj) => (
                     <ClassCard
                       key={classObj.id}
-                      name={classObj.name}
-                      classCode={classObj.classCode}
+                      courseName={classObj.courseName}
+                      courseCode={classObj.courseCode}
                       periods={classObj.periods}
                       location={classObj.location}
-                      totalSeats={classObj.totalSeats}
-                      numStudents={classObj.numStudents}
+                      totalSeats={classObj.studentMax}
+                      numStudents={classObj.studentSelected}
                       className={`m-2 border-2 overflow-visible hover:border-gray-500 hover:transition hover:duration-300 ${classSelectedID === classObj.id ? 'border-stone-300' : 'border-transparent'}`}
                       style={{ width: '-webkit-fill-available' }} // Hacky way, fix later
                       onPress={() => handleClassSelect(classObj.id)}
@@ -165,12 +109,12 @@ const Classes = () => {
                 .filter((classObj) => selectedClasses.includes(classObj.id)) // Filter out classes that have not been added
                 .map((classObj) => (
                   <ClassCard
-                    name={classObj.name}
-                    classCode={classObj.classCode}
+                    courseName={classObj.courseName}
+                    courseCode={classObj.courseCode}
                     periods={classObj.periods}
                     location={classObj.location}
-                    totalSeats={classObj.totalSeats}
-                    numStudents={classObj.numStudents}
+                    totalSeats={classObj.studentMax}
+                    numStudents={classObj.studentSelected}
                     className={`m-2 border-2 hover:border-gray-500 hover:transition hover:duration-300 ${classSelectedID === classObj.id ? 'border-gray-500' : 'border-transparent'}`}
                     onPress={() => handleClassSelect(classObj.id)}
                   />

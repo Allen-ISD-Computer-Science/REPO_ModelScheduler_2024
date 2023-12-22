@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "courseName": "Accounting I",
+    "courseCode": "BM1ACA",
+    "periods": [2, 3, 4],
+    "doubleBlockPeriod": null,
+    "location": "AHS",
+    "studentMax": 30,
+    "studentSelected": 20
+  },
+  {
+    "id": 2,
+    "courseName": "Accounting II",
+    "courseCode": "BM1A2A",
+    "periods": [3],
+    "doubleBlockPeriod": null,
+    "location": "AHS",
+    "studentMax": 32,
+    "studentSelected": 12
+  },
+  {
+    "id": 3,
+    "courseName": "AC/DC Electronics",
+    "courseCode": "TA1EAA",
+    "periods": [1],
+    "doubleBlockPeriod": null,
+    "location": "STEAM",
+    "studentMax": 34,
+    "studentSelected": 49
+  },
+  {
+    "id": 4,
+    "courseName": "AP Biology",
+    "courseCode": "SC1BAA",
+    "periods": [2, 4, 5, 7],
+    "doubleBlockPeriod": null,
+    "location": "AHS",
+    "studentMax": 36,
+    "studentSelected": 0
+  },
+  {
+    "id": 5,
+    "courseName": "AP Physics 1",
+    "courseCode": "SC1PAA",
+    "periods": [3, 5],
+    "doubleBlockPeriod": null,
+    "location": "STEAM",
+    "studentMax": 52,
+    "studentSelected": 30
+  },
+  {
+    "id": 6,
+    "courseName": "DC Composition I",
+    "courseCode": "EN1DCA",
+    "periods": [1, 2, 3, 4, 5, 6, 7, 8],
+    "doubleBlockPeriod": null,
+    "location": "CTC",
+    "studentMax": 12,
+    "studentSelected": 20
+  }
+]
