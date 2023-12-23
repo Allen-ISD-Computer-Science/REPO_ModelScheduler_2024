@@ -6,8 +6,16 @@
     "periods": [2, 3, 4],
     "doubleBlockPeriod": null,
     "location": "AHS",
-    "studentMax": 30,
-    "studentSelected": 20
+    "studentMax": {
+      "2": 30,
+      "3": 30,
+      "4": 30
+    },
+    "studentSelected": {
+      "2": 26,
+      "3": 32,
+      "4": 28
+    }
   },
   {
     "id": 2,
@@ -16,8 +24,12 @@
     "periods": [3],
     "doubleBlockPeriod": null,
     "location": "AHS",
-    "studentMax": 32,
-    "studentSelected": 12
+    "studentMax": {
+      "3": 30
+    },
+    "studentSelected": {
+      "3": 0
+    }
   },
   {
     "id": 3,
@@ -26,37 +38,417 @@
     "periods": [1],
     "doubleBlockPeriod": null,
     "location": "STEAM",
-    "studentMax": 34,
-    "studentSelected": 49
+    "studentMax": {
+      "1": 30
+    },
+    "studentSelected": {
+      "1": 12
+    }
   },
   {
     "id": 4,
     "courseName": "AP Biology",
-    "courseCode": "SC1BAA",
-    "periods": [2, 4, 5, 7],
+    "courseCode": "SC3BIA",
+    "periods": [1, 3, 4, 5, 6, 8],
     "doubleBlockPeriod": null,
     "location": "AHS",
-    "studentMax": 36,
-    "studentSelected": 0
+    "studentMax": {
+      "1": 30,
+      "3": 30,
+      "4": 30,
+      "5": 60,
+      "6": 30,
+      "8": 60
+    },
+    "studentSelected": {
+      "1": 28,
+      "3": 25,
+      "4": 32,
+      "5": 45,
+      "6": 28,
+      "8": 52
+    }
   },
   {
     "id": 5,
     "courseName": "AP Physics 1",
-    "courseCode": "SC1PAA",
-    "periods": [3, 5],
+    "courseCode": "SC3PBA",
+    "periods": [1, 2, 3, 4, 5, 6, 7],
     "doubleBlockPeriod": null,
     "location": "STEAM",
-    "studentMax": 52,
-    "studentSelected": 30
+    "studentMax": {
+      "1": 30,
+      "2": 30,
+      "3": 30,
+      "4": 30,
+      "5": 60,
+      "6": 60,
+      "7": 30
+    },
+    "studentSelected": {
+      "1": 22,
+      "2": 35,
+      "3": 28,
+      "4": 25,
+      "5": 40,
+      "6": 50,
+      "7": 20
+    }
   },
   {
     "id": 6,
-    "courseName": "DC Composition I",
-    "courseCode": "EN1DCA",
+    "courseName": "DC Composition English 3F",
+    "courseCode": "LA5E3A",
     "periods": [1, 2, 3, 4, 5, 6, 7, 8],
     "doubleBlockPeriod": null,
     "location": "CTC",
-    "studentMax": 12,
-    "studentSelected": 20
+    "studentMax": {
+      "1": 120,
+      "2": 60,
+      "3": 120,
+      "4": 90,
+      "5": 60,
+      "6": 120,
+      "7": 90,
+      "8": 30
+    },
+    "studentSelected": {
+      "1": 100,
+      "2": 45,
+      "3": 110,
+      "4": 80,
+      "5": 55,
+      "6": 90,
+      "7": 80,
+      "8": 25
+    }
+  },
+  {
+    "id": 7,
+    "courseName": "AP Psychology/SPTSS",
+    "courseCode": "SS3PSB",
+    "periods": [2, 3, 4, 5, 7, 8],
+    "doubleBlockPeriod": null,
+    "location": "AHS",
+    "studentMax": {
+      "2": 60,
+      "3": 30,
+      "4": 60,
+      "5": 30,
+      "7": 30,
+      "8": 30
+    },
+    "studentSelected": {
+      "2": 28,
+      "3": 25,
+      "4": 15,
+      "5": 13,
+      "7": 18,
+      "8": 12
+    }
+  },
+  {
+    "id": 8,
+    "courseName": "English III FUNDAMENTAL",
+    "courseCode": "LY93EA",
+    "periods": [2, 3, 4, 6, 7],
+    "doubleBlockPeriod": null,
+    "location": "AHS",
+    "studentMax": {
+      "2": 30,
+      "3": 30,
+      "4": 30,
+      "6": 30,
+      "7": 30
+    },
+    "studentSelected": {
+      "2": 20,
+      "3": 18,
+      "4": 22,
+      "6": 25,
+      "7": 15
+    }
+  },
+  {
+    "id": 9,
+    "courseName": "Forensic Science",
+    "courseCode": "LW1FSA",
+    "periods": [1, 2, 3, 4, 5, 6, 7, 8],
+    "doubleBlockPeriod": null,
+    "location": "AHS",
+    "studentMax": {
+      "1": 120,
+      "2": 60,
+      "3": 150,
+      "4": 120,
+      "5": 30,
+      "6": 90,
+      "7": 90,
+      "8": 30
+    },
+    "studentSelected": {
+      "1": 100,
+      "2": 50,
+      "3": 120,
+      "4": 80,
+      "5": 25,
+      "6": 70,
+      "7": 80,
+      "8": 20
+    }
+  },
+  {
+    "id": 10,
+    "courseName": "American Sign Language 1",
+    "courseCode": "FL1A1A",
+    "periods": [4, 7],
+    "doubleBlockPeriod": null,
+    "location": "AHS",
+    "studentMax": {
+      "4": 30,
+      "7": 30
+    },
+    "studentSelected": {
+      "4": 25,
+      "7": 20
+    }
+  },
+  {
+    "id": 11,
+    "courseName": "Wind Symphony",
+    "courseCode": "FAB21A",
+    "periods": [5],
+    "doubleBlockPeriod": null,
+    "location": "AHS",
+    "studentMax": {
+      "5": 30
+    },
+    "studentSelected": {
+      "5": 28
+    }
+  },
+  {
+    "id": 12,
+    "courseName": "Aquatic Science",
+    "courseCode": "SC1AQA",
+    "periods": [1, 2, 3, 4, 5, 6, 7],
+    "doubleBlockPeriod": null,
+    "location": "STEAM",
+    "studentMax": {
+      "1": 30,
+      "2": 60,
+      "3": 60,
+      "4": 30,
+      "5": 60,
+      "6": 60,
+      "7": 60
+    },
+    "studentSelected": {
+      "1": 25,
+      "2": 40,
+      "3": 35,
+      "4": 22,
+      "5": 45,
+      "6": 50,
+      "7": 30
+    }
+  },
+  {
+    "id": 13,
+    "courseName": "Sociology",
+    "courseCode": "SS1SCC",
+    "periods": [4, 5, 7, 8],
+    "doubleBlockPeriod": null,
+    "location": "AHS",
+    "studentMax": {
+      "4": 60,
+      "5": 60,
+      "7": 60,
+      "8": 60
+    },
+    "studentSelected": {
+      "4": 50,
+      "5": 35,
+      "7": 45,
+      "8": 55
+    }
+  },
+  {
+    "id": 14,
+    "courseName": "US History",
+    "courseCode": "SS1UHA",
+    "periods": [1, 2, 3, 5, 6, 7, 8],
+    "doubleBlockPeriod": null,
+    "location": "AHS",
+    "studentMax": {
+      "1": 120,
+      "2": 210,
+      "3": 210,
+      "5": 150,
+      "6": 180,
+      "7": 150,
+      "8": 150
+    },
+    "studentSelected": {
+      "1": 100,
+      "2": 180,
+      "3": 200,
+      "5": 120,
+      "6": 150,
+      "7": 130,
+      "8": 140
+    }
+  },
+  {
+    "id": 15,
+    "courseName": "AP Environmental Science",
+    "courseCode": "SC3ENA",
+    "periods": [1, 2, 3, 4, 5, 6, 7],
+    "doubleBlockPeriod": null,
+    "location": "STEAM",
+    "studentMax": {
+      "1": 60,
+      "2": 60,
+      "3": 60,
+      "4": 60,
+      "5": 60,
+      "6": 60,
+      "7": 60
+    },
+    "studentSelected": {
+      "1": 45,
+      "2": 50,
+      "3": 55,
+      "4": 40,
+      "5": 50,
+      "6": 55,
+      "7": 45
+    }
+  },
+  {
+    "id": 16,
+    "courseName": "World History",
+    "courseCode": "SS1WHA",
+    "periods": [1, 2, 3, 4, 5, 6, 8],
+    "doubleBlockPeriod": null,
+    "location": "AHS",
+    "studentMax": {
+      "1": 120,
+      "2": 210,
+      "3": 240,
+      "4": 120,
+      "5": 240,
+      "6": 270,
+      "8": 90
+    },
+    "studentSelected": {
+      "1": 100,
+      "2": 200,
+      "3": 220,
+      "4": 110,
+      "5": 230,
+      "6": 250,
+      "8": 80
+    }
+  },
+  {
+    "id": 17,
+    "courseName": "Business Management",
+    "courseCode": "BM1BMA",
+    "periods": [1, 2, 4, 5, 6, 7, 8],
+    "doubleBlockPeriod": null,
+    "location": "AHS",
+    "studentMax": {
+      "1": 30,
+      "2": 30,
+      "4": 30,
+      "5": 30,
+      "6": 30,
+      "7": 30,
+      "8": 30
+    },
+    "studentSelected": {
+      "1": 25,
+      "2": 20,
+      "4": 22,
+      "5": 28,
+      "6": 26,
+      "7": 24,
+      "8": 23
+    }
+  },
+  {
+    "id": 18,
+    "courseName": "Environmental Science Modified",
+    "courseCode": "CX1ENA",
+    "periods": [3, 4, 5, 6, 7],
+    "doubleBlockPeriod": null,
+    "location": "STEAM",
+    "studentMax": {
+      "3": 60,
+      "4": 30,
+      "5": 30,
+      "6": 60,
+      "7": 30
+    },
+    "studentSelected": {
+      "3": 50,
+      "4": 35,
+      "5": 40,
+      "6": 55,
+      "7": 38
+    }
+  },
+  {
+    "id": 19,
+    "courseName": "Chemistry Advanced",
+    "courseCode": "SC2CHA",
+    "periods": [1, 2, 3, 4, 5, 6, 7, 8],
+    "doubleBlockPeriod": null,
+    "location": "AHS",
+    "studentMax": {
+      "1": 150,
+      "2": 150,
+      "3": 60,
+      "4": 150,
+      "5": 120,
+      "6": 30,
+      "7": 150,
+      "8": 120
+    },
+    "studentSelected": {
+      "1": 140,
+      "2": 130,
+      "3": 65,
+      "4": 155,
+      "5": 125,
+      "6": 35,
+      "7": 145,
+      "8": 125
+    }
+  },
+  {
+    "id": 20,
+    "courseName": "Priv Prd I 11th",
+    "courseCode": "PP15SB",
+    "periods": [1, 2, 4, 5, 7, 8],
+    "doubleBlockPeriod": null,
+    "location": "AHS",
+    "studentMax": {
+      "1": 300,
+      "2": 250,
+      "4": 200,
+      "5": 200,
+      "7": 200,
+      "8": 400
+    },
+    "studentSelected": {
+      "1": 290,
+      "2": 240,
+      "4": 205,
+      "5": 215,
+      "7": 210,
+      "8": 405
+    }
   }
 ]

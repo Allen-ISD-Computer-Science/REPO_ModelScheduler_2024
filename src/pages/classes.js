@@ -51,7 +51,7 @@ const Classes = () => {
 
             {/* List of classes */}
             <Card className="h-full bg-background/50 bg-default-100 overflow-y-auto">
-              <ScrollShadow>
+              <ScrollShadow size={80}>
                 {classes
                   .filter((classObj) => !selectedClasses.includes(classObj.id)) // Filter out classes that have already been added
                   .map((classObj) => (
@@ -61,8 +61,8 @@ const Classes = () => {
                       courseCode={classObj.courseCode}
                       periods={classObj.periods}
                       location={classObj.location}
-                      totalSeats={classObj.studentMax}
-                      numStudents={classObj.studentSelected}
+                      totalSeats={Object.values(classObj.studentMax).reduce((sum, num) => sum + num, 0)}
+                      numStudents={Object.values(classObj.studentSelected).reduce((sum, num) => sum + num, 0)}
                       className={`m-2 border-2 overflow-visible hover:border-gray-500 hover:transition hover:duration-300 ${classSelectedID === classObj.id ? 'border-stone-300' : 'border-transparent'}`}
                       style={{ width: '-webkit-fill-available' }} // Hacky way, fix later
                       onPress={() => handleClassSelect(classObj.id)}
@@ -105,20 +105,23 @@ const Classes = () => {
           {/* Right side (Added classes) */}
           <div className="flex flex-col justify-center h-5/6 w-5/12 lg:w-1/3 mr-12 my-6 self-end self-center">
             <Card className="h-full bg-background/50 bg-default-100 overflow-y-auto">
-              {exampleTestClasses
-                .filter((classObj) => selectedClasses.includes(classObj.id)) // Filter out classes that have not been added
-                .map((classObj) => (
-                  <ClassCard
-                    courseName={classObj.courseName}
-                    courseCode={classObj.courseCode}
-                    periods={classObj.periods}
-                    location={classObj.location}
-                    totalSeats={classObj.studentMax}
-                    numStudents={classObj.studentSelected}
-                    className={`m-2 border-2 hover:border-gray-500 hover:transition hover:duration-300 ${classSelectedID === classObj.id ? 'border-gray-500' : 'border-transparent'}`}
-                    onPress={() => handleClassSelect(classObj.id)}
-                  />
-                ))}
+              <ScrollShadow size={80}>
+                {exampleTestClasses
+                  .filter((classObj) => selectedClasses.includes(classObj.id)) // Filter out classes that have not been added
+                  .map((classObj) => (
+                    <ClassCard
+                      courseName={classObj.courseName}
+                      courseCode={classObj.courseCode}
+                      periods={classObj.periods}
+                      location={classObj.location}
+                      totalSeats={Object.values(classObj.studentMax).reduce((sum, num) => sum + num, 0)}
+                      numStudents={Object.values(classObj.studentSelected).reduce((sum, num) => sum + num, 0)}
+                      className={`m-2 border-2 overflow-visible hover:border-gray-500 hover:transition hover:duration-300 ${classSelectedID === classObj.id ? 'border-stone-300' : 'border-transparent'}`}
+                      style={{ width: '-webkit-fill-available' }} // Hacky way, fix later
+                      onPress={() => handleClassSelect(classObj.id)}
+                    />
+                  ))}
+              </ScrollShadow>
             </Card>
           </div>
         </div>

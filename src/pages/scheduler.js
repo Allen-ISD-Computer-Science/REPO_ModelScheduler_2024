@@ -8,7 +8,7 @@ const Scheduler = () => {
   return (
     <>
       <h1>Scheduler</h1>
-      <p>Selected classes: {selectedClasses}</p>
+      <p>Selected classes: {selectedClasses.join(", ")}</p>
     </>
   );
 };
