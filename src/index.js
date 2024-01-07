@@ -11,12 +11,14 @@ import SelectedClassesContext from '@/context/selectedClasses';
 import Home from '@/pages/index';
 import Classes from '@/pages/classes';
 import Scheduler from '@/pages/scheduler';
+import Login from '@/pages/login';
 import reportWebVitals from '@/reportWebVitals';
 
 const router = createBrowserRouter([
   { path: "/", element: <Home />, },
   { path: "/classes", element: <Classes />, },
   { path: "/scheduler", element: <Scheduler />, },
+  { path: "/login", element: <Login />, },
 ],
   {
     basename: process.env.PUBLIC_URL ? `${process.env.PUBLIC_URL}/` : "/",
