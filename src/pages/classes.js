@@ -50,7 +50,7 @@ const Classes = () => {
 
           {/* List of classes */}
           <Card className="h-full bg-background/50 bg-default-100 overflow-y-auto">
-            <ScrollShadow size={80}>
+            <ScrollShadow size={80} className="flex flex-col">
               {classes
                 .filter((classObj) => !selectedClasses.includes(classObj.id)) // Filter out classes that have already been added
                 .map((classObj) => (
@@ -62,8 +62,7 @@ const Classes = () => {
                     location={classObj.location}
                     totalSeats={Object.values(classObj.studentMax).reduce((sum, num) => sum + num, 0)}
                     numStudents={Object.values(classObj.studentSelected).reduce((sum, num) => sum + num, 0)}
-                    className={`m-2 border-2 overflow-visible hover:border-gray-500 hover:transition hover:duration-300 ${classSelectedID === classObj.id ? 'border-stone-400' : 'border-transparent'}`}
-                    style={{ width: '-webkit-fill-available' }} // Hacky way, fix later
+                    className={`grow m-2 border-2 overflow-visible hover:border-gray-500 hover:transition hover:duration-300 ${classSelectedID === classObj.id ? 'border-stone-400' : 'border-transparent'}`}
                     onPress={() => handleClassSelect(classObj.id)}
                   />
                 ))}
@@ -111,7 +110,7 @@ const Classes = () => {
             )}
 
             {/* List of classes */}
-            <ScrollShadow size={80}>
+            <ScrollShadow size={80} className="flex flex-col">
               {exampleTestClasses
                 .filter((classObj) => selectedClasses.includes(classObj.id)) // Filter out classes that have not been added
                 .map((classObj) => (
@@ -122,8 +121,7 @@ const Classes = () => {
                     location={classObj.location}
                     totalSeats={Object.values(classObj.studentMax).reduce((sum, num) => sum + num, 0)}
                     numStudents={Object.values(classObj.studentSelected).reduce((sum, num) => sum + num, 0)}
-                    className={`m-2 border-2 overflow-visible hover:border-gray-500 hover:transition hover:duration-300 ${classSelectedID === classObj.id ? 'border-stone-400' : 'border-transparent'}`}
-                    style={{ width: '-webkit-fill-available' }} // Hacky way, fix later
+                    className={`grow m-2 border-2 overflow-visible hover:border-gray-500 hover:transition hover:duration-300 ${classSelectedID === classObj.id ? 'border-stone-400' : 'border-transparent'}`}
                     onPress={() => handleClassSelect(classObj.id)}
                   />
                 ))}
