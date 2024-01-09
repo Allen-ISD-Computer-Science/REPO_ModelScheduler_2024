@@ -19,7 +19,7 @@ const ClassCard = ({ courseName, courseCode, periods, location, totalSeats, numS
         <CardBody>
           <p className="text-2xl font-bold mb-1">{courseName}</p>
 
-          <p className="absolute top-2 right-2 text-sm font-bold text-gray-500">{courseCode}</p>
+          <p className="absolute top-2 right-2 text-sm font-bold text-neutral-500">{courseCode}</p>
 
           <div className="flex items-center flex-wrap">
             {/* Location */}

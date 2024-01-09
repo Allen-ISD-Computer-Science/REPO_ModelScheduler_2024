@@ -21,7 +21,7 @@ const SearchBar = ({ classes, setClasses, ...props }) => {
         placeholder="Search for a class"
         variant="faded"
         value={searchQuery}
-        startContent={<UilSearchAlt className="text-gray-400" />}
+        startContent={<UilSearchAlt className="text-neutral-400" />}
         onValueChange={(value) => setSearchQuery(value)}
         {...props}
       />

@@ -62,7 +62,7 @@ const FilterButton = ({ classes, setClasses, ...props }) => {
         radius="sm"
         size="lg"
         variant="faded"
-        startContent={<UilFilter className="text-gray-400" />}
+        startContent={<UilFilter className="text-neutral-400" />}
         onPress={onOpen}
         {...props}
       >
