@@ -9,9 +9,9 @@ const EmailField = () => {
                 isRequired
                 type="email"
                 label="Email"
-                key="lg"
-                radius="lg"
-                defaultValue="Enter Your Email"
+                key="underlined"
+                variant="underlined"
+                placeholder="Enter Email"
                 className="max-w-xs"
             />
             </div>
