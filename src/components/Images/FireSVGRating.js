@@ -15,9 +15,9 @@ const FireSVGRating = ({ percentage, className }) => {
    */
   if (percentageFloat === 0) {
     fireSVGs = [emptyFireSVG, emptyFireSVG, emptyFireSVG];
-  } else if (percentageFloat > 0 && percentageFloat < .5) {
+  } else if (percentageFloat > 0 && percentageFloat < 0.5) {
     fireSVGs = [filledFireSVG, emptyFireSVG, emptyFireSVG];
-  } else if (percentageFloat >= .5 && percentageFloat < 1) {
+  } else if (percentageFloat >= 0.5 && percentageFloat < 1) {
     fireSVGs = [filledFireSVG, filledFireSVG, emptyFireSVG];
   } else if (percentageFloat >= 1) {
     fireSVGs = [filledFireSVG, filledFireSVG, filledFireSVG];
@@ -35,3 +35,10 @@ const FireSVGRating = ({ percentage, className }) => {
 };
 
 export default FireSVGRating;
+
+import PropTypes from "prop-types";
+
+FireSVGRating.propTypes = {
+  percentage: PropTypes.number.isRequired,
+  className: PropTypes.string,
+};

@@ -6,15 +6,15 @@ import { EmailField } from "@/components/Inputs";
 import { PasswordField } from "@/components/Inputs";
 
 const Login = () => {
-    return (
-        <>
-        <LoginLayout>
-            <EmailField></EmailField>
-            <PasswordField></PasswordField>
-            <LoginButton></LoginButton>
-        </LoginLayout>
-        </>
-    );
+  return (
+    <>
+      <LoginLayout>
+        <EmailField></EmailField>
+        <PasswordField></PasswordField>
+        <LoginButton></LoginButton>
+      </LoginLayout>
+    </>
+  );
 };
 
 export default Login;

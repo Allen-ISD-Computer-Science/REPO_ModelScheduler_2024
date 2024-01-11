@@ -3,8 +3,8 @@ import { Button } from "@nextui-org/button";
 import { Modal, ModalContent, ModalBody, ModalFooter, ModalHeader } from "@nextui-org/modal";
 import { useDisclosure } from "@nextui-org/use-disclosure";
 
-import UilSchedule from '@iconscout/react-unicons/icons/uil-schedule';
-import UilExclamationTriangle from '@iconscout/react-unicons/icons/uil-exclamation-triangle';
+import UilSchedule from "@iconscout/react-unicons/icons/uil-schedule";
+import UilExclamationTriangle from "@iconscout/react-unicons/icons/uil-exclamation-triangle";
 
 const ScheduleButton = ({ selectedClasses, ...props }) => {
   const navigate = useNavigate();
@@ -20,11 +20,7 @@ const ScheduleButton = ({ selectedClasses, ...props }) => {
 
   return (
     <>
-      <Button
-        {...props}
-        startContent={<UilSchedule />}
-        onPress={handleSchedule}
-      >
+      <Button startContent={<UilSchedule />} onPress={handleSchedule} {...props}>
         Schedule
       </Button>
 
@@ -46,10 +42,10 @@ const ScheduleButton = ({ selectedClasses, ...props }) => {
                 </div>
 
                 <p className="text-center">
-                  You have selected <span className="font-bold">{selectedClasses.length}</span> classes
-                  out of <span className="font-bold">8</span> required classes. This may result in an
-                  incomplete schedule which may not work during arena scheduling. Do you understand
-                  you may have an incomplete schedule if you continue?
+                  You have selected <span className="font-bold">{selectedClasses.length}</span>
+                  classes out of <span className="font-bold">8</span> required classes. This may
+                  result in an incomplete schedule which may not work during arena scheduling. Do
+                  you understand you may have an incomplete schedule if you continue?
                 </p>
               </ModalBody>
 
@@ -71,3 +67,9 @@ const ScheduleButton = ({ selectedClasses, ...props }) => {
 };
 
 export default ScheduleButton;
+
+import PropTypes from "prop-types";
+
+ScheduleButton.propTypes = {
+  selectedClasses: PropTypes.arrayOf(PropTypes.string).isRequired,
+};
