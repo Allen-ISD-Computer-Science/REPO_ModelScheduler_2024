@@ -6,32 +6,36 @@ import { ShowPassword } from "@/components/Images";
 import { HidePassword } from "@/components/Images";
 
 const PasswordField = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  const toggleVisibility = () => setIsVisible(!isVisible);
 
-    const [isVisible, setIsVisible] = useState(false);
-    const toggleVisibility = () => setIsVisible(!isVisible);
-
-    return (
-        <>
-            <Input
-                isRequired
-                label="Password"
-                key="underlined"
-                placeholder="Enter Password"
-                className="max-w-xs"
-                // Visibility
-                endContent ={
-                    <button className="focus:outline-none" type="button" onClick={toggleVisibility}>
-                        {isVisible ? 
-                        (<HidePassword className="text-2x1 text-default-400 pointer-events-none" />)
-                        :
-                        (<ShowPassword className="text2xl text-default-400 pointer-events-none" />)
-                        }   
-                    </button>
-                }
-                type={isVisible ? "text" : "password"}
-            />
-        </>
-    );
+  return (
+    <>
+      {/* Password Layout */}
+      <div key="bordered">
+        <Input
+          isRequired
+          //type="password" Fix to toggle between visibility and non visible
+          label="Password"
+          key="lg"
+          radius="lg"
+          defaultValue="Enter Your Password"
+          className="max-w-xs"
+          // Visibility
+          endContent={
+            <Button className="focus:outline-none" type="button" onClick={toggleVisibility}>
+              {isVisible ? (
+                <HidePassword className="text-2x1 text-default-400 pointer-events-none" />
+              ) : (
+                <ShowPassword className="text2xl text-default-400 pointer-events-none" />
+              )}
+            </Button>
+          }
+          type={isVisible ? "text" : "password"}
+        />
+      </div>
+    </>
+  );
 };
 
 export default PasswordField;

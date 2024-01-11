@@ -1,5 +1,5 @@
 module.exports = {
-  "AHS": "danger",
-  "STEAM": "primary",
-  "CTC": "warning",
-}
+  AHS: "danger",
+  STEAM: "primary",
+  CTC: "warning",
+};
