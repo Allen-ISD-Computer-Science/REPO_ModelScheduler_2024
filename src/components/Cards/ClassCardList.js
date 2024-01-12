@@ -1,5 +1,5 @@
 import { Card } from "@nextui-org/card";
-import { ScrollShadow } from "@nextui-org/scroll-shadow";
+import { VList } from "virtua";
 
 import { ClassCard } from "@/components/Cards";
 
@@ -18,7 +18,7 @@ const ClassCardList = ({ classes, classSelected, emptyMsg, onClassSelected, ...p
   return (
     <>
       <Card {...props}>
-        {emptyMsg && (
+        {emptyMsg ? (
           <div className="flex flex-col h-full justify-center items-center p-8">
             <p className="text-2xl text-center font-bold text-neutral-200 animate-fade-down animate-ease-in-out">
               No classes added
@@ -27,28 +27,30 @@ const ClassCardList = ({ classes, classSelected, emptyMsg, onClassSelected, ...p
               Click on a class and then the &quot;Add class&quot; button to add it.
             </p>
           </div>
+        ) : (
+          <VList style={{ height: "80vh" }}>
+            {classes.map((classObj, index) => (
+              <div key={classObj.id} className="flex">
+                <ClassCard
+                  key={classObj.id}
+                  courseName={classObj.courseName}
+                  courseCode={classObj.courseCode}
+                  periods={classObj.periods}
+                  location={classObj.location}
+                  totalSeats={Object.values(classObj.studentMax).reduce((sum, num) => sum + num, 0)}
+                  numStudents={Object.values(classObj.studentSelected).reduce(
+                    (sum, num) => sum + num,
+                    0
+                  )}
+                  className={`grow mx-2 mt-2 border-2 overflow-visible animate-fade animate-duration-200 hover:border-gray-500 hover:transition hover:duration-300 ${
+                    classSelected === classObj.id ? "border-stone-400" : "border-transparent"
+                  } ${index === classes.length - 1 && "mb-2"}`}
+                  onPress={() => onClassSelected(classObj.id)}
+                />
+              </div>
+            ))}
+          </VList>
         )}
-
-        <ScrollShadow size={80} className="flex flex-col">
-          {classes.map((classObj) => (
-            <ClassCard
-              key={classObj.id}
-              courseName={classObj.courseName}
-              courseCode={classObj.courseCode}
-              periods={classObj.periods}
-              location={classObj.location}
-              totalSeats={Object.values(classObj.studentMax).reduce((sum, num) => sum + num, 0)}
-              numStudents={Object.values(classObj.studentSelected).reduce(
-                (sum, num) => sum + num,
-                0
-              )}
-              className={`grow m-2 border-2 overflow-visible animate-fade animate-duration-200 hover:border-gray-500 hover:transition hover:duration-300 ${
-                classSelected === classObj.id ? "border-stone-400" : "border-transparent"
-              }`}
-              onPress={() => onClassSelected(classObj.id)}
-            />
-          ))}
-        </ScrollShadow>
       </Card>
     </>
   );
@@ -60,7 +62,7 @@ import PropTypes from "prop-types";
 
 ClassCardList.propTypes = {
   classes: PropTypes.arrayOf(PropTypes.object).isRequired,
-  classSelected: PropTypes.string,
+  classSelected: PropTypes.number,
   emptyMsg: PropTypes.bool,
   onClassSelected: PropTypes.func.isRequired,
 };

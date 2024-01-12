@@ -71,5 +71,5 @@ export default ScheduleButton;
 import PropTypes from "prop-types";
 
 ScheduleButton.propTypes = {
-  selectedClasses: PropTypes.arrayOf(PropTypes.string).isRequired,
+  selectedClasses: PropTypes.arrayOf(PropTypes.number).isRequired,
 };

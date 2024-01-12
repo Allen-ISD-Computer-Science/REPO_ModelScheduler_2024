@@ -27,7 +27,7 @@ const ClassCard = ({
   numStudents,
   ...props
 }) => {
-  const percentFull = (numStudents / totalSeats).toFixed(2);
+  const percentFull = Number((numStudents / totalSeats).toFixed(2));
 
   return (
     <>

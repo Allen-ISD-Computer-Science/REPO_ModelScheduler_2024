@@ -11,6 +11,7 @@
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.20.1",
     "tailwindcss-animated": "^1.0.1",
+    "virtua": "^0.20.3",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
