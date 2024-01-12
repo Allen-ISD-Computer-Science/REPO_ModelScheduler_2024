@@ -27,7 +27,7 @@ You can either run the Model Scheduler using the CRACO (recommended) or directly
 - `PUBLIC_URL` - Most of the time, you won't need to declare this as CoderMerlin routes routes your port directly to your VAPOR url.
 
 ### 🧙 CoderMerlin
-Using the build scripts on CoderMerlin is significantly easier than serving through a user-unique VAPOR port. To start, head into your CLI:
+Using the build scripts on CoderMerlin is significantly easier than using CRACO due to user-unique VAPOR ports. To start, head into your CLI:
 
 1. Add any required environment variables to `.env`
 2. Build & Serve the app by executing `run`

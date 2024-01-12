@@ -9,3 +9,9 @@ const ClassesLayout = ({ children }) => {
 };
 
 export default ClassesLayout;
+
+import PropTypes from "prop-types";
+
+ClassesLayout.propTypes = {
+  children: PropTypes.node.isRequired,
+};

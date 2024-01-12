@@ -1,14 +1,15 @@
-import { useContext } from "react";
+//import { useContext } from "react";
 
-import SelectedClassesContext from "@/context/selectedClasses";
+import { SchedulerLayout } from "@/components/Layout";
+
+//import SelectedClassesContext from "@/context/selectedClasses";
 
 const Scheduler = () => {
-  const { selectedClasses } = useContext(SelectedClassesContext);
+  //const { selectedClasses } = useContext(SelectedClassesContext);
 
   return (
     <>
-      <h1>Scheduler</h1>
-      <p>Selected classes: {selectedClasses.join(", ")}</p>
+      <SchedulerLayout>{/* Left side (List of all classes excluding added) */}</SchedulerLayout>
     </>
   );
 };
