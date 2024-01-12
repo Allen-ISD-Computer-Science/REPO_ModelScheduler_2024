@@ -9,6 +9,7 @@ import { ClassCard } from "@/components/Cards";
  * @component
  * @param {Object} props - The component props.
  * @param {Array} props.classes - The array of class objects to be displayed.
+ * @param {Function} props.onDragStart - The function to be called when a class is dragged.
  * @returns {JSX.Element} The component JSX element.
  */
 const DragDropClassCardList = ({ classes, onDragStart, ...props }) => {
@@ -19,7 +20,11 @@ const DragDropClassCardList = ({ classes, onDragStart, ...props }) => {
           {(droppableProvided) => (
             <Card ref={droppableProvided.innerRef} {...props}>
               {classes.map((classObj, index) => (
-                <Draggable key={classObj.id} draggableId={`draggable-class-${classObj.id}`} index={index}>
+                <Draggable
+                  key={classObj.id}
+                  draggableId={`draggable-class-${classObj.id}`}
+                  index={index}
+                >
                   {(draggableProvided) => (
                     <div
                       key={classObj.id}
@@ -42,8 +47,9 @@ const DragDropClassCardList = ({ classes, onDragStart, ...props }) => {
                           (sum, num) => sum + num,
                           0
                         )}
-                        className={`grow mx-2 mt-2 overflow-visible animate-fade animate-duration-200 ${index === classes.length - 1 && "mb-2"
-                          }`}
+                        className={`grow mx-2 mt-2 overflow-visible animate-fade animate-duration-200 ${
+                          index === classes.length - 1 && "mb-2"
+                        }`}
                       />
                     </div>
                   )}
@@ -63,4 +69,5 @@ import PropTypes from "prop-types";
 
 DragDropClassCardList.propTypes = {
   classes: PropTypes.arrayOf(PropTypes.object).isRequired,
+  onDragStart: PropTypes.func,
 };
