@@ -1,11 +1,11 @@
-//import { useContext } from "react";
+import { useContext } from "react";
 
 import { SchedulerLayout } from "@/components/Layout";
 
-//import SelectedClassesContext from "@/context/selectedClasses";
+import SelectedClassesContext from "@/context/selectedClasses";
 
 const Scheduler = () => {
-  //const { selectedClasses } = useContext(SelectedClassesContext);
+  const { selectedClasses } = useContext(SelectedClassesContext);
 
   return (
     <>
