@@ -33,6 +33,7 @@ const ClassCardList = ({ classes, classSelected, emptyMsg, onClassSelected, ...p
               <div key={classObj.id} className="flex">
                 <ClassCard
                   key={classObj.id}
+                  isPressable
                   courseName={classObj.courseName}
                   courseCode={classObj.courseCode}
                   periods={classObj.periods}

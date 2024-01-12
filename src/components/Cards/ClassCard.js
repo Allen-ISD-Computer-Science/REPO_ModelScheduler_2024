@@ -1,8 +1,8 @@
-import ClassLocationChipColors from "@/constants/ClassLocationChipColors";
 import { Card, CardBody } from "@nextui-org/card";
 import { Chip } from "@nextui-org/chip";
 
 import numberToOrdinal from "@/utils/numberToOrdinal";
+import ClassLocationChipColors from "@/constants/ClassLocationChipColors";
 import { FireSVGRating } from "@/components/Images";
 
 /**
@@ -31,7 +31,7 @@ const ClassCard = ({
 
   return (
     <>
-      <Card isPressable disableRipple {...props}>
+      <Card disableRipple {...props}>
         <CardBody>
           <p className="text-2xl font-bold mb-1">{courseName}</p>
 
