@@ -24,13 +24,7 @@ const ScheduleButton = ({ selectedClasses, ...props }) => {
         Schedule
       </Button>
 
-      <Modal
-        size="lg"
-        backdrop="blur"
-        isOpen={isOpen}
-        onOpenChange={onOpenChange}
-        scrollBehavior="inside"
-      >
+      <Modal size="lg" backdrop="blur" isOpen={isOpen} onOpenChange={onOpenChange} scrollBehavior="inside">
         <ModalContent>
           {(onClose) => (
             <>
@@ -43,9 +37,9 @@ const ScheduleButton = ({ selectedClasses, ...props }) => {
 
                 <p className="text-center">
                   You have selected <span className="font-bold">{selectedClasses.length}</span>
-                  classes out of <span className="font-bold">8</span> required classes. This may
-                  result in an incomplete schedule which may not work during arena scheduling. Do
-                  you understand you may have an incomplete schedule if you continue?
+                  classes out of <span className="font-bold">8</span> required classes. This may result in an incomplete
+                  schedule which may not work during arena scheduling. Do you understand you may have an incomplete
+                  schedule if you continue?
                 </p>
               </ModalBody>
 

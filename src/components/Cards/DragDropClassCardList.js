@@ -20,11 +20,7 @@ const DragDropClassCardList = ({ classes, onDragStart, ...props }) => {
           {(droppableProvided) => (
             <Card ref={droppableProvided.innerRef} {...props}>
               {classes.map((classObj, index) => (
-                <Draggable
-                  key={classObj.id}
-                  draggableId={`draggable-class-${classObj.id}`}
-                  index={index}
-                >
+                <Draggable key={classObj.id} draggableId={`draggable-class-${classObj.id}`} index={index}>
                   {(draggableProvided) => (
                     <div
                       key={classObj.id}
@@ -39,14 +35,8 @@ const DragDropClassCardList = ({ classes, onDragStart, ...props }) => {
                         courseCode={classObj.courseCode}
                         periods={classObj.periods}
                         location={classObj.location}
-                        totalSeats={Object.values(classObj.studentMax).reduce(
-                          (sum, num) => sum + num,
-                          0
-                        )}
-                        numStudents={Object.values(classObj.studentSelected).reduce(
-                          (sum, num) => sum + num,
-                          0
-                        )}
+                        totalSeats={Object.values(classObj.studentMax).reduce((sum, num) => sum + num, 0)}
+                        numStudents={Object.values(classObj.studentSelected).reduce((sum, num) => sum + num, 0)}
                         className={`grow mx-2 mt-2 overflow-visible animate-fade animate-duration-200 ${
                           index === classes.length - 1 && "mb-2"
                         }`}

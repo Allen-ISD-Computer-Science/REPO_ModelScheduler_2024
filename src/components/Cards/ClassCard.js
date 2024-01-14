@@ -18,15 +18,7 @@ import { FireSVGRating } from "@/components/Images";
  * @param {Number} props.numStudents - The number of students in the class.
  * @returns {JSX.Element} The rendered class card component.
  */
-const ClassCard = ({
-  courseName,
-  courseCode,
-  periods,
-  location,
-  totalSeats,
-  numStudents,
-  ...props
-}) => {
+const ClassCard = ({ courseName, courseCode, periods, location, totalSeats, numStudents, ...props }) => {
   const percentFull = Number((numStudents / totalSeats).toFixed(2));
 
   return (
@@ -39,24 +31,13 @@ const ClassCard = ({
 
           <div className="flex items-center flex-wrap">
             {/* Location */}
-            <Chip
-              color={ClassLocationChipColors[location]}
-              radius="sm"
-              variant="bordered"
-              className="mr-2 mb-2"
-            >
+            <Chip color={ClassLocationChipColors[location]} radius="sm" variant="bordered" className="mr-2 mb-2">
               {location}
             </Chip>
 
             {/* Periods */}
             {periods.map((period, index) => (
-              <Chip
-                key={index}
-                color="default"
-                radius="sm"
-                variant="bordered"
-                className="mr-2 mb-2"
-              >
+              <Chip key={index} color="default" radius="sm" variant="bordered" className="mr-2 mb-2">
                 {numberToOrdinal(period)}
               </Chip>
             ))}
@@ -64,10 +45,7 @@ const ClassCard = ({
 
           {/* Rating on how competitive a class is */}
           <div className="flex flex-row justify-start">
-            <FireSVGRating
-              percentage={percentFull}
-              className="flex p-0.5 bg-stone-700/50 rounded"
-            />
+            <FireSVGRating percentage={percentFull} className="flex p-0.5 bg-stone-700/50 rounded" />
           </div>
         </CardBody>
       </Card>

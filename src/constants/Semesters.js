@@ -4,4 +4,4 @@ module.exports = {
   SPRING_SEMESTER: "S1",
   FALL_SEMESTER: "S2",
   FULL_YEAR: "S1+S2",
-}
+};
