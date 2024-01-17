@@ -28,9 +28,7 @@ const FilterButton = ({ classes, setClasses, ...props }) => {
       if (prevSelectedFilters[filterKey].includes(filter)) {
         return {
           ...prevSelectedFilters,
-          [filterKey]: prevSelectedFilters[filterKey].filter(
-            (filterValue) => filterValue !== filter
-          ),
+          [filterKey]: prevSelectedFilters[filterKey].filter((filterValue) => filterValue !== filter),
         };
       } else {
         return {
@@ -52,10 +50,8 @@ const FilterButton = ({ classes, setClasses, ...props }) => {
           const selectedLocations = selectedFilters["location"];
 
           const isPeriodMatch =
-            selectedPeriods.length === 0 ||
-            selectedPeriods.every((period) => periods.includes(period));
-          const isLocationMatch =
-            selectedLocations.length === 0 || selectedLocations.includes(location);
+            selectedPeriods.length === 0 || selectedPeriods.every((period) => periods.includes(period));
+          const isLocationMatch = selectedLocations.length === 0 || selectedLocations.includes(location);
 
           return isPeriodMatch && isLocationMatch;
         })
@@ -76,13 +72,7 @@ const FilterButton = ({ classes, setClasses, ...props }) => {
         Filter
       </Button>
 
-      <Modal
-        size="lg"
-        backdrop="blur"
-        isOpen={isOpen}
-        onOpenChange={onOpenChange}
-        scrollBehavior="inside"
-      >
+      <Modal size="lg" backdrop="blur" isOpen={isOpen} onOpenChange={onOpenChange} scrollBehavior="inside">
         <ModalContent>
           {(onClose) => (
             <>

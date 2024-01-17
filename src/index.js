@@ -45,23 +45,23 @@ const App = () => {
 ReactDOM.createRoot(document.getElementById("root")).render(<App />);
 
 // Ignore ResizeObserver loop error from virtualized list (<VList>)
-window.addEventListener('error', function (e) {
-  const resizeObserverErrDiv = document.getElementById('webpack-dev-server-client-overlay-div');
-  const resizeObserverErr = document.getElementById('webpack-dev-server-client-overlay');
+window.addEventListener("error", function (e) {
+  const resizeObserverErrDiv = document.getElementById("webpack-dev-server-client-overlay-div");
+  const resizeObserverErr = document.getElementById("webpack-dev-server-client-overlay");
 
   if (e.message === "ResizeObserver loop completed with undelivered notifications.") {
     console.log(e);
     // prevent React's listener from firing
     e.stopImmediatePropagation();
-    // prevent the browser's console error message 
+    // prevent the browser's console error message
     e.preventDefault();
     // prevent webpack from showing a compile error in the console
-    if (resizeObserverErr) resizeObserverErr.style.display = 'none';
-    if (resizeObserverErrDiv) resizeObserverErrDiv.style.display = 'none';
+    if (resizeObserverErr) resizeObserverErr.style.display = "none";
+    if (resizeObserverErrDiv) resizeObserverErrDiv.style.display = "none";
   } else {
     // show webpack overlay for other errors
-    if (resizeObserverErr) resizeObserverErr.style.display = 'block';
-    if (resizeObserverErrDiv) resizeObserverErrDiv.style.display = 'block';
+    if (resizeObserverErr) resizeObserverErr.style.display = "block";
+    if (resizeObserverErrDiv) resizeObserverErrDiv.style.display = "block";
   }
 });
 

@@ -15,9 +15,7 @@ const Classes = () => {
   const [availableClasses, setAvailableClasses] = useState(
     classes.filter((classObj) => !selectedClasses.includes(classObj.id))
   );
-  const [addedClasses, setAddedClasses] = useState(
-    classes.filter((classObj) => selectedClasses.includes(classObj.id))
-  );
+  const [addedClasses, setAddedClasses] = useState(classes.filter((classObj) => selectedClasses.includes(classObj.id)));
 
   const handleClassSelect = (classID) => {
     if (classSelectedID === classID) {
@@ -50,11 +48,7 @@ const Classes = () => {
         <div className="flex flex-col justify-center h-3/4 md:h-5/6 w-full md:w-5/12 lg:w-1/3 self-start self-center">
           <div className="flex flex-row justify-between gap-2 mb-4">
             {/* Search bar */}
-            <SearchBar
-              classes={exampleTestClasses}
-              setClasses={setClasses}
-              className="self-center w-1/2 lg:w-2/3"
-            />
+            <SearchBar classes={exampleTestClasses} setClasses={setClasses} className="self-center w-1/2 lg:w-2/3" />
 
             {/* Filter */}
             <FilterButton
