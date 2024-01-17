@@ -1,35 +1,42 @@
+import { useState } from "react";
+
 import { Image } from "@nextui-org/image";
-import { Card, CardHeader, CardBody, CardFooter } from "@nextui-org/card";
+import { Button, ButtonGroup } from "@nextui-org/button";
 
 import { LoginLayout } from "@/components/Layout";
-import { LoginButton } from "@/components/Buttons";
-import { EmailField } from "@/components/Inputs";
-import { PasswordField } from "@/components/Inputs";
+import { LoginCard } from "@/components/Cards";
 
-import AllenLogo from "../components/Images/allenisdLogo.png";
+import AllenLogo from "../components/Images/AllenISDLogo.png";
 
 const Login = () => {
+
+  const [page, setPage] = useState("login")
+
   return (
     <>
-      <LoginLayout>
-        <Card>
-          <CardHeader>
-
-          </CardHeader>
-          <CardBody>
-            <Image
-              src={AllenLogo}
-              alt="Allen Logo"
-              width={100}
-            />
-            <EmailField></EmailField>
-            <PasswordField></PasswordField>
-          </CardBody>
-          <CardFooter>
-            <LoginButton></LoginButton>
-          </CardFooter>
-        </Card>
-      </LoginLayout>
+    <LoginLayout>
+      <div className="space-y-6">
+        <div>
+          <Image
+            src={AllenLogo}
+            alt="AllenISD Logo"
+            className="size-fit mx-auto my-auto"
+          />
+        </div>
+        <div>
+          <ButtonGroup>
+            <Button onClick={() => setPage("login")}>Log In</Button>
+            <Button onClick={() => setPage("register")}>Register</Button>
+            <Button onClick={() => setPage("reset")}>Reset Password</Button>
+          </ButtonGroup>
+        </div>
+        <div>
+          <LoginCard
+            page={page}
+          />
+        </div>
+      </div>
+    </LoginLayout>
     </>
   );
 };

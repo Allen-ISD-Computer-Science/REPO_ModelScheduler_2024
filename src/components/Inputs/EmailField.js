@@ -1,20 +1,26 @@
 import { Input } from "@nextui-org/input";
 
-const EmailField = () => {
+const EmailField = ({ setEmail, emailError, emailValid, setEmailValid, ...props }) => {
+
+  const changeInput = () => {
+    setEmailValid(false);
+    setEmail;
+  };
+
   return (
     <>
       {/* Email Layout */}
-      <div key="bordered">
-        <Input
-          isRequired
-          type="email"
-          label="Email"
-          key="lg"
-          radius="lg"
-          defaultValue="Enter Your Email"
-          className="max-w-xs"
-        />
-      </div>
+      <Input
+        {...props}
+        isRequired
+        type="email"
+        label="Email Address"
+        variant="bordered"
+        className="justify-between max-w-sm align-middle"
+        isInvalid={emailValid}
+        errorMessage={emailValid && emailError}
+        onValueChange={changeInput}
+      />
 
       {/* Send Info To Server On Button Click */}
     </>
@@ -22,3 +28,12 @@ const EmailField = () => {
 };
 
 export default EmailField;
+
+import PropTypes from "prop-types";
+
+EmailField.propTypes = {
+  setEmail: PropTypes.string.isRequired,
+  emailError: PropTypes.string.isRequired,
+  emailValid: PropTypes.bool.isRequired,
+  setEmailValid: PropTypes.bool.isRequired
+};
