@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Input } from "@nextui-org/input";
+import { Button } from "@nextui-org/button";
 
 import { ShowPassword } from "@/components/Images";
 import { HidePassword } from "@/components/Images";
@@ -26,9 +27,9 @@ const PasswordField = ({ passwordValid, passwordError, setPassword, setPasswordV
         endContent={
           <button className="focus:outline-none align-middle" type="button" onClick={toggleVisibility}>
             {isVisible ? (
-              <HidePassword className="text-2x1 text-default-400 pointer-events-none" />
+              <HidePassword className="text-9x1 text-default-400 pointer-events-none" />
             ) : (
-              <ShowPassword className="text2xl text-default-400 pointer-events-none" />
+              <ShowPassword className="text-2x1 text-default-400 pointer-events-none" />
             )}
           </button>
         }
