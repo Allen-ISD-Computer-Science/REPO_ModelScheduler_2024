@@ -17,7 +17,7 @@ const Login = () => {
     <LoginLayout>
       <div className="space-y-6 justify-items-center">
 
-        <div className="justify-itmes-center">
+        <div className="flex justify-center">
           <Image
             src={AllenLogo}
             alt="AllenISD Logo"
