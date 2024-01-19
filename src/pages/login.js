@@ -28,7 +28,7 @@ const Login = () => {
           />
         </div>
 
-        <div className="bg-zinc-600 p-4 rounded-lg space-y-6">
+        <div className="bg-zinc-600 p-5 rounded-lg space-y-6">
           <div className="font-mono flex justify-center">Welcome</div>
           <ButtonGroup>
             <Button onClick={() => setPage("login")}>Log In</Button>
