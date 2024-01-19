@@ -14,8 +14,11 @@ const Login = () => {
 
   return (
     <>
+
     <LoginLayout>
       <div className="space-y-6 justify-items-center">
+
+      <div className="font-mono flex justify-center relative -top-24 text-2xl">AHS Mock Scheduler</div>
 
         <div className="flex justify-center">
           <Image
@@ -25,20 +28,16 @@ const Login = () => {
           />
         </div>
 
-        <div>
+        <div className="bg-zinc-600 p-4 rounded-lg space-y-6">
+          <div className="font-mono flex justify-center">Welcome</div>
           <ButtonGroup>
             <Button onClick={() => setPage("login")}>Log In</Button>
             <Button onClick={() => setPage("register")}>Register</Button>
             <Button onClick={() => setPage("reset")}>Reset Password</Button>
           </ButtonGroup>
-        </div>
 
-        <div>
-          <LoginCard
-            page={page}
-          />
+          <LoginCard page={page} />
         </div>
-
       </div>
     </LoginLayout>
     </>
