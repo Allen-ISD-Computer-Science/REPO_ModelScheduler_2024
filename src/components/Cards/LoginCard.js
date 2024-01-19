@@ -45,13 +45,24 @@ const LoginCard = ({ page }) => {
             {page == "register" ? (
                 <>
                 <EmailField
-
+                    setEmail={setEmail}
+                    emailError={emailError}
+                    emailValid={emailValid}
+                    setEmailValid={setEmailValid}
                 />
+        
                 <PasswordField
-
+                    setPassword={setPassword}
+                    passwordError={passwordError}
+                    passwordValid={passwordValid}
+                    setPasswordValid={setPasswordValid}
                 />
-                <PasswordField
 
+                <PasswordField
+                    setPassword={setPassword}
+                    passwordError={passwordError}
+                    passwordValid={passwordValid}
+                    setPasswordValid={setPasswordValid}
                 />
 
                 <LoginButton
@@ -69,8 +80,12 @@ const LoginCard = ({ page }) => {
             {page == "reset" ? (
                 <>
                 <EmailField
-                    // Verify 6 digit code sent in email
+                    setEmail={setEmail}
+                    emailError={emailError}
+                    emailValid={emailValid}
+                    setEmailValid={setEmailValid}
                 />
+                {/* Verify 6 code using Gmail API */}
 
                 <LoginButton 
                     email={email}
