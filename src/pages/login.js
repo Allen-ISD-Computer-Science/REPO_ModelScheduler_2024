@@ -15,14 +15,16 @@ const Login = () => {
   return (
     <>
     <LoginLayout>
-      <div className="space-y-6">
-        <div>
+      <div className="space-y-6 justify-items-center">
+
+        <div className="flex justify-center">
           <Image
             src={AllenLogo}
             alt="AllenISD Logo"
             className="size-fit mx-auto my-auto"
           />
         </div>
+
         <div>
           <ButtonGroup>
             <Button onClick={() => setPage("login")}>Log In</Button>
@@ -30,11 +32,13 @@ const Login = () => {
             <Button onClick={() => setPage("reset")}>Reset Password</Button>
           </ButtonGroup>
         </div>
+
         <div>
           <LoginCard
             page={page}
           />
         </div>
+
       </div>
     </LoginLayout>
     </>

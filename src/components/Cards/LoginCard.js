@@ -12,64 +12,93 @@ const LoginCard = ({ page }) => {
     const [emailValid, setEmailValid] = useState(false);
     const [passwordValid, setPasswordValid] = useState(false);
 
-    const renderLogin = () => {
-        <>
-        <EmailField
-            setEmail={setEmail}
-            emailError={emailError}
-            emailValid={emailValid}
-            setEmailValid={setEmailValid}
-        />
-
-        <PasswordField
-            setPassword={setPassword}
-            passwordError={passwordError}
-            passwordValid={passwordValid}
-            setPasswordValid={setPasswordValid}
-        />
-
-        <LoginButton 
-            email={email}
-            setEmailError={setEmailError}
-            setEmailValid={setEmailValid}
-            password={password}
-            setPasswordError={setPasswordError}
-            setPasswordValid={setPasswordValid}
-        />
-        </>
-    };
-
-    const renderRegister = () => {
-        <>
-            <EmailField
-
-            />
-            <PasswordField
-
-            />
-            <PasswordField
-
-            />
-        </>
-    };
-
-    const renderReset = () => {
-        <>
-            <EmailField
-                // Verify 6 digit code sent in email
-            />
-        </>
-    };
     return (
         <>
-        {/* Login */}
-        {(page == "login") ? renderLogin : null}
+        <div className="space-y-4">
+            {page == "login" ? (
+                <>
+                <EmailField
+                    setEmail={setEmail}
+                    emailError={emailError}
+                    emailValid={emailValid}
+                    setEmailValid={setEmailValid}
+                />
+        
+                <PasswordField
+                    setPassword={setPassword}
+                    passwordError={passwordError}
+                    passwordValid={passwordValid}
+                    setPasswordValid={setPasswordValid}
+                />
+        
+                <LoginButton 
+                    email={email}
+                    setEmailError={setEmailError}
+                    setEmailValid={setEmailValid}
+                    password={password}
+                    setPasswordError={setPasswordError}
+                    setPasswordValid={setPasswordValid}
+                />
+                </>
+            ) : (null)}
 
-        {/* Register */}
-        {(page == "register") ? renderRegister : null}
+            {page == "register" ? (
+                <>
+                <EmailField
+                    setEmail={setEmail}
+                    emailError={emailError}
+                    emailValid={emailValid}
+                    setEmailValid={setEmailValid}
+                />
+        
+                <PasswordField
+                    setPassword={setPassword}
+                    passwordError={passwordError}
+                    passwordValid={passwordValid}
+                    setPasswordValid={setPasswordValid}
+                />
 
-        {/* Forgot Password */}
-        {(page == "reset") ? renderReset : null}
+                <PasswordField
+                    setPassword={setPassword}
+                    passwordError={passwordError}
+                    passwordValid={passwordValid}
+                    setPasswordValid={setPasswordValid}
+                />
+
+                <LoginButton
+                    email={email}
+                    setEmailError={setEmailError}
+                    setEmailValid={setEmailValid}
+                    password={password}
+                    setPasswordError={setPasswordError}
+                    setPasswordValid={setPasswordValid}
+                />
+
+                </>
+            ) : (null)}
+
+            {page == "reset" ? (
+                <>
+                <EmailField
+                    setEmail={setEmail}
+                    emailError={emailError}
+                    emailValid={emailValid}
+                    setEmailValid={setEmailValid}
+                />
+                {/* Verify 6 code using Gmail API */}
+
+                <LoginButton 
+                    email={email}
+                    setEmailError={setEmailError}
+                    setEmailValid={setEmailValid}
+                    password={password}
+                    setPasswordError={setPasswordError}
+                    setPasswordValid={setPasswordValid}
+                />
+
+                </>
+            ) : (null)}
+        </div>
         </>
     );
 };
