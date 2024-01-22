@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   AHS: "AHS",
   STEAM: "STEAM",
   LFC: "LFC",
