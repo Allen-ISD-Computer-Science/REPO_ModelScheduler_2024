@@ -136,13 +136,26 @@ export default function checkClassConflicts(classToCheck, schedule) {
   } else if (isClass7thPeriodSTEAM_CTC && (isScheduleIn8thPeriodAHS || isScheduleIn8thPeriodLFC)) {
     conflicts.push(7);
   } else if (isScheduleIn1stPeriodAHS && (isClass2ndPeriodSTEAM_CTC || isClass5thPeriodSTEAM_CTC)) {
-    isClass2ndPeriodSTEAM_CTC ? conflicts.push(2) : conflicts.push(5);
+    conflicts.push(2, 5);
   } else if (isScheduleIn1stPeriodLFC && (isClass2ndPeriodSTEAM_CTC || isClass5thPeriodSTEAM_CTC)) {
-    isClass2ndPeriodSTEAM_CTC ? conflicts.push(2) : conflicts.push(5);
+    conflicts.push(2, 5);
   } else if (isScheduleIn4thPeriodSTEAM_CTC && (isClass8thPeriodAHS || isClass8thPeriodLFC)) {
     conflicts.push(8);
   } else if (isScheduleIn7thPeriodSTEAM_CTC && (isClass8thPeriodAHS || isClass8thPeriodLFC)) {
     conflicts.push(8);
+  }
+
+  // Check if double blocked class conflicts will conflict with other classes
+  if (classToCheck.doubleBlockPeriod) {
+    const classPeriods = classToCheck.periods;
+    const doubleBlockPeriod = classToCheck.doubleBlockPeriod;
+    const isScheduleInDoubleBlockPeriod = Object.values(schedule).some((classInSchedule) =>
+      classInSchedule.periods.includes(doubleBlockPeriod)
+    );
+
+    if (isScheduleInDoubleBlockPeriod) {
+      conflicts.push(...classPeriods, doubleBlockPeriod);
+    }
   }
 
   return [...new Set(conflicts)]; // Remove duplicates

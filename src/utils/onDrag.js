@@ -1,25 +1,68 @@
 import checkClassConflicts from "@/utils/checkClassConflicts";
+import checkUnavailablePeriods from "@/utils/checkUnavailablePeriods";
 import exampleTestClasses from "@/temp_data.json";
 import Semesters from "@/constants/Semesters";
+import AllPeriods from "@/constants/AllPeriods";
+
+/**
+ *
+ * @param {Number} classId
+ * @param {Object<String, Object>} schedule
+ * @returns
+ */
+function getSameClassesInSemester(classId, schedule) {
+  return Object.keys(schedule).filter((period) => schedule[period].id == classId);
+}
 
 /**
  *
  * @param {Object} result - Result object from react-beautiful-dnd
  * @param {Array<Object>} springSemesterSelectedClasses - The spring semester selected classes
  * @param {Array<Object>} fallSemesterSelectedClasses - The fall semester selected classes
+ * @param {Function} setUnavailablePeriods - Setter for the list of unavailable periods
  * @param {Function} setConflictPeriods - Setter for the list of conflicts
  */
-export function onDragStart(result, springSemesterSelectedClasses, fallSemesterSelectedClasses, setConflictPeriods) {
-  const period = Number(result.draggableId.split("-")[2]);
-  const classObj = exampleTestClasses.find((class_) => class_.id == result.draggableId.split("-")[2]);
+export function onDragStart(
+  result,
+  springSemesterSelectedClasses,
+  fallSemesterSelectedClasses,
+  setUnavailablePeriods,
+  setConflictPeriods
+) {
+  const classId = Number(result.draggableId.split("-")[2]);
+  const classObj = exampleTestClasses.find((class_) => class_.id == classId);
 
-  console.log("onDragStart");
-  console.log(classObj);
-  console.log(springSemesterSelectedClasses);
-  console.log(fallSemesterSelectedClasses);
-  console.time("checkClassConflicts");
-  console.log(checkClassConflicts(classObj, springSemesterSelectedClasses));
-  console.timeEnd("checkClassConflicts");
+  if (classObj.term == Semesters.SPRING) {
+    setUnavailablePeriods({
+      [Semesters.S1]: checkUnavailablePeriods(classObj, springSemesterSelectedClasses),
+      [Semesters.S2]: AllPeriods,
+    });
+
+    setConflictPeriods({
+      [Semesters.S1]: checkClassConflicts(classObj, springSemesterSelectedClasses),
+      [Semesters.S2]: checkClassConflicts(classObj, fallSemesterSelectedClasses),
+    });
+  } else if (classObj.term == Semesters.FALL) {
+    setUnavailablePeriods({
+      [Semesters.S1]: AllPeriods,
+      [Semesters.S2]: checkUnavailablePeriods(classObj, fallSemesterSelectedClasses),
+    });
+
+    setConflictPeriods({
+      [Semesters.S1]: AllPeriods,
+      [Semesters.S2]: checkClassConflicts(classObj, fallSemesterSelectedClasses),
+    });
+  } else if (classObj.term == Semesters.FULL_YEAR) {
+    setUnavailablePeriods({
+      [Semesters.S1]: checkUnavailablePeriods(classObj, springSemesterSelectedClasses),
+      [Semesters.S2]: checkUnavailablePeriods(classObj, fallSemesterSelectedClasses),
+    });
+
+    setConflictPeriods({
+      [Semesters.S1]: checkClassConflicts(classObj, springSemesterSelectedClasses),
+      [Semesters.S2]: checkClassConflicts(classObj, fallSemesterSelectedClasses),
+    });
+  }
 }
 
 /**
@@ -27,17 +70,29 @@ export function onDragStart(result, springSemesterSelectedClasses, fallSemesterS
  * @param {Function} setAddedClasses - Setter for the list of classes that are available to be added to the schedule
  * @param {Function} setSpringSemesterSelectedClasses - Setter for the spring semester selected classes
  * @param {Function} setFallSemesterSelectedClasses - Setter for the fall semester selected classes
+ * @param {Function} setUnavailablePeriods - Setter for the list of unavailable periods
+ * @param {Function} setConflictPeriods - Setter for the list of conflicts
  * @returns
  */
-export function onDragEnd(result, setAddedClasses, setSpringSemesterSelectedClasses, setFallSemesterSelectedClasses) {
+export function onDragEnd(
+  result,
+  setAddedClasses,
+  setSpringSemesterSelectedClasses,
+  setFallSemesterSelectedClasses,
+  setUnavailablePeriods,
+  setConflictPeriods
+) {
   const { source, destination } = result;
   const classId = result.draggableId.split("-")[2];
-  const sourcePeriod = Number(source.droppableId.split("-")[2]);
-  const destinationPeriod = Number(destination.droppableId.split("-")[2]);
+  const destinationPeriod = destination ? Number(destination.droppableId.split("-")[2]) : null;
   const classObj = exampleTestClasses.find((class_) => class_.id == classId);
 
+  // Reset the list of unavailable periods and conflicts
+  setUnavailablePeriods({});
+  setConflictPeriods({});
+
   // If the user drops the class at the same position dropped, do nothing
-  if (destination.droppableId === source.droppableId) return;
+  if (destination?.droppableId === source?.droppableId || !destination) return;
 
   // If the user drops the class in a semester schedule
   if (destination.droppableId.includes("schedule")) {
@@ -48,9 +103,29 @@ export function onDragEnd(result, setAddedClasses, setSpringSemesterSelectedClas
         : setFallSemesterSelectedClasses;
       setClasses((prev) => {
         const newSelectedClasses = { ...prev };
-        delete newSelectedClasses[sourcePeriod];
+
+        // Return all periods with the same class id & remove them
+        const allPeriodsWithClass = getSameClassesInSemester(classId, newSelectedClasses);
+        allPeriodsWithClass.forEach((period) => delete newSelectedClasses[period]);
+
         return newSelectedClasses;
       });
+
+      // If the class is a full year class, remove the class from the opposite semester schedule
+      const setOppositeSemesterClasses = !source.droppableId.includes("spring")
+        ? setSpringSemesterSelectedClasses
+        : setFallSemesterSelectedClasses;
+      if (classObj.term == Semesters.FULL_YEAR) {
+        setOppositeSemesterClasses((prev) => {
+          const newSelectedClasses = { ...prev };
+
+          // Return all periods with the same class id & remove them
+          const allPeriodsWithClass = getSameClassesInSemester(classId, newSelectedClasses);
+          allPeriodsWithClass.forEach((period) => delete newSelectedClasses[period]);
+
+          return newSelectedClasses;
+        });
+      }
     }
 
     // Add the class to the semester schedule
@@ -58,6 +133,7 @@ export function onDragEnd(result, setAddedClasses, setSpringSemesterSelectedClas
       ? setSpringSemesterSelectedClasses
       : setFallSemesterSelectedClasses;
     setClasses((prev) => {
+      // Add the class to the list of classes in the semester schedule
       const newSelectedClasses = { ...prev };
       newSelectedClasses[destinationPeriod] = { ...classObj, periods: [destinationPeriod] };
 
@@ -66,6 +142,31 @@ export function onDragEnd(result, setAddedClasses, setSpringSemesterSelectedClas
         const newAddedClasses = prev.filter((class_) => class_.id != classId);
         return newAddedClasses;
       });
+
+      // If the class is a full year class, add the class to the opposite semester schedule
+      const setOppositeSemesterClasses = !destination.droppableId.includes("spring")
+        ? setSpringSemesterSelectedClasses
+        : setFallSemesterSelectedClasses;
+      if (classObj.term == Semesters.FULL_YEAR) {
+        setOppositeSemesterClasses((prev) => {
+          const newSelectedClasses = { ...prev };
+          newSelectedClasses[destinationPeriod] = { ...classObj, periods: [destinationPeriod] };
+
+          // Add the class double blocked period to the opposite semester schedule
+          if (classObj.doubleBlockPeriod) {
+            const doubleBlockPeriod = classObj.doubleBlockPeriod;
+            newSelectedClasses[doubleBlockPeriod] = { ...classObj, periods: [doubleBlockPeriod] };
+          }
+
+          return newSelectedClasses;
+        });
+      }
+
+      // Add the class double blocked period to the semester schedule
+      if (classObj.doubleBlockPeriod) {
+        const doubleBlockPeriod = classObj.doubleBlockPeriod;
+        newSelectedClasses[doubleBlockPeriod] = { ...classObj, periods: [doubleBlockPeriod] };
+      }
 
       return newSelectedClasses;
     });
@@ -78,12 +179,33 @@ export function onDragEnd(result, setAddedClasses, setSpringSemesterSelectedClas
       : setFallSemesterSelectedClasses;
     setClasses((prev) => {
       const newSelectedClasses = { ...prev };
-      delete newSelectedClasses[sourcePeriod];
+
+      // Return all periods with the same class id & remove them
+      const allPeriodsWithClass = Object.keys(newSelectedClasses).filter(
+        (period) => newSelectedClasses[period].id == classId
+      );
+      allPeriodsWithClass.forEach((period) => delete newSelectedClasses[period]);
 
       setAddedClasses((prev) => {
+        // Add the class back to the list of classes available
         const newAddedClasses = [...prev, classObj];
         return newAddedClasses;
       });
+
+      // If the class is a full year class, delete the class from the opposite semester schedule
+      const setOppositeSemesterClasses = !source.droppableId.includes("spring")
+        ? setSpringSemesterSelectedClasses
+        : setFallSemesterSelectedClasses;
+      if (classObj.term == Semesters.FULL_YEAR) {
+        setOppositeSemesterClasses((prev) => {
+          const newSelectedClasses = { ...prev };
+
+          // Remove all periods with the same class id
+          allPeriodsWithClass.forEach((period) => delete newSelectedClasses[period]);
+
+          return newSelectedClasses;
+        });
+      }
 
       return newSelectedClasses;
     });

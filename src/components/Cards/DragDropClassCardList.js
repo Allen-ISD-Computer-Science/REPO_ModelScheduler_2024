@@ -20,7 +20,7 @@ const DroppableClassCardList = ({ droppableId, classes, ...props }) => {
               </div>
             ) : (
               classes.map((classObj, index) => (
-                <Draggable key={classObj.id} draggableId={`draggable-class-${classObj.id}`} index={index}>
+                <Draggable key={classObj.id} draggableId={`draggable-class-${classObj.id}-available`} index={index}>
                   {(provided) => (
                     <div
                       ref={provided.innerRef}

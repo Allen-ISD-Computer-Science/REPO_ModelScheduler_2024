@@ -6,7 +6,7 @@ import bellSchedule from "@/utils/bellSchedule";
 import numberToOrdinal from "@/utils/numberToOrdinal";
 import ClassLocationChipColors from "@/constants/ClassLocationChipColors";
 
-const DroppableClassScheduleCard = ({ droppableId, course, period, showAHSTimes, disableDrag, ...props }) => {
+const DroppableClassScheduleCard = ({ droppableId, semester, course, period, showAHSTimes, disableDrag, ...props }) => {
   const getColorByPercentFull = (percentFull) => {
     if (percentFull < 0.5) {
       return "success";
@@ -26,11 +26,11 @@ const DroppableClassScheduleCard = ({ droppableId, course, period, showAHSTimes,
             {...props}
             {...provided.droppableProps}
             style={{
-              border: snapshot.isDraggingOver ? "2px dashed #0284c7" : "none",
+              border: snapshot.isDraggingOver && !disableDrag ? "2px dashed #0284c7" : "none",
             }}
           >
             {course ? (
-              <Draggable draggableId={`draggable-class-${course.id}-scheduled`} index={period}>
+              <Draggable draggableId={`draggable-class-${course.id}-scheduled-${semester}-${period}`} index={period}>
                 {(provided) => (
                   <div
                     ref={provided.innerRef}
@@ -72,7 +72,9 @@ const DroppableClassScheduleCard = ({ droppableId, course, period, showAHSTimes,
                   {numberToOrdinal(period)} Period
                 </p>
                 <p className="text-center text-neutral-300/50 font-bold animate-fade">
-                  {showAHSTimes ? `AHS: ${bellSchedule(period, "AHS")}` : `STEAM: ${bellSchedule(period, "STEAM")}`}
+                  {showAHSTimes
+                    ? `AHS: ${bellSchedule(period, "AHS")}`
+                    : `STEAM: ${bellSchedule(period, "STEAM") || "N/A"}`}
                 </p>
               </div>
             )}
@@ -88,6 +90,7 @@ export default DroppableClassScheduleCard;
 import PropTypes from "prop-types";
 DroppableClassScheduleCard.propTypes = {
   droppableId: PropTypes.string.isRequired,
+  semester: PropTypes.string.isRequired,
   course: PropTypes.shape({
     id: PropTypes.number.isRequired,
     courseName: PropTypes.string.isRequired,

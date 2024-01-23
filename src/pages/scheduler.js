@@ -15,22 +15,30 @@ const Scheduler = () => {
   );
   const [springSemesterSelectedClasses, setSpringSemesterSelectedClasses] = useState({});
   const [fallSemesterSelectedClasses, setFallSemesterSelectedClasses] = useState({});
+  const [unavailablePeriods, setUnavailablePeriods] = useState({});
   const [conflictPeriods, setConflictPeriods] = useState({});
-  /**
-   * {
-   *  "Spring": [1, 2, 4],
-   *  "Fall": [1, 3, 5]
-   * }
-   */
 
   return (
     <>
       <DragDropContext
         onDragStart={(result) =>
-          onDragStart(result, springSemesterSelectedClasses, fallSemesterSelectedClasses, setConflictPeriods)
+          onDragStart(
+            result,
+            springSemesterSelectedClasses,
+            fallSemesterSelectedClasses,
+            setUnavailablePeriods,
+            setConflictPeriods
+          )
         }
         onDragEnd={(result) =>
-          onDragEnd(result, setAddedClasses, setSpringSemesterSelectedClasses, setFallSemesterSelectedClasses)
+          onDragEnd(
+            result,
+            setAddedClasses,
+            setSpringSemesterSelectedClasses,
+            setFallSemesterSelectedClasses,
+            setUnavailablePeriods,
+            setConflictPeriods
+          )
         }
       >
         <SchedulerLayout>
@@ -39,7 +47,8 @@ const Scheduler = () => {
             <DragDropClassSchedule
               semester="Spring"
               classes={springSemesterSelectedClasses}
-              setScheduledClasses={setSpringSemesterSelectedClasses}
+              unavailablePeriods={unavailablePeriods}
+              conflictPeriods={conflictPeriods}
               className="h-full bg-background/50 bg-default-100 overflow-y-auto"
             />
           </div>
@@ -59,7 +68,8 @@ const Scheduler = () => {
             <DragDropClassSchedule
               semester="Fall"
               classes={fallSemesterSelectedClasses}
-              setScheduledClasses={setFallSemesterSelectedClasses}
+              unavailablePeriods={unavailablePeriods}
+              conflictPeriods={conflictPeriods}
               className="h-full bg-background/50 bg-default-100 overflow-y-auto"
             />
           </div>
