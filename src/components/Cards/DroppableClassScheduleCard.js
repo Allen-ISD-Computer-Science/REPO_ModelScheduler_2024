@@ -94,6 +94,7 @@ export default function DroppableClassScheduleCard({
 }
 
 import PropTypes from "prop-types";
+
 DroppableClassScheduleCard.propTypes = {
   droppableId: PropTypes.string.isRequired,
   semester: PropTypes.string.isRequired,

@@ -1,7 +1,7 @@
 import { Card } from "@nextui-org/card";
 import { Droppable, Draggable } from "@hello-pangea/dnd";
 
-import { ClassCard } from "@/components/Cards";
+import ClassCard from "@/components/Cards/ClassCard";
 
 export default function DroppableClassCardList({ droppableId, classes, ...props }) {
   return (

@@ -1,7 +1,7 @@
 import { Card } from "@nextui-org/card";
 import { VList } from "virtua";
 
-import { ClassCard } from "@/components/Cards";
+import ClassCard from "@/components/Cards/ClassCard";
 
 export default function ClassCardList({ classes, classSelected, emptyMsg, onClassSelected, ...props }) {
   return (

@@ -3,7 +3,7 @@ import { Chip } from "@nextui-org/chip";
 
 import numberToOrdinal from "@/utils/numberToOrdinal";
 import ClassLocationChipColors from "@/constants/ClassLocationChipColors";
-import { FireSVGRating } from "@/components/Images";
+import FireSVGRating from "@/components/Images/FireSVGRating";
 
 export default function ClassCard({
   courseName,

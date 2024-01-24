@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Card } from "@nextui-org/card";
 
-import { DroppableClassScheduleCard } from "@/components/Cards";
+import DroppableClassScheduleCard from "@/components/Cards/DroppableClassScheduleCard";
 
 export default function DragDropClassSchedule({ semester, classes, unavailablePeriods, conflictPeriods }) {
   const [showAHSTimes, setShowAHSTimes] = useState(true);
