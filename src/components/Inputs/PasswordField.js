@@ -5,7 +5,7 @@ import { Button } from "@nextui-org/button";
 import { ShowPassword } from "@/components/Images";
 import { HidePassword } from "@/components/Images";
 
-const PasswordField = ({ passwordValid, passwordError, setPassword, setPasswordValid, ...props }) => {
+export default function PasswordField({ passwordValid, passwordError, setPassword, setPasswordValid, ...props }) {
 
   const [isVisible, setIsVisible] = useState(false);
   const toggleVisibility = () => setIsVisible(!isVisible);
@@ -40,9 +40,7 @@ const PasswordField = ({ passwordValid, passwordError, setPassword, setPasswordV
       />
     </>
   );
-};
-
-export default PasswordField;
+}
 
 import PropTypes from "prop-types";
 

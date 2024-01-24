@@ -5,7 +5,7 @@ import numberToOrdinal from "@/utils/numberToOrdinal";
 import ClassLocationChipColors from "@/constants/ClassLocationChipColors";
 import { FireSVGRating } from "@/components/Images";
 
-const ClassCard = ({
+export default function ClassCard({
   courseName,
   courseCode,
   periods,
@@ -14,7 +14,7 @@ const ClassCard = ({
   numStudents,
   compact = false,
   ...props
-}) => {
+}) {
   const percentFull = Number((numStudents / totalSeats).toFixed(2));
 
   return (
@@ -50,9 +50,7 @@ const ClassCard = ({
       </Card>
     </>
   );
-};
-
-export default ClassCard;
+}
 
 import PropTypes from "prop-types";
 

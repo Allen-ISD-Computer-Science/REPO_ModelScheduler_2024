@@ -3,7 +3,7 @@ import { Droppable, Draggable } from "@hello-pangea/dnd";
 
 import { ClassCard } from "@/components/Cards";
 
-const DroppableClassCardList = ({ droppableId, classes, ...props }) => {
+export default function DroppableClassCardList({ droppableId, classes, ...props }) {
   return (
     <>
       <Droppable droppableId={droppableId}>
@@ -50,9 +50,7 @@ const DroppableClassCardList = ({ droppableId, classes, ...props }) => {
       </Droppable>
     </>
   );
-};
-
-export default DroppableClassCardList;
+}
 
 import PropTypes from "prop-types";
 

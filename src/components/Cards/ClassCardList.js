@@ -3,7 +3,7 @@ import { VList } from "virtua";
 
 import { ClassCard } from "@/components/Cards";
 
-const ClassCardList = ({ classes, classSelected, emptyMsg, onClassSelected, ...props }) => {
+export default function ClassCardList({ classes, classSelected, emptyMsg, onClassSelected, ...props }) {
   return (
     <>
       <Card {...props}>
@@ -41,9 +41,7 @@ const ClassCardList = ({ classes, classSelected, emptyMsg, onClassSelected, ...p
       </Card>
     </>
   );
-};
-
-export default ClassCardList;
+}
 
 import PropTypes from "prop-types";
 

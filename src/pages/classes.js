@@ -8,7 +8,7 @@ import { SearchBar, FilterButton, ScheduleButton } from "@/components/Buttons";
 import SelectedClassesContext from "@/context/selectedClasses";
 import exampleTestClasses from "@/temp_data.json";
 
-const Classes = () => {
+export default function Classes() {
   const [classes, setClasses] = useState(exampleTestClasses);
   const [classSelectedID, setClassSelectedID] = useState(null);
   const { selectedClasses, setSelectedClasses } = useContext(SelectedClassesContext);
@@ -103,6 +103,4 @@ const Classes = () => {
       </ClassesLayout>
     </>
   );
-};
-
-export default Classes;
+}

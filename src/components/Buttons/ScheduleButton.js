@@ -6,7 +6,7 @@ import { useDisclosure } from "@nextui-org/use-disclosure";
 import UilSchedule from "@iconscout/react-unicons/icons/uil-schedule";
 import UilExclamationTriangle from "@iconscout/react-unicons/icons/uil-exclamation-triangle";
 
-const ScheduleButton = ({ selectedClasses, ...props }) => {
+export default function ScheduleButton({ selectedClasses, ...props }) {
   const navigate = useNavigate();
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
 
@@ -58,9 +58,7 @@ const ScheduleButton = ({ selectedClasses, ...props }) => {
       </Modal>
     </>
   );
-};
-
-export default ScheduleButton;
+}
 
 import PropTypes from "prop-types";
 

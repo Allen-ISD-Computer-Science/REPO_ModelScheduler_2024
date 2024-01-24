@@ -3,7 +3,7 @@ import { Card } from "@nextui-org/card";
 
 import { DroppableClassScheduleCard } from "@/components/Cards";
 
-const DragDropClassSchedule = ({ semester, classes, unavailablePeriods, conflictPeriods }) => {
+export default function DragDropClassSchedule({ semester, classes, unavailablePeriods, conflictPeriods }) {
   const [showAHSTimes, setShowAHSTimes] = useState(true);
 
   const getColorFromClassAvailability = (period) => {
@@ -134,9 +134,7 @@ const DragDropClassSchedule = ({ semester, classes, unavailablePeriods, conflict
       </div>
     </>
   );
-};
-
-export default DragDropClassSchedule;
+}
 
 import PropTypes from "prop-types";
 

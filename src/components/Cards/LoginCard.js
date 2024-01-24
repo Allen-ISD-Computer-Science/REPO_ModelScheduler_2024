@@ -3,7 +3,7 @@ import  { useState } from 'react';
 import { LoginButton } from '../Buttons';
 import { EmailField, PasswordField } from '../Inputs';
 
-const LoginCard = ({ page }) => {
+export default function LoginCard({ page }) {
 
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
@@ -101,9 +101,7 @@ const LoginCard = ({ page }) => {
         </div>
         </>
     );
-};
-
-export default LoginCard;
+}
 
 import PropTypes from "prop-types";
 

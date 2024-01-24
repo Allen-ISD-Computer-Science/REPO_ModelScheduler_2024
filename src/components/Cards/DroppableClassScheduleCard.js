@@ -6,7 +6,15 @@ import bellSchedule from "@/utils/bellSchedule";
 import numberToOrdinal from "@/utils/numberToOrdinal";
 import ClassLocationChipColors from "@/constants/ClassLocationChipColors";
 
-const DroppableClassScheduleCard = ({ droppableId, semester, course, period, showAHSTimes, disableDrag, ...props }) => {
+export default function DroppableClassScheduleCard({
+  droppableId,
+  semester,
+  course,
+  period,
+  showAHSTimes,
+  disableDrag,
+  ...props
+}) {
   const getColorByPercentFull = (percentFull) => {
     if (percentFull < 0.5) {
       return "success";
@@ -83,9 +91,7 @@ const DroppableClassScheduleCard = ({ droppableId, semester, course, period, sho
       </Droppable>
     </>
   );
-};
-
-export default DroppableClassScheduleCard;
+}
 
 import PropTypes from "prop-types";
 DroppableClassScheduleCard.propTypes = {

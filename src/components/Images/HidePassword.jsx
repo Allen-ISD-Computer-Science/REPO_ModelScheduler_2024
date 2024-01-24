@@ -1,4 +1,4 @@
-const HidePassword = (props) => {
+export default function HidePassword(props) {
   return (
     <svg
       aria-hidden="true"
@@ -32,6 +32,4 @@ const HidePassword = (props) => {
       />
     </svg>
   );
-};
-
-export default HidePassword;
+}

@@ -8,7 +8,7 @@ import { LoginCard } from "@/components/Cards";
 
 import AllenLogo from "../components/Images/AllenISDLogo.png";
 
-const Login = () => {
+export default function Login() {
 
   const [page, setPage] = useState("login")
 
@@ -42,6 +42,4 @@ const Login = () => {
     </LoginLayout>
     </>
   );
-};
-
-export default Login;
+}

@@ -8,7 +8,7 @@ import { onDragStart, onDragEnd } from "@/utils/onDrag";
 import SelectedClassesContext from "@/context/selectedClasses";
 import exampleTestClasses from "@/temp_data.json";
 
-const Scheduler = () => {
+export default function Scheduler() {
   const { selectedClasses } = useContext(SelectedClassesContext);
   const [addedClasses, setAddedClasses] = useState(
     exampleTestClasses.filter((class_) => selectedClasses.includes(class_.id))
@@ -77,6 +77,4 @@ const Scheduler = () => {
       </DragDropContext>
     </>
   );
-};
-
-export default Scheduler;
+}

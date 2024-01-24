@@ -1,6 +1,6 @@
 import { Input } from "@nextui-org/input";
 
-const EmailField = ({ setEmail, emailError, emailValid, setEmailValid, ...props }) => {
+export default function EmailField({ setEmail, emailError, emailValid, setEmailValid, ...props }) {
 
   const changeInput = () => {
     setEmailValid(false);
@@ -25,9 +25,7 @@ const EmailField = ({ setEmail, emailError, emailValid, setEmailValid, ...props 
       {/* Send Info To Server On Button Click */}
     </>
   );
-};
-
-export default EmailField;
+}
 
 import PropTypes from "prop-types";
 

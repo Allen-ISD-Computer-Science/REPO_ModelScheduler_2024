@@ -1,6 +1,6 @@
 import { Button } from "@nextui-org/button";
 
-const LoginButton = ({ email, setEmailError, setEmailValid, password, setPasswordError, setPasswordValid }) => {
+export default function LoginButton({ email, setEmailError, setEmailValid, password, setPasswordError, setPasswordValid }) {
 
   const onButtonClick = () => {
     // Add if Email or Password are incorrect
@@ -38,9 +38,7 @@ const LoginButton = ({ email, setEmailError, setEmailValid, password, setPasswor
       </Button>
     </>
   );
-};
-
-export default LoginButton;
+}
 
 import PropTypes from "prop-types";
 
