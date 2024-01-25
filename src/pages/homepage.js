@@ -5,6 +5,7 @@ import AllenLogo from "../components/Images/AllenISDLogo.png";
 const Homepage = () => {
   return (
     <>
+      {/* Contains link to: FAQ, Classes, Scheduler(?), Feedback */}
       <HomepageLayout>
       <div style={{backgroundColor:"#1F1F1F"}} className="w-52 h-screen mr-auto">
         <div className="flex justify-center ">
@@ -20,17 +21,17 @@ const Homepage = () => {
           Model Scheduler
         </div>
 
-        <div className="mx-auto w-10/12 relative top-2/3 text-3xl font-mono text-center rounded-lg tracking-tighter space-y-24">
-          <div className="bg-black rounded-lg">Feedback</div>
-          <div className="bg-black rounded-full">?</div>
+        <div className="mx-auto w-10/12 relative top-2/3 text-3xl font-mono text-center rounded-lg tracking-tighter space-y-10">
+          <div className="bg-neutral-700 rounded-lg">Feedback</div>
+          <div style={{aspectRatio: "1/1", height: 75, width: 75}} className="mx-auto bg-neutral-700 rounded-full py-5">?</div>
         </div>
       </div>
 
       <div className="w-screen h-screen font-mono">
-        <div className="text-center text-5xl p-8">Classes</div>
+        <div className="text-center text-5xl p-8">Stuff goes here</div>
         <div className="mx-auto text-center bg-neutral-900 w-1/2 h-5/6 rounded-lg shadow-[0_0_2px_#fff,inset_0_0_2px_#fff,0_0_5px_#08f,0_0_15px_#08f,0_0_50px_#08f] pt-10">
-          <div className="mx-auto text-center bg-neutral-700 w-3/4 h-1/6 rounded-lg">
-            <div className="pt-2 text-3xl">Insert Class Name Here</div>
+          <div className="mx-auto text-center bg-neutral-700 w-5/6 h-1/6 rounded-lg">
+            <div className="pt-2 text-3xl">Stuff goes here</div>
           </div>
         </div>
       </div>
