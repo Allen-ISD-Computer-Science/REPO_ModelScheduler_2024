@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   SOCIAL_STUDIES: "SOCIAL STUDIES",
   SPECIAL_EDUCATION: "SPECIAL EDUCATION",
   SCIENCE: "SCIENCE",

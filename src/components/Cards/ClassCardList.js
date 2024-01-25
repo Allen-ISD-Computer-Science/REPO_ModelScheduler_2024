@@ -1,20 +1,9 @@
 import { Card } from "@nextui-org/card";
 import { VList } from "virtua";
 
-import { ClassCard } from "@/components/Cards";
+import ClassCard from "@/components/Cards/ClassCard";
 
-/**
- * Renders a card component that displays a list of classes.
- *
- * @component
- * @param {Object} props - The component props.
- * @param {Array} props.classes - The array of class objects to be displayed.
- * @param {String} props.classSelected - The ID of the selected class.
- * @param {String|null} props.emptyMsg - The message to be displayed when the class list is empty.
- * @param {Function} props.onClassSelected - The callback function to be called when a class is selected.
- * @returns {JSX.Element} The component JSX element.
- */
-const ClassCardList = ({ classes, classSelected, emptyMsg, onClassSelected, ...props }) => {
+export default function ClassCardList({ classes, classSelected, emptyMsg, onClassSelected, ...props }) {
   return (
     <>
       <Card {...props}>
@@ -52,9 +41,7 @@ const ClassCardList = ({ classes, classSelected, emptyMsg, onClassSelected, ...p
       </Card>
     </>
   );
-};
-
-export default ClassCardList;
+}
 
 import PropTypes from "prop-types";
 

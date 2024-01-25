@@ -1,63 +1,60 @@
 import { Card } from "@nextui-org/card";
-import { DragDropContext, Droppable, Draggable } from "@hello-pangea/dnd";
+import { Droppable, Draggable } from "@hello-pangea/dnd";
 
-import { ClassCard } from "@/components/Cards";
+import ClassCard from "@/components/Cards/ClassCard";
 
-/**
- * Renders a card component that displays a list of classes.
- *
- * @component
- * @param {Object} props - The component props.
- * @param {Array} props.classes - The array of class objects to be displayed.
- * @param {Function} props.onDragStart - The function to be called when a class is dragged.
- * @returns {JSX.Element} The component JSX element.
- */
-const DragDropClassCardList = ({ classes, onDragStart, ...props }) => {
+export default function DroppableClassCardList({ droppableId, classes, ...props }) {
   return (
     <>
-      <DragDropContext onDragStart={onDragStart}>
-        <Droppable droppableId="droppable-class-list">
-          {(droppableProvided) => (
-            <Card ref={droppableProvided.innerRef} {...props}>
-              {classes.map((classObj, index) => (
-                <Draggable key={classObj.id} draggableId={`draggable-class-${classObj.id}`} index={index}>
-                  {(draggableProvided) => (
+      <Droppable droppableId={droppableId}>
+        {(provided) => (
+          <Card ref={provided.innerRef} {...props} {...provided.droppableProps}>
+            {classes.length === 0 ? (
+              <div className="flex flex-col h-full justify-center items-center p-8">
+                <p className="text-2xl text-center font-bold text-neutral-200 animate-fade-down animate-ease-in-out">
+                  No classes added
+                </p>
+                <p className="text-md text-center text-neutral-400 animate-fade-up animate-delay-200">
+                  Go back and add some classes ya dingus
+                </p>
+              </div>
+            ) : (
+              classes.map((classObj, index) => (
+                <Draggable key={classObj.id} draggableId={`draggable-class-${classObj.id}-available`} index={index}>
+                  {(provided) => (
                     <div
+                      ref={provided.innerRef}
                       key={classObj.id}
                       className="flex"
-                      ref={draggableProvided.innerRef}
-                      {...draggableProvided.draggableProps}
-                      {...draggableProvided.dragHandleProps}
+                      {...provided.draggableProps}
+                      {...provided.dragHandleProps}
                     >
                       <ClassCard
                         key={classObj.id}
+                        compact
                         courseName={classObj.courseName}
                         courseCode={classObj.courseCode}
                         periods={classObj.periods}
                         location={classObj.location}
                         totalSeats={Object.values(classObj.studentMax).reduce((sum, num) => sum + num, 0)}
                         numStudents={Object.values(classObj.studentSelected).reduce((sum, num) => sum + num, 0)}
-                        className={`grow mx-2 mt-2 overflow-visible animate-fade animate-duration-200 ${
-                          index === classes.length - 1 && "mb-2"
-                        }`}
+                        className="grow mx-2 mt-2 overflow-visible animate-fade animate-duration-200"
                       />
                     </div>
                   )}
                 </Draggable>
-              ))}
-            </Card>
-          )}
-        </Droppable>
-      </DragDropContext>
+              ))
+            )}
+          </Card>
+        )}
+      </Droppable>
     </>
   );
-};
-
-export default DragDropClassCardList;
+}
 
 import PropTypes from "prop-types";
 
-DragDropClassCardList.propTypes = {
+DroppableClassCardList.propTypes = {
+  droppableId: PropTypes.string.isRequired,
   classes: PropTypes.arrayOf(PropTypes.object).isRequired,
-  onDragStart: PropTypes.func,
 };

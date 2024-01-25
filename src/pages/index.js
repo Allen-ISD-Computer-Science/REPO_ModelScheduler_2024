@@ -1,4 +1,4 @@
-function Home() {
+export default function Home() {
   return (
     <div className="text-center">
       <header className="bg-neutral-800 min-h-screen flex flex-col items-center justify-center text-2xl text-white">
@@ -13,5 +13,3 @@ function Home() {
     </div>
   );
 }
-
-export default Home;

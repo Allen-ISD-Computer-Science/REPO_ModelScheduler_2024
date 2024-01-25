@@ -1,6 +1,6 @@
 import FireFileNames from "@/constants/FireFileNames";
 
-const FireSVGRating = ({ percentage, className }) => {
+export default function FireSVGRating({ percentage, className }) {
   const percentageFloat = parseFloat(percentage);
   const emptyFireSVG = FireFileNames.EmptyFireSVG;
   const filledFireSVG = FireFileNames.FilledFireSVG;
@@ -32,9 +32,7 @@ const FireSVGRating = ({ percentage, className }) => {
       </div>
     </>
   );
-};
-
-export default FireSVGRating;
+}
 
 import PropTypes from "prop-types";
 

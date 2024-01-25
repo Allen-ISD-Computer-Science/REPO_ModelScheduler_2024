@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   EmptyFireSVG: "emptyFire.svg",
   FilledFireSVG: "filledFire.svg",
 };

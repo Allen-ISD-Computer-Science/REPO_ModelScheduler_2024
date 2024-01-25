@@ -3,22 +3,18 @@ import { Chip } from "@nextui-org/chip";
 
 import numberToOrdinal from "@/utils/numberToOrdinal";
 import ClassLocationChipColors from "@/constants/ClassLocationChipColors";
-import { FireSVGRating } from "@/components/Images";
+import FireSVGRating from "@/components/Images/FireSVGRating";
 
-/**
- * Renders a card component that displays a class.
- *
- * @component
- * @param {Object} props - The component props.
- * @param {String} props.courseName - The name of the course.
- * @param {String} props.courseCode - The code of the course.
- * @param {Array<number>} props.periods - The periods of the class.
- * @param {String} props.location - The location of the class.
- * @param {Number} props.totalSeats - The total number of seats in the class.
- * @param {Number} props.numStudents - The number of students in the class.
- * @returns {JSX.Element} The rendered class card component.
- */
-const ClassCard = ({ courseName, courseCode, periods, location, totalSeats, numStudents, ...props }) => {
+export default function ClassCard({
+  courseName,
+  courseCode,
+  periods,
+  location,
+  totalSeats,
+  numStudents,
+  compact = false,
+  ...props
+}) {
   const percentFull = Number((numStudents / totalSeats).toFixed(2));
 
   return (
@@ -31,16 +27,19 @@ const ClassCard = ({ courseName, courseCode, periods, location, totalSeats, numS
 
           <div className="flex items-center flex-wrap">
             {/* Location */}
-            <Chip color={ClassLocationChipColors[location]} radius="sm" variant="bordered" className="mr-2 mb-2">
-              {location}
-            </Chip>
+            {!compact && (
+              <Chip color={ClassLocationChipColors[location]} radius="sm" variant="bordered" className="mr-2 mb-2">
+                {location}
+              </Chip>
+            )}
 
             {/* Periods */}
-            {periods.map((period, index) => (
-              <Chip key={index} color="default" radius="sm" variant="bordered" className="mr-2 mb-2">
-                {numberToOrdinal(period)}
-              </Chip>
-            ))}
+            {!compact &&
+              periods.map((period, index) => (
+                <Chip key={index} color="default" radius="sm" variant="bordered" className="mr-2 mb-2">
+                  {numberToOrdinal(period)}
+                </Chip>
+              ))}
           </div>
 
           {/* Rating on how competitive a class is */}
@@ -51,9 +50,7 @@ const ClassCard = ({ courseName, courseCode, periods, location, totalSeats, numS
       </Card>
     </>
   );
-};
-
-export default ClassCard;
+}
 
 import PropTypes from "prop-types";
 
@@ -64,4 +61,5 @@ ClassCard.propTypes = {
   location: PropTypes.string.isRequired,
   totalSeats: PropTypes.number.isRequired,
   numStudents: PropTypes.number.isRequired,
+  compact: PropTypes.bool,
 };

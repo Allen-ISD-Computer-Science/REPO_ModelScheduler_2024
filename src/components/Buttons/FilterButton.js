@@ -7,7 +7,7 @@ import { useDisclosure } from "@nextui-org/use-disclosure";
 
 import UilFilter from "@iconscout/react-unicons/icons/uil-filter";
 
-const FilterButton = ({ classes, setClasses, ...props }) => {
+export default function FilterButton({ classes, setClasses, ...props }) {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
   const [selectedFilters, setSelectedFilters] = useState({
     period: [],
@@ -202,9 +202,7 @@ const FilterButton = ({ classes, setClasses, ...props }) => {
       </Modal>
     </>
   );
-};
-
-export default FilterButton;
+}
 
 import PropTypes from "prop-types";
 

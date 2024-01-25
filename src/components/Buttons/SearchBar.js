@@ -3,7 +3,7 @@ import { Input } from "@nextui-org/input";
 
 import UilSearchAlt from "@iconscout/react-unicons/icons/uil-search-alt";
 
-const SearchBar = ({ classes, setClasses, ...props }) => {
+export default function SearchBar({ classes, setClasses, ...props }) {
   const [searchQuery, setSearchQuery] = useState("");
 
   useEffect(() => {
@@ -29,9 +29,7 @@ const SearchBar = ({ classes, setClasses, ...props }) => {
       />
     </>
   );
-};
-
-export default SearchBar;
+}
 
 import PropTypes from "prop-types";
 

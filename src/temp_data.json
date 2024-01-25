@@ -490,5 +490,63 @@
       "7": 210,
       "8": 405
     }
+  },
+  {
+    "id": 21,
+    "courseName": "Priv Prd II 11th",
+    "courseCode": "PP16SB",
+    "term": "S1+S2",
+    "department": "Privilege",
+    "periods": [1, 2, 4, 5, 7, 8],
+    "doubleBlockPeriod": null,
+    "location": "AHS",
+    "studentMax": {
+      "1": 300,
+      "2": 250,
+      "4": 200,
+      "5": 200,
+      "7": 200,
+      "8": 400
+    },
+    "studentSelected": {
+      "1": 290,
+      "2": 240,
+      "4": 205,
+      "5": 215,
+      "7": 210,
+      "8": 405
+    }
+  },
+  {
+    "id": 22,
+    "courseName": "Practicum in Animation",
+    "courseCode": "PM1ANA",
+    "term": "S1+S2",
+    "department": "CAREER - TECHNICAL ED",
+    "periods": [4],
+    "doubleBlockPeriod": 7,
+    "location": "AHS",
+    "studentMax": {
+      "4": 30
+    },
+    "studentSelected": {
+      "4": 25
+    }
+  },
+  {
+    "id": 23,
+    "courseName": "Career Preparation I",
+    "courseCode": "BM1C1A",
+    "term": "S1+S2",
+    "department": "CAREER - TECHNICAL ED",
+    "periods": [7],
+    "doubleBlockPeriod": 8,
+    "location": "AHS",
+    "studentMax": {
+      "7": 30
+    },
+    "studentSelected": {
+      "7": 43
+    }
   }
 ]
