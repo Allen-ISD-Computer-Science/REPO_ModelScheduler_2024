@@ -9,6 +9,7 @@ import { NextUIProvider } from "@nextui-org/react";
 import SelectedClassesContext from "@/context/selectedClasses";
 
 import Home from "@/pages/index";
+import Homepage from"@/pages/homepage";
 import Classes from "@/pages/classes";
 import Scheduler from "@/pages/scheduler";
 import Login from "@/pages/login";
@@ -20,6 +21,7 @@ const router = createBrowserRouter(
     { path: "/classes", element: <Classes /> },
     { path: "/scheduler", element: <Scheduler /> },
     { path: "/login", element: <Login /> },
+    { path: "/home", element: <Homepage /> },
   ],
   {
     basename: process.env.PUBLIC_URL ? `${process.env.PUBLIC_URL}/` : "/",

@@ -28,7 +28,7 @@ export default function Login() {
           />
         </div>
 
-        <div className="bg-zinc-600 p-5 rounded-lg space-y-6">
+        <div style={{backgroundColor: "#161B2E", borderWidth: "1px"}} className="p-5 rounded-lg space-y-6">
           <div className="font-mono flex justify-center">Welcome</div>
           <ButtonGroup>
             <Button onClick={() => setPage("login")}>Log In</Button>
