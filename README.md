@@ -19,7 +19,7 @@ scheduling experience for the upcoming school year.
 - Engineer-Frontend (Lead): Helen Giordano  [hgiordano888](https://codermerlin.academy/users/helen-giordano/Digital%20Portfolio/index.html)
 - Engineer-Frontend (FE2):
 - Engineer-Backend (Lead): Richard Jang  [Richard-Jang](https://codermerlin.academy/users/ming-ruei-jang/Digital%20Portfolio/index.html)
-- Engineer-Backend (BE2):
+- Engineer-Backend (BE2): Rohan Natarajan [Rohan Natarajan] (https://codermerlin.academy/users/rohan-natarajan/Digital%20Portfolio/index.html)
 
 ## 🏃 Running
 You can either run the Model Scheduler using the CRACO (recommended) or directly with the build scripts. Both methods may require environment variables depending on your situation:
