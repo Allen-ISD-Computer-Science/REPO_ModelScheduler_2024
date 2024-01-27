@@ -3,11 +3,11 @@ import { VList } from "virtua";
 
 import ClassCard from "@/components/Cards/ClassCard";
 
-export default function ClassCardList({ classes, classSelected, emptyMsg, onClassSelected, ...props }) {
+export default function ClassCardList({ classes, classSelected, onClassSelected, ...props }) {
   return (
     <>
       <Card {...props}>
-        {emptyMsg ? (
+        {classes.length === 0 ? (
           <div className="flex flex-col h-full justify-center items-center p-8">
             <p className="text-2xl text-center font-bold text-neutral-200 animate-fade-down animate-ease-in-out">
               No classes added
@@ -48,6 +48,5 @@ import PropTypes from "prop-types";
 ClassCardList.propTypes = {
   classes: PropTypes.arrayOf(PropTypes.object).isRequired,
   classSelected: PropTypes.number,
-  emptyMsg: PropTypes.bool,
   onClassSelected: PropTypes.func.isRequired,
 };
