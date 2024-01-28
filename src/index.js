@@ -6,10 +6,8 @@ import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { NextUIProvider } from "@nextui-org/react";
 
-import SelectedClassesContext from "@/context/selectedClasses";
-
 import Home from "@/pages/index";
-import Homepage from"@/pages/homepage";
+import Homepage from "@/pages/homepage";
 import Classes from "@/pages/classes";
 import Scheduler from "@/pages/scheduler";
 import Review from "@/pages/review";
@@ -31,16 +29,12 @@ const router = createBrowserRouter(
 );
 
 const App = () => {
-  const [selectedClasses, setSelectedClasses] = useState([]);
-
   return (
     <React.StrictMode>
       <NextUIProvider>
-        <SelectedClassesContext.Provider value={{ selectedClasses, setSelectedClasses }}>
-          <main>
-            <RouterProvider router={router} />
-          </main>
-        </SelectedClassesContext.Provider>
+        <main>
+          <RouterProvider router={router} />
+        </main>
       </NextUIProvider>
     </React.StrictMode>
   );

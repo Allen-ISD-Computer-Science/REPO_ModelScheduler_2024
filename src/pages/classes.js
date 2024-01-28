@@ -19,16 +19,28 @@ export default function Classes() {
 
   const handleAddClass = (classID) => {
     setSelectedClassID(null);
-    const selectedClass = availableClasses.find((classObj) => classObj.id === classID); // Get class object
-    setAddedClasses([...addedClasses, selectedClass].sort((a, b) => a.id - b.id)); // Add selected class object to addedClasses
-    setAvailableClasses(availableClasses.filter((classObj) => classObj.id !== classID).sort((a, b) => a.id - b.id)); // Filter out selected class object from availableClasses
+
+    // Get selected class object
+    const selectedClass = availableClasses.find((classObj) => classObj.id === classID);
+
+    // Add selected class object to addedClasses (sort by id)
+    setAddedClasses([...addedClasses, selectedClass].sort((a, b) => a.id - b.id));
+
+    // Filter out selected class object from availableClasses (sort by id)
+    setAvailableClasses(availableClasses.filter((classObj) => classObj.id !== classID).sort((a, b) => a.id - b.id));
   };
 
   const handleRemoveClass = () => {
     setSelectedClassID(null);
-    const selectedClass = addedClasses.find((classObj) => classObj.id === selectedClassID); // Get class object
-    setAvailableClasses([...availableClasses, selectedClass].sort((a, b) => a.id - b.id)); // Add selected class object to availableClasses
-    setAddedClasses(addedClasses.filter((classObj) => classObj.id !== selectedClassID).sort((a, b) => a.id - b.id)); // Filter out selected class object from addedClasses
+
+    // Get selected class object
+    const selectedClass = addedClasses.find((classObj) => classObj.id === selectedClassID);
+
+    // Add selected class object to availableClasses (sort by id)
+    setAvailableClasses([...availableClasses, selectedClass].sort((a, b) => a.id - b.id));
+
+    // Filter out selected class object from addedClasses (sort by id)
+    setAddedClasses(addedClasses.filter((classObj) => classObj.id !== selectedClassID).sort((a, b) => a.id - b.id));
   };
 
   // check if addedClasses has a class id
@@ -94,7 +106,7 @@ export default function Classes() {
       </div>
 
       {/* Right side (Added classes) */}
-      <div className="flex flex-col justify-center h-3/4 md:h-5/6 w-full md:w-5/12 lg:w-1/3 self-end self-center">
+      <div className="flex flex-col justify-center h-3/4 md:h-5/6 w-full md:w-5/12 lg:w-1/3 self-center">
         <ClassCardList
           classes={addedClasses}
           classSelected={selectedClassID}

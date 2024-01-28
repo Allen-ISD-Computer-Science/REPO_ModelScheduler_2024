@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Input } from "@nextui-org/input";
 
 import UilSearchAlt from "@iconscout/react-unicons/icons/uil-search-alt";
@@ -14,7 +14,7 @@ export default function SearchBar({ classes, setClasses, ...props }) {
       classObj.courseName.toLowerCase().includes(value.toLowerCase())
     );
     setClasses(filteredClasses);
-  }
+  };
 
   return (
     <>
