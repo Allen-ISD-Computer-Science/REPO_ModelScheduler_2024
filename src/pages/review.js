@@ -1,13 +1,19 @@
-import { useContext } from "react";
+import { useState } from "react";
 
 import ReviewLayout from "@/components/Layout/ReviewLayout";
 import ClassSchedule from "@/components/Cards/ClassSchedule";
 
-import ScheduledClassesContext from "@/context/scheduledClasses";
 import Semesters from "@/constants/Semesters";
 
 export default function Review() {
-  const { scheduledClasses } = useContext(ScheduledClassesContext);
+  const [scheduledClasses] = useState(() => {
+    return (
+      JSON.parse(localStorage.getItem("scheduledClasses")) || {
+        [Semesters.S1]: [],
+        [Semesters.S2]: [],
+      }
+    );
+  });
 
   return (
     <ReviewLayout>
