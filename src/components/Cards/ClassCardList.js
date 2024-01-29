@@ -26,6 +26,7 @@ export default function ClassCardList({ classes, classSelected, onClassSelected,
                   courseName={classObj.courseName}
                   courseCode={classObj.courseCode}
                   periods={classObj.periods}
+                  term={classObj.term}
                   location={classObj.location}
                   className={`grow mx-2 mt-2 border-2 overflow-visible animate-fade animate-duration-200 hover:border-gray-500 hover:transition hover:duration-300 ${
                     classSelected === classObj.id ? "border-stone-400" : "border-transparent"
