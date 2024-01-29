@@ -27,8 +27,6 @@ export default function ClassCardList({ classes, classSelected, onClassSelected,
                   courseCode={classObj.courseCode}
                   periods={classObj.periods}
                   location={classObj.location}
-                  totalSeats={Object.values(classObj.studentMax).reduce((sum, num) => sum + num, 0)}
-                  numStudents={Object.values(classObj.studentSelected).reduce((sum, num) => sum + num, 0)}
                   className={`grow mx-2 mt-2 border-2 overflow-visible animate-fade animate-duration-200 hover:border-gray-500 hover:transition hover:duration-300 ${
                     classSelected === classObj.id ? "border-stone-400" : "border-transparent"
                   } ${index === classes.length - 1 && "mb-2"}`}

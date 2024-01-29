@@ -3,20 +3,8 @@ import { Chip } from "@nextui-org/chip";
 
 import numberToOrdinal from "@/utils/numberToOrdinal";
 import ClassLocationChipColors from "@/constants/ClassLocationChipColors";
-import FireSVGRating from "@/components/Images/FireSVGRating";
 
-export default function ClassCard({
-  courseName,
-  courseCode,
-  periods,
-  location,
-  totalSeats,
-  numStudents,
-  compact = false,
-  ...props
-}) {
-  const percentFull = Number((numStudents / totalSeats).toFixed(2));
-
+export default function ClassCard({ courseName, courseCode, periods, location, compact = false, ...props }) {
   return (
     <>
       <Card disableRipple {...props}>
@@ -41,11 +29,6 @@ export default function ClassCard({
                 </Chip>
               ))}
           </div>
-
-          {/* Rating on how competitive a class is */}
-          <div className="flex flex-row justify-start">
-            <FireSVGRating percentage={percentFull} className="flex p-0.5 bg-stone-700/50 rounded" />
-          </div>
         </CardBody>
       </Card>
     </>
@@ -59,7 +42,5 @@ ClassCard.propTypes = {
   courseCode: PropTypes.string.isRequired,
   periods: PropTypes.arrayOf(PropTypes.number).isRequired,
   location: PropTypes.string.isRequired,
-  totalSeats: PropTypes.number.isRequired,
-  numStudents: PropTypes.number.isRequired,
   compact: PropTypes.bool,
 };

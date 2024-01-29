@@ -60,12 +60,6 @@ ClassSchedule.propTypes = {
       periods: PropTypes.arrayOf(PropTypes.number).isRequired,
       doubleBlockPeriod: PropTypes.number,
       location: PropTypes.string.isRequired,
-      studentSelected: PropTypes.shape({
-        [PropTypes.number]: PropTypes.string,
-      }).isRequired,
-      studentMax: PropTypes.shape({
-        [PropTypes.number]: PropTypes.string,
-      }).isRequired,
     })
   ).isRequired,
 };
