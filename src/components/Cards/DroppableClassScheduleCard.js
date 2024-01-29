@@ -15,16 +15,6 @@ export default function DroppableClassScheduleCard({
   disableDrag,
   ...props
 }) {
-  const getColorByPercentFull = (percentFull) => {
-    if (percentFull < 0.5) {
-      return "success";
-    } else if (percentFull < 1.0) {
-      return "warning";
-    } else {
-      return "danger";
-    }
-  };
-
   return (
     <>
       <Droppable droppableId={droppableId} isDropDisabled={disableDrag}>
@@ -46,16 +36,6 @@ export default function DroppableClassScheduleCard({
                     {...provided.draggableProps}
                     {...provided.dragHandleProps}
                   >
-                    {/* Top Right Chip */}
-                    <Chip
-                      size="sm"
-                      color={getColorByPercentFull(course.studentSelected[period] / course.studentMax[period])}
-                      variant="flat"
-                      className="top-2 right-2 absolute"
-                    >
-                      {course.studentSelected[period]}/{course.studentMax[period]}
-                    </Chip>
-
                     {/* Course Details */}
                     <div className="flex flex-col items-center justify-center h-full">
                       <p className="text-center font-bold mb-1">{course.courseName}</p>
@@ -107,12 +87,6 @@ DroppableClassScheduleCard.propTypes = {
     periods: PropTypes.arrayOf(PropTypes.number).isRequired,
     doubleBlockPeriod: PropTypes.number,
     location: PropTypes.string.isRequired,
-    studentSelected: PropTypes.shape({
-      [PropTypes.number]: PropTypes.string,
-    }).isRequired,
-    studentMax: PropTypes.shape({
-      [PropTypes.number]: PropTypes.string,
-    }).isRequired,
   }),
   period: PropTypes.number.isRequired,
   showAHSTimes: PropTypes.bool,
