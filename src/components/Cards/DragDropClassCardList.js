@@ -35,9 +35,8 @@ export default function DroppableClassCardList({ droppableId, classes, ...props 
                         courseName={classObj.courseName}
                         courseCode={classObj.courseCode}
                         periods={classObj.periods}
+                        term={classObj.term}
                         location={classObj.location}
-                        totalSeats={Object.values(classObj.studentMax).reduce((sum, num) => sum + num, 0)}
-                        numStudents={Object.values(classObj.studentSelected).reduce((sum, num) => sum + num, 0)}
                         className="grow mx-2 mt-2 overflow-visible animate-fade animate-duration-200"
                       />
                     </div>

@@ -1,22 +1,47 @@
-import { useState, useContext } from "react";
+import { useState, useEffect } from "react";
 import { DragDropContext } from "@hello-pangea/dnd";
 
 import SchedulerLayout from "@/components/Layout/SchedulerLayout";
 import { DragDropClassCardList, DragDropClassSchedule } from "@/components/Cards";
 import { onDragStart, onDragEnd } from "@/utils/onDrag";
 
-import SelectedClassesContext from "@/context/selectedClasses";
-import exampleTestClasses from "@/temp_data.json";
+import Semesters from "@/constants/Semesters";
 
 export default function Scheduler() {
-  const { selectedClasses } = useContext(SelectedClassesContext);
-  const [addedClasses, setAddedClasses] = useState(
-    exampleTestClasses.filter((class_) => selectedClasses.includes(class_.id))
+  const [addedClasses, setAddedClasses] = useState(() => {
+    return JSON.parse(localStorage.getItem("addedClasses")) || {};
+  });
+  const [springSemesterSelectedClasses, setSpringSemesterSelectedClasses] = useState(
+    localStorage.getItem("scheduledClasses") ? JSON.parse(localStorage.getItem("scheduledClasses"))[Semesters.S1] : {}
   );
-  const [springSemesterSelectedClasses, setSpringSemesterSelectedClasses] = useState({});
-  const [fallSemesterSelectedClasses, setFallSemesterSelectedClasses] = useState({});
+  const [fallSemesterSelectedClasses, setFallSemesterSelectedClasses] = useState(
+    localStorage.getItem("scheduledClasses") ? JSON.parse(localStorage.getItem("scheduledClasses"))[Semesters.S2] : {}
+  );
   const [unavailablePeriods, setUnavailablePeriods] = useState({});
   const [conflictPeriods, setConflictPeriods] = useState({});
+
+  // Update addedClasses to remove scheduled classes on render
+  useEffect(() => {
+    // If there are "Spring" and "Fall" keys
+    if (Object.keys(addedClasses).length > 0) {
+      // Array of scheduled class IDs
+      const scheduledClassIDs = Object.values(springSemesterSelectedClasses)
+        .concat(Object.values(fallSemesterSelectedClasses))
+        .map((classObj) => classObj.id);
+
+      // Filter out scheduled classes from added classes
+      setAddedClasses(addedClasses.filter((classObj) => !scheduledClassIDs.includes(classObj.id)));
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []); // We only want to run this once on render
+
+  // Update scheduledClasses when springSemesterSelectedClasses or fallSemesterSelectedClasses changes
+  useEffect(() => {
+    localStorage.setItem(
+      "scheduledClasses",
+      JSON.stringify({ [Semesters.S1]: springSemesterSelectedClasses, [Semesters.S2]: fallSemesterSelectedClasses })
+    );
+  }, [springSemesterSelectedClasses, fallSemesterSelectedClasses]);
 
   return (
     <DragDropContext

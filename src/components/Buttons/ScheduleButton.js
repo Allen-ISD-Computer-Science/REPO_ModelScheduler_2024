@@ -6,12 +6,12 @@ import { useDisclosure } from "@nextui-org/use-disclosure";
 import UilSchedule from "@iconscout/react-unicons/icons/uil-schedule";
 import UilExclamationTriangle from "@iconscout/react-unicons/icons/uil-exclamation-triangle";
 
-export default function ScheduleButton({ selectedClasses, ...props }) {
+export default function ScheduleButton({ addedClasses, ...props }) {
   const navigate = useNavigate();
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
 
   const handleSchedule = () => {
-    if (selectedClasses.length === 0 || selectedClasses.length < 8) {
+    if (addedClasses.length === 0 || addedClasses.length < 8) {
       onOpen(); // Show the modal
     } else {
       navigate("/scheduler");
@@ -36,7 +36,7 @@ export default function ScheduleButton({ selectedClasses, ...props }) {
                 </div>
 
                 <p className="text-center">
-                  You have selected <span className="font-bold">{selectedClasses.length}</span> classes out of{" "}
+                  You have selected <span className="font-bold">{addedClasses.length}</span> classes out of{" "}
                   <span className="font-bold">8</span> required classes. This may result in an incomplete schedule which
                   may not work during arena scheduling. Do you understand you may have an incomplete schedule if you
                   continue?
@@ -63,5 +63,5 @@ export default function ScheduleButton({ selectedClasses, ...props }) {
 import PropTypes from "prop-types";
 
 ScheduleButton.propTypes = {
-  selectedClasses: PropTypes.arrayOf(PropTypes.number).isRequired,
+  addedClasses: PropTypes.arrayOf(PropTypes.object).isRequired,
 };

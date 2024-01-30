@@ -3,49 +3,44 @@ import { Chip } from "@nextui-org/chip";
 
 import numberToOrdinal from "@/utils/numberToOrdinal";
 import ClassLocationChipColors from "@/constants/ClassLocationChipColors";
-import FireSVGRating from "@/components/Images/FireSVGRating";
+import SemesterChipColors from "@/constants/SemesterChipColors";
 
-export default function ClassCard({
-  courseName,
-  courseCode,
-  periods,
-  location,
-  totalSeats,
-  numStudents,
-  compact = false,
-  ...props
-}) {
-  const percentFull = Number((numStudents / totalSeats).toFixed(2));
-
+export default function ClassCard({ courseName, courseCode, periods, term, location, compact = false, ...props }) {
   return (
     <>
       <Card disableRipple {...props}>
         <CardBody>
           <p className="text-2xl font-bold mb-1">{courseName}</p>
 
-          <p className="absolute top-2 right-2 text-sm font-bold text-neutral-500">{courseCode}</p>
+          <p className="absolute top-1 right-1 text-sm font-bold text-neutral-500">{courseCode}</p>
 
-          <div className="flex items-center flex-wrap">
-            {/* Location */}
-            {!compact && (
+          {!compact && (
+            <div className="flex items-center flex-wrap">
+              {/* Location */}
               <Chip color={ClassLocationChipColors[location]} radius="sm" variant="bordered" className="mr-2 mb-2">
                 {location}
               </Chip>
-            )}
 
-            {/* Periods */}
-            {!compact &&
-              periods.map((period, index) => (
+              {/* Semesters */}
+              <Chip
+                radius="sm"
+                variant="bordered"
+                className="mr-2 mb-2"
+                classNames={{
+                  base: SemesterChipColors[term],
+                }}
+              >
+                {term}
+              </Chip>
+
+              {/* Periods */}
+              {periods.map((period, index) => (
                 <Chip key={index} color="default" radius="sm" variant="bordered" className="mr-2 mb-2">
                   {numberToOrdinal(period)}
                 </Chip>
               ))}
-          </div>
-
-          {/* Rating on how competitive a class is */}
-          <div className="flex flex-row justify-start">
-            <FireSVGRating percentage={percentFull} className="flex p-0.5 bg-stone-700/50 rounded" />
-          </div>
+            </div>
+          )}
         </CardBody>
       </Card>
     </>
@@ -58,8 +53,7 @@ ClassCard.propTypes = {
   courseName: PropTypes.string.isRequired,
   courseCode: PropTypes.string.isRequired,
   periods: PropTypes.arrayOf(PropTypes.number).isRequired,
+  term: PropTypes.string.isRequired,
   location: PropTypes.string.isRequired,
-  totalSeats: PropTypes.number.isRequired,
-  numStudents: PropTypes.number.isRequired,
   compact: PropTypes.bool,
 };

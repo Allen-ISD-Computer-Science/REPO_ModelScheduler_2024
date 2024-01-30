@@ -1,18 +1,18 @@
 import "./styles/index.css";
 import "./styles/tailwind.css";
 
-import React, { useState } from "react";
+import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { NextUIProvider } from "@nextui-org/react";
 
-import SelectedClassesContext from "@/context/selectedClasses";
-
 import Home from "@/pages/index";
-import Homepage from"@/pages/homepage";
+import Homepage from "@/pages/homepage";
 import Classes from "@/pages/classes";
 import Scheduler from "@/pages/scheduler";
+import Review from "@/pages/review";
 import Login from "@/pages/login";
+import Guide from "@/pages/guide";
 import reportWebVitals from "@/reportWebVitals";
 
 const router = createBrowserRouter(
@@ -20,8 +20,10 @@ const router = createBrowserRouter(
     { path: "/", element: <Home /> },
     { path: "/classes", element: <Classes /> },
     { path: "/scheduler", element: <Scheduler /> },
+    { path: "/review", element: <Review /> },
     { path: "/login", element: <Login /> },
     { path: "/home", element: <Homepage /> },
+    { path: "/guide", element: <Guide />},
   ],
   {
     basename: process.env.PUBLIC_URL ? `${process.env.PUBLIC_URL}/` : "/",
@@ -29,16 +31,12 @@ const router = createBrowserRouter(
 );
 
 const App = () => {
-  const [selectedClasses, setSelectedClasses] = useState([]);
-
   return (
     <React.StrictMode>
       <NextUIProvider>
-        <SelectedClassesContext.Provider value={{ selectedClasses, setSelectedClasses }}>
-          <main>
-            <RouterProvider router={router} />
-          </main>
-        </SelectedClassesContext.Provider>
+        <main>
+          <RouterProvider router={router} />
+        </main>
       </NextUIProvider>
     </React.StrictMode>
   );

@@ -3,11 +3,11 @@ import { VList } from "virtua";
 
 import ClassCard from "@/components/Cards/ClassCard";
 
-export default function ClassCardList({ classes, classSelected, emptyMsg, onClassSelected, ...props }) {
+export default function ClassCardList({ classes, classSelected, onClassSelected, ...props }) {
   return (
     <>
       <Card {...props}>
-        {emptyMsg ? (
+        {classes.length === 0 ? (
           <div className="flex flex-col h-full justify-center items-center p-8">
             <p className="text-2xl text-center font-bold text-neutral-200 animate-fade-down animate-ease-in-out">
               No classes added
@@ -26,11 +26,10 @@ export default function ClassCardList({ classes, classSelected, emptyMsg, onClas
                   courseName={classObj.courseName}
                   courseCode={classObj.courseCode}
                   periods={classObj.periods}
+                  term={classObj.term}
                   location={classObj.location}
-                  totalSeats={Object.values(classObj.studentMax).reduce((sum, num) => sum + num, 0)}
-                  numStudents={Object.values(classObj.studentSelected).reduce((sum, num) => sum + num, 0)}
-                  className={`grow mx-2 mt-2 border-2 overflow-visible animate-fade animate-duration-200 hover:border-gray-500 hover:transition hover:duration-300 ${
-                    classSelected === classObj.id ? "border-stone-400" : "border-transparent"
+                  className={`grow mx-2 mt-2 border-2 border-transparent overflow-visible animate-fade animate-duration-200 hover:border-gray-500 hover:transition hover:duration-300 ${
+                    classSelected === classObj.id && "border-stone-400"
                   } ${index === classes.length - 1 && "mb-2"}`}
                   onPress={() => onClassSelected(classObj.id)}
                 />
@@ -48,6 +47,5 @@ import PropTypes from "prop-types";
 ClassCardList.propTypes = {
   classes: PropTypes.arrayOf(PropTypes.object).isRequired,
   classSelected: PropTypes.number,
-  emptyMsg: PropTypes.bool,
   onClassSelected: PropTypes.func.isRequired,
 };
