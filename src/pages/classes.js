@@ -20,6 +20,9 @@ export default function Classes() {
   const handleAddClass = (classID) => {
     setSelectedClassID(null);
 
+    // Limit to 25 classes
+    if (addedClasses.length >= 20) return; // TODO: Add modal to notify user
+
     // Get selected class object
     const selectedClass = availableClasses.find((classObj) => classObj.id === classID);
 

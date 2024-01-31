@@ -24,7 +24,8 @@ export default function DroppableClassScheduleCard({
             {...props}
             {...provided.droppableProps}
             style={{
-              border: snapshot.isDraggingOver && !disableDrag ? "2px dashed #0284c7" : "none",
+              border: snapshot.isDraggingOver && !disableDrag ? "2px dashed #0284c7" : "2px dashed transparent",
+              transition: "all 0.2s ease-in-out",
             }}
           >
             {course ? (

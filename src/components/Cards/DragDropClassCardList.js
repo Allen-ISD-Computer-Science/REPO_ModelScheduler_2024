@@ -35,6 +35,7 @@ export default function DroppableClassCardList({ droppableId, classes, ...props 
                         courseName={classObj.courseName}
                         courseCode={classObj.courseCode}
                         periods={classObj.periods}
+                        term={classObj.term}
                         location={classObj.location}
                         className="grow mx-2 mt-2 overflow-visible animate-fade animate-duration-200"
                       />
