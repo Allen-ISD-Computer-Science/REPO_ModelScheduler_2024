@@ -13,6 +13,7 @@ import Scheduler from "@/pages/scheduler";
 import Review from "@/pages/review";
 import Login from "@/pages/login";
 import Guide from "@/pages/guide";
+import Faq from "@/pages/faq";
 import reportWebVitals from "@/reportWebVitals";
 
 const router = createBrowserRouter(
@@ -24,6 +25,7 @@ const router = createBrowserRouter(
     { path: "/login", element: <Login /> },
     { path: "/home", element: <Homepage /> },
     { path: "/guide", element: <Guide />},
+    { path: "/faq", element: <Faq />},
   ],
   {
     basename: process.env.PUBLIC_URL ? `${process.env.PUBLIC_URL}/` : "/",
