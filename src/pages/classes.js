@@ -3,7 +3,8 @@ import { Button } from "@nextui-org/button";
 
 import ClassesLayout from "@/components/Layout/ClassesLayout";
 import ClassCardList from "@/components/Cards/ClassCardList";
-import { SearchBar, FilterButton, ScheduleButton } from "@/components/Buttons";
+import SearchBar from "@/components/Inputs/SearchBar";
+import { FilterButton, ScheduleButton } from "@/components/Buttons";
 
 import exampleTestClasses from "@/temp_data.json";
 
