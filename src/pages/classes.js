@@ -1,10 +1,12 @@
 import { useState, useEffect } from "react";
 import { Button } from "@nextui-org/button";
 
+import MaxClassesReachedModal from "@/components/Modals/MaxClassesReachedModal";
 import ClassesLayout from "@/components/Layout/ClassesLayout";
 import ClassCardList from "@/components/Cards/ClassCardList";
 import SearchBar from "@/components/Inputs/SearchBar";
 import { FilterButton, ScheduleButton } from "@/components/Buttons";
+import { useDisclosure } from "@nextui-org/use-disclosure";
 
 import exampleTestClasses from "@/temp_data.json";
 
@@ -15,6 +17,7 @@ export default function Classes() {
     return JSON.parse(localStorage.getItem("addedClasses")) || [];
   });
   const [availableClasses, setAvailableClasses] = useState([]);
+  const { isOpen, onOpen, onOpenChange } = useDisclosure();
 
   const handleClassSelect = (classID) => setSelectedClassID(classID === selectedClassID ? null : classID);
 
@@ -22,7 +25,10 @@ export default function Classes() {
     setSelectedClassID(null);
 
     // Limit to 25 classes
-    if (addedClasses.length >= 20) return; // TODO: Add modal to notify user
+    if (addedClasses.length >= 20) {
+      onOpen(); // Show the modal
+      return;
+    }
 
     // Get selected class object
     const selectedClass = availableClasses.find((classObj) => classObj.id === classID);
@@ -63,6 +69,9 @@ export default function Classes() {
 
   return (
     <ClassesLayout>
+      {/* Max classes reached modal */}
+      <MaxClassesReachedModal isOpen={isOpen} onOpenChange={onOpenChange} />
+
       {/* Left side (List of all classes excluding added) */}
       <div className="flex flex-col justify-center h-3/4 md:h-5/6 w-full md:w-5/12 lg:w-1/3 self-center">
         <div className="flex flex-row justify-between gap-2 mb-4">
