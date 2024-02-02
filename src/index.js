@@ -1,10 +1,11 @@
 import "./styles/index.css";
 import "./styles/tailwind.css";
 
-import React from "react";
+import React, { useEffect } from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { NextUIProvider } from "@nextui-org/react";
+import { useDisclosure } from "@nextui-org/use-disclosure";
 
 import Home from "@/pages/index";
 import Homepage from "@/pages/homepage";
@@ -16,6 +17,8 @@ import Guide from "@/pages/guide";
 import Faq from "@/pages/faq";
 import reportWebVitals from "@/reportWebVitals";
 
+import DesktopRecommendationModal from "@/components/Modals/DesktopRecommendationModal";
+
 const router = createBrowserRouter(
   [
     { path: "/", element: <Home /> },
@@ -24,8 +27,8 @@ const router = createBrowserRouter(
     { path: "/review", element: <Review /> },
     { path: "/login", element: <Login /> },
     { path: "/home", element: <Homepage /> },
-    { path: "/guide", element: <Guide />},
-    { path: "/faq", element: <Faq />},
+    { path: "/guide", element: <Guide /> },
+    { path: "/faq", element: <Faq /> },
   ],
   {
     basename: process.env.PUBLIC_URL ? `${process.env.PUBLIC_URL}/` : "/",
@@ -33,10 +36,27 @@ const router = createBrowserRouter(
 );
 
 const App = () => {
+  const { isOpen, onOpen, onOpenChange } = useDisclosure();
+
+  const isCurrentPath = (path) => {
+    return location.pathname === path;
+  };
+
+  // On initial load, if the user is on a small screen, open the warning modal
+  useEffect(() => {
+    if (
+      window.innerWidth < 768 &&
+      (isCurrentPath("/classes") || isCurrentPath("/scheduler") || isCurrentPath("/review"))
+    ) {
+      onOpen();
+    }
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
+
   return (
     <React.StrictMode>
       <NextUIProvider>
         <main>
+          <DesktopRecommendationModal isOpen={isOpen} onOpenChange={onOpenChange} />
           <RouterProvider router={router} />
         </main>
       </NextUIProvider>
