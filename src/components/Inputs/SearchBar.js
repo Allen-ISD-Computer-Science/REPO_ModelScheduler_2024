@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Input } from "@nextui-org/input";
 
-import UilSearchAlt from "@iconscout/react-unicons/icons/uil-search-alt";
+import { Icon } from "@iconify/react";
 
 export default function SearchBar({ classes, setClasses, ...props }) {
   const [searchQuery, setSearchQuery] = useState("");
@@ -25,7 +25,7 @@ export default function SearchBar({ classes, setClasses, ...props }) {
         placeholder="Search for a class"
         variant="faded"
         value={searchQuery}
-        startContent={<UilSearchAlt className="text-neutral-400" />}
+        startContent={<Icon icon="uil:search-alt" fontSize="1.25rem" className="text-neutral-400" />}
         onValueChange={onSearchQueryChange}
         {...props}
       />

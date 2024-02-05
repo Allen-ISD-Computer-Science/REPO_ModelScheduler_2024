@@ -3,7 +3,7 @@ import { Button } from "@nextui-org/button";
 import { useDisclosure } from "@nextui-org/use-disclosure";
 
 import FilterModal from "@/components/Modals/FilterModal";
-import UilFilter from "@iconscout/react-unicons/icons/uil-filter";
+import { Icon } from "@iconify/react";
 
 export default function FilterButton({ classes, setClasses, ...props }) {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
@@ -38,7 +38,7 @@ export default function FilterButton({ classes, setClasses, ...props }) {
         radius="sm"
         size="lg"
         variant="faded"
-        startContent={<UilFilter className="text-neutral-400" />}
+        startContent={<Icon icon="heroicons-outline:filter" fontSize="1.25rem" />}
         onPress={onOpen}
         {...props}
       >

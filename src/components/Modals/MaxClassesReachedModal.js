@@ -1,7 +1,7 @@
 import { Modal, ModalContent, ModalBody, ModalFooter, ModalHeader } from "@nextui-org/modal";
 import { Button } from "@nextui-org/button";
 
-import UilExclamationOctagon from "@iconscout/react-unicons/icons/uil-exclamation-octagon";
+import { Icon } from "@iconify/react";
 
 export default function MaxClassesReachedModal({ isOpen, onOpenChange }) {
   return (
@@ -14,7 +14,7 @@ export default function MaxClassesReachedModal({ isOpen, onOpenChange }) {
 
               <ModalBody>
                 <div className="flex justify-center">
-                  <UilExclamationOctagon size="3rem" className="text-red-500" />
+                  <Icon icon="ph:warning-octagon" fontSize="4rem" className="text-red-500" />
                 </div>
 
                 <p className="text-center">

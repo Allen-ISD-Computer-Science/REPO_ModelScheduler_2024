@@ -3,7 +3,7 @@ import { Button } from "@nextui-org/button";
 import { useDisclosure } from "@nextui-org/use-disclosure";
 
 import ScheduleWarningModal from "@/components/Modals/ScheduleWarningModal";
-import UilSchedule from "@iconscout/react-unicons/icons/uil-schedule";
+import { Icon } from "@iconify/react";
 
 export default function ScheduleButton({ addedClasses, ...props }) {
   const navigate = useNavigate();
@@ -19,7 +19,7 @@ export default function ScheduleButton({ addedClasses, ...props }) {
 
   return (
     <>
-      <Button startContent={<UilSchedule />} onPress={handleSchedule} {...props}>
+      <Button startContent={<Icon icon="uil:schedule" fontSize="1.25rem" />} onPress={handleSchedule} {...props}>
         Schedule
       </Button>
 

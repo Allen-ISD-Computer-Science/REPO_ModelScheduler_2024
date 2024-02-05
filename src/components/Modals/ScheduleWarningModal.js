@@ -2,7 +2,7 @@ import { useNavigate } from "react-router-dom";
 import { Modal, ModalContent, ModalBody, ModalFooter, ModalHeader } from "@nextui-org/modal";
 import { Button } from "@nextui-org/button";
 
-import UilExclamationTriangle from "@iconscout/react-unicons/icons/uil-exclamation-triangle";
+import { Icon } from "@iconify/react";
 
 export default function ScheduleWarningModal({ isOpen, onOpenChange, addedClasses }) {
   const navigate = useNavigate();
@@ -17,7 +17,7 @@ export default function ScheduleWarningModal({ isOpen, onOpenChange, addedClasse
 
               <ModalBody>
                 <div className="flex justify-center">
-                  <UilExclamationTriangle size="3rem" className="text-amber-500" />
+                  <Icon icon="ph:warning" fontSize="4rem" className="text-amber-500" />
                 </div>
 
                 <p className="text-center">
