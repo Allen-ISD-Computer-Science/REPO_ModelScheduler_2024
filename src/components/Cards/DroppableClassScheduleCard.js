@@ -6,15 +6,7 @@ import bellSchedule from "@/utils/bellSchedule";
 import numberToOrdinal from "@/utils/numberToOrdinal";
 import ClassLocationChipColors from "@/constants/ClassLocationChipColors";
 
-export default function DroppableClassScheduleCard({
-  droppableId,
-  semester,
-  course,
-  period,
-  showAHSTimes,
-  disableDrag,
-  ...props
-}) {
+export default function DroppableClassScheduleCard({ droppableId, semester, course, period, disableDrag, ...props }) {
   return (
     <>
       <Droppable droppableId={droppableId} isDropDisabled={disableDrag}>
@@ -33,12 +25,12 @@ export default function DroppableClassScheduleCard({
                 {(provided) => (
                   <div
                     ref={provided.innerRef}
-                    className="flex flex-col h-full bg-neutral-900 rounded-lg"
+                    className="h-full bg-default-50/20 rounded-lg"
                     {...provided.draggableProps}
                     {...provided.dragHandleProps}
                   >
                     {/* Course Details */}
-                    <div className="flex flex-col items-center justify-center h-full">
+                    <div className="flex flex-col h-full items-center justify-center">
                       <p className="text-center font-bold mb-1">{course.courseName}</p>
                       <div className="flex flex-row items-center justify-center">
                         <Chip
@@ -59,11 +51,6 @@ export default function DroppableClassScheduleCard({
               <div className="flex flex-col justify-center h-full">
                 <p className="text-center text-neutral-300/50 font-bold animate-fade">
                   {numberToOrdinal(period)} Period
-                </p>
-                <p className="text-center text-neutral-300/50 font-bold animate-fade">
-                  {showAHSTimes
-                    ? `AHS: ${bellSchedule(period, "AHS")}`
-                    : `STEAM: ${bellSchedule(period, "STEAM") || "N/A"}`}
                 </p>
               </div>
             )}
@@ -90,6 +77,5 @@ DroppableClassScheduleCard.propTypes = {
     location: PropTypes.string.isRequired,
   }),
   period: PropTypes.number.isRequired,
-  showAHSTimes: PropTypes.bool,
   disableDrag: PropTypes.bool,
 };

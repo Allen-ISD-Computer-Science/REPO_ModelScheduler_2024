@@ -1,15 +1,12 @@
-import { useState, useEffect } from "react";
 import { Card } from "@nextui-org/card";
 
 import DroppableClassScheduleCard from "@/components/Cards/DroppableClassScheduleCard";
 
 export default function DragDropClassSchedule({ semester, classes, unavailablePeriods, conflictPeriods }) {
-  const [showAHSTimes, setShowAHSTimes] = useState(true);
-
   const getColorFromClassAvailability = (period) => {
     if (!unavailablePeriods[semester] && !conflictPeriods[semester]) return;
-    else if (unavailablePeriods[semester]?.includes(period)) return "bg-zinc-950/25";
-    else if (conflictPeriods[semester]?.includes(period)) return "bg-red-500/25";
+    else if (unavailablePeriods[semester]?.includes(period)) return "bg-zinc-950/10";
+    else if (conflictPeriods[semester]?.includes(period)) return "bg-red-500/10";
   };
 
   const disableDragByPeriod = (period) => {
@@ -19,30 +16,17 @@ export default function DragDropClassSchedule({ semester, classes, unavailablePe
     else return false;
   };
 
-  useEffect(() => {
-    // Toggle showing AHS/STEAM times every 5 seconds
-    const interval = setInterval(() => {
-      setShowAHSTimes((prevShowAHSTimes) => !prevShowAHSTimes);
-    }, 5000);
-
-    return () => clearInterval(interval);
-  }, []);
-
   return (
     <>
       <div className="h-full grid grid-cols-2 grid-rows-12 gap-2">
         {/* Semester Header */}
-        <Card className="col-span-2 row-span-1 border-2 border-neutral-400 text-center font-bold flex items-center justify-center">
+        <Card className="col-span-2 row-span-1 border-2 border-neutral-600 bg-default-200/30 text-center font-bold justify-center">
           {semester} Semester
         </Card>
 
         {/* A/B Day Header */}
-        <Card className="col-span-1 row-span-1 bg-red-500 text-center font-bold flex items-center justify-center">
-          A Day
-        </Card>
-        <Card className="col-span-1 row-span-1 bg-blue-600 text-center font-bold flex items-center justify-center">
-          B Day
-        </Card>
+        <Card className="col-span-1 row-span-1 bg-red-500 text-center font-bold justify-center">A Day</Card>
+        <Card className="col-span-1 row-span-1 bg-blue-600 text-center font-bold justify-center">B Day</Card>
 
         {/* 1st Period */}
         <DroppableClassScheduleCard
@@ -50,9 +34,8 @@ export default function DragDropClassSchedule({ semester, classes, unavailablePe
           semester={semester}
           course={classes["1"]}
           period={1}
-          showAHSTimes={showAHSTimes}
           disableDrag={disableDragByPeriod(1)}
-          className={`col-span-2 row-span-2 ${getColorFromClassAvailability(1)}`}
+          className={`bg-default-300/25 col-span-2 row-span-2 ${getColorFromClassAvailability(1) || ""}`}
         />
 
         {/* 2nd Period */}
@@ -61,9 +44,8 @@ export default function DragDropClassSchedule({ semester, classes, unavailablePe
           semester={semester}
           course={classes["2"]}
           period={2}
-          showAHSTimes={showAHSTimes}
           disableDrag={disableDragByPeriod(2)}
-          className={`col-span-1 row-span-2 ${getColorFromClassAvailability(2)}`}
+          className={`bg-default-300/25 col-span-1 row-span-2 ${getColorFromClassAvailability(2) || ""}`}
         />
 
         {/* 5th Period */}
@@ -72,9 +54,8 @@ export default function DragDropClassSchedule({ semester, classes, unavailablePe
           semester={semester}
           course={classes["5"]}
           period={5}
-          showAHSTimes={showAHSTimes}
           disableDrag={disableDragByPeriod(5)}
-          className={`col-span-1 row-span-2 ${getColorFromClassAvailability(5)}`}
+          className={`bg-default-300/25 col-span-1 row-span-2 ${getColorFromClassAvailability(5) || ""}`}
         />
 
         {/* 3rd Period */}
@@ -83,9 +64,8 @@ export default function DragDropClassSchedule({ semester, classes, unavailablePe
           semester={semester}
           course={classes["3"]}
           period={3}
-          showAHSTimes={showAHSTimes}
           disableDrag={disableDragByPeriod(3)}
-          className={`col-span-1 row-span-2 ${getColorFromClassAvailability(3)}`}
+          className={`bg-default-300/25 col-span-1 row-span-2 ${getColorFromClassAvailability(3) || ""}`}
         />
 
         {/* 6th Period */}
@@ -94,9 +74,8 @@ export default function DragDropClassSchedule({ semester, classes, unavailablePe
           semester={semester}
           course={classes["6"]}
           period={6}
-          showAHSTimes={showAHSTimes}
           disableDrag={disableDragByPeriod(6)}
-          className={`col-span-1 row-span-2 ${getColorFromClassAvailability(6)}`}
+          className={`bg-default-300/25 col-span-1 row-span-2 ${getColorFromClassAvailability(6) || ""}`}
         />
 
         {/* 4th Period */}
@@ -105,9 +84,8 @@ export default function DragDropClassSchedule({ semester, classes, unavailablePe
           semester={semester}
           course={classes["4"]}
           period={4}
-          showAHSTimes={showAHSTimes}
           disableDrag={disableDragByPeriod(4)}
-          className={`col-span-1 row-span-2 ${getColorFromClassAvailability(4)}`}
+          className={`bg-default-300/25 col-span-1 row-span-2 ${getColorFromClassAvailability(4) || ""}`}
         />
 
         {/* 7th Period */}
@@ -116,9 +94,8 @@ export default function DragDropClassSchedule({ semester, classes, unavailablePe
           semester={semester}
           course={classes["7"]}
           period={7}
-          showAHSTimes={showAHSTimes}
           disableDrag={disableDragByPeriod(7)}
-          className={`col-span-1 row-span-2 ${getColorFromClassAvailability(7)}`}
+          className={`bg-default-300/25 col-span-1 row-span-2 ${getColorFromClassAvailability(7) || ""}`}
         />
 
         {/* 8th Period */}
@@ -127,9 +104,8 @@ export default function DragDropClassSchedule({ semester, classes, unavailablePe
           semester={semester}
           course={classes["8"]}
           period={8}
-          showAHSTimes={showAHSTimes}
           disableDrag={disableDragByPeriod(8)}
-          className={`col-span-2 row-span-2 ${getColorFromClassAvailability(8)}`}
+          className={`bg-default-300/25 col-span-2 row-span-2 ${getColorFromClassAvailability(8) || ""}`}
         />
       </div>
     </>

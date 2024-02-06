@@ -9,11 +9,11 @@ export default function ClassScheduleCard({ course, period, ...props }) {
   return (
     <>
       <Card {...props}>
-        <div className="flex flex-col h-full bg-neutral-900 rounded-lg">
+        <div className="flex flex-col h-full rounded-lg">
           {/* Course Details */}
           {course ? (
             <div className="flex flex-col items-center justify-center h-full">
-              <p className="text-center font-bold mb-1">{course.courseName}</p>
+              <p className="text-center font-bold">{course.courseName}</p>
               <div className="flex flex-row items-center justify-center">
                 <Chip size="sm" color={ClassLocationChipColors[course.location]} variant="flat" className="mr-1">
                   {course.location}
@@ -23,7 +23,7 @@ export default function ClassScheduleCard({ course, period, ...props }) {
             </div>
           ) : (
             <div className="flex flex-col items-center justify-center h-full">
-              <p className="text-center font-bold mb-1">{numberToOrdinal(period)} Period</p>
+              <p className="text-center font-bold">{numberToOrdinal(period)} Period</p>
             </div>
           )}
         </div>

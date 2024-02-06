@@ -15,7 +15,6 @@ module.exports = {
       themes: {
         dark: {
           colors: {
-            background: "#121212",
             success: "#38A169",
             danger: "#E53E3E"
           }

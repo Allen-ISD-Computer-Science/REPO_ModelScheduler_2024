@@ -108,7 +108,7 @@ export default function Scheduler() {
           <DragDropClassCardList
             droppableId="droppable-class-list"
             classes={addedClasses}
-            className="h-full bg-background/50 bg-default-100 overflow-y-auto"
+            className="h-full bg-default-100/50 overflow-y-auto"
           />
         </div>
 

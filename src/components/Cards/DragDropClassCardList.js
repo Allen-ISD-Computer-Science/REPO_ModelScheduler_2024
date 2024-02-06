@@ -25,7 +25,6 @@ export default function DroppableClassCardList({ droppableId, classes, ...props 
                     <div
                       ref={provided.innerRef}
                       key={classObj.id}
-                      className="flex"
                       {...provided.draggableProps}
                       {...provided.dragHandleProps}
                     >
@@ -37,7 +36,7 @@ export default function DroppableClassCardList({ droppableId, classes, ...props 
                         periods={classObj.periods}
                         term={classObj.term}
                         location={classObj.location}
-                        className="grow mx-2 mt-2 overflow-visible animate-fade animate-duration-200"
+                        className="grow mx-2 mt-2 bg-default-200/25 overflow-visible animate-fade animate-duration-200"
                       />
                     </div>
                   )}

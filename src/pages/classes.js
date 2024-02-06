@@ -76,13 +76,18 @@ export default function Classes() {
       <div className="flex flex-col justify-center h-3/4 md:h-5/6 w-full md:w-5/12 lg:w-1/3 self-center">
         <div className="flex flex-row justify-between gap-2 mb-4">
           {/* Search bar */}
-          <SearchBar classes={exampleTestClasses} setClasses={setClasses} className="w-2/3" />
+          <SearchBar
+            classes={exampleTestClasses}
+            setClasses={setClasses}
+            className="w-2/3"
+            classNames={{ inputWrapper: "bg-default-50/30" }}
+          />
 
           {/* Filter */}
           <FilterButton
             classes={exampleTestClasses}
             setClasses={setClasses}
-            className="self-center w-1/2 lg:w-1/3 text-neutral-400"
+            className="self-center w-1/2 lg:w-1/3 text-neutral-400 bg-default-50/30"
           />
         </div>
 
@@ -91,7 +96,7 @@ export default function Classes() {
           classes={availableClasses}
           classSelected={selectedClassID}
           onClassSelected={handleClassSelect}
-          className="h-full bg-background/50 bg-default-100 overflow-y-auto"
+          className="h-full bg-default-100/50 overflow-y-auto"
         />
       </div>
 
@@ -124,7 +129,7 @@ export default function Classes() {
           classes={addedClasses}
           classSelected={selectedClassID}
           onClassSelected={handleClassSelect}
-          className="h-full bg-background/50 bg-default-100 overflow-y-auto"
+          className="h-full bg-default-100/50 overflow-y-auto"
         />
       </div>
     </ClassesLayout>
