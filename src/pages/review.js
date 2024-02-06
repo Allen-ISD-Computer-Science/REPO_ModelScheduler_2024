@@ -1,5 +1,6 @@
 import { useState } from "react";
 
+import ReviewNavbar from "@/components/Navbars/ReviewNavbar";
 import ReviewLayout from "@/components/Layout/ReviewLayout";
 import ClassSchedule from "@/components/Cards/ClassSchedule";
 
@@ -16,16 +17,20 @@ export default function Review() {
   });
 
   return (
-    <ReviewLayout>
-      {/* Left side (Spring Semester) */}
-      <div className="h-5/6 md:h-11/12 w-5/12">
-        <ClassSchedule semester="Spring" classes={scheduledClasses[Semesters.S1]} />
-      </div>
+    <>
+      <ReviewNavbar />
 
-      {/* Right side (Fall Semester) */}
-      <div className="h-5/6 md:h-11/12 w-5/12">
-        <ClassSchedule semester="Fall" classes={scheduledClasses[Semesters.S2]} />
-      </div>
-    </ReviewLayout>
+      <ReviewLayout>
+        {/* Left side (Spring Semester) */}
+        <div className="h-5/6 md:h-11/12 w-5/12">
+          <ClassSchedule semester="Spring" classes={scheduledClasses[Semesters.S1]} />
+        </div>
+
+        {/* Right side (Fall Semester) */}
+        <div className="h-5/6 md:h-11/12 w-5/12">
+          <ClassSchedule semester="Fall" classes={scheduledClasses[Semesters.S2]} />
+        </div>
+      </ReviewLayout>
+    </>
   );
 }
