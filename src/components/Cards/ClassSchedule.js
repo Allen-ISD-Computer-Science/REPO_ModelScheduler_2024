@@ -51,7 +51,7 @@ import PropTypes from "prop-types";
 
 ClassSchedule.propTypes = {
   semester: PropTypes.string.isRequired,
-  classes: PropTypes.arrayOf(
+  classes: PropTypes.objectOf(
     PropTypes.shape({
       courseName: PropTypes.string.isRequired,
       courseCode: PropTypes.string.isRequired,

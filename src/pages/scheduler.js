@@ -11,10 +11,10 @@ export default function Scheduler() {
   const [addedClasses, setAddedClasses] = useState(() => {
     return JSON.parse(localStorage.getItem("addedClasses")) || {};
   });
-  const [springSemesterSelectedClasses, setSpringSemesterSelectedClasses] = useState(
+  const [springSemesterScheduledClasses, setSpringSemesterScheduledClasses] = useState(
     localStorage.getItem("scheduledClasses") ? JSON.parse(localStorage.getItem("scheduledClasses"))[Semesters.S1] : {}
   );
-  const [fallSemesterSelectedClasses, setFallSemesterSelectedClasses] = useState(
+  const [fallSemesterScheduledClasses, setFallSemesterScheduledClasses] = useState(
     localStorage.getItem("scheduledClasses") ? JSON.parse(localStorage.getItem("scheduledClasses"))[Semesters.S2] : {}
   );
   const [unavailablePeriods, setUnavailablePeriods] = useState({});
@@ -25,31 +25,57 @@ export default function Scheduler() {
     // If there are "Spring" and "Fall" keys
     if (Object.keys(addedClasses).length > 0) {
       // Array of scheduled class IDs
-      const scheduledClassIDs = Object.values(springSemesterSelectedClasses)
-        .concat(Object.values(fallSemesterSelectedClasses))
+      const scheduledClassIDs = Object.values(springSemesterScheduledClasses)
+        .concat(Object.values(fallSemesterScheduledClasses))
         .map((classObj) => classObj.id);
 
       // Filter out scheduled classes from added classes
       setAddedClasses(addedClasses.filter((classObj) => !scheduledClassIDs.includes(classObj.id)));
     }
+
+    const addedClassesIDs = addedClasses.map((classObj) => classObj.id);
+    const scheduledClassesIDs = [
+      ...new Set(
+        Object.values(springSemesterScheduledClasses)
+          .concat(Object.values(fallSemesterScheduledClasses))
+          .map((classObj) => classObj.id)
+      ),
+    ];
+
+    // If all elements in scheduledClassesIDs are not in addedClassesIDs
+    if (!scheduledClassesIDs.every((classID) => addedClassesIDs.includes(classID))) {
+      // Remove the offending class/classes from scheduledClasses
+      const updatedSpringSemesterScheduledClasses = Object.fromEntries(
+        Object.entries(springSemesterScheduledClasses).filter(([, classObj]) => addedClassesIDs.includes(classObj.id))
+      );
+
+      const updatedFallSemesterScheduledClasses = Object.fromEntries(
+        Object.entries(fallSemesterScheduledClasses).filter(([, classObj]) => addedClassesIDs.includes(classObj.id))
+      );
+
+      // Update scheduledClasses
+      setSpringSemesterScheduledClasses(updatedSpringSemesterScheduledClasses);
+      setFallSemesterScheduledClasses(updatedFallSemesterScheduledClasses);
+    }
+
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []); // We only want to run this once on render
 
-  // Update scheduledClasses when springSemesterSelectedClasses or fallSemesterSelectedClasses changes
+  // Update scheduledClasses when springSemesterScheduledClasses or fallSemesterScheduledClasses changes
   useEffect(() => {
     localStorage.setItem(
       "scheduledClasses",
-      JSON.stringify({ [Semesters.S1]: springSemesterSelectedClasses, [Semesters.S2]: fallSemesterSelectedClasses })
+      JSON.stringify({ [Semesters.S1]: springSemesterScheduledClasses, [Semesters.S2]: fallSemesterScheduledClasses })
     );
-  }, [springSemesterSelectedClasses, fallSemesterSelectedClasses]);
+  }, [springSemesterScheduledClasses, fallSemesterScheduledClasses]);
 
   return (
     <DragDropContext
       onDragStart={(result) =>
         onDragStart(
           result,
-          springSemesterSelectedClasses,
-          fallSemesterSelectedClasses,
+          springSemesterScheduledClasses,
+          fallSemesterScheduledClasses,
           setUnavailablePeriods,
           setConflictPeriods
         )
@@ -58,8 +84,8 @@ export default function Scheduler() {
         onDragEnd(
           result,
           setAddedClasses,
-          setSpringSemesterSelectedClasses,
-          setFallSemesterSelectedClasses,
+          setSpringSemesterScheduledClasses,
+          setFallSemesterScheduledClasses,
           setUnavailablePeriods,
           setConflictPeriods
         )
@@ -70,7 +96,7 @@ export default function Scheduler() {
         <div className="flex flex-col h-5/6 md:h-11/12 md:w-1/3">
           <DragDropClassSchedule
             semester="Spring"
-            classes={springSemesterSelectedClasses}
+            classes={springSemesterScheduledClasses}
             unavailablePeriods={unavailablePeriods}
             conflictPeriods={conflictPeriods}
           />
@@ -90,7 +116,7 @@ export default function Scheduler() {
         <div className="flex flex-col h-5/6 md:h-11/12 md:w-1/3">
           <DragDropClassSchedule
             semester="Fall"
-            classes={fallSemesterSelectedClasses}
+            classes={fallSemesterScheduledClasses}
             unavailablePeriods={unavailablePeriods}
             conflictPeriods={conflictPeriods}
           />
