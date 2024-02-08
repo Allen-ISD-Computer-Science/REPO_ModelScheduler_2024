@@ -1,11 +1,29 @@
+import React, { useState } from "react";
 import { Navbar, NavbarBrand, NavbarContent, NavbarItem } from "@nextui-org/navbar";
 import { Image } from "@nextui-org/image";
 import { Link } from "@nextui-org/link";
 import { Button } from "@nextui-org/button";
+import { Divider } from "@nextui-org/divider";
 
+import Semesters from "@/constants/Semesters";
 import { Icon } from "@iconify/react";
+import SchedulePDF from "@/components/Printables/SchedulePDF";
+
+const PDFDownloadLink = React.lazy(() => import("@react-pdf/renderer").then(module => ({ default: module.PDFDownloadLink })));
 
 export default function ReviewNavbar() {
+  const [scheduledClasses] = useState(() => {
+    return (
+      JSON.parse(localStorage.getItem("scheduledClasses")) || {
+        [Semesters.S1]: [],
+        [Semesters.S2]: [],
+      }
+    );
+  });
+
+  const combinedClasses = [...Object.values(scheduledClasses[Semesters.S1]), ...Object.values(scheduledClasses[Semesters.S2])];
+  const uniqueClasses = combinedClasses.filter((item, index, array) => array.findIndex(obj => obj.id === item.id) === index).sort((a, b) => a.periods[0] - b.periods[0]);
+
   return (
     <Navbar isBordered shouldHideOnScroll>
       <NavbarBrand>
@@ -16,7 +34,7 @@ export default function ReviewNavbar() {
       </NavbarBrand>
 
       <NavbarContent
-        className="h-11 gap-4 rounded-full border-medium border-default-200/50 bg-default-100/50 px-4 shadow-medium"
+        className="h-11 rounded-full border-medium border-default-200/50 bg-default-100/50 px-4 shadow-medium"
         justify="center"
       >
         {/* Home */}
@@ -48,12 +66,30 @@ export default function ReviewNavbar() {
         </NavbarItem>
       </NavbarContent>
 
-      <NavbarContent justify="end">
+      <NavbarContent justify="end" className="gap-0">
+        {/* Previous */}
+        <NavbarItem className="flex items-center mr-4">
+          <Icon icon="bx:bx-chevron-left" fontSize="1.25rem" />
+          <Link color="foreground" href="/scheduler">
+            Go Back
+          </Link>
+        </NavbarItem>
+
+        <Divider orientation="vertical" className="h-8 mx-1" />
+
         {/* Print */}
         <NavbarItem>
-          <Button variant="ghost" startContent={<Icon icon="uil:print" fontSize="1.25rem" />}>
-            Print
-          </Button>
+          <PDFDownloadLink document={<SchedulePDF classes={uniqueClasses} />} fileName="schedule.pdf">
+            {({ loading }) => (
+              <Button
+                variant="light"
+                isLoading={loading}
+                startContent={!loading && <Icon icon="ph:download-simple-bold" fontSize="1.25rem" />}
+              >
+                Download
+              </Button>
+            )}
+          </PDFDownloadLink>
         </NavbarItem>
       </NavbarContent>
     </Navbar>
