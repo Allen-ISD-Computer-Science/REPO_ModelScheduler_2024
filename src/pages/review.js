@@ -22,12 +22,12 @@ export default function Review() {
 
       <ReviewLayout>
         {/* Left side (Spring Semester) */}
-        <div className="h-5/6 md:h-11/12 w-5/12">
+        <div className="h-5/6 w-full">
           <ClassSchedule semester="Spring" classes={scheduledClasses[Semesters.S1]} />
         </div>
 
         {/* Right side (Fall Semester) */}
-        <div className="h-5/6 md:h-11/12 w-5/12">
+        <div className="h-5/6 w-full">
           <ClassSchedule semester="Fall" classes={scheduledClasses[Semesters.S2]} />
         </div>
       </ReviewLayout>
