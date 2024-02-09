@@ -46,8 +46,10 @@ export default function ReviewNavbar() {
       <NavbarContent>
         <NavbarMenuToggle aria-label={isMenuOpen ? "Close menu" : "Open menu"} className="md:hidden" />
         <NavbarBrand>
-          <Image src="/Logo.png" alt="Model Scheduler" width={32} height={32} className="rounded-none" />
-          <span className="font-bold test-inherit ml-2">Model Scheduler</span>
+          <Link color="foreground" href="/home">
+            <Image src="/Logo.png" alt="Model Scheduler" width={32} height={32} className="rounded-none" />
+            <span className="font-bold test-inherit ml-2">Model Scheduler</span>
+          </Link>
         </NavbarBrand>
       </NavbarContent>
 
