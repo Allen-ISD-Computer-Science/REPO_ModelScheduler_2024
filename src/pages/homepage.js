@@ -1,6 +1,5 @@
 import { HomepageLayout } from "@/components/Layout";
 import { Image } from "@nextui-org/image";
-import AllenLogo from "../components/Images/AllenISDLogo.png";
 import { Navbar, NavbarBrand, NavbarContent, NavbarItem, Link } from "@nextui-org/react";
 
 import { Button } from "@nextui-org/button";
@@ -51,7 +50,7 @@ export default function Homepage() {
       {/* Contains link to: FAQ, Classes, Scheduler(?), Feedback */}
       <HomepageLayout>
         <div className="w-full h-full absolute bottom-0 flex place-items-center flex-col space-y-10 pt-40 font-sans font-thin tracking-wide">
-          <Image src={AllenLogo} alt="AllenISD Logo" className="my-auto mx-auto" style={{ blockSize: 300 }} />
+          <Image src="/AllenISDLogo.png" alt="AllenISD Logo" className="my-auto mx-auto" style={{ blockSize: 300 }} />
 
           <div className="flex place-items-center justify-center mx-auto w-9/12 text-center rounded-lg tracking-wide">
             <Button
