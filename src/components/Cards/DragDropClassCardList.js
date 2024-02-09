@@ -15,7 +15,7 @@ export default function DroppableClassCardList({ droppableId, classes, ...props 
                   No classes added
                 </p>
                 <p className="text-md text-center text-neutral-400 animate-fade-up animate-delay-200">
-                  Go back and add some classes ya dingus
+                  Go back and add classes
                 </p>
               </div>
             ) : (
