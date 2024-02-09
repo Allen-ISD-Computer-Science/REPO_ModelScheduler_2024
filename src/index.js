@@ -12,7 +12,6 @@ import Homepage from "@/pages/homepage";
 import Classes from "@/pages/classes";
 import Scheduler from "@/pages/scheduler";
 import Review from "@/pages/review";
-import Login from "@/pages/login";
 import Guide from "@/pages/guide";
 import FAQ from "@/pages/faq";
 import reportWebVitals from "@/reportWebVitals";
@@ -25,7 +24,6 @@ const router = createBrowserRouter(
     { path: "/classes", element: <Classes /> },
     { path: "/scheduler", element: <Scheduler /> },
     { path: "/review", element: <Review /> },
-    { path: "/login", element: <Login /> },
     { path: "/home", element: <Homepage /> },
     { path: "/guide", element: <Guide /> },
     { path: "/faq", element: <FAQ /> },
