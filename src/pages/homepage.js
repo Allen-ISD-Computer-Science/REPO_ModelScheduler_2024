@@ -1,6 +1,7 @@
 import { HomepageLayout } from "@/components/Layout";
 import { Image } from "@nextui-org/image";
 import AllenLogo from "../components/Images/AllenISDLogo.png";
+import {Navbar, NavbarBrand, NavbarContent, NavbarItem, Link} from "@nextui-org/react";
 
 import { Button } from "@nextui-org/button";
 import { useNavigate } from "react-router-dom";
@@ -15,6 +16,39 @@ export default function Homepage() {
 
   return (
     <>
+
+<Navbar shouldHideOnScroll>
+      <NavbarBrand isActive>
+        <Link href="../home" aria-current="page">
+        <p className="font-bold text-inherit">AISD</p>
+        </Link>
+      </NavbarBrand>
+      <NavbarContent className="hidden sm:flex gap-4" justify="center">
+        <NavbarItem>
+          <Link color="foreground" href="../classes">
+            Classes
+          </Link>
+        </NavbarItem>
+        <NavbarItem>
+          <Link color="foreground" href="../guide">
+            Guide
+          </Link>
+        </NavbarItem>
+        <NavbarItem>
+          <Link color="foreground" href="../faq">
+            FAQ
+          </Link>
+        </NavbarItem>
+      </NavbarContent>
+      <NavbarContent justify="end">
+        <NavbarItem>
+          <Button as={Link} color="primary" href="../login" variant="flat">
+            Login
+          </Button>
+        </NavbarItem>
+      </NavbarContent>
+    </Navbar>
+
       {/* Contains link to: FAQ, Classes, Scheduler(?), Feedback */}
       <HomepageLayout>
 
