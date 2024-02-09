@@ -9,7 +9,7 @@ import Semesters from "@/constants/Semesters";
 
 export default function Scheduler() {
   const [addedClasses, setAddedClasses] = useState(() => {
-    return JSON.parse(localStorage.getItem("addedClasses")) || {};
+    return JSON.parse(localStorage.getItem("addedClasses")) || [];
   });
   const [springSemesterScheduledClasses, setSpringSemesterScheduledClasses] = useState(
     localStorage.getItem("scheduledClasses") ? JSON.parse(localStorage.getItem("scheduledClasses"))[Semesters.S1] : {}
