@@ -15,7 +15,7 @@ export default function FAQ() {
           <span className="inline-block lg:hidden">FAQs</span>
 
           {/* Desktop Heading */}
-          <h2 className="hidden bg-gradient-to-br from-foreground-800 to-foreground-200 bg-clip-text pt-4 text-5xl font-semibold text-transparent lg:inline-block">
+          <h2 className=" bg-clip-text pt-4 text-5xl font-semibold lg:inline-block">
             Frequently <br />
             Asked <br />
             Questions

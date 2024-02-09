@@ -39,11 +39,6 @@ export default function Homepage() {
           </NavbarItem>
         </NavbarContent>
         <NavbarContent justify="end">
-          <NavbarItem>
-            <Button as={Link} color="primary" href="../login" variant="flat">
-              Login
-            </Button>
-          </NavbarItem>
         </NavbarContent>
       </Navbar>
 
