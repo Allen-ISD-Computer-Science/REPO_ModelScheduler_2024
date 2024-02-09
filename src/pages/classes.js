@@ -9,6 +9,7 @@ import { FilterButton, ScheduleButton } from "@/components/Buttons";
 import { useDisclosure } from "@nextui-org/use-disclosure";
 
 import exampleTestClasses from "@/temp_data.json";
+import { DefaultNavbar } from "@/components/Navbars";
 
 export default function Classes() {
   const [classes, setClasses] = useState(exampleTestClasses);
@@ -68,7 +69,11 @@ export default function Classes() {
   }, [addedClasses]);
 
   return (
+    <>
+    <DefaultNavbar />
+
     <ClassesLayout>
+
       {/* Max classes reached modal */}
       <MaxClassesReachedModal isOpen={isOpen} onOpenChange={onOpenChange} />
 
@@ -133,5 +138,6 @@ export default function Classes() {
         />
       </div>
     </ClassesLayout>
+    </>
   );
 }

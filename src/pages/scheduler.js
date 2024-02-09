@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { DragDropContext } from "@hello-pangea/dnd";
 
 import SchedulerLayout from "@/components/Layout/SchedulerLayout";
+import { DefaultNavbar } from "@/components/Navbars";
 import { DragDropClassCardList, DragDropClassSchedule } from "@/components/Cards";
 import { onDragStart, onDragEnd } from "@/utils/onDrag";
 
@@ -70,6 +71,8 @@ export default function Scheduler() {
   }, [springSemesterScheduledClasses, fallSemesterScheduledClasses]);
 
   return (
+    <>
+    <DefaultNavbar />
     <DragDropContext
       onDragStart={(result) =>
         onDragStart(
@@ -123,5 +126,6 @@ export default function Scheduler() {
         </div>
       </SchedulerLayout>
     </DragDropContext>
+    </>
   );
 }
