@@ -1,13 +1,13 @@
 import { GuideLayout } from "@/components/Layout";
 
 const Guide = () => {
-    return (
-        <>
-        <GuideLayout>
+  return (
+    <>
+      <GuideLayout>
         <div>Guide Placeholder</div>
-        </GuideLayout>
-        </>
-    );
-}
+      </GuideLayout>
+    </>
+  );
+};
 
 export default Guide;
