@@ -28,6 +28,28 @@ const FAQ = () => {
             </div>
         </div>
 
+        <div style={{backgroundColor: "#18181B"}} className="rounded-3xl absolute w-11/12 h-3/4 bottom-16 flex place-items-center place-self-center justify-center">
+          <div style={{backgroundColor: "#27272A"}} className="rounded-3xl w-3/4 h-3/4 p-8">
+          <Accordion variant="splitted" className="space-y-6">
+            <AccordionItem key="1" title="how do I use this">
+             {"just use it"}
+            </AccordionItem>
+            <AccordionItem key="2" title="is this real scheduler">
+             {"no you goober"}
+            </AccordionItem>
+            <AccordionItem key="3" title="[Insert Question Here]">
+             {}
+            </AccordionItem>
+            <AccordionItem key="4" title="[Insert Question Here]">
+             {}
+            </AccordionItem>
+            <AccordionItem key="5" title="[Insert Question Here]">
+             {}
+            </AccordionItem>
+          </Accordion>
+          </div>
+        </div>
+
         </FaqLayout>
         </>
     );
