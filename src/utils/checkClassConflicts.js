@@ -77,53 +77,85 @@ export default function checkClassConflicts(classToCheck, schedule) {
    * 4/7 STEAM/CTC - 8 AHS
    * 4/7 STEAM/CTC - 8 LFC
    */
-  const isClass1stPeriodAHS = classToCheck.periods.includes(1) && classToCheck.location === Locations.AHS;
-  const isClass1stPeriodLFC = classToCheck.periods.includes(1) && classToCheck.location === Locations.LFC;
+  const isClass1stPeriodAHS =
+    classToCheck.department !== Departments.PRIVILEGE &&
+    classToCheck.periods.includes(1) &&
+    classToCheck.location === Locations.AHS;
+  const isClass1stPeriodLFC =
+    classToCheck.department !== Departments.PRIVILEGE &&
+    classToCheck.periods.includes(1) &&
+    classToCheck.location === Locations.LFC;
   const isClass2ndPeriodSTEAM_CTC =
+    classToCheck.department !== Departments.PRIVILEGE &&
     classToCheck.periods.includes(2) &&
     (classToCheck.location === Locations.STEAM || classToCheck.location === Locations.CTC);
   const isClass5thPeriodSTEAM_CTC =
+    classToCheck.department !== Departments.PRIVILEGE &&
     classToCheck.periods.includes(5) &&
     (classToCheck.location === Locations.STEAM || classToCheck.location === Locations.CTC);
   const isClass4thPeriodSTEAM_CTC =
+    classToCheck.department !== Departments.PRIVILEGE &&
     classToCheck.periods.includes(4) &&
     (classToCheck.location === Locations.STEAM || classToCheck.location === Locations.CTC);
   const isClass7thPeriodSTEAM_CTC =
+    classToCheck.department !== Departments.PRIVILEGE &&
     classToCheck.periods.includes(7) &&
     (classToCheck.location === Locations.STEAM || classToCheck.location === Locations.CTC);
-  const isClass8thPeriodAHS = classToCheck.periods.includes(8) && classToCheck.location === Locations.AHS;
-  const isClass8thPeriodLFC = classToCheck.periods.includes(8) && classToCheck.location === Locations.LFC;
+  const isClass8thPeriodAHS =
+    classToCheck.department !== Departments.PRIVILEGE &&
+    classToCheck.periods.includes(8) &&
+    classToCheck.location === Locations.AHS;
+  const isClass8thPeriodLFC =
+    classToCheck.department !== Departments.PRIVILEGE &&
+    classToCheck.periods.includes(8) &&
+    classToCheck.location === Locations.LFC;
   const isScheduleIn1stPeriodAHS = Object.values(schedule).some(
-    (classInSchedule) => classInSchedule.periods.includes(1) && classInSchedule.location === Locations.AHS
+    (classInSchedule) =>
+      classInSchedule.department !== Departments.PRIVILEGE &&
+      classInSchedule.periods.includes(1) &&
+      classInSchedule.location === Locations.AHS
   );
   const isScheduleIn1stPeriodLFC = Object.values(schedule).some(
-    (classInSchedule) => classInSchedule.periods.includes(1) && classInSchedule.location === Locations.LFC
+    (classInSchedule) =>
+      classInSchedule.department !== Departments.PRIVILEGE &&
+      classInSchedule.periods.includes(1) &&
+      classInSchedule.location === Locations.LFC
   );
   const isScheduleIn2ndPeriodSTEAM_CTC = Object.values(schedule).some(
     (classInSchedule) =>
+      classInSchedule.department !== Departments.PRIVILEGE &&
       classInSchedule.periods.includes(2) &&
       (classInSchedule.location === Locations.STEAM || classInSchedule.location === Locations.CTC)
   );
   const isScheduleIn5thPeriodSTEAM_CTC = Object.values(schedule).some(
     (classInSchedule) =>
+      classInSchedule.department !== Departments.PRIVILEGE &&
       classInSchedule.periods.includes(5) &&
       (classInSchedule.location === Locations.STEAM || classInSchedule.location === Locations.CTC)
   );
   const isScheduleIn4thPeriodSTEAM_CTC = Object.values(schedule).some(
     (classInSchedule) =>
+      classInSchedule.department !== Departments.PRIVILEGE &&
       classInSchedule.periods.includes(4) &&
       (classInSchedule.location === Locations.STEAM || classInSchedule.location === Locations.CTC)
   );
   const isScheduleIn7thPeriodSTEAM_CTC = Object.values(schedule).some(
     (classInSchedule) =>
+      classInSchedule.department !== Departments.PRIVILEGE &&
       classInSchedule.periods.includes(7) &&
       (classInSchedule.location === Locations.STEAM || classInSchedule.location === Locations.CTC)
   );
   const isScheduleIn8thPeriodAHS = Object.values(schedule).some(
-    (classInSchedule) => classInSchedule.periods.includes(8) && classInSchedule.location === Locations.AHS
+    (classInSchedule) =>
+      classInSchedule.department !== Departments.PRIVILEGE &&
+      classInSchedule.periods.includes(8) &&
+      classInSchedule.location === Locations.AHS
   );
   const isScheduleIn8thPeriodLFC = Object.values(schedule).some(
-    (classInSchedule) => classInSchedule.periods.includes(8) && classInSchedule.location === Locations.LFC
+    (classInSchedule) =>
+      classInSchedule.department !== Departments.PRIVILEGE &&
+      classInSchedule.periods.includes(8) &&
+      classInSchedule.location === Locations.LFC
   );
 
   // Check for AHS, STEAM, LFC, and CTC class time conflicts
