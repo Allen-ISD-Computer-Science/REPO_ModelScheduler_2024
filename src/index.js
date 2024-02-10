@@ -45,7 +45,7 @@ const App = () => {
   // Check if localStorage is outdated
   const isLocalStorageOutdated = () => {
     return version !== Versions.CLASSES_KEY;
-  }
+  };
 
   // On initial load
   useEffect(() => {
