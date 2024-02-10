@@ -1,7 +1,7 @@
 import "./styles/index.css";
 import "./styles/tailwind.css";
 
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { NextUIProvider } from "@nextui-org/react";
@@ -17,6 +17,7 @@ import FAQ from "@/pages/faq";
 import reportWebVitals from "@/reportWebVitals";
 
 import DesktopRecommendationModal from "@/components/Modals/DesktopRecommendationModal";
+import Versions from "@/constants/Versions";
 
 const router = createBrowserRouter(
   [
@@ -34,19 +35,34 @@ const router = createBrowserRouter(
 );
 
 const App = () => {
+  const [version, setVersion] = useState(localStorage.getItem("version") || undefined);
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
 
   const isCurrentPath = (path) => {
     return location.pathname === path;
   };
 
-  // On initial load, if the user is on a small screen, open the warning modal
+  // Check if localStorage is outdated
+  const isLocalStorageOutdated = () => {
+    return version !== Versions.CLASSES_KEY;
+  }
+
+  // On initial load
   useEffect(() => {
+    // If the user is on a small screen, open the warning modal
     if (
       window.innerWidth < 768 &&
       (isCurrentPath("/classes") || isCurrentPath("/scheduler") || isCurrentPath("/review"))
     ) {
       onOpen();
+    }
+
+    // If localStorage version is outdated, reset it
+    if (isLocalStorageOutdated()) {
+      localStorage.removeItem("addedClasses");
+      localStorage.removeItem("scheduledClasses");
+      localStorage.setItem("version", Versions.CLASSES_KEY);
+      setVersion(Versions.CLASSES_KEY);
     }
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
