@@ -66,7 +66,7 @@
   },
   {
     "id": 5,
-    "courseCode": "FAB20A/FAB21A/FAB22A",
+    "courseCode": "FAB21A",
     "courseName": "Wind Symphony",
     "term": "S1+S2",
     "department": "FINE ARTS",
@@ -235,7 +235,7 @@
   },
   {
     "id": 15,
-    "courseCode": "PP15SA/PP15SB",
+    "courseCode": "PP15SB",
     "courseName": "Priv Prd I 11th",
     "term": "S1+S2",
     "department": "Privilege",
@@ -252,7 +252,7 @@
   },
   {
     "id": 16,
-    "courseCode": "PP17SA/PP17SB",
+    "courseCode": "PP17SA",
     "courseName": "Priv Prd I 12th",
     "term": "S1+S2",
     "department": "Privilege",
@@ -269,7 +269,7 @@
   },
   {
     "id": 17,
-    "courseCode": "PM12AA/PM2A2A",
+    "courseCode": "PM12AA",
     "courseName": "Animation II & Lab",
     "term": "S1+S2",
     "department": "CAREER - TECHNICAL ED",
@@ -402,7 +402,7 @@
   },
   {
     "id": 25,
-    "courseCode": "PP16SA/PP16SB",
+    "courseCode": "PP16SB",
     "courseName": "Priv Prd II 11th",
     "term": "S1+S2",
     "department": "Privilege",
@@ -595,6 +595,23 @@
   },
   {
     "id": 38,
+    "courseCode": "SS3GVC",
+    "courseName": "AP Government",
+    "term": "S2",
+    "department": "SOCIAL STUDIES",
+    "periods": [
+      1,
+      2,
+      3,
+      5,
+      6,
+      8
+    ],
+    "doubleBlockPeriod": null,
+    "location": "AHS"
+  },
+  {
+    "id": 39,
     "courseCode": "SC1PHA",
     "courseName": "Physics",
     "term": "S1+S2",
@@ -613,7 +630,7 @@
     "location": "AHS"
   },
   {
-    "id": 39,
+    "id": 40,
     "courseCode": "MA3CBA",
     "courseName": "AP Calculus BC",
     "term": "S1+S2",
@@ -630,7 +647,7 @@
     "location": "AHS"
   },
   {
-    "id": 40,
+    "id": 41,
     "courseCode": "SS3ECC",
     "courseName": "AP Macroeconomics",
     "term": "S2",
@@ -647,7 +664,7 @@
     "location": "AHS"
   },
   {
-    "id": 41,
+    "id": 42,
     "courseCode": "CO1Y1A",
     "courseName": "Advanced Journalism Yearbook",
     "term": "S1+S2",
@@ -659,7 +676,7 @@
     "location": "AHS"
   },
   {
-    "id": 42,
+    "id": 43,
     "courseCode": "SC5BSA",
     "courseName": "DC Biology I Science Majors",
     "term": "S1",
@@ -673,7 +690,7 @@
     "location": "CTC"
   },
   {
-    "id": 43,
+    "id": 44,
     "courseCode": "MA1STA",
     "courseName": "Statistics",
     "term": "S1+S2",
@@ -691,7 +708,7 @@
     "location": "STEAM"
   },
   {
-    "id": 44,
+    "id": 45,
     "courseCode": "FL1S3A",
     "courseName": "Spanish III",
     "term": "S1+S2",
@@ -704,7 +721,7 @@
     "location": "AHS"
   },
   {
-    "id": 45,
+    "id": 46,
     "courseCode": "SS5PYC",
     "courseName": "DC General Psychology",
     "term": "S1",
@@ -723,7 +740,7 @@
     "location": "CTC"
   },
   {
-    "id": 46,
+    "id": 47,
     "courseCode": "LY9E2A",
     "courseName": "English II Applied",
     "term": "S1+S2",
@@ -735,7 +752,7 @@
     "location": "AHS"
   },
   {
-    "id": 47,
+    "id": 48,
     "courseCode": "FL2C1A",
     "courseName": "Chinese I Advanced",
     "term": "S1+S2",
@@ -748,7 +765,7 @@
     "location": "AHS"
   },
   {
-    "id": 48,
+    "id": 49,
     "courseCode": "EL9BSA",
     "courseName": "Study Skills BASIC",
     "term": "S1+S2",
@@ -761,7 +778,7 @@
     "location": "AHS"
   },
   {
-    "id": 49,
+    "id": 50,
     "courseCode": "FAB60A",
     "courseName": "Concert I Band 10th",
     "term": "S1+S2",
@@ -773,7 +790,7 @@
     "location": "AHS"
   },
   {
-    "id": 50,
+    "id": 51,
     "courseCode": "MA1PCA",
     "courseName": "Pre-Calculus",
     "term": "S1+S2",
@@ -792,8 +809,8 @@
     "location": "AHS"
   },
   {
-    "id": 51,
-    "courseCode": "FC1PCA/FC3PCA",
+    "id": 52,
+    "courseCode": "FC1PCA",
     "courseName": "Practicum in Culinary Arts I",
     "term": "S1+S2",
     "department": "CAREER - TECHNICAL ED",
@@ -808,8 +825,8 @@
     "location": "AHS"
   },
   {
-    "id": 52,
-    "courseCode": "PP19SA/PP19SB",
+    "id": 53,
+    "courseCode": "PP19SB",
     "courseName": "Priv Prd III 12th",
     "term": "S1+S2",
     "department": "Privilege",
@@ -823,7 +840,7 @@
     "location": "AHS"
   },
   {
-    "id": 53,
+    "id": 54,
     "courseCode": "SS3UHA",
     "courseName": "AP US History",
     "term": "S1+S2",
@@ -842,7 +859,7 @@
     "location": "AHS"
   },
   {
-    "id": 54,
+    "id": 55,
     "courseCode": "FACT2A",
     "courseName": "Treble Choir 2",
     "term": "S1+S2",
@@ -854,7 +871,7 @@
     "location": "AHS"
   },
   {
-    "id": 55,
+    "id": 56,
     "courseCode": "FA1J0A",
     "courseName": "Jazz Band 10",
     "term": "S1+S2",
@@ -866,8 +883,8 @@
     "location": "AHS"
   },
   {
-    "id": 56,
-    "courseCode": "TA1R1A/TA2R1A",
+    "id": 57,
+    "courseCode": "TA2R1A",
     "courseName": "Robotics I",
     "term": "S1+S2",
     "department": "STEAM",
@@ -880,7 +897,7 @@
     "location": "STEAM"
   },
   {
-    "id": 57,
+    "id": 58,
     "courseCode": "SS1FEC",
     "courseName": "Personal Financial Lit/Econom",
     "term": "S2",
@@ -897,7 +914,7 @@
     "location": "AHS"
   },
   {
-    "id": 58,
+    "id": 59,
     "courseCode": "FL1S2A",
     "courseName": "Spanish II",
     "term": "S1+S2",
@@ -916,8 +933,8 @@
     "location": "AHS"
   },
   {
-    "id": 59,
-    "courseCode": "PE1LFA/PE9LFA",
+    "id": 60,
+    "courseCode": "PE9LFA",
     "courseName": "Lifetime Fitness & Wellness",
     "term": "S1+S2",
     "department": "PHYSICAL ED/HEALTH",
@@ -929,7 +946,7 @@
     "location": "AHS"
   },
   {
-    "id": 60,
+    "id": 61,
     "courseCode": "FA1D3A",
     "courseName": "Dance III",
     "term": "S1+S2",
@@ -942,7 +959,7 @@
     "location": "AHS"
   },
   {
-    "id": 61,
+    "id": 62,
     "courseCode": "SS5ECC",
     "courseName": "DC Principles of Microeco",
     "term": "S1",
@@ -953,14 +970,13 @@
       3,
       4,
       5,
-      6,
-      7
+      6
     ],
     "doubleBlockPeriod": null,
     "location": "CTC"
   },
   {
-    "id": 62,
+    "id": 63,
     "courseCode": "BM1ACA",
     "courseName": "Accounting I",
     "term": "S1+S2",
@@ -974,7 +990,7 @@
     "location": "AHS"
   },
   {
-    "id": 63,
+    "id": 64,
     "courseCode": "LA9R2A",
     "courseName": "Reading II",
     "term": "S1+S2",
@@ -988,7 +1004,7 @@
     "location": "AHS"
   },
   {
-    "id": 64,
+    "id": 65,
     "courseCode": "LX9E4A",
     "courseName": "English IV ESSENTIAL",
     "term": "S1+S2",
@@ -1001,7 +1017,7 @@
     "location": "AHS"
   },
   {
-    "id": 65,
+    "id": 66,
     "courseCode": "FA1AEA",
     "courseName": "Art II Digital Art & Media I",
     "term": "S1+S2",
@@ -1014,8 +1030,8 @@
     "location": "AHS"
   },
   {
-    "id": 66,
-    "courseCode": "PM12GA/PM2G2A",
+    "id": 67,
+    "courseCode": "PM12GA",
     "courseName": "Graphic Design II & Lab",
     "term": "S1+S2",
     "department": "STEAM",
@@ -1027,7 +1043,25 @@
     "location": "STEAM"
   },
   {
-    "id": 67,
+    "id": 68,
+    "courseCode": "SS1GVC",
+    "courseName": "US Government",
+    "term": "S2",
+    "department": "SOCIAL STUDIES",
+    "periods": [
+      1,
+      2,
+      3,
+      5,
+      6,
+      7,
+      8
+    ],
+    "doubleBlockPeriod": null,
+    "location": "AHS"
+  },
+  {
+    "id": 69,
     "courseCode": "SC5BSB",
     "courseName": "DC Biology II Science Majors",
     "term": "S2",
@@ -1041,7 +1075,7 @@
     "location": "CTC"
   },
   {
-    "id": 68,
+    "id": 70,
     "courseCode": "SS5GVC",
     "courseName": "DC American Government",
     "term": "S1",
@@ -1050,7 +1084,6 @@
       1,
       2,
       3,
-      4,
       5,
       6,
       7
@@ -1059,7 +1092,7 @@
     "location": "CTC"
   },
   {
-    "id": 69,
+    "id": 71,
     "courseCode": "SY9FUA",
     "courseName": "US History Fundamentals",
     "term": "S1+S2",
@@ -1073,8 +1106,8 @@
     "location": "AHS"
   },
   {
-    "id": 70,
-    "courseCode": "LW1PLA/LW3PLA",
+    "id": 72,
+    "courseCode": "LW1PLA",
     "courseName": "PraLawPubSafeCorSec I",
     "term": "S1+S2",
     "department": "CAREER - TECHNICAL ED",
@@ -1088,7 +1121,7 @@
     "location": "AHS"
   },
   {
-    "id": 71,
+    "id": 73,
     "courseCode": "MA2PCA",
     "courseName": "Pre-Calculus Advanced",
     "term": "S1+S2",
@@ -1107,7 +1140,7 @@
     "location": "AHS"
   },
   {
-    "id": 72,
+    "id": 74,
     "courseCode": "MA1ARA",
     "courseName": "Algebraic Reasoning",
     "term": "S1+S2",
@@ -1121,7 +1154,7 @@
     "location": "AHS"
   },
   {
-    "id": 73,
+    "id": 75,
     "courseCode": "SC5ESA",
     "courseName": "DC Environmental Systems",
     "term": "S1",
@@ -1135,7 +1168,7 @@
     "location": "CTC"
   },
   {
-    "id": 74,
+    "id": 76,
     "courseCode": "TCNS1A",
     "courseName": "DC Certified Nurse Aide",
     "term": "S1+S2",
@@ -1149,21 +1182,20 @@
     "location": "CTC"
   },
   {
-    "id": 75,
+    "id": 77,
     "courseCode": "BM1SEC",
     "courseName": "Sports Entertainment Marketing",
     "term": "S1",
     "department": "CAREER - TECHNICAL ED",
     "periods": [
       4,
-      7,
-      8
+      7
     ],
     "doubleBlockPeriod": null,
     "location": "AHS"
   },
   {
-    "id": 76,
+    "id": 78,
     "courseCode": "LA5E3A",
     "courseName": "DC Composition English 3F",
     "term": "S1+S2",
@@ -1182,7 +1214,24 @@
     "location": "CTC"
   },
   {
-    "id": 77,
+    "id": 79,
+    "courseCode": "SS3ECC",
+    "courseName": "AP Macroeconomics",
+    "term": "S1",
+    "department": "SOCIAL STUDIES",
+    "periods": [
+      1,
+      2,
+      3,
+      5,
+      6,
+      8
+    ],
+    "doubleBlockPeriod": null,
+    "location": "AHS"
+  },
+  {
+    "id": 80,
     "courseCode": "FAB51A",
     "courseName": "Symphonic III Band 11th",
     "term": "S1+S2",
@@ -1194,8 +1243,8 @@
     "location": "AHS"
   },
   {
-    "id": 78,
-    "courseCode": "PP18SA/PP18SB",
+    "id": 81,
+    "courseCode": "PP18SB",
     "courseName": "Priv Prd II 12th",
     "term": "S1+S2",
     "department": "Privilege",
@@ -1211,7 +1260,7 @@
     "location": "AHS"
   },
   {
-    "id": 79,
+    "id": 82,
     "courseCode": "MA2GEA",
     "courseName": "Geometry Advanced",
     "term": "S1+S2",
@@ -1227,7 +1276,7 @@
     "location": "AHS"
   },
   {
-    "id": 80,
+    "id": 83,
     "courseCode": "SC1ASA",
     "courseName": "Astronomy",
     "term": "S1+S2",
@@ -1240,7 +1289,7 @@
     "location": "STEAM"
   },
   {
-    "id": 81,
+    "id": 84,
     "courseCode": "IBSH2A",
     "courseName": "IB Spanish Higher Level YR2",
     "term": "S1+S2",
@@ -1255,7 +1304,7 @@
     "location": "AHS"
   },
   {
-    "id": 82,
+    "id": 85,
     "courseCode": "HS1PHA",
     "courseName": "Principles of Health Science",
     "term": "S1+S2",
@@ -1272,7 +1321,7 @@
     "location": "AHS"
   },
   {
-    "id": 83,
+    "id": 86,
     "courseCode": "EL9LNC",
     "courseName": "Lifetime Nutrition & Wellness",
     "term": "S1",
@@ -1285,7 +1334,7 @@
     "location": "AHS"
   },
   {
-    "id": 84,
+    "id": 87,
     "courseCode": "EL9V1A",
     "courseName": "Vocational Experience I",
     "term": "S1+S2",
@@ -1302,7 +1351,7 @@
     "location": "AHS"
   },
   {
-    "id": 85,
+    "id": 88,
     "courseCode": "SC2APA",
     "courseName": "Anatomy-Physiology Human Sys",
     "term": "S1+S2",
@@ -1319,7 +1368,7 @@
     "location": "AHS"
   },
   {
-    "id": 86,
+    "id": 89,
     "courseCode": "PE2R3A",
     "courseName": "JROTC Leadership 3",
     "term": "S1+S2",
@@ -1334,7 +1383,7 @@
     "location": "AHS"
   },
   {
-    "id": 87,
+    "id": 90,
     "courseCode": "BM1FIA",
     "courseName": "Financial Mathematics",
     "term": "S1+S2",
@@ -1352,7 +1401,7 @@
     "location": "AHS"
   },
   {
-    "id": 88,
+    "id": 91,
     "courseCode": "LA2E2A",
     "courseName": "English II Advanced",
     "term": "S1+S2",
@@ -1370,7 +1419,7 @@
     "location": "AHS"
   },
   {
-    "id": 89,
+    "id": 92,
     "courseCode": "SL1L4A",
     "courseName": "Peer Leadership 4",
     "term": "S1+S2",
@@ -1386,7 +1435,7 @@
     "location": "AHS"
   },
   {
-    "id": 90,
+    "id": 93,
     "courseCode": "HS2PYA",
     "courseName": "Pathophysiology",
     "term": "S1+S2",
@@ -1400,7 +1449,7 @@
     "location": "AHS"
   },
   {
-    "id": 91,
+    "id": 94,
     "courseCode": "SS9GAC",
     "courseName": "Government Applied",
     "term": "S1+S2",
@@ -1413,7 +1462,7 @@
     "location": "AHS"
   },
   {
-    "id": 92,
+    "id": 95,
     "courseCode": "BM9DSC",
     "courseName": "Dollars & Sense",
     "term": "S1",
@@ -1426,7 +1475,7 @@
     "location": "AHS"
   },
   {
-    "id": 93,
+    "id": 96,
     "courseCode": "SY9FWA",
     "courseName": "World History Fundamentals",
     "term": "S1+S2",
@@ -1440,7 +1489,7 @@
     "location": "AHS"
   },
   {
-    "id": 94,
+    "id": 97,
     "courseCode": "MA9A4A",
     "courseName": "Math IV APPLIED",
     "term": "S1+S2",
@@ -1453,7 +1502,7 @@
     "location": "AHS"
   },
   {
-    "id": 95,
+    "id": 98,
     "courseCode": "SS5UHC",
     "courseName": "DC US History I",
     "term": "S1",
@@ -1472,7 +1521,7 @@
     "location": "CTC"
   },
   {
-    "id": 96,
+    "id": 99,
     "courseCode": "PE1WTA",
     "courseName": "Lifetime Fit & Well Cardio Wgt",
     "term": "S1+S2",
@@ -1489,21 +1538,20 @@
     "location": "AHS"
   },
   {
-    "id": 97,
+    "id": 100,
     "courseCode": "BM1ADC",
     "courseName": "Advertising",
     "term": "S2",
     "department": "CAREER - TECHNICAL ED",
     "periods": [
       3,
-      4,
-      5
+      4
     ],
     "doubleBlockPeriod": null,
     "location": "AHS"
   },
   {
-    "id": 98,
+    "id": 101,
     "courseCode": "HS1MTA",
     "courseName": "Medical Terminology",
     "term": "S1+S2",
@@ -1522,7 +1570,7 @@
     "location": "AHS"
   },
   {
-    "id": 99,
+    "id": 102,
     "courseCode": "SL1L1A",
     "courseName": "Peer Leadership 1",
     "term": "S1+S2",
@@ -1538,7 +1586,7 @@
     "location": "AHS"
   },
   {
-    "id": 100,
+    "id": 103,
     "courseCode": "MA5CAA",
     "courseName": "DC College Algebra",
     "term": "S1",
@@ -1553,7 +1601,7 @@
     "location": "CTC"
   },
   {
-    "id": 101,
+    "id": 104,
     "courseCode": "AG1SDA",
     "courseName": "Agricultrual Structure DesFab",
     "term": "S1+S2",
@@ -1565,7 +1613,7 @@
     "location": "AHS"
   },
   {
-    "id": 102,
+    "id": 105,
     "courseCode": "SS5SCC",
     "courseName": "DC Introduction to Sociology",
     "term": "S1",
@@ -1584,7 +1632,7 @@
     "location": "CTC"
   },
   {
-    "id": 103,
+    "id": 106,
     "courseCode": "FL3S4A",
     "courseName": "AP Spanish IV",
     "term": "S1+S2",
@@ -1597,7 +1645,7 @@
     "location": "AHS"
   },
   {
-    "id": 104,
+    "id": 107,
     "courseCode": "MA3CAA",
     "courseName": "AP Calculus AB",
     "term": "S1+S2",
@@ -1615,7 +1663,7 @@
     "location": "AHS"
   },
   {
-    "id": 105,
+    "id": 108,
     "courseCode": "FA2DRA",
     "courseName": "Art II Drawing Advanced",
     "term": "S1+S2",
@@ -1627,7 +1675,7 @@
     "location": "AHS"
   },
   {
-    "id": 106,
+    "id": 109,
     "courseCode": "IBM1SA",
     "courseName": "IB Math Analysis SL YR1",
     "term": "S1+S2",
@@ -1640,7 +1688,7 @@
     "location": "AHS"
   },
   {
-    "id": 107,
+    "id": 110,
     "courseCode": "BM1LWA",
     "courseName": "Business Law",
     "term": "S1+S2",
@@ -1653,7 +1701,7 @@
     "location": "AHS"
   },
   {
-    "id": 108,
+    "id": 111,
     "courseCode": "SC1ENA",
     "courseName": "Environmental Systems",
     "term": "S1+S2",
@@ -1669,7 +1717,7 @@
     "location": "STEAM"
   },
   {
-    "id": 109,
+    "id": 112,
     "courseCode": "PESG3A",
     "courseName": "Girls Soccer 3 Fall",
     "term": "S1+S2",
@@ -1681,7 +1729,7 @@
     "location": "AHS"
   },
   {
-    "id": 110,
+    "id": 113,
     "courseCode": "EL1SAC",
     "courseName": "SAT/ACT Test Prep Class",
     "term": "S1",
@@ -1693,7 +1741,7 @@
     "location": "AHS"
   },
   {
-    "id": 111,
+    "id": 114,
     "courseCode": "FA2A1A",
     "courseName": "Art I Advanced",
     "term": "S1+S2",
@@ -1707,7 +1755,7 @@
     "location": "AHS"
   },
   {
-    "id": 112,
+    "id": 115,
     "courseCode": "PEFB3A",
     "courseName": "Football 3 Fall",
     "term": "S1+S2",
@@ -1719,7 +1767,7 @@
     "location": "AHS"
   },
   {
-    "id": 113,
+    "id": 116,
     "courseCode": "SS1PYC",
     "courseName": "Psychology",
     "term": "S2",
@@ -1734,7 +1782,7 @@
     "location": "AHS"
   },
   {
-    "id": 114,
+    "id": 117,
     "courseCode": "LA3E4A",
     "courseName": "AP English IV",
     "term": "S1+S2",
@@ -1751,7 +1799,7 @@
     "location": "AHS"
   },
   {
-    "id": 115,
+    "id": 118,
     "courseCode": "SC1CHA",
     "courseName": "Chemistry",
     "term": "S1+S2",
@@ -1769,7 +1817,7 @@
     "location": "AHS"
   },
   {
-    "id": 116,
+    "id": 119,
     "courseCode": "SL1L3A",
     "courseName": "Peer Leadership 3",
     "term": "S1+S2",
@@ -1786,7 +1834,7 @@
     "location": "AHS"
   },
   {
-    "id": 117,
+    "id": 120,
     "courseCode": "FAB50A",
     "courseName": "Symphonic III Band 10th",
     "term": "S1+S2",
@@ -1798,7 +1846,7 @@
     "location": "AHS"
   },
   {
-    "id": 118,
+    "id": 121,
     "courseCode": "SL1PPA",
     "courseName": "Peer Partnering I",
     "term": "S1",
@@ -1817,7 +1865,7 @@
     "location": "AHS"
   },
   {
-    "id": 119,
+    "id": 122,
     "courseCode": "AG1FNA",
     "courseName": "Prin Agric, Food, Natural Res",
     "term": "S1+S2",
@@ -1831,7 +1879,22 @@
     "location": "AHS"
   },
   {
-    "id": 120,
+    "id": 123,
+    "courseCode": "SS1SCC",
+    "courseName": "Sociology",
+    "term": "S1",
+    "department": "SOCIAL STUDIES",
+    "periods": [
+      4,
+      5,
+      7,
+      8
+    ],
+    "doubleBlockPeriod": null,
+    "location": "AHS"
+  },
+  {
+    "id": 124,
     "courseCode": "LY9E4A",
     "courseName": "English IV Applied",
     "term": "S1+S2",
@@ -1843,7 +1906,7 @@
     "location": "AHS"
   },
   {
-    "id": 121,
+    "id": 125,
     "courseCode": "FA1ADA",
     "courseName": "Art II Drawing",
     "term": "S1+S2",
@@ -1857,7 +1920,7 @@
     "location": "AHS"
   },
   {
-    "id": 122,
+    "id": 126,
     "courseCode": "EL9GEA",
     "courseName": "General Employability Skills",
     "term": "S1+S2",
@@ -1876,7 +1939,7 @@
     "location": "AHS"
   },
   {
-    "id": 123,
+    "id": 127,
     "courseCode": "SS1WGA",
     "courseName": "World Geography",
     "term": "S1+S2",
@@ -1889,7 +1952,7 @@
     "location": "AHS"
   },
   {
-    "id": 124,
+    "id": 128,
     "courseCode": "LA3E3A",
     "courseName": "AP English III",
     "term": "S1+S2",
@@ -1907,8 +1970,8 @@
     "location": "AHS"
   },
   {
-    "id": 125,
-    "courseCode": "FABP0A/FABP1A",
+    "id": 129,
+    "courseCode": "FABP1A",
     "courseName": "Percussion",
     "term": "S1+S2",
     "department": "FINE ARTS",
@@ -1920,8 +1983,8 @@
     "location": "AHS"
   },
   {
-    "id": 126,
-    "courseCode": "FC1CLA/FC2CAA",
+    "id": 130,
+    "courseCode": "FC2CAA",
     "courseName": "Culinary Arts",
     "term": "S1+S2",
     "department": "CAREER - TECHNICAL ED",
@@ -1936,7 +1999,7 @@
     "location": "AHS"
   },
   {
-    "id": 127,
+    "id": 131,
     "courseCode": "FL2SSA",
     "courseName": "Spanish III  Native Spkr  Adv",
     "term": "S1+S2",
@@ -1949,7 +2012,7 @@
     "location": "AHS"
   },
   {
-    "id": 128,
+    "id": 132,
     "courseCode": "IBM1HA",
     "courseName": "IB Math Analysis HL YR1",
     "term": "S1+S2",
@@ -1966,7 +2029,7 @@
     "location": "AHS"
   },
   {
-    "id": 129,
+    "id": 133,
     "courseCode": "FA1ACA",
     "courseName": "Art II Ceramics",
     "term": "S1+S2",
@@ -1981,7 +2044,7 @@
     "location": "AHS"
   },
   {
-    "id": 130,
+    "id": 134,
     "courseCode": "SL1L2A",
     "courseName": "Peer Leadership 2",
     "term": "S1+S2",
@@ -1998,7 +2061,7 @@
     "location": "AHS"
   },
   {
-    "id": 131,
+    "id": 135,
     "courseCode": "TA2DMA",
     "courseName": "DiscreteMath-Computer Science",
     "term": "S1+S2",
@@ -2011,7 +2074,7 @@
     "location": "STEAM"
   },
   {
-    "id": 132,
+    "id": 136,
     "courseCode": "SL6SCA",
     "courseName": "Office Aide",
     "term": "S1+S2",
@@ -2030,7 +2093,7 @@
     "location": "AHS"
   },
   {
-    "id": 133,
+    "id": 137,
     "courseCode": "IBLA1A",
     "courseName": "IB Language Studies YR1",
     "term": "S1+S2",
@@ -2043,7 +2106,7 @@
     "location": "AHS"
   },
   {
-    "id": 134,
+    "id": 138,
     "courseCode": "IBBSLA",
     "courseName": "IB Biology Standard Level",
     "term": "S1+S2",
@@ -2055,7 +2118,7 @@
     "location": "AHS"
   },
   {
-    "id": 135,
+    "id": 139,
     "courseCode": "LY92EA",
     "courseName": "English II FUNDAMENTAL",
     "term": "S1+S2",
@@ -2071,7 +2134,24 @@
     "location": "AHS"
   },
   {
-    "id": 136,
+    "id": 140,
+    "courseCode": "SS1FEC",
+    "courseName": "Personal Financial Lit/Econom",
+    "term": "S1",
+    "department": "SOCIAL STUDIES",
+    "periods": [
+      2,
+      3,
+      5,
+      6,
+      7,
+      8
+    ],
+    "doubleBlockPeriod": null,
+    "location": "AHS"
+  },
+  {
+    "id": 141,
     "courseCode": "TA2S3A",
     "courseName": "Computer Science III",
     "term": "S1+S2",
@@ -2086,7 +2166,7 @@
     "location": "STEAM"
   },
   {
-    "id": 137,
+    "id": 142,
     "courseCode": "LA2G2A",
     "courseName": "English II  Advanced GTPhoenix",
     "term": "S1+S2",
@@ -2103,7 +2183,7 @@
     "location": "AHS"
   },
   {
-    "id": 138,
+    "id": 143,
     "courseCode": "BM5PCC",
     "courseName": "DC Prof Communications",
     "term": "S1",
@@ -2116,8 +2196,8 @@
     "location": "CTC"
   },
   {
-    "id": 139,
-    "courseCode": "PP10SA/PP10SB",
+    "id": 144,
+    "courseCode": "PP10SA",
     "courseName": "Priv Prd I 10th",
     "term": "S1+S2",
     "department": "Privilege",
@@ -2133,8 +2213,8 @@
     "location": "AHS"
   },
   {
-    "id": 140,
-    "courseCode": "TA2MRA/TA3PMA",
+    "id": 145,
+    "courseCode": "TA2MRA",
     "courseName": "Practicum Manufacture Robotics",
     "term": "S1+S2",
     "department": "STEAM",
@@ -2146,7 +2226,7 @@
     "location": "STEAM"
   },
   {
-    "id": 141,
+    "id": 146,
     "courseCode": "LA5E4A",
     "courseName": "DC Composition English 4",
     "term": "S1+S2",
@@ -2165,21 +2245,19 @@
     "location": "CTC"
   },
   {
-    "id": 142,
+    "id": 147,
     "courseCode": "EL9C2C",
     "courseName": "Making Connections II",
     "term": "S2",
     "department": "SPECIAL EDUCATION",
     "periods": [
-      1,
-      2,
-      3
+      2
     ],
     "doubleBlockPeriod": null,
     "location": "AHS"
   },
   {
-    "id": 143,
+    "id": 148,
     "courseCode": "HS2PNA",
     "courseName": "Pharmacy 1",
     "term": "S1+S2",
@@ -2192,7 +2270,7 @@
     "location": "AHS"
   },
   {
-    "id": 144,
+    "id": 149,
     "courseCode": "FA1J1A",
     "courseName": "Jazz Band 11",
     "term": "S1+S2",
@@ -2204,7 +2282,7 @@
     "location": "AHS"
   },
   {
-    "id": 145,
+    "id": 150,
     "courseCode": "SS8GVC",
     "courseName": "US Government ELL SH",
     "term": "S1",
@@ -2216,7 +2294,7 @@
     "location": "AHS"
   },
   {
-    "id": 146,
+    "id": 151,
     "courseCode": "BM1C1A",
     "courseName": "Career Preparation I",
     "term": "S1+S2",
@@ -2228,7 +2306,7 @@
     "location": "AHS"
   },
   {
-    "id": 147,
+    "id": 152,
     "courseCode": "MX9ARA",
     "courseName": "Algebraic Reasoning ESS",
     "term": "S1+S2",
@@ -2242,7 +2320,7 @@
     "location": "AHS"
   },
   {
-    "id": 148,
+    "id": 153,
     "courseCode": "LA3G4A",
     "courseName": "AP-GT English IV Phoenix",
     "term": "S1+S2",
@@ -2258,7 +2336,26 @@
     "location": "AHS"
   },
   {
-    "id": 149,
+    "id": 154,
+    "courseCode": "SS5PYC",
+    "courseName": "DC General Psychology",
+    "term": "S2",
+    "department": "DUAL CREDIT - NON STAFFED",
+    "periods": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "doubleBlockPeriod": null,
+    "location": "CTC"
+  },
+  {
+    "id": 155,
     "courseCode": "PERO2A",
     "courseName": "JROTC 2",
     "term": "S1+S2",
@@ -2273,7 +2370,7 @@
     "location": "AHS"
   },
   {
-    "id": 150,
+    "id": 156,
     "courseCode": "FA1T3A",
     "courseName": "Theater Arts III",
     "term": "S1+S2",
@@ -2286,7 +2383,7 @@
     "location": "AHS"
   },
   {
-    "id": 151,
+    "id": 157,
     "courseCode": "LA1PJA",
     "courseName": "Photojournalism",
     "term": "S1+S2",
@@ -2299,7 +2396,7 @@
     "location": "AHS"
   },
   {
-    "id": 152,
+    "id": 158,
     "courseCode": "FATP2A",
     "courseName": "Theatre Production II",
     "term": "S1+S2",
@@ -2311,7 +2408,7 @@
     "location": "AHS"
   },
   {
-    "id": 153,
+    "id": 159,
     "courseCode": "BM9MMA",
     "courseName": "Money Matters",
     "term": "S1",
@@ -2323,7 +2420,7 @@
     "location": "AHS"
   },
   {
-    "id": 154,
+    "id": 160,
     "courseCode": "PM1A1A",
     "courseName": "Animation I",
     "term": "S1+S2",
@@ -2336,7 +2433,7 @@
     "location": "AHS"
   },
   {
-    "id": 155,
+    "id": 161,
     "courseCode": "IBSS1A",
     "courseName": "IB Spanish Standard Level YR1",
     "term": "S1+S2",
@@ -2351,7 +2448,7 @@
     "location": "AHS"
   },
   {
-    "id": 156,
+    "id": 162,
     "courseCode": "PEGL4A",
     "courseName": "Golf 4 Fall",
     "term": "S1+S2",
@@ -2364,7 +2461,7 @@
     "location": "AHS"
   },
   {
-    "id": 157,
+    "id": 163,
     "courseCode": "MA9F3A",
     "courseName": "Math Models FUNDAMENTAL",
     "term": "S1+S2",
@@ -2379,7 +2476,7 @@
     "location": "AHS"
   },
   {
-    "id": 158,
+    "id": 164,
     "courseCode": "SC3PBA",
     "courseName": "AP Physics 1",
     "term": "S1+S2",
@@ -2397,7 +2494,7 @@
     "location": "STEAM"
   },
   {
-    "id": 159,
+    "id": 165,
     "courseCode": "FA1A1A",
     "courseName": "Art I",
     "term": "S1+S2",
@@ -2416,7 +2513,7 @@
     "location": "AHS"
   },
   {
-    "id": 160,
+    "id": 166,
     "courseCode": "AG1FLA",
     "courseName": "Floral Design",
     "term": "S1+S2",
@@ -2432,7 +2529,7 @@
     "location": "AHS"
   },
   {
-    "id": 161,
+    "id": 167,
     "courseCode": "SC5ASA",
     "courseName": "DC Astronomy",
     "term": "S1",
@@ -2451,8 +2548,8 @@
     "location": "CTC"
   },
   {
-    "id": 162,
-    "courseCode": "PM12VA/PM2V2A",
+    "id": 168,
+    "courseCode": "PM12VA",
     "courseName": "Audio/Video Pro II & Lab",
     "term": "S1+S2",
     "department": "CAREER - TECHNICAL ED",
@@ -2463,8 +2560,8 @@
     "location": "AHS"
   },
   {
-    "id": 163,
-    "courseCode": "FAB10A/FAB11A/FAB12A",
+    "id": 169,
+    "courseCode": "FAB10A",
     "courseName": "Wind Ensemble",
     "term": "S1+S2",
     "department": "FINE ARTS",
@@ -2475,7 +2572,7 @@
     "location": "AHS"
   },
   {
-    "id": 164,
+    "id": 170,
     "courseCode": "SC2PHA",
     "courseName": "Physics Advanced",
     "term": "S1+S2",
@@ -2494,7 +2591,7 @@
     "location": "AHS"
   },
   {
-    "id": 165,
+    "id": 171,
     "courseCode": "IBM2SA",
     "courseName": "IB Math Analysis SL YR2",
     "term": "S1+S2",
@@ -2507,7 +2604,7 @@
     "location": "AHS"
   },
   {
-    "id": 166,
+    "id": 172,
     "courseCode": "SC1PCA",
     "courseName": "Integrated Physics-Chemistry",
     "term": "S1+S2",
@@ -2524,7 +2621,7 @@
     "location": "AHS"
   },
   {
-    "id": 167,
+    "id": 173,
     "courseCode": "PEFB2A",
     "courseName": "Football 2 Fall",
     "term": "S1+S2",
@@ -2536,7 +2633,7 @@
     "location": "AHS"
   },
   {
-    "id": 168,
+    "id": 174,
     "courseCode": "SC3P2A",
     "courseName": "AP Physics 2",
     "term": "S1+S2",
@@ -2549,7 +2646,7 @@
     "location": "STEAM"
   },
   {
-    "id": 169,
+    "id": 175,
     "courseCode": "FA3AHA",
     "courseName": "AP Art History",
     "term": "S1+S2",
@@ -2564,7 +2661,7 @@
     "location": "AHS"
   },
   {
-    "id": 170,
+    "id": 176,
     "courseCode": "FL3F4A",
     "courseName": "AP French IV",
     "term": "S1+S2",
@@ -2576,7 +2673,21 @@
     "location": "AHS"
   },
   {
-    "id": 171,
+    "id": 177,
+    "courseCode": "EL9C2C",
+    "courseName": "Making Connections II",
+    "term": "S1",
+    "department": "SPECIAL EDUCATION",
+    "periods": [
+      1,
+      2,
+      3
+    ],
+    "doubleBlockPeriod": null,
+    "location": "AHS"
+  },
+  {
+    "id": 178,
     "courseCode": "FAB61A",
     "courseName": "Concert I Band 11th",
     "term": "S1+S2",
@@ -2588,7 +2699,7 @@
     "location": "AHS"
   },
   {
-    "id": 172,
+    "id": 179,
     "courseCode": "LA9R1A",
     "courseName": "Reading I",
     "term": "S1+S2",
@@ -2602,7 +2713,7 @@
     "location": "AHS"
   },
   {
-    "id": 173,
+    "id": 180,
     "courseCode": "FL2S3A",
     "courseName": "Spanish III Advanced",
     "term": "S1+S2",
@@ -2619,7 +2730,7 @@
     "location": "AHS"
   },
   {
-    "id": 174,
+    "id": 181,
     "courseCode": "SLPP2B",
     "courseName": "Peer Partnering II",
     "term": "S1",
@@ -2638,7 +2749,7 @@
     "location": "AHS"
   },
   {
-    "id": 175,
+    "id": 182,
     "courseCode": "LA8E2A",
     "courseName": "English II ESL",
     "term": "S1+S2",
@@ -2651,8 +2762,8 @@
     "location": "AHS"
   },
   {
-    "id": 176,
-    "courseCode": "PE1SPA/PE9SPA",
+    "id": 183,
+    "courseCode": "PE1SPA",
     "courseName": "Lifetime SkillBased Activities",
     "term": "S1+S2",
     "department": "PHYSICAL ED/HEALTH",
@@ -2667,7 +2778,7 @@
     "location": "AHS"
   },
   {
-    "id": 177,
+    "id": 184,
     "courseCode": "FL1S1A",
     "courseName": "Spanish I",
     "term": "S1+S2",
@@ -2682,7 +2793,7 @@
     "location": "AHS"
   },
   {
-    "id": 178,
+    "id": 185,
     "courseCode": "FACC2A",
     "courseName": "Chorale Choir 2",
     "term": "S1+S2",
@@ -2694,7 +2805,7 @@
     "location": "AHS"
   },
   {
-    "id": 179,
+    "id": 186,
     "courseCode": "SC3CHA",
     "courseName": "AP Chemistry",
     "term": "S1+S2",
@@ -2708,7 +2819,24 @@
     "location": "AHS"
   },
   {
-    "id": 180,
+    "id": 187,
+    "courseCode": "SS5ECC",
+    "courseName": "DC Principles of Microeco",
+    "term": "S2",
+    "department": "DUAL CREDIT - NON STAFFED",
+    "periods": [
+      1,
+      2,
+      3,
+      5,
+      6,
+      7
+    ],
+    "doubleBlockPeriod": null,
+    "location": "CTC"
+  },
+  {
+    "id": 188,
     "courseCode": "LY94EA",
     "courseName": "English IV FUNDAMENTAL",
     "term": "S1+S2",
@@ -2724,7 +2852,7 @@
     "location": "AHS"
   },
   {
-    "id": 181,
+    "id": 189,
     "courseCode": "SS9EAC",
     "courseName": "Economics Applied",
     "term": "S1+S2",
@@ -2737,7 +2865,7 @@
     "location": "AHS"
   },
   {
-    "id": 182,
+    "id": 190,
     "courseCode": "HS2PTA",
     "courseName": "Prac/Hlt/Sci-Pharmacy Tech",
     "term": "S1+S2",
@@ -2752,7 +2880,24 @@
     "location": "AHS"
   },
   {
-    "id": 183,
+    "id": 191,
+    "courseCode": "SS5SCC",
+    "courseName": "DC Introduction to Sociology",
+    "term": "S2",
+    "department": "DUAL CREDIT - NON STAFFED",
+    "periods": [
+      1,
+      3,
+      5,
+      6,
+      7,
+      8
+    ],
+    "doubleBlockPeriod": null,
+    "location": "CTC"
+  },
+  {
+    "id": 192,
     "courseCode": "SL1LDA",
     "courseName": "Student Leadership Dev I",
     "term": "S1+S2",
@@ -2764,7 +2909,7 @@
     "location": "AHS"
   },
   {
-    "id": 184,
+    "id": 193,
     "courseCode": "PM1ANA",
     "courseName": "Practicum in Animation",
     "term": "S1+S2",
@@ -2777,7 +2922,7 @@
     "location": "AHS"
   },
   {
-    "id": 185,
+    "id": 194,
     "courseCode": "TA1TIA",
     "courseName": "Prin of Information Technology",
     "term": "S1+S2",
@@ -2789,7 +2934,7 @@
     "location": "AHS"
   },
   {
-    "id": 186,
+    "id": 195,
     "courseCode": "MA5ISA",
     "courseName": "DC Independent Study Math",
     "term": "S1+S2",
@@ -2801,7 +2946,7 @@
     "location": "CTC"
   },
   {
-    "id": 187,
+    "id": 196,
     "courseCode": "SC9F4A",
     "courseName": "Aquatic Science Fundamental",
     "term": "S1+S2",
@@ -2813,7 +2958,7 @@
     "location": "AHS"
   },
   {
-    "id": 188,
+    "id": 197,
     "courseCode": "MA2A2A",
     "courseName": "Algebra II Advanced",
     "term": "S1+S2",
@@ -2831,7 +2976,7 @@
     "location": "AHS"
   },
   {
-    "id": 189,
+    "id": 198,
     "courseCode": "FL1A2A",
     "courseName": "American Sign Language II",
     "term": "S1+S2",
@@ -2850,7 +2995,7 @@
     "location": "AHS"
   },
   {
-    "id": 190,
+    "id": 199,
     "courseCode": "PM1G1A",
     "courseName": "Graphic Design Illustration I",
     "term": "S1+S2",
@@ -2863,7 +3008,7 @@
     "location": "STEAM"
   },
   {
-    "id": 191,
+    "id": 200,
     "courseCode": "EL9C3C",
     "courseName": "Making Connections III",
     "term": "S1",
@@ -2876,7 +3021,7 @@
     "location": "AHS"
   },
   {
-    "id": 192,
+    "id": 201,
     "courseCode": "SC9PIA",
     "courseName": "Integrated Physics/Chem FUN",
     "term": "S1+S2",
@@ -2889,7 +3034,7 @@
     "location": "AHS"
   },
   {
-    "id": 193,
+    "id": 202,
     "courseCode": "CY9B3A",
     "courseName": "Environmental Systems Applied",
     "term": "S1+S2",
@@ -2902,7 +3047,7 @@
     "location": "AHS"
   },
   {
-    "id": 194,
+    "id": 203,
     "courseCode": "AM2OPA",
     "courseName": "Advance Music Orchestra 10th",
     "term": "S1+S2",
@@ -2915,7 +3060,7 @@
     "location": "AHS"
   },
   {
-    "id": 195,
+    "id": 204,
     "courseCode": "AG2VMA",
     "courseName": "Veterinary Medical Application",
     "term": "S1+S2",
@@ -2928,7 +3073,7 @@
     "location": "AHS"
   },
   {
-    "id": 196,
+    "id": 205,
     "courseCode": "SY9WHA",
     "courseName": "World Hist APP",
     "term": "S1+S2",
@@ -2941,22 +3086,20 @@
     "location": "AHS"
   },
   {
-    "id": 197,
+    "id": 206,
     "courseCode": "FL3SSB",
     "courseName": "Spanish IV Native Spkr AP",
     "term": "S2",
     "department": "FOREIGN LANGUAGE",
     "periods": [
-      3,
       4,
-      6,
-      7
+      6
     ],
     "doubleBlockPeriod": null,
     "location": "AHS"
   },
   {
-    "id": 198,
+    "id": 207,
     "courseCode": "PETG2A",
     "courseName": "Girls Track 2 Fall",
     "term": "S1+S2",
@@ -2968,7 +3111,7 @@
     "location": "AHS"
   },
   {
-    "id": 199,
+    "id": 208,
     "courseCode": "PE1SWA",
     "courseName": "Swimming Team Fall",
     "term": "S1+S2",
@@ -2982,7 +3125,7 @@
     "location": "AHS"
   },
   {
-    "id": 200,
+    "id": 209,
     "courseCode": "FA1J9A",
     "courseName": "Jazz Band 09",
     "term": "S1+S2",
@@ -2994,7 +3137,7 @@
     "location": "AHS"
   },
   {
-    "id": 201,
+    "id": 210,
     "courseCode": "PE2R4A",
     "courseName": "JROTC Leadership 4",
     "term": "S1+S2",
@@ -3009,7 +3152,7 @@
     "location": "AHS"
   },
   {
-    "id": 202,
+    "id": 211,
     "courseCode": "LW1PPA",
     "courseName": "Prin/Law,PubSafe,Correct,Secur",
     "term": "S1+S2",
@@ -3022,7 +3165,7 @@
     "location": "AHS"
   },
   {
-    "id": 203,
+    "id": 212,
     "courseCode": "PETN3A",
     "courseName": "Tennis 3 Fall",
     "term": "S1+S2",
@@ -3035,7 +3178,7 @@
     "location": "AHS"
   },
   {
-    "id": 204,
+    "id": 213,
     "courseCode": "IBCSLA",
     "courseName": "IB Chemistry Standard Level",
     "term": "S1+S2",
@@ -3048,7 +3191,7 @@
     "location": "AHS"
   },
   {
-    "id": 205,
+    "id": 214,
     "courseCode": "CO1N2A",
     "courseName": "Advanced Journalism News 2",
     "term": "S1+S2",
@@ -3060,7 +3203,7 @@
     "location": "AHS"
   },
   {
-    "id": 206,
+    "id": 215,
     "courseCode": "TA2S1A",
     "courseName": "Computer Science I",
     "term": "S1+S2",
@@ -3077,7 +3220,7 @@
     "location": "AHS"
   },
   {
-    "id": 207,
+    "id": 216,
     "courseCode": "IBMSLA",
     "courseName": "IB Music Standard Level",
     "term": "S1+S2",
@@ -3089,7 +3232,7 @@
     "location": "AHS"
   },
   {
-    "id": 208,
+    "id": 217,
     "courseCode": "FA1M4A",
     "courseName": "Art IV Digital Art & Media III",
     "term": "S1+S2",
@@ -3101,7 +3244,7 @@
     "location": "AHS"
   },
   {
-    "id": 209,
+    "id": 218,
     "courseCode": "AG2PAA",
     "courseName": "Prac Ag-Veterinary Med",
     "term": "S1+S2",
@@ -3113,7 +3256,7 @@
     "location": "AHS"
   },
   {
-    "id": 210,
+    "id": 219,
     "courseCode": "FL1A4A",
     "courseName": "American Sign Language IV",
     "term": "S1+S2",
@@ -3125,7 +3268,7 @@
     "location": "AHS"
   },
   {
-    "id": 211,
+    "id": 220,
     "courseCode": "SS1ECC",
     "courseName": "Economics-Emphasis on Free Ent",
     "term": "S2",
@@ -3138,7 +3281,7 @@
     "location": "AHS"
   },
   {
-    "id": 212,
+    "id": 221,
     "courseCode": "PEDV2A",
     "courseName": "Diving 2 Fall",
     "term": "S1+S2",
@@ -3150,7 +3293,7 @@
     "location": "AHS"
   },
   {
-    "id": 213,
+    "id": 222,
     "courseCode": "IBFH1A",
     "courseName": "IB French Higher Level YR1",
     "term": "S1+S2",
@@ -3162,7 +3305,7 @@
     "location": "AHS"
   },
   {
-    "id": 214,
+    "id": 223,
     "courseCode": "IBTK1A",
     "courseName": "IB Intro Theory Knowledge JR",
     "term": "S1+S2",
@@ -3175,7 +3318,7 @@
     "location": "AHS"
   },
   {
-    "id": 215,
+    "id": 224,
     "courseCode": "FACT3A",
     "courseName": "Treble Choir 3",
     "term": "S1+S2",
@@ -3187,7 +3330,7 @@
     "location": "AHS"
   },
   {
-    "id": 216,
+    "id": 225,
     "courseCode": "AM3OSA",
     "courseName": "Advance Music Orchestra 12th",
     "term": "S1+S2",
@@ -3204,7 +3347,7 @@
     "location": "AHS"
   },
   {
-    "id": 217,
+    "id": 226,
     "courseCode": "FAO30A",
     "courseName": "Sinfonia Orchestra I 10",
     "term": "S1+S2",
@@ -3216,8 +3359,8 @@
     "location": "AHS"
   },
   {
-    "id": 218,
-    "courseCode": "AG2PFA/AG3PFA",
+    "id": 227,
+    "courseCode": "AG2PFA",
     "courseName": "Prac-Ag-Floral Design I",
     "term": "S1+S2",
     "department": "CAREER - TECHNICAL ED",
@@ -3228,7 +3371,7 @@
     "location": "AHS"
   },
   {
-    "id": 219,
+    "id": 228,
     "courseCode": "CX9CHA",
     "courseName": "Chemistry Essentials",
     "term": "S1+S2",
@@ -3240,7 +3383,7 @@
     "location": "AHS"
   },
   {
-    "id": 220,
+    "id": 229,
     "courseCode": "FCPC2A",
     "courseName": "Prac Culinary Art 2",
     "term": "S1+S2",
@@ -3256,7 +3399,7 @@
     "location": "AHS"
   },
   {
-    "id": 221,
+    "id": 230,
     "courseCode": "BM1BFC",
     "courseName": "Banking and Financial Services",
     "term": "S2",
@@ -3268,7 +3411,7 @@
     "location": "AHS"
   },
   {
-    "id": 222,
+    "id": 231,
     "courseCode": "CO1Y2A",
     "courseName": "Advanced Journalism Yearbook 2",
     "term": "S1+S2",
@@ -3280,7 +3423,7 @@
     "location": "AHS"
   },
   {
-    "id": 223,
+    "id": 232,
     "courseCode": "CX1AQA",
     "courseName": "Aquatic Science Modified",
     "term": "S1+S2",
@@ -3294,7 +3437,7 @@
     "location": "STEAM"
   },
   {
-    "id": 224,
+    "id": 233,
     "courseCode": "FL2S2A",
     "courseName": "Spanish II Advanced",
     "term": "S1+S2",
@@ -3309,7 +3452,7 @@
     "location": "AHS"
   },
   {
-    "id": 225,
+    "id": 234,
     "courseCode": "BM5ACB",
     "courseName": "DC Prin Managerial Accounting",
     "term": "S2",
@@ -3321,7 +3464,7 @@
     "location": "CTC"
   },
   {
-    "id": 226,
+    "id": 235,
     "courseCode": "TA2STA",
     "courseName": "Practicum in STEM",
     "term": "S1+S2",
@@ -3334,7 +3477,7 @@
     "location": "STEAM"
   },
   {
-    "id": 227,
+    "id": 236,
     "courseCode": "FA1AJA",
     "courseName": "Art II Jewelry",
     "term": "S1+S2",
@@ -3349,7 +3492,7 @@
     "location": "AHS"
   },
   {
-    "id": 228,
+    "id": 237,
     "courseCode": "PERO1A",
     "courseName": "JROTC 1",
     "term": "S1+S2",
@@ -3364,7 +3507,7 @@
     "location": "AHS"
   },
   {
-    "id": 229,
+    "id": 238,
     "courseCode": "FL1A3A",
     "courseName": "American Sign Language III",
     "term": "S1+S2",
@@ -3376,7 +3519,7 @@
     "location": "AHS"
   },
   {
-    "id": 230,
+    "id": 239,
     "courseCode": "FACT4A",
     "courseName": "Treble Choir 4",
     "term": "S1+S2",
@@ -3388,7 +3531,7 @@
     "location": "AHS"
   },
   {
-    "id": 231,
+    "id": 240,
     "courseCode": "IBLG1A",
     "courseName": "IB GT Language Studies YR1",
     "term": "S1+S2",
@@ -3401,7 +3544,7 @@
     "location": "AHS"
   },
   {
-    "id": 232,
+    "id": 241,
     "courseCode": "IBAHLA",
     "courseName": "IB Art Higher Level YR2",
     "term": "S1+S2",
@@ -3413,7 +3556,7 @@
     "location": "AHS"
   },
   {
-    "id": 233,
+    "id": 242,
     "courseCode": "PEDV3A",
     "courseName": "Diving 3 Fall",
     "term": "S1+S2",
@@ -3425,7 +3568,7 @@
     "location": "AHS"
   },
   {
-    "id": 234,
+    "id": 243,
     "courseCode": "TA1EAA",
     "courseName": "AC/DC Electronics",
     "term": "S1+S2",
@@ -3437,7 +3580,7 @@
     "location": "STEAM"
   },
   {
-    "id": 235,
+    "id": 244,
     "courseCode": "SC9F3A",
     "courseName": "Environmental Systems Fund",
     "term": "S1+S2",
@@ -3450,7 +3593,7 @@
     "location": "AHS"
   },
   {
-    "id": 236,
+    "id": 245,
     "courseCode": "LA5WLC",
     "courseName": "DC World Literature I",
     "term": "S1",
@@ -3468,7 +3611,7 @@
     "location": "CTC"
   },
   {
-    "id": 237,
+    "id": 246,
     "courseCode": "FA1J3A",
     "courseName": "Art III Jewelry",
     "term": "S1+S2",
@@ -3480,7 +3623,7 @@
     "location": "AHS"
   },
   {
-    "id": 238,
+    "id": 247,
     "courseCode": "IBAS1A",
     "courseName": "IB Art Standard Level YR1",
     "term": "S1+S2",
@@ -3492,7 +3635,7 @@
     "location": "AHS"
   },
   {
-    "id": 239,
+    "id": 248,
     "courseCode": "SS9GFC",
     "courseName": "Government Fundamental",
     "term": "S1+S2",
@@ -3506,7 +3649,7 @@
     "location": "AHS"
   },
   {
-    "id": 240,
+    "id": 249,
     "courseCode": "PM1ATA",
     "courseName": "Prin/Art/Vid/Tech and Comm",
     "term": "S1+S2",
@@ -3520,7 +3663,7 @@
     "location": "AHS"
   },
   {
-    "id": 241,
+    "id": 250,
     "courseCode": "FACE3A",
     "courseName": "Eagle Select 3",
     "term": "S1+S2",
@@ -3532,7 +3675,7 @@
     "location": "AHS"
   },
   {
-    "id": 242,
+    "id": 251,
     "courseCode": "FA3DRA",
     "courseName": "AP Art Drawing Portfolio",
     "term": "S1+S2",
@@ -3545,7 +3688,7 @@
     "location": "AHS"
   },
   {
-    "id": 243,
+    "id": 252,
     "courseCode": "PEBL4A",
     "courseName": "Baseball 4 Fall",
     "term": "S1+S2",
@@ -3558,7 +3701,7 @@
     "location": "AHS"
   },
   {
-    "id": 244,
+    "id": 253,
     "courseCode": "LA3G3A",
     "courseName": "AP-GT English III Phoenix",
     "term": "S1+S2",
@@ -3575,7 +3718,7 @@
     "location": "AHS"
   },
   {
-    "id": 245,
+    "id": 254,
     "courseCode": "LY9E3A",
     "courseName": "English III Applied",
     "term": "S1+S2",
@@ -3587,7 +3730,7 @@
     "location": "AHS"
   },
   {
-    "id": 246,
+    "id": 255,
     "courseCode": "SC1ESA",
     "courseName": "Earth and Space Science",
     "term": "S1+S2",
@@ -3601,7 +3744,7 @@
     "location": "STEAM"
   },
   {
-    "id": 247,
+    "id": 256,
     "courseCode": "LX9E2A",
     "courseName": "English II ESSENTIAL",
     "term": "S1+S2",
@@ -3615,7 +3758,7 @@
     "location": "AHS"
   },
   {
-    "id": 248,
+    "id": 257,
     "courseCode": "SS8EWA",
     "courseName": "World History ESL",
     "term": "S1+S2",
@@ -3628,7 +3771,7 @@
     "location": "AHS"
   },
   {
-    "id": 249,
+    "id": 258,
     "courseCode": "BM1I1A",
     "courseName": "Business Information Mgt I",
     "term": "S1+S2",
@@ -3642,7 +3785,7 @@
     "location": "AHS"
   },
   {
-    "id": 250,
+    "id": 259,
     "courseCode": "FA1TPA",
     "courseName": "Theatre Production I",
     "term": "S1+S2",
@@ -3655,7 +3798,7 @@
     "location": "AHS"
   },
   {
-    "id": 251,
+    "id": 260,
     "courseCode": "LX9E3A",
     "courseName": "English III ESSENTIAL",
     "term": "S1+S2",
@@ -3669,7 +3812,7 @@
     "location": "AHS"
   },
   {
-    "id": 252,
+    "id": 261,
     "courseCode": "CO1N1A",
     "courseName": "Advanced Journalism News",
     "term": "S1+S2",
@@ -3681,7 +3824,7 @@
     "location": "AHS"
   },
   {
-    "id": 253,
+    "id": 262,
     "courseCode": "FA1P4A",
     "courseName": "Art IV Painting",
     "term": "S1+S2",
@@ -3693,7 +3836,7 @@
     "location": "AHS"
   },
   {
-    "id": 254,
+    "id": 263,
     "courseCode": "FC1PEA",
     "courseName": "Prin/Education and Training",
     "term": "S1+S2",
@@ -3706,7 +3849,7 @@
     "location": "AHS"
   },
   {
-    "id": 255,
+    "id": 264,
     "courseCode": "SS5U2C",
     "courseName": "DC US History II",
     "term": "S2",
@@ -3725,7 +3868,7 @@
     "location": "CTC"
   },
   {
-    "id": 256,
+    "id": 265,
     "courseCode": "LA8E3A",
     "courseName": "English III ESL",
     "term": "S1+S2",
@@ -3738,7 +3881,7 @@
     "location": "AHS"
   },
   {
-    "id": 257,
+    "id": 266,
     "courseCode": "PERO3A",
     "courseName": "JROTC 3",
     "term": "S1+S2",
@@ -3752,7 +3895,22 @@
     "location": "AHS"
   },
   {
-    "id": 258,
+    "id": 267,
+    "courseCode": "SS1PYC",
+    "courseName": "Psychology",
+    "term": "S1",
+    "department": "SOCIAL STUDIES",
+    "periods": [
+      4,
+      5,
+      7,
+      8
+    ],
+    "doubleBlockPeriod": null,
+    "location": "AHS"
+  },
+  {
+    "id": 268,
     "courseCode": "MA2CUA",
     "courseName": "Calculus",
     "term": "S1+S2",
@@ -3768,7 +3926,7 @@
     "location": "AHS"
   },
   {
-    "id": 259,
+    "id": 269,
     "courseCode": "SS9EFC",
     "courseName": "Economics Fundamental",
     "term": "S1+S2",
@@ -3782,7 +3940,7 @@
     "location": "AHS"
   },
   {
-    "id": 260,
+    "id": 270,
     "courseCode": "IBCH2A",
     "courseName": "IB Chemistry Higher Level YR2",
     "term": "S1+S2",
@@ -3794,7 +3952,7 @@
     "location": "AHS"
   },
   {
-    "id": 261,
+    "id": 271,
     "courseCode": "TA1A1A",
     "courseName": "Architectural Design I",
     "term": "S1+S2",
@@ -3807,8 +3965,8 @@
     "location": "STEAM"
   },
   {
-    "id": 262,
-    "courseCode": "TA1CMA/TA2CMA",
+    "id": 272,
+    "courseCode": "TA1CMA",
     "courseName": "Computer Maintenance",
     "term": "S1+S2",
     "department": "STEAM",
@@ -3820,7 +3978,7 @@
     "location": "STEAM"
   },
   {
-    "id": 263,
+    "id": 273,
     "courseCode": "LA8R3A",
     "courseName": "Reading III ESL",
     "term": "S1+S2",
@@ -3832,7 +3990,7 @@
     "location": "AHS"
   },
   {
-    "id": 264,
+    "id": 274,
     "courseCode": "TA1APA",
     "courseName": "Prin of Architecture",
     "term": "S1+S2",
@@ -3844,7 +4002,7 @@
     "location": "AHS"
   },
   {
-    "id": 265,
+    "id": 275,
     "courseCode": "PEBL3A",
     "courseName": "Baseball 3 Fall",
     "term": "S1+S2",
@@ -3857,7 +4015,7 @@
     "location": "AHS"
   },
   {
-    "id": 266,
+    "id": 276,
     "courseCode": "MA9F4A",
     "courseName": "Math IV FUNDAMENTAL",
     "term": "S1+S2",
@@ -3871,8 +4029,8 @@
     "location": "AHS"
   },
   {
-    "id": 267,
-    "courseCode": "FAB30A/FAB31A",
+    "id": 277,
+    "courseCode": "FAB31A",
     "courseName": "Symphonic I Band",
     "term": "S1+S2",
     "department": "FINE ARTS",
@@ -3883,7 +4041,7 @@
     "location": "AHS"
   },
   {
-    "id": 268,
+    "id": 278,
     "courseCode": "SL6CUA",
     "courseName": "Credit Union TX Aide",
     "term": "S1+S2",
@@ -3900,7 +4058,7 @@
     "location": "AHS"
   },
   {
-    "id": 269,
+    "id": 279,
     "courseCode": "FA1T1A",
     "courseName": "Theater Arts I",
     "term": "S1+S2",
@@ -3913,7 +4071,7 @@
     "location": "AHS"
   },
   {
-    "id": 270,
+    "id": 280,
     "courseCode": "EL9V2A",
     "courseName": "Vocational  Experience II",
     "term": "S1+S2",
@@ -3928,7 +4086,7 @@
     "location": "AHS"
   },
   {
-    "id": 271,
+    "id": 281,
     "courseCode": "SC3BIA",
     "courseName": "AP Biology",
     "term": "S1+S2",
@@ -3945,7 +4103,7 @@
     "location": "AHS"
   },
   {
-    "id": 272,
+    "id": 282,
     "courseCode": "IBCH1A",
     "courseName": "IB Chemistry Higher Level YR1",
     "term": "S1+S2",
@@ -3958,7 +4116,24 @@
     "location": "AHS"
   },
   {
-    "id": 273,
+    "id": 283,
+    "courseCode": "SS5GVC",
+    "courseName": "DC American Government",
+    "term": "S2",
+    "department": "DUAL CREDIT - NON STAFFED",
+    "periods": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "doubleBlockPeriod": null,
+    "location": "CTC"
+  },
+  {
+    "id": 284,
     "courseCode": "TA1ESA",
     "courseName": "Technologies E Sports I",
     "term": "S1+S2",
@@ -3971,7 +4146,7 @@
     "location": "AHS"
   },
   {
-    "id": 274,
+    "id": 285,
     "courseCode": "FA5APC",
     "courseName": "DC Art I Art Appreciation",
     "term": "S2",
@@ -3984,7 +4159,7 @@
     "location": "CTC"
   },
   {
-    "id": 275,
+    "id": 286,
     "courseCode": "SC3PMA",
     "courseName": "AP Physics C Mechanics",
     "term": "S1+S2",
@@ -3998,7 +4173,7 @@
     "location": "AHS"
   },
   {
-    "id": 276,
+    "id": 287,
     "courseCode": "FL2C3A",
     "courseName": "Chinese III Advanced",
     "term": "S1+S2",
@@ -4010,7 +4185,7 @@
     "location": "AHS"
   },
   {
-    "id": 277,
+    "id": 288,
     "courseCode": "FATS2A",
     "courseName": "Treble Select 2",
     "term": "S1+S2",
@@ -4022,7 +4197,7 @@
     "location": "AHS"
   },
   {
-    "id": 278,
+    "id": 289,
     "courseCode": "EL9CNC",
     "courseName": "Making Connection I",
     "term": "S1",
@@ -4036,7 +4211,7 @@
     "location": "AHS"
   },
   {
-    "id": 279,
+    "id": 290,
     "courseCode": "SC1BIA",
     "courseName": "Biology",
     "term": "S1+S2",
@@ -4048,7 +4223,7 @@
     "location": "AHS"
   },
   {
-    "id": 280,
+    "id": 291,
     "courseCode": "FAB40A",
     "courseName": "Symphonic II Band",
     "term": "S1+S2",
@@ -4060,7 +4235,7 @@
     "location": "AHS"
   },
   {
-    "id": 281,
+    "id": 292,
     "courseCode": "FA1C3A",
     "courseName": "Art III Ceramics II",
     "term": "S1+S2",
@@ -4072,7 +4247,7 @@
     "location": "AHS"
   },
   {
-    "id": 282,
+    "id": 293,
     "courseCode": "IBLG2A",
     "courseName": "IB GT Language Studies YR2",
     "term": "S1+S2",
@@ -4085,7 +4260,20 @@
     "location": "AHS"
   },
   {
-    "id": 283,
+    "id": 294,
+    "courseCode": "FL2SSA",
+    "courseName": "Spanish III  Native Spkr Adv",
+    "term": "S1",
+    "department": "FOREIGN LANGUAGE",
+    "periods": [
+      4,
+      6
+    ],
+    "doubleBlockPeriod": null,
+    "location": "AHS"
+  },
+  {
+    "id": 295,
     "courseCode": "FA1M3A",
     "courseName": "Art III Digital Art & Media II",
     "term": "S1+S2",
@@ -4097,7 +4285,7 @@
     "location": "AHS"
   },
   {
-    "id": 284,
+    "id": 296,
     "courseCode": "TCNS2A",
     "courseName": "DC Patient Care Technician",
     "term": "S1+S2",
@@ -4109,7 +4297,7 @@
     "location": "CTC"
   },
   {
-    "id": 285,
+    "id": 297,
     "courseCode": "PESW4A",
     "courseName": "Swimming 4 Fall",
     "term": "S1+S2",
@@ -4123,7 +4311,7 @@
     "location": "AHS"
   },
   {
-    "id": 286,
+    "id": 298,
     "courseCode": "IBGERA",
     "courseName": "IB German Standard Level",
     "term": "S1+S2",
@@ -4135,7 +4323,7 @@
     "location": "AHS"
   },
   {
-    "id": 287,
+    "id": 299,
     "courseCode": "IBTK2A",
     "courseName": "IB Theory of Knowledge Seniors",
     "term": "S1+S2",
@@ -4148,7 +4336,7 @@
     "location": "AHS"
   },
   {
-    "id": 288,
+    "id": 300,
     "courseCode": "SC2NBA",
     "courseName": "Special Topics: Nutri Biochem",
     "term": "S1+S2",
@@ -4160,7 +4348,7 @@
     "location": "AHS"
   },
   {
-    "id": 289,
+    "id": 301,
     "courseCode": "TA2S2A",
     "courseName": "Computer Science II",
     "term": "S1+S2",
@@ -4176,7 +4364,7 @@
     "location": "STEAM"
   },
   {
-    "id": 290,
+    "id": 302,
     "courseCode": "TA2ESA",
     "courseName": "Technologies E Sports II",
     "term": "S1+S2",
@@ -4189,7 +4377,7 @@
     "location": "AHS"
   },
   {
-    "id": 291,
+    "id": 303,
     "courseCode": "PESL2A",
     "courseName": "Softball 2 Fall",
     "term": "S1+S2",
@@ -4201,7 +4389,7 @@
     "location": "AHS"
   },
   {
-    "id": 292,
+    "id": 304,
     "courseCode": "BM2MKA",
     "courseName": "Advanced Marketing",
     "term": "S1+S2",
@@ -4214,7 +4402,7 @@
     "location": "AHS"
   },
   {
-    "id": 293,
+    "id": 305,
     "courseCode": "LA5W2C",
     "courseName": "DC World Literature II",
     "term": "S2",
@@ -4232,7 +4420,7 @@
     "location": "CTC"
   },
   {
-    "id": 294,
+    "id": 306,
     "courseCode": "FA1ASA",
     "courseName": "Art II Sculpture",
     "term": "S1+S2",
@@ -4244,7 +4432,7 @@
     "location": "AHS"
   },
   {
-    "id": 295,
+    "id": 307,
     "courseCode": "PE2R2A",
     "courseName": "JROTC Leadership 2",
     "term": "S1+S2",
@@ -4259,7 +4447,7 @@
     "location": "AHS"
   },
   {
-    "id": 296,
+    "id": 308,
     "courseCode": "CO1N3A",
     "courseName": "Advanced Journalism News 3",
     "term": "S1+S2",
@@ -4271,7 +4459,7 @@
     "location": "AHS"
   },
   {
-    "id": 297,
+    "id": 309,
     "courseCode": "FL1C2A",
     "courseName": "Chinese II",
     "term": "S1+S2",
@@ -4284,7 +4472,7 @@
     "location": "AHS"
   },
   {
-    "id": 298,
+    "id": 310,
     "courseCode": "PEDV4A",
     "courseName": "Diving 4 Fall",
     "term": "S1+S2",
@@ -4296,7 +4484,7 @@
     "location": "AHS"
   },
   {
-    "id": 299,
+    "id": 311,
     "courseCode": "IBFS1A",
     "courseName": "IB French Standard Level YR1",
     "term": "S1+S2",
@@ -4308,7 +4496,7 @@
     "location": "AHS"
   },
   {
-    "id": 300,
+    "id": 312,
     "courseCode": "PEOF2A",
     "courseName": "PE 2 Off Campus Fall",
     "term": "S1+S2",
@@ -4321,7 +4509,7 @@
     "location": "AHS"
   },
   {
-    "id": 301,
+    "id": 313,
     "courseCode": "PM1GRA",
     "courseName": "Prac-Graphic Design-Illust",
     "term": "S1+S2",
@@ -4334,7 +4522,7 @@
     "location": "STEAM"
   },
   {
-    "id": 302,
+    "id": 314,
     "courseCode": "PEBB3A",
     "courseName": "Boys Basketball 3 Fall",
     "term": "S1+S2",
@@ -4346,7 +4534,7 @@
     "location": "AHS"
   },
   {
-    "id": 303,
+    "id": 315,
     "courseCode": "PESB4A",
     "courseName": "Boys Soccer 4 Fall",
     "term": "S1+S2",
@@ -4358,7 +4546,7 @@
     "location": "AHS"
   },
   {
-    "id": 304,
+    "id": 316,
     "courseCode": "PE1STA",
     "courseName": "Lifetime Skill Based Tennis",
     "term": "S1+S2",
@@ -4371,7 +4559,7 @@
     "location": "AHS"
   },
   {
-    "id": 305,
+    "id": 317,
     "courseCode": "PEOF4A",
     "courseName": "PE 4 Off Campus Fall",
     "term": "S1+S2",
@@ -4384,7 +4572,7 @@
     "location": "AHS"
   },
   {
-    "id": 306,
+    "id": 318,
     "courseCode": "PE1HLC",
     "courseName": "Health I",
     "term": "S1",
@@ -4396,7 +4584,7 @@
     "location": "AHS"
   },
   {
-    "id": 307,
+    "id": 319,
     "courseCode": "IBBH1A",
     "courseName": "IB Biology HL YR1",
     "term": "S1+S2",
@@ -4408,7 +4596,7 @@
     "location": "AHS"
   },
   {
-    "id": 308,
+    "id": 320,
     "courseCode": "FA1MTA",
     "courseName": "Music Theory I",
     "term": "S1+S2",
@@ -4421,7 +4609,7 @@
     "location": "AHS"
   },
   {
-    "id": 309,
+    "id": 321,
     "courseCode": "PETB3A",
     "courseName": "Boys Track 3 Fall",
     "term": "S1+S2",
@@ -4433,7 +4621,7 @@
     "location": "AHS"
   },
   {
-    "id": 310,
+    "id": 322,
     "courseCode": "AG1PMA",
     "courseName": "Practicum-Ag-Mechanics",
     "term": "S1+S2",
@@ -4446,7 +4634,7 @@
     "location": "AHS"
   },
   {
-    "id": 311,
+    "id": 323,
     "courseCode": "FL1C1A",
     "courseName": "Chinese I",
     "term": "S1+S2",
@@ -4459,7 +4647,7 @@
     "location": "AHS"
   },
   {
-    "id": 312,
+    "id": 324,
     "courseCode": "SC1SRA",
     "courseName": "Scientific Research Design",
     "term": "S1+S2",
@@ -4471,7 +4659,7 @@
     "location": "STEAM"
   },
   {
-    "id": 313,
+    "id": 325,
     "courseCode": "MX9GEA",
     "courseName": "Geometry Essentials",
     "term": "S1+S2",
@@ -4486,7 +4674,7 @@
     "location": "AHS"
   },
   {
-    "id": 314,
+    "id": 326,
     "courseCode": "PEGL3A",
     "courseName": "Golf 3 Fall",
     "term": "S1+S2",
@@ -4499,7 +4687,7 @@
     "location": "AHS"
   },
   {
-    "id": 315,
+    "id": 327,
     "courseCode": "MY9GEA",
     "courseName": "Geometry Applications",
     "term": "S1+S2",
@@ -4512,7 +4700,7 @@
     "location": "AHS"
   },
   {
-    "id": 316,
+    "id": 328,
     "courseCode": "PESW2A",
     "courseName": "Swimming 2 Fall",
     "term": "S1+S2",
@@ -4526,7 +4714,7 @@
     "location": "AHS"
   },
   {
-    "id": 317,
+    "id": 329,
     "courseCode": "PETN4A",
     "courseName": "Tennis 4 Fall",
     "term": "S1+S2",
@@ -4539,7 +4727,7 @@
     "location": "AHS"
   },
   {
-    "id": 318,
+    "id": 330,
     "courseCode": "LW1L1A",
     "courseName": "Law Enforcement I",
     "term": "S1+S2",
@@ -4553,7 +4741,7 @@
     "location": "AHS"
   },
   {
-    "id": 319,
+    "id": 331,
     "courseCode": "IBBH2A",
     "courseName": "IB Biology HL YR2",
     "term": "S1+S2",
@@ -4565,7 +4753,7 @@
     "location": "AHS"
   },
   {
-    "id": 320,
+    "id": 332,
     "courseCode": "CO1Y3A",
     "courseName": "Advanced Journalism Yearbook 3",
     "term": "S1+S2",
@@ -4577,7 +4765,7 @@
     "location": "AHS"
   },
   {
-    "id": 321,
+    "id": 333,
     "courseCode": "FA14TA",
     "courseName": "Tech Theater IV",
     "term": "S1+S2",
@@ -4590,7 +4778,7 @@
     "location": "AHS"
   },
   {
-    "id": 322,
+    "id": 334,
     "courseCode": "IBLA2A",
     "courseName": "IB Language Studies YR2",
     "term": "S1+S2",
@@ -4603,7 +4791,7 @@
     "location": "AHS"
   },
   {
-    "id": 323,
+    "id": 335,
     "courseCode": "TA1I1A",
     "courseName": "Interior Design I",
     "term": "S1+S2",
@@ -4617,7 +4805,7 @@
     "location": "STEAM"
   },
   {
-    "id": 324,
+    "id": 336,
     "courseCode": "TA1PEA",
     "courseName": "Prin of Applied Engineering",
     "term": "S1+S2",
@@ -4630,7 +4818,7 @@
     "location": "STEAM"
   },
   {
-    "id": 325,
+    "id": 337,
     "courseCode": "IBSH1A",
     "courseName": "IB Spanish Higher Level YR1",
     "term": "S1+S2",
@@ -4645,7 +4833,7 @@
     "location": "AHS"
   },
   {
-    "id": 326,
+    "id": 338,
     "courseCode": "IBFH2A",
     "courseName": "IB French Higher Level Y2",
     "term": "S1+S2",
@@ -4657,7 +4845,7 @@
     "location": "AHS"
   },
   {
-    "id": 327,
+    "id": 339,
     "courseCode": "FAO42A",
     "courseName": "Sinfonia Orchestra II  12",
     "term": "S1+S2",
@@ -4669,7 +4857,7 @@
     "location": "AHS"
   },
   {
-    "id": 328,
+    "id": 340,
     "courseCode": "FAO41A",
     "courseName": "Sinfonia Orchestra II 11",
     "term": "S1+S2",
@@ -4681,7 +4869,7 @@
     "location": "AHS"
   },
   {
-    "id": 329,
+    "id": 341,
     "courseCode": "AM3OJA",
     "courseName": "Advance Music Orchestra 11th",
     "term": "S1+S2",
@@ -4698,7 +4886,7 @@
     "location": "AHS"
   },
   {
-    "id": 330,
+    "id": 342,
     "courseCode": "FACC4A",
     "courseName": "Chorale Choir 4",
     "term": "S1+S2",
@@ -4710,7 +4898,7 @@
     "location": "AHS"
   },
   {
-    "id": 331,
+    "id": 343,
     "courseCode": "IBM2HA",
     "courseName": "IB Math Analysis HL YR2",
     "term": "S1+S2",
@@ -4724,7 +4912,7 @@
     "location": "AHS"
   },
   {
-    "id": 332,
+    "id": 344,
     "courseCode": "FA11TA",
     "courseName": "Technical Theater I",
     "term": "S1+S2",
@@ -4738,7 +4926,7 @@
     "location": "AHS"
   },
   {
-    "id": 333,
+    "id": 345,
     "courseCode": "SC3PEA",
     "courseName": "AP Physics C Electri&Magnetism",
     "term": "S1+S2",
@@ -4751,7 +4939,7 @@
     "location": "AHS"
   },
   {
-    "id": 334,
+    "id": 346,
     "courseCode": "AG1AAA",
     "courseName": "Advanced Animal Science",
     "term": "S1+S2",
@@ -4764,7 +4952,7 @@
     "location": "AHS"
   },
   {
-    "id": 335,
+    "id": 347,
     "courseCode": "TA1I3A",
     "courseName": "Pra-Arcitect. Interior Desig",
     "term": "S1+S2",
@@ -4777,7 +4965,7 @@
     "location": "STEAM"
   },
   {
-    "id": 336,
+    "id": 348,
     "courseCode": "SS1ASA",
     "courseName": "African American Studies",
     "term": "S1+S2",
@@ -4790,7 +4978,7 @@
     "location": "AHS"
   },
   {
-    "id": 337,
+    "id": 349,
     "courseCode": "FATN3A",
     "courseName": "Tallenettes 3",
     "term": "S1+S2",
@@ -4802,7 +4990,7 @@
     "location": "AHS"
   },
   {
-    "id": 338,
+    "id": 350,
     "courseCode": "BM1I2A",
     "courseName": "Business Information Mgt II",
     "term": "S1+S2",
@@ -4815,7 +5003,7 @@
     "location": "AHS"
   },
   {
-    "id": 339,
+    "id": 351,
     "courseCode": "AGPF2A",
     "courseName": "Practicum Ag Floral Design II",
     "term": "S1+S2",
@@ -4827,7 +5015,7 @@
     "location": "AHS"
   },
   {
-    "id": 340,
+    "id": 352,
     "courseCode": "MA5ESC",
     "courseName": "DC ElementaryStatisticalMethod",
     "term": "S2",
@@ -4842,7 +5030,7 @@
     "location": "CTC"
   },
   {
-    "id": 341,
+    "id": 353,
     "courseCode": "CY9IPA",
     "courseName": "IPC APP",
     "term": "S1+S2",
@@ -4855,7 +5043,7 @@
     "location": "AHS"
   },
   {
-    "id": 342,
+    "id": 354,
     "courseCode": "BM5ACA",
     "courseName": "DC Prin Financial Accounting",
     "term": "S1",
@@ -4867,7 +5055,7 @@
     "location": "CTC"
   },
   {
-    "id": 343,
+    "id": 355,
     "courseCode": "BMPB2A",
     "courseName": "Practicum Business Mgmt II",
     "term": "S1+S2",
@@ -4880,7 +5068,7 @@
     "location": "AHS"
   },
   {
-    "id": 344,
+    "id": 356,
     "courseCode": "FA3MTA",
     "courseName": "AP Music Theory",
     "term": "S1+S2",
@@ -4893,7 +5081,7 @@
     "location": "AHS"
   },
   {
-    "id": 345,
+    "id": 357,
     "courseCode": "FA1T2A",
     "courseName": "Theater Arts II",
     "term": "S1+S2",
@@ -4906,7 +5094,7 @@
     "location": "AHS"
   },
   {
-    "id": 346,
+    "id": 358,
     "courseCode": "FABP2B",
     "courseName": "Percussion 12",
     "term": "S1+S2",
@@ -4919,7 +5107,7 @@
     "location": "AHS"
   },
   {
-    "id": 347,
+    "id": 359,
     "courseCode": "PERO4A",
     "courseName": "JROTC 4",
     "term": "S1+S2",
@@ -4931,7 +5119,7 @@
     "location": "AHS"
   },
   {
-    "id": 348,
+    "id": 360,
     "courseCode": "PETG3A",
     "courseName": "Girls Track 3 Fall",
     "term": "S1+S2",
@@ -4943,8 +5131,8 @@
     "location": "AHS"
   },
   {
-    "id": 349,
-    "courseCode": "TA1E1A/TA2E1A",
+    "id": 361,
+    "courseCode": "TA2E1A",
     "courseName": "Engineer Des & Presentation I",
     "term": "S1+S2",
     "department": "STEAM",
@@ -4958,7 +5146,7 @@
     "location": "STEAM"
   },
   {
-    "id": 350,
+    "id": 362,
     "courseCode": "IBHH2A",
     "courseName": "IB History of Americas HL YR2",
     "term": "S1+S2",
@@ -4971,7 +5159,7 @@
     "location": "AHS"
   },
   {
-    "id": 351,
+    "id": 363,
     "courseCode": "FL1G2A",
     "courseName": "German II",
     "term": "S1+S2",
@@ -4984,7 +5172,7 @@
     "location": "AHS"
   },
   {
-    "id": 352,
+    "id": 364,
     "courseCode": "PE1DVA",
     "courseName": "Diving Fall",
     "term": "S1+S2",
@@ -4996,7 +5184,7 @@
     "location": "AHS"
   },
   {
-    "id": 353,
+    "id": 365,
     "courseCode": "SY9UHA",
     "courseName": "US History APP",
     "term": "S1+S2",
@@ -5009,7 +5197,7 @@
     "location": "AHS"
   },
   {
-    "id": 354,
+    "id": 366,
     "courseCode": "PE1OAA",
     "courseName": "Lifetime Recreation & Outdoor",
     "term": "S1+S2",
@@ -5022,7 +5210,20 @@
     "location": "AHS"
   },
   {
-    "id": 355,
+    "id": 367,
+    "courseCode": "FL3SSB",
+    "courseName": "Spanish IV Native Spkr AP",
+    "term": "S1+S2",
+    "department": "FOREIGN LANGUAGE",
+    "periods": [
+      3,
+      7
+    ],
+    "doubleBlockPeriod": null,
+    "location": "AHS"
+  },
+  {
+    "id": 368,
     "courseCode": "PEVB3A",
     "courseName": "Volleyball 3 Fall",
     "term": "S1+S2",
@@ -5034,7 +5235,7 @@
     "location": "AHS"
   },
   {
-    "id": 356,
+    "id": 369,
     "courseCode": "FA3P3A",
     "courseName": "AP Art 3-D Design Portfolio",
     "term": "S1+S2",
@@ -5046,8 +5247,8 @@
     "location": "AHS"
   },
   {
-    "id": 357,
-    "courseCode": "TA1I2A/TA2I2A",
+    "id": 370,
+    "courseCode": "TA2I2A",
     "courseName": "Interior Design II",
     "term": "S1+S2",
     "department": "STEAM",
@@ -5059,7 +5260,7 @@
     "location": "STEAM"
   },
   {
-    "id": 358,
+    "id": 371,
     "courseCode": "FL1G3A",
     "courseName": "German III",
     "term": "S1+S2",
@@ -5071,7 +5272,7 @@
     "location": "AHS"
   },
   {
-    "id": 359,
+    "id": 372,
     "courseCode": "IBPSLA",
     "courseName": "IB Psychology Standard Level",
     "term": "S1+S2",
@@ -5084,7 +5285,7 @@
     "location": "AHS"
   },
   {
-    "id": 360,
+    "id": 373,
     "courseCode": "FL2G2A",
     "courseName": "German II Advanced",
     "term": "S1+S2",
@@ -5096,7 +5297,7 @@
     "location": "AHS"
   },
   {
-    "id": 361,
+    "id": 374,
     "courseCode": "SL6STA",
     "courseName": "STEAM Leadership",
     "term": "S1+S2",
@@ -5109,8 +5310,8 @@
     "location": "STEAM"
   },
   {
-    "id": 362,
-    "courseCode": "BM1PBA/BM3PBA",
+    "id": 375,
+    "courseCode": "BM3PBA",
     "courseName": "Practicum in Business Mgt I",
     "term": "S1+S2",
     "department": "CAREER - TECHNICAL ED",
@@ -5122,7 +5323,7 @@
     "location": "AHS"
   },
   {
-    "id": 363,
+    "id": 376,
     "courseCode": "FACX2A",
     "courseName": "Mixed Choir 2",
     "term": "S1+S2",
@@ -5134,7 +5335,7 @@
     "location": "AHS"
   },
   {
-    "id": 364,
+    "id": 377,
     "courseCode": "SL6SLA",
     "courseName": "Student Council Aide",
     "term": "S1+S2",
@@ -5146,7 +5347,7 @@
     "location": "AHS"
   },
   {
-    "id": 365,
+    "id": 378,
     "courseCode": "FL1G1A",
     "courseName": "German I (LFC)",
     "term": "S1+S2",
@@ -5159,7 +5360,7 @@
     "location": "LFC"
   },
   {
-    "id": 366,
+    "id": 379,
     "courseCode": "CY9B4A",
     "courseName": "Aquatic Science Applied",
     "term": "S1+S2",
@@ -5172,7 +5373,7 @@
     "location": "AHS"
   },
   {
-    "id": 367,
+    "id": 380,
     "courseCode": "PE9OAA",
     "courseName": "LT Basic Recreation & Outdoor",
     "term": "S1+S2",
@@ -5185,7 +5386,7 @@
     "location": "AHS"
   },
   {
-    "id": 368,
+    "id": 381,
     "courseCode": "AG1LPA",
     "courseName": "Livestock Production",
     "term": "S1+S2",
@@ -5197,7 +5398,7 @@
     "location": "AHS"
   },
   {
-    "id": 369,
+    "id": 382,
     "courseCode": "FAO52A",
     "courseName": "Concert Orchestra I 12",
     "term": "S1+S2",
@@ -5209,7 +5410,7 @@
     "location": "AHS"
   },
   {
-    "id": 370,
+    "id": 383,
     "courseCode": "PESL3A",
     "courseName": "Softball 3 Fall",
     "term": "S1+S2",
@@ -5221,7 +5422,7 @@
     "location": "AHS"
   },
   {
-    "id": 371,
+    "id": 384,
     "courseCode": "CO5SPC",
     "courseName": "DC Public Speaking",
     "term": "S1",
@@ -5234,7 +5435,7 @@
     "location": "CTC"
   },
   {
-    "id": 372,
+    "id": 385,
     "courseCode": "PM1V1A",
     "courseName": "Audio Video Production I",
     "term": "S1+S2",
@@ -5247,7 +5448,7 @@
     "location": "AHS"
   },
   {
-    "id": 373,
+    "id": 386,
     "courseCode": "CO1JRA",
     "courseName": "Journalism",
     "term": "S1+S2",
@@ -5259,7 +5460,7 @@
     "location": "AHS"
   },
   {
-    "id": 374,
+    "id": 387,
     "courseCode": "FASS1A",
     "courseName": "Silver Stars 1",
     "term": "S1+S2",
@@ -5271,7 +5472,19 @@
     "location": "AHS"
   },
   {
-    "id": 375,
+    "id": 388,
+    "courseCode": "PE1HLC",
+    "courseName": "Health I",
+    "term": "S2",
+    "department": "PHYSICAL ED/HEALTH",
+    "periods": [
+      6
+    ],
+    "doubleBlockPeriod": null,
+    "location": "AHS"
+  },
+  {
+    "id": 389,
     "courseCode": "MA5CAB",
     "courseName": "DC Plane Trig",
     "term": "S1",
@@ -5283,7 +5496,7 @@
     "location": "CTC"
   },
   {
-    "id": 376,
+    "id": 390,
     "courseCode": "TA2R2A",
     "courseName": "Robotics II",
     "term": "S1+S2",
@@ -5295,7 +5508,7 @@
     "location": "STEAM"
   },
   {
-    "id": 377,
+    "id": 391,
     "courseCode": "FC1ICA",
     "courseName": "Intro Culinary Arts",
     "term": "S1+S2",
@@ -5310,7 +5523,7 @@
     "location": "AHS"
   },
   {
-    "id": 378,
+    "id": 392,
     "courseCode": "CO2I2A",
     "courseName": "Independent Study Journalism 2",
     "term": "S1+S2",
@@ -5322,7 +5535,7 @@
     "location": "AHS"
   },
   {
-    "id": 379,
+    "id": 393,
     "courseCode": "FL2C2A",
     "courseName": "Chinese II Advanced",
     "term": "S1+S2",
@@ -5334,7 +5547,33 @@
     "location": "AHS"
   },
   {
-    "id": 380,
+    "id": 394,
+    "courseCode": "FL1G1A",
+    "courseName": "German I (AHS)",
+    "term": "S1+S2",
+    "department": "FOREIGN LANGUAGE",
+    "periods": [
+      3,
+      4
+    ],
+    "doubleBlockPeriod": null,
+    "location": "AHS"
+  },
+  {
+    "id": 395,
+    "courseCode": "SS1ECC",
+    "courseName": "Economics-Emphasis on Free Ent",
+    "term": "S1",
+    "department": "SOCIAL STUDIES",
+    "periods": [
+      2,
+      3
+    ],
+    "doubleBlockPeriod": null,
+    "location": "AHS"
+  },
+  {
+    "id": 396,
     "courseCode": "SS5MEC",
     "courseName": "DC Macro Economics",
     "term": "S2",
@@ -5347,7 +5586,7 @@
     "location": "CTC"
   },
   {
-    "id": 381,
+    "id": 397,
     "courseCode": "FL2F3A",
     "courseName": "French III Advanced",
     "term": "S1+S2",
@@ -5360,7 +5599,7 @@
     "location": "AHS"
   },
   {
-    "id": 382,
+    "id": 398,
     "courseCode": "AG1EQC",
     "courseName": "Equine Science",
     "term": "S2",
@@ -5373,7 +5612,7 @@
     "location": "AHS"
   },
   {
-    "id": 383,
+    "id": 399,
     "courseCode": "AG1MMA",
     "courseName": "Ag Mechanical-Metal Technology",
     "term": "S1+S2",
@@ -5387,7 +5626,7 @@
     "location": "AHS"
   },
   {
-    "id": 384,
+    "id": 400,
     "courseCode": "IBAH1A",
     "courseName": "IB Art Higher Level YR1",
     "term": "S1+S2",
@@ -5399,7 +5638,7 @@
     "location": "AHS"
   },
   {
-    "id": 385,
+    "id": 401,
     "courseCode": "FL1F1A",
     "courseName": "French I",
     "term": "S1+S2",
@@ -5411,8 +5650,8 @@
     "location": "AHS"
   },
   {
-    "id": 386,
-    "courseCode": "TA2CTA/TA3CTA",
+    "id": 402,
+    "courseCode": "TA3CTA",
     "courseName": "Computer Technician Prac I",
     "term": "S1+S2",
     "department": "STEAM",
@@ -5423,7 +5662,7 @@
     "location": "STEAM"
   },
   {
-    "id": 387,
+    "id": 403,
     "courseCode": "PM1PRA",
     "courseName": "Prac-Audio-Video Production",
     "term": "S1+S2",
@@ -5435,7 +5674,7 @@
     "location": "AHS"
   },
   {
-    "id": 388,
+    "id": 404,
     "courseCode": "FC1T2A",
     "courseName": "Practicum Education & Training",
     "term": "S1+S2",
@@ -5447,7 +5686,7 @@
     "location": "AHS"
   },
   {
-    "id": 389,
+    "id": 405,
     "courseCode": "MY9GOA",
     "courseName": "Geometry Fundamentals",
     "term": "S1+S2",
@@ -5462,7 +5701,7 @@
     "location": "AHS"
   },
   {
-    "id": 390,
+    "id": 406,
     "courseCode": "FL2A3A",
     "courseName": "American Signlanguage III Adv.",
     "term": "S1+S2",
@@ -5474,7 +5713,7 @@
     "location": "AHS"
   },
   {
-    "id": 391,
+    "id": 407,
     "courseCode": "PEWR4A",
     "courseName": "Wrestling 4 Fall",
     "term": "S1+S2",
@@ -5486,7 +5725,7 @@
     "location": "AHS"
   },
   {
-    "id": 392,
+    "id": 408,
     "courseCode": "FACM4A",
     "courseName": "Men's Choir 4",
     "term": "S1+S2",
@@ -5498,7 +5737,7 @@
     "location": "AHS"
   },
   {
-    "id": 393,
+    "id": 409,
     "courseCode": "PEWR3A",
     "courseName": "Wrestling 3 Fall",
     "term": "S1+S2",
@@ -5510,7 +5749,7 @@
     "location": "AHS"
   },
   {
-    "id": 394,
+    "id": 410,
     "courseCode": "FA1T4A",
     "courseName": "Theater Arts IV",
     "term": "S1+S2",
@@ -5523,7 +5762,7 @@
     "location": "AHS"
   },
   {
-    "id": 395,
+    "id": 411,
     "courseCode": "FL1F3A",
     "courseName": "French  III",
     "term": "S1+S2",
@@ -5536,7 +5775,7 @@
     "location": "AHS"
   },
   {
-    "id": 396,
+    "id": 412,
     "courseCode": "MA1A1A",
     "courseName": "Algebra I",
     "term": "S1+S2",
@@ -5549,7 +5788,7 @@
     "location": "AHS"
   },
   {
-    "id": 397,
+    "id": 413,
     "courseCode": "FACM2A",
     "courseName": "Men's Choir 2",
     "term": "S1+S2",
@@ -5561,7 +5800,7 @@
     "location": "AHS"
   },
   {
-    "id": 398,
+    "id": 414,
     "courseCode": "FAO51A",
     "courseName": "Concert Orchestra I 11",
     "term": "S1+S2",
@@ -5573,7 +5812,7 @@
     "location": "AHS"
   },
   {
-    "id": 399,
+    "id": 415,
     "courseCode": "AG1MTA",
     "courseName": "Math Applications Agriculture",
     "term": "S1+S2",
@@ -5585,7 +5824,7 @@
     "location": "AHS"
   },
   {
-    "id": 400,
+    "id": 416,
     "courseCode": "FATP4A",
     "courseName": "Theatre Production IV",
     "term": "S1+S2",
@@ -5597,7 +5836,19 @@
     "location": "AHS"
   },
   {
-    "id": 401,
+    "id": 417,
+    "courseCode": "EL1SAC",
+    "courseName": "SAT/ACT Test Prep Class",
+    "term": "S2",
+    "department": "ELECTIVES",
+    "periods": [
+      6
+    ],
+    "doubleBlockPeriod": null,
+    "location": "AHS"
+  },
+  {
+    "id": 418,
     "courseCode": "BM1SIA",
     "courseName": "Securities and Investments",
     "term": "S1+S2",
@@ -5609,7 +5860,7 @@
     "location": "AHS"
   },
   {
-    "id": 402,
+    "id": 419,
     "courseCode": "FL2G3A",
     "courseName": "German III Advanced",
     "term": "S1+S2",
@@ -5621,7 +5872,7 @@
     "location": "AHS"
   },
   {
-    "id": 403,
+    "id": 420,
     "courseCode": "TA2E2A",
     "courseName": "Engineering Design Present II",
     "term": "S1+S2",
@@ -5636,7 +5887,20 @@
     "location": "STEAM"
   },
   {
-    "id": 404,
+    "id": 421,
+    "courseCode": "BM1SEC",
+    "courseName": "Sports Entertainment Marketing",
+    "term": "S2",
+    "department": "CAREER - TECHNICAL ED",
+    "periods": [
+      7,
+      8
+    ],
+    "doubleBlockPeriod": null,
+    "location": "AHS"
+  },
+  {
+    "id": 422,
     "courseCode": "FAO40A",
     "courseName": "Sinfonia Orchestra II 10",
     "term": "S1+S2",
@@ -5648,7 +5912,7 @@
     "location": "AHS"
   },
   {
-    "id": 405,
+    "id": 423,
     "courseCode": "FA13TA",
     "courseName": "Technical Theater III",
     "term": "S1+S2",
@@ -5661,7 +5925,7 @@
     "location": "AHS"
   },
   {
-    "id": 406,
+    "id": 424,
     "courseCode": "IBHH1A",
     "courseName": "IB History of Americas HL YR1",
     "term": "S1+S2",
@@ -5674,7 +5938,7 @@
     "location": "AHS"
   },
   {
-    "id": 407,
+    "id": 425,
     "courseCode": "FA1APA",
     "courseName": "Art II Painting",
     "term": "S1+S2",
@@ -5687,7 +5951,7 @@
     "location": "AHS"
   },
   {
-    "id": 408,
+    "id": 426,
     "courseCode": "LA8E4A",
     "courseName": "English  IV ESL",
     "term": "S1+S2",
@@ -5700,7 +5964,7 @@
     "location": "AHS"
   },
   {
-    "id": 409,
+    "id": 427,
     "courseCode": "MY9MMA",
     "courseName": "Math Models Applied",
     "term": "S1+S2",
@@ -5713,7 +5977,7 @@
     "location": "AHS"
   },
   {
-    "id": 410,
+    "id": 428,
     "courseCode": "FA12TA",
     "courseName": "Technical Theater II",
     "term": "S1+S2",
@@ -5726,7 +5990,7 @@
     "location": "AHS"
   },
   {
-    "id": 411,
+    "id": 429,
     "courseCode": "PEBB2A",
     "courseName": "Boys Basketball 2 Fall",
     "term": "S1+S2",
@@ -5738,7 +6002,7 @@
     "location": "AHS"
   },
   {
-    "id": 412,
+    "id": 430,
     "courseCode": "BM1A2A",
     "courseName": "Accounting II",
     "term": "S1+S2",
@@ -5750,7 +6014,7 @@
     "location": "AHS"
   },
   {
-    "id": 413,
+    "id": 431,
     "courseCode": "EL9C4C",
     "courseName": "Making Connections IV",
     "term": "S1",
@@ -5763,7 +6027,7 @@
     "location": "AHS"
   },
   {
-    "id": 414,
+    "id": 432,
     "courseCode": "CO1D1A",
     "courseName": "Debate 1",
     "term": "S1+S2",
@@ -5776,7 +6040,7 @@
     "location": "AHS"
   },
   {
-    "id": 415,
+    "id": 433,
     "courseCode": "FAO31A",
     "courseName": "Sinfonia Orchestra I 11",
     "term": "S1+S2",
@@ -5788,8 +6052,8 @@
     "location": "AHS"
   },
   {
-    "id": 416,
-    "courseCode": "FC1IPA/FC2IPA",
+    "id": 434,
+    "courseCode": "FC1IPA",
     "courseName": "Instructional Practices",
     "term": "S1+S2",
     "department": "CAREER - TECHNICAL ED",
@@ -5800,7 +6064,7 @@
     "location": "AHS"
   },
   {
-    "id": 417,
+    "id": 435,
     "courseCode": "SL6HPA",
     "courseName": "Hope Squad",
     "term": "S1+S2",
@@ -5812,7 +6076,7 @@
     "location": "AHS"
   },
   {
-    "id": 418,
+    "id": 436,
     "courseCode": "MA1QRA",
     "courseName": "Adv Quantitative Reasoning",
     "term": "S1+S2",
@@ -5825,7 +6089,7 @@
     "location": "AHS"
   },
   {
-    "id": 419,
+    "id": 437,
     "courseCode": "FACX3A",
     "courseName": "Mixed Choir 3",
     "term": "S1+S2",
@@ -5837,7 +6101,7 @@
     "location": "AHS"
   },
   {
-    "id": 420,
+    "id": 438,
     "courseCode": "SS3EUA",
     "courseName": "AP European History",
     "term": "S1+S2",
@@ -5849,7 +6113,7 @@
     "location": "AHS"
   },
   {
-    "id": 421,
+    "id": 439,
     "courseCode": "PEBB4A",
     "courseName": "Boys Basketball 4 Fall",
     "term": "S1+S2",
@@ -5861,7 +6125,7 @@
     "location": "AHS"
   },
   {
-    "id": 422,
+    "id": 440,
     "courseCode": "LA8R2A",
     "courseName": "Reading II ESL",
     "term": "S1+S2",
@@ -5873,7 +6137,7 @@
     "location": "AHS"
   },
   {
-    "id": 423,
+    "id": 441,
     "courseCode": "PECC3A",
     "courseName": "Cross Country 3 Fall",
     "term": "S1+S2",
@@ -5885,20 +6149,19 @@
     "location": "AHS"
   },
   {
-    "id": 424,
+    "id": 442,
     "courseCode": "BM1FMC",
     "courseName": "Fashion Marketing",
     "term": "S1",
     "department": "CAREER - TECHNICAL ED",
     "periods": [
-      2,
-      5
+      2
     ],
     "doubleBlockPeriod": null,
     "location": "AHS"
   },
   {
-    "id": 425,
+    "id": 443,
     "courseCode": "FATS4A",
     "courseName": "Treble Select 4",
     "term": "S1+S2",
@@ -5910,7 +6173,7 @@
     "location": "AHS"
   },
   {
-    "id": 426,
+    "id": 444,
     "courseCode": "SC2NBB",
     "courseName": "Special Topics: Biochemistry",
     "term": "S1+S2",
@@ -5922,7 +6185,7 @@
     "location": "AHS"
   },
   {
-    "id": 427,
+    "id": 445,
     "courseCode": "FAO50A",
     "courseName": "Concert Orchestra I 10",
     "term": "S1+S2",
@@ -5934,7 +6197,7 @@
     "location": "AHS"
   },
   {
-    "id": 428,
+    "id": 446,
     "courseCode": "SC8PCA",
     "courseName": "Integrated Physics/Chem ESL",
     "term": "S1+S2",
@@ -5946,7 +6209,7 @@
     "location": "AHS"
   },
   {
-    "id": 429,
+    "id": 447,
     "courseCode": "PEBG2A",
     "courseName": "Girls Basketball 2 Fall",
     "term": "S1+S2",
@@ -5958,7 +6221,19 @@
     "location": "AHS"
   },
   {
-    "id": 430,
+    "id": 448,
+    "courseCode": "FC1CLA",
+    "courseName": "Culinary Arts (2.1]",
+    "term": "S1+S2",
+    "department": "CAREER - TECHNICAL ED",
+    "periods": [
+      2
+    ],
+    "doubleBlockPeriod": null,
+    "location": "AHS"
+  },
+  {
+    "id": 449,
     "courseCode": "FACC3A",
     "courseName": "Chorale Choir 3",
     "term": "S1+S2",
@@ -5970,7 +6245,7 @@
     "location": "AHS"
   },
   {
-    "id": 431,
+    "id": 450,
     "courseCode": "FL2G1A",
     "courseName": "German I Advanced",
     "term": "S1+S2",
@@ -5982,7 +6257,7 @@
     "location": "AHS"
   },
   {
-    "id": 432,
+    "id": 451,
     "courseCode": "AG1SAC",
     "courseName": "Small Animal Management",
     "term": "S1",
@@ -5995,7 +6270,7 @@
     "location": "AHS"
   },
   {
-    "id": 433,
+    "id": 452,
     "courseCode": "PESB3A",
     "courseName": "Boys Soccer 3 Fall",
     "term": "S1+S2",
@@ -6007,7 +6282,7 @@
     "location": "AHS"
   },
   {
-    "id": 434,
+    "id": 453,
     "courseCode": "FATN2A",
     "courseName": "Tallenettes 2",
     "term": "S1+S2",
@@ -6019,7 +6294,7 @@
     "location": "AHS"
   },
   {
-    "id": 435,
+    "id": 454,
     "courseCode": "PESL4A",
     "courseName": "Softball 4 Fall",
     "term": "S1+S2",
@@ -6031,7 +6306,7 @@
     "location": "AHS"
   },
   {
-    "id": 436,
+    "id": 455,
     "courseCode": "IBPH1A",
     "courseName": "IB Psychology Higher Level YR1",
     "term": "S1+S2",
@@ -6044,7 +6319,7 @@
     "location": "AHS"
   },
   {
-    "id": 437,
+    "id": 456,
     "courseCode": "PECC2A",
     "courseName": "Cross Country 2 Fall",
     "term": "S1+S2",
@@ -6056,7 +6331,7 @@
     "location": "AHS"
   },
   {
-    "id": 438,
+    "id": 457,
     "courseCode": "PESB2A",
     "courseName": "Boys Soccer 2  Fall",
     "term": "S1+S2",
@@ -6068,7 +6343,7 @@
     "location": "AHS"
   },
   {
-    "id": 439,
+    "id": 458,
     "courseCode": "FA1J4A",
     "courseName": "Art IV Jewelry III",
     "term": "S1+S2",
@@ -6080,7 +6355,7 @@
     "location": "AHS"
   },
   {
-    "id": 440,
+    "id": 459,
     "courseCode": "FATP3A",
     "courseName": "Theatre Production III",
     "term": "S1+S2",
@@ -6092,7 +6367,7 @@
     "location": "AHS"
   },
   {
-    "id": 441,
+    "id": 460,
     "courseCode": "BM5BPC",
     "courseName": "DC Business Principles",
     "term": "S2",
@@ -6105,7 +6380,7 @@
     "location": "CTC"
   },
   {
-    "id": 442,
+    "id": 461,
     "courseCode": "FA3P2A",
     "courseName": "AP Art 2-D Design Portfolio",
     "term": "S1+S2",
@@ -6118,7 +6393,7 @@
     "location": "AHS"
   },
   {
-    "id": 443,
+    "id": 462,
     "courseCode": "PEGL2A",
     "courseName": "Golf 2 Fall",
     "term": "S1+S2",
@@ -6131,7 +6406,7 @@
     "location": "AHS"
   },
   {
-    "id": 444,
+    "id": 463,
     "courseCode": "PE1ASA",
     "courseName": "Lifetime Skill Based Swimming",
     "term": "S1+S2",
@@ -6144,7 +6419,7 @@
     "location": "AHS"
   },
   {
-    "id": 445,
+    "id": 464,
     "courseCode": "FACE2A",
     "courseName": "Eagle Select 2",
     "term": "S1+S2",
@@ -6156,7 +6431,7 @@
     "location": "AHS"
   },
   {
-    "id": 446,
+    "id": 465,
     "courseCode": "BM9BMA",
     "courseName": "Business Info Mgt I",
     "term": "S1+S2",
@@ -6168,7 +6443,7 @@
     "location": "AHS"
   },
   {
-    "id": 447,
+    "id": 466,
     "courseCode": "SL1LDC",
     "courseName": "Intro to Leadership",
     "term": "S1",
@@ -6180,7 +6455,7 @@
     "location": "AHS"
   },
   {
-    "id": 448,
+    "id": 467,
     "courseCode": "PEFB4A",
     "courseName": "Football 4 Fall",
     "term": "S1+S2",
@@ -6192,7 +6467,7 @@
     "location": "AHS"
   },
   {
-    "id": 449,
+    "id": 468,
     "courseCode": "PESW3A",
     "courseName": "Swimming 3 Fall",
     "term": "S1+S2",
@@ -6206,7 +6481,7 @@
     "location": "AHS"
   },
   {
-    "id": 450,
+    "id": 469,
     "courseCode": "CO1D2A",
     "courseName": "Debate II",
     "term": "S1+S2",
@@ -6219,7 +6494,7 @@
     "location": "AHS"
   },
   {
-    "id": 451,
+    "id": 470,
     "courseCode": "FATS3A",
     "courseName": "Treble Select 3",
     "term": "S1+S2",
@@ -6231,7 +6506,7 @@
     "location": "AHS"
   },
   {
-    "id": 452,
+    "id": 471,
     "courseCode": "FL2F2A",
     "courseName": "French II Advanced",
     "term": "S1+S2",
@@ -6243,7 +6518,7 @@
     "location": "AHS"
   },
   {
-    "id": 453,
+    "id": 472,
     "courseCode": "PEBL2A",
     "courseName": "Baseball  2 Fall",
     "term": "S1+S2",
@@ -6256,7 +6531,20 @@
     "location": "AHS"
   },
   {
-    "id": 454,
+    "id": 473,
+    "courseCode": "BM1ADC",
+    "courseName": "Advertising",
+    "term": "S1",
+    "department": "CAREER - TECHNICAL ED",
+    "periods": [
+      3,
+      5
+    ],
+    "doubleBlockPeriod": null,
+    "location": "AHS"
+  },
+  {
+    "id": 474,
     "courseCode": "IBCHIA",
     "courseName": "IB Chinese Standard Level",
     "term": "S1+S2",
@@ -6268,7 +6556,7 @@
     "location": "AHS"
   },
   {
-    "id": 455,
+    "id": 475,
     "courseCode": "PETB2A",
     "courseName": "Boys Track 2 Fall",
     "term": "S1+S2",
@@ -6280,7 +6568,7 @@
     "location": "AHS"
   },
   {
-    "id": 456,
+    "id": 476,
     "courseCode": "FACE4A",
     "courseName": "Eagle Select 4",
     "term": "S1+S2",
@@ -6292,7 +6580,7 @@
     "location": "AHS"
   },
   {
-    "id": 457,
+    "id": 477,
     "courseCode": "PEBG4A",
     "courseName": "Girls Basketball 4 Fall",
     "term": "S1+S2",
@@ -6304,7 +6592,7 @@
     "location": "AHS"
   },
   {
-    "id": 458,
+    "id": 478,
     "courseCode": "LA8ELA",
     "courseName": "ESOL II",
     "term": "S1+S2",
@@ -6316,7 +6604,7 @@
     "location": "AHS"
   },
   {
-    "id": 459,
+    "id": 479,
     "courseCode": "FAB62A",
     "courseName": "Concert I Band 12th",
     "term": "S1+S2",
@@ -6328,7 +6616,7 @@
     "location": "AHS"
   },
   {
-    "id": 460,
+    "id": 480,
     "courseCode": "HS2PNC",
     "courseName": "Pharmacy 1 (Pharm Tech)",
     "term": "S1+S2",
@@ -6341,7 +6629,7 @@
     "location": "AHS"
   },
   {
-    "id": 461,
+    "id": 481,
     "courseCode": "PEOF3A",
     "courseName": "PE 3 Off Campus Fall",
     "term": "S1+S2",
@@ -6354,7 +6642,7 @@
     "location": "AHS"
   },
   {
-    "id": 462,
+    "id": 482,
     "courseCode": "PESG4A",
     "courseName": "Girls Soccer 4 Fall",
     "term": "S1+S2",
@@ -6366,7 +6654,19 @@
     "location": "AHS"
   },
   {
-    "id": 463,
+    "id": 483,
+    "courseCode": "EL9CNC",
+    "courseName": "Making Connection I",
+    "term": "S2",
+    "department": "SPECIAL EDUCATION",
+    "periods": [
+      2
+    ],
+    "doubleBlockPeriod": null,
+    "location": "AHS"
+  },
+  {
+    "id": 484,
     "courseCode": "FA1C4A",
     "courseName": "Art IV Ceramics",
     "term": "S1+S2",
@@ -6378,7 +6678,7 @@
     "location": "AHS"
   },
   {
-    "id": 464,
+    "id": 485,
     "courseCode": "SC8CHA",
     "courseName": "Chemistry ESL",
     "term": "S1+S2",
@@ -6390,7 +6690,7 @@
     "location": "AHS"
   },
   {
-    "id": 465,
+    "id": 486,
     "courseCode": "PEBG3A",
     "courseName": "Girls Basketball 3 Fall",
     "term": "S1+S2",
@@ -6402,7 +6702,7 @@
     "location": "AHS"
   },
   {
-    "id": 466,
+    "id": 487,
     "courseCode": "FAO32A",
     "courseName": "Sinfonia Orchestra I 12",
     "term": "S1+S2",
@@ -6414,7 +6714,7 @@
     "location": "AHS"
   },
   {
-    "id": 467,
+    "id": 488,
     "courseCode": "PETG4A",
     "courseName": "Girls Track 4 Fall",
     "term": "S1+S2",
@@ -6426,7 +6726,19 @@
     "location": "AHS"
   },
   {
-    "id": 468,
+    "id": 489,
+    "courseCode": "AG1SAC",
+    "courseName": "Small Animal Management",
+    "term": "S2",
+    "department": "CAREER - TECHNICAL ED",
+    "periods": [
+      8
+    ],
+    "doubleBlockPeriod": null,
+    "location": "AHS"
+  },
+  {
+    "id": 490,
     "courseCode": "PEVB2A",
     "courseName": "Volleyball 2 Fall",
     "term": "S1+S2",
@@ -6438,7 +6750,7 @@
     "location": "AHS"
   },
   {
-    "id": 469,
+    "id": 491,
     "courseCode": "NN8NCA",
     "courseName": "ELL New Comer",
     "term": "S1+S2",
@@ -6450,7 +6762,19 @@
     "location": "AHS"
   },
   {
-    "id": 470,
+    "id": 492,
+    "courseCode": "AG1EQC",
+    "courseName": "Equine Science",
+    "term": "S1",
+    "department": "CAREER - TECHNICAL ED",
+    "periods": [
+      8
+    ],
+    "doubleBlockPeriod": null,
+    "location": "AHS"
+  },
+  {
+    "id": 493,
     "courseCode": "PETN2A",
     "courseName": "Tennis 2 Fall",
     "term": "S1+S2",
@@ -6463,7 +6787,7 @@
     "location": "AHS"
   },
   {
-    "id": 471,
+    "id": 494,
     "courseCode": "PETB4A",
     "courseName": "Boys Track 4 Fall",
     "term": "S1+S2",
@@ -6475,7 +6799,7 @@
     "location": "AHS"
   },
   {
-    "id": 472,
+    "id": 495,
     "courseCode": "PEWR2A",
     "courseName": "Wrestling 2 Fall",
     "term": "S1+S2",
@@ -6487,7 +6811,7 @@
     "location": "AHS"
   },
   {
-    "id": 473,
+    "id": 496,
     "courseCode": "FC1HGA",
     "courseName": "Human Growth and Development",
     "term": "S1+S2",
@@ -6500,7 +6824,7 @@
     "location": "AHS"
   },
   {
-    "id": 474,
+    "id": 497,
     "courseCode": "IBASLA",
     "courseName": "IB Art Standard Level YR2",
     "term": "S1+S2",
@@ -6512,7 +6836,7 @@
     "location": "AHS"
   },
   {
-    "id": 475,
+    "id": 498,
     "courseCode": "FATN1A",
     "courseName": "Tallenettes 1",
     "term": "S1+S2",
@@ -6524,7 +6848,20 @@
     "location": "AHS"
   },
   {
-    "id": 476,
+    "id": 499,
+    "courseCode": "BM1FMC",
+    "courseName": "Fashion Marketing",
+    "term": "S2",
+    "department": "CAREER - TECHNICAL ED",
+    "periods": [
+      2,
+      5
+    ],
+    "doubleBlockPeriod": null,
+    "location": "AHS"
+  },
+  {
+    "id": 500,
     "courseCode": "IBPHYA",
     "courseName": "IB Physics Standard Level",
     "term": "S1+S2",
@@ -6536,7 +6873,7 @@
     "location": "AHS"
   },
   {
-    "id": 477,
+    "id": 501,
     "courseCode": "FACX4A",
     "courseName": "Mixed Choir 4",
     "term": "S1+S2",
@@ -6548,7 +6885,19 @@
     "location": "AHS"
   },
   {
-    "id": 478,
+    "id": 502,
+    "courseCode": "BM1BFC",
+    "courseName": "Banking and Financial Services",
+    "term": "S1",
+    "department": "CAREER - TECHNICAL ED",
+    "periods": [
+      7
+    ],
+    "doubleBlockPeriod": null,
+    "location": "AHS"
+  },
+  {
+    "id": 503,
     "courseCode": "PEVB4A",
     "courseName": "Volleyball 4 Fall",
     "term": "S1+S2",
@@ -6560,7 +6909,7 @@
     "location": "AHS"
   },
   {
-    "id": 479,
+    "id": 504,
     "courseCode": "HS2PMC",
     "courseName": "Pharmacology (Pharm Tech)",
     "term": "S1+S2",
@@ -6572,7 +6921,7 @@
     "location": "AHS"
   },
   {
-    "id": 480,
+    "id": 505,
     "courseCode": "PECC4A",
     "courseName": "Cross Country 4 Fall",
     "term": "S1+S2",
@@ -6584,7 +6933,7 @@
     "location": "AHS"
   },
   {
-    "id": 481,
+    "id": 506,
     "courseCode": "FACM3A",
     "courseName": "Men's Choir 3",
     "term": "S1+S2",
@@ -6596,7 +6945,7 @@
     "location": "AHS"
   },
   {
-    "id": 482,
+    "id": 507,
     "courseCode": "IBPH2A",
     "courseName": "IB Psychology Higher Level YR2",
     "term": "S1+S2",
