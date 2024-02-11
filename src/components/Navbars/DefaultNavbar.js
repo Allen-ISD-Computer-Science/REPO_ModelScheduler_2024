@@ -11,6 +11,8 @@ import {
 import { Image } from "@nextui-org/image";
 import { Link } from "@nextui-org/link";
 
+import Pages from "@/constants/Pages";
+
 export default function DefaultNavbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -20,7 +22,7 @@ export default function DefaultNavbar() {
       <NavbarContent>
         <NavbarMenuToggle aria-label={isMenuOpen ? "Close menu" : "Open menu"} className="md:hidden" />
         <NavbarBrand>
-          <Link color="foreground" href="/home">
+          <Link color="foreground" href={Pages.HOME}>
             <Image src="/Logo.png" alt="Model Scheduler" width={32} height={32} className="shrink-0 rounded-none" />
             <span className="font-bold test-inherit ml-2">Model Scheduler</span>
           </Link>
@@ -30,22 +32,22 @@ export default function DefaultNavbar() {
       {/* Mobile Links */}
       <NavbarMenu>
         <NavbarMenuItem>
-          <Link color="foreground" href="/home">
+          <Link color="foreground" href={Pages.HOME}>
             Home
           </Link>
         </NavbarMenuItem>
         <NavbarMenuItem>
-          <Link color="foreground" href="/classes">
+          <Link color="foreground" href={Pages.CLASSES}>
             Schedule
           </Link>
         </NavbarMenuItem>
         <NavbarMenuItem>
-          <Link color="foreground" href="/guide">
+          <Link color="foreground" href={Pages.GUIDE}>
             Guides
           </Link>
         </NavbarMenuItem>
         <NavbarMenuItem>
-          <Link color="foreground" href="/faq">
+          <Link color="foreground" href={Pages.FAQ}>
             FAQ
           </Link>
         </NavbarMenuItem>
@@ -58,28 +60,28 @@ export default function DefaultNavbar() {
       >
         {/* Home */}
         <NavbarItem>
-          <Link color="foreground" href="/home">
+          <Link color="foreground" href={Pages.HOME}>
             Home
           </Link>
         </NavbarItem>
 
         {/* Schedule */}
         <NavbarItem>
-          <Link color="foreground" href="/classes">
+          <Link color="foreground" href={Pages.CLASSES}>
             Schedule
           </Link>
         </NavbarItem>
 
         {/* Guide */}
         <NavbarItem>
-          <Link color="foreground" href="/guide">
+          <Link color="foreground" href={Pages.GUIDE}>
             Guides
           </Link>
         </NavbarItem>
 
         {/* FAQ */}
         <NavbarItem>
-          <Link color="foreground" href="/faq">
+          <Link color="foreground" href={Pages.FAQ}>
             FAQ
           </Link>
         </NavbarItem>

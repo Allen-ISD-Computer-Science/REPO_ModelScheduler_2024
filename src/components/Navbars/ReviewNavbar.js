@@ -12,9 +12,10 @@ import { Image } from "@nextui-org/image";
 import { Link } from "@nextui-org/link";
 import { Button } from "@nextui-org/button";
 import { Divider } from "@nextui-org/divider";
-
-import Semesters from "@/constants/Semesters";
 import { Icon } from "@iconify/react";
+
+import Pages from "@/constants/Pages";
+import Semesters from "@/constants/Semesters";
 import SchedulePDF from "@/components/Printables/SchedulePDF";
 
 const PDFDownloadLink = React.lazy(() =>
@@ -46,7 +47,7 @@ export default function ReviewNavbar() {
       <NavbarContent>
         <NavbarMenuToggle aria-label={isMenuOpen ? "Close menu" : "Open menu"} className="md:hidden" />
         <NavbarBrand>
-          <Link color="foreground" href="/home">
+          <Link color="foreground" href={Pages.HOME}>
             <Image src="/Logo.png" alt="Model Scheduler" width={32} height={32} className="rounded-none" />
             <span className="font-bold test-inherit ml-2">Model Scheduler</span>
           </Link>
@@ -56,27 +57,34 @@ export default function ReviewNavbar() {
       {/* Mobile Links */}
       <NavbarMenu>
         <NavbarMenuItem>
-          <Link color="foreground" href="/home">
+          <Link color="foreground" href={Pages.HOME}>
             Home
           </Link>
         </NavbarMenuItem>
         <NavbarMenuItem>
-          <Link color="foreground" href="/classes">
+          <Link color="foreground" href={Pages.CLASSES}>
             Schedule
           </Link>
         </NavbarMenuItem>
         <NavbarMenuItem>
-          <Link color="foreground" href="/guide">
+          <Link color="foreground" href={Pages.GUIDE}>
             Guides
           </Link>
         </NavbarMenuItem>
         <NavbarMenuItem>
-          <Link color="foreground" href="/faq">
+          <Link color="foreground" href={Pages.FAQ}>
             FAQ
           </Link>
         </NavbarMenuItem>
 
         <Divider className="my-2" />
+
+        <NavbarMenuItem className="flex items-center mr-4">
+          <Icon icon="bx:bx-chevron-left" fontSize="1.25rem" />
+          <Link color="foreground" href={Pages.SCHEDULER}>
+            Previous
+          </Link>
+        </NavbarMenuItem>
 
         <NavbarMenuItem>
           <PDFDownloadLink document={<SchedulePDF classes={uniqueClasses} />} fileName="schedule.pdf">
@@ -101,28 +109,28 @@ export default function ReviewNavbar() {
       >
         {/* Home */}
         <NavbarItem>
-          <Link color="foreground" href="/home">
+          <Link color="foreground" href={Pages.HOME}>
             Home
           </Link>
         </NavbarItem>
 
         {/* Schedule */}
         <NavbarItem>
-          <Link color="foreground" href="/classes">
+          <Link color="foreground" href={Pages.CLASSES}>
             Schedule
           </Link>
         </NavbarItem>
 
         {/* Guide */}
         <NavbarItem>
-          <Link color="foreground" href="/guide">
+          <Link color="foreground" href={Pages.GUIDE}>
             Guides
           </Link>
         </NavbarItem>
 
         {/* FAQ */}
         <NavbarItem>
-          <Link color="foreground" href="/faq">
+          <Link color="foreground" href={Pages.FAQ}>
             FAQ
           </Link>
         </NavbarItem>
@@ -132,7 +140,7 @@ export default function ReviewNavbar() {
         {/* Previous */}
         <NavbarItem className="flex items-center mr-4">
           <Icon icon="bx:bx-chevron-left" fontSize="1.25rem" />
-          <Link color="foreground" href="/scheduler">
+          <Link color="foreground" href={Pages.SCHEDULER}>
             Previous
           </Link>
         </NavbarItem>
