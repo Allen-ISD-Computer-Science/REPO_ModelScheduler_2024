@@ -66,7 +66,7 @@
   },
   {
     "id": 5,
-    "courseCode": "FAB21A",
+    "courseCode": "FAB20A/FAB21A/FAB22A",
     "courseName": "Wind Symphony",
     "term": "S1+S2",
     "department": "FINE ARTS",
@@ -235,7 +235,7 @@
   },
   {
     "id": 15,
-    "courseCode": "PP15SB",
+    "courseCode": "PP15SA/PP15SB",
     "courseName": "Priv Prd I 11th",
     "term": "S1+S2",
     "department": "Privilege",
@@ -252,7 +252,7 @@
   },
   {
     "id": 16,
-    "courseCode": "PP17SA",
+    "courseCode": "PP17SA/PP17SB",
     "courseName": "Priv Prd I 12th",
     "term": "S1+S2",
     "department": "Privilege",
@@ -269,7 +269,7 @@
   },
   {
     "id": 17,
-    "courseCode": "PM12AA",
+    "courseCode": "PM12AA/PM2A2A",
     "courseName": "Animation II & Lab",
     "term": "S1+S2",
     "department": "CAREER - TECHNICAL ED",
@@ -402,7 +402,7 @@
   },
   {
     "id": 25,
-    "courseCode": "PP16SB",
+    "courseCode": "PP16SA/PP16SB",
     "courseName": "Priv Prd II 11th",
     "term": "S1+S2",
     "department": "Privilege",
@@ -810,7 +810,7 @@
   },
   {
     "id": 52,
-    "courseCode": "FC1PCA",
+    "courseCode": "FC1PCA/FC3PCA",
     "courseName": "Practicum in Culinary Arts I",
     "term": "S1+S2",
     "department": "CAREER - TECHNICAL ED",
@@ -826,7 +826,7 @@
   },
   {
     "id": 53,
-    "courseCode": "PP19SB",
+    "courseCode": "PP19SA/PP19SB",
     "courseName": "Priv Prd III 12th",
     "term": "S1+S2",
     "department": "Privilege",
@@ -884,7 +884,7 @@
   },
   {
     "id": 57,
-    "courseCode": "TA2R1A",
+    "courseCode": "TA1R1A/TA2R1A",
     "courseName": "Robotics I",
     "term": "S1+S2",
     "department": "STEAM",
@@ -934,7 +934,7 @@
   },
   {
     "id": 60,
-    "courseCode": "PE9LFA",
+    "courseCode": "PE1LFA/PE9LFA",
     "courseName": "Lifetime Fitness & Wellness",
     "term": "S1+S2",
     "department": "PHYSICAL ED/HEALTH",
@@ -1031,7 +1031,7 @@
   },
   {
     "id": 67,
-    "courseCode": "PM12GA",
+    "courseCode": "PM12GA/PM2G2A",
     "courseName": "Graphic Design II & Lab",
     "term": "S1+S2",
     "department": "STEAM",
@@ -1107,7 +1107,7 @@
   },
   {
     "id": 72,
-    "courseCode": "LW1PLA",
+    "courseCode": "LW1PLA/LW3PLA",
     "courseName": "PraLawPubSafeCorSec I",
     "term": "S1+S2",
     "department": "CAREER - TECHNICAL ED",
@@ -1244,7 +1244,7 @@
   },
   {
     "id": 81,
-    "courseCode": "PP18SB",
+    "courseCode": "PP18SA/PP18SB",
     "courseName": "Priv Prd II 12th",
     "term": "S1+S2",
     "department": "Privilege",
@@ -1971,7 +1971,7 @@
   },
   {
     "id": 129,
-    "courseCode": "FABP1A",
+    "courseCode": "FABP0A/FABP1A",
     "courseName": "Percussion",
     "term": "S1+S2",
     "department": "FINE ARTS",
@@ -1984,7 +1984,7 @@
   },
   {
     "id": 130,
-    "courseCode": "FC2CAA",
+    "courseCode": "FC1CLA/FC2CAA",
     "courseName": "Culinary Arts",
     "term": "S1+S2",
     "department": "CAREER - TECHNICAL ED",
@@ -2197,7 +2197,7 @@
   },
   {
     "id": 144,
-    "courseCode": "PP10SA",
+    "courseCode": "PP10SA/PP10SB",
     "courseName": "Priv Prd I 10th",
     "term": "S1+S2",
     "department": "Privilege",
@@ -2214,7 +2214,7 @@
   },
   {
     "id": 145,
-    "courseCode": "TA2MRA",
+    "courseCode": "TA2MRA/TA3PMA",
     "courseName": "Practicum Manufacture Robotics",
     "term": "S1+S2",
     "department": "STEAM",
@@ -2549,7 +2549,7 @@
   },
   {
     "id": 168,
-    "courseCode": "PM12VA",
+    "courseCode": "PM12VA/PM2V2A",
     "courseName": "Audio/Video Pro II & Lab",
     "term": "S1+S2",
     "department": "CAREER - TECHNICAL ED",
@@ -2561,7 +2561,7 @@
   },
   {
     "id": 169,
-    "courseCode": "FAB10A",
+    "courseCode": "FAB10A/FAB11A/FAB12A",
     "courseName": "Wind Ensemble",
     "term": "S1+S2",
     "department": "FINE ARTS",
@@ -2763,7 +2763,7 @@
   },
   {
     "id": 183,
-    "courseCode": "PE1SPA",
+    "courseCode": "PE1SPA/PE9SPA",
     "courseName": "Lifetime SkillBased Activities",
     "term": "S1+S2",
     "department": "PHYSICAL ED/HEALTH",
@@ -3360,7 +3360,7 @@
   },
   {
     "id": 227,
-    "courseCode": "AG2PFA",
+    "courseCode": "AG2PFA/AG3PFA",
     "courseName": "Prac-Ag-Floral Design I",
     "term": "S1+S2",
     "department": "CAREER - TECHNICAL ED",
@@ -3966,7 +3966,7 @@
   },
   {
     "id": 272,
-    "courseCode": "TA1CMA",
+    "courseCode": "TA1CMA/TA2CMA",
     "courseName": "Computer Maintenance",
     "term": "S1+S2",
     "department": "STEAM",
@@ -4030,7 +4030,7 @@
   },
   {
     "id": 277,
-    "courseCode": "FAB31A",
+    "courseCode": "FAB30A/FAB31A",
     "courseName": "Symphonic I Band",
     "term": "S1+S2",
     "department": "FINE ARTS",
@@ -5132,7 +5132,7 @@
   },
   {
     "id": 361,
-    "courseCode": "TA2E1A",
+    "courseCode": "TA1E1A/TA2E1A",
     "courseName": "Engineer Des & Presentation I",
     "term": "S1+S2",
     "department": "STEAM",
@@ -5248,7 +5248,7 @@
   },
   {
     "id": 370,
-    "courseCode": "TA2I2A",
+    "courseCode": "TA1I2A/TA2I2A",
     "courseName": "Interior Design II",
     "term": "S1+S2",
     "department": "STEAM",
@@ -5311,7 +5311,7 @@
   },
   {
     "id": 375,
-    "courseCode": "BM3PBA",
+    "courseCode": "BM1PBA/BM3PBA",
     "courseName": "Practicum in Business Mgt I",
     "term": "S1+S2",
     "department": "CAREER - TECHNICAL ED",
@@ -5651,7 +5651,7 @@
   },
   {
     "id": 402,
-    "courseCode": "TA3CTA",
+    "courseCode": "TA2CTA/TA3CTA",
     "courseName": "Computer Technician Prac I",
     "term": "S1+S2",
     "department": "STEAM",
@@ -6053,7 +6053,7 @@
   },
   {
     "id": 434,
-    "courseCode": "FC1IPA",
+    "courseCode": "FC1IPA/FC2IPA",
     "courseName": "Instructional Practices",
     "term": "S1+S2",
     "department": "CAREER - TECHNICAL ED",

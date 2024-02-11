@@ -8,8 +8,9 @@ import { Icon } from "@iconify/react";
 export default function FilterButton({ classes, setClasses, ...props }) {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
   const [selectedFilters, setSelectedFilters] = useState({
-    period: [],
+    periods: [],
     location: [],
+    term: [],
   });
 
   useEffect(() => {
@@ -18,15 +19,17 @@ export default function FilterButton({ classes, setClasses, ...props }) {
     } else {
       setClasses(
         classes.filter((classObj) => {
-          const { periods, location } = classObj;
-          const selectedPeriods = selectedFilters["period"];
+          const { periods, location, term } = classObj;
+          const selectedPeriods = selectedFilters["periods"];
           const selectedLocations = selectedFilters["location"];
+          const selectedTerms = selectedFilters["term"];
 
           const isPeriodMatch =
             selectedPeriods.length === 0 || selectedPeriods.every((period) => periods.includes(period));
           const isLocationMatch = selectedLocations.length === 0 || selectedLocations.includes(location);
+          const isTermMatch = selectedTerms.length === 0 || selectedTerms.includes(term);
 
-          return isPeriodMatch && isLocationMatch;
+          return isPeriodMatch && isLocationMatch && isTermMatch;
         })
       );
     }

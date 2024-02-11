@@ -5,11 +5,15 @@ import { Divider } from "@nextui-org/divider";
 
 export default function FilterModal({ selectedFilters, setSelectedFilters, isOpen, onOpenChange }) {
   const isPeriodSelected = (period) => {
-    return selectedFilters["period"].includes(period);
+    return selectedFilters["periods"].includes(period);
   };
 
   const isLocationSelected = (location) => {
     return selectedFilters["location"].includes(location);
+  };
+
+  const isTermSelected = (term) => {
+    return selectedFilters["term"].includes(term);
   };
 
   const handleFilterSelect = (filterKey, filter) => {
@@ -44,7 +48,7 @@ export default function FilterModal({ selectedFilters, setSelectedFilters, isOpe
                     <Checkbox
                       value="1"
                       defaultSelected={isPeriodSelected(1)}
-                      onChange={() => handleFilterSelect("period", 1)}
+                      onChange={() => handleFilterSelect("periods", 1)}
                     >
                       1st
                     </Checkbox>
@@ -53,14 +57,14 @@ export default function FilterModal({ selectedFilters, setSelectedFilters, isOpe
                     <Checkbox
                       value="2"
                       defaultSelected={isPeriodSelected(2)}
-                      onChange={() => handleFilterSelect("period", 2)}
+                      onChange={() => handleFilterSelect("periods", 2)}
                     >
                       2nd
                     </Checkbox>
                     <Checkbox
                       value="5"
                       defaultSelected={isPeriodSelected(5)}
-                      onChange={() => handleFilterSelect("period", 5)}
+                      onChange={() => handleFilterSelect("periods", 5)}
                     >
                       5th
                     </Checkbox>
@@ -69,14 +73,14 @@ export default function FilterModal({ selectedFilters, setSelectedFilters, isOpe
                     <Checkbox
                       value="3"
                       defaultSelected={isPeriodSelected(3)}
-                      onChange={() => handleFilterSelect("period", 3)}
+                      onChange={() => handleFilterSelect("periods", 3)}
                     >
                       3rd
                     </Checkbox>
                     <Checkbox
                       value="6"
                       defaultSelected={isPeriodSelected(6)}
-                      onChange={() => handleFilterSelect("period", 6)}
+                      onChange={() => handleFilterSelect("periods", 6)}
                     >
                       6th
                     </Checkbox>
@@ -85,14 +89,14 @@ export default function FilterModal({ selectedFilters, setSelectedFilters, isOpe
                     <Checkbox
                       value="4"
                       defaultSelected={isPeriodSelected(4)}
-                      onChange={() => handleFilterSelect("period", 4)}
+                      onChange={() => handleFilterSelect("periods", 4)}
                     >
                       4th
                     </Checkbox>
                     <Checkbox
                       value="7"
                       defaultSelected={isPeriodSelected(7)}
-                      onChange={() => handleFilterSelect("period", 7)}
+                      onChange={() => handleFilterSelect("periods", 7)}
                     >
                       7th
                     </Checkbox>
@@ -101,7 +105,7 @@ export default function FilterModal({ selectedFilters, setSelectedFilters, isOpe
                     <Checkbox
                       value="8"
                       defaultSelected={isPeriodSelected(8)}
-                      onChange={() => handleFilterSelect("period", 8)}
+                      onChange={() => handleFilterSelect("periods", 8)}
                     >
                       8th
                     </Checkbox>
@@ -138,6 +142,31 @@ export default function FilterModal({ selectedFilters, setSelectedFilters, isOpe
                     CTC
                   </Button>
                 </ButtonGroup>
+
+                <Divider />
+
+                {/* Term filter */}
+                <p className="text-lg font-bold mb-2">Terms/Semesters</p>
+                <ButtonGroup variant="ghost">
+                  <Button
+                    variant={isTermSelected("S1") ? "solid" : "ghost"}
+                    onPress={() => handleFilterSelect("term", "S1")}
+                  >
+                    S1 (Fall)
+                  </Button>
+                  <Button
+                    variant={isTermSelected("S2") ? "solid" : "ghost"}
+                    onPress={() => handleFilterSelect("term", "S2")}
+                  >
+                    S2 (Spring)
+                  </Button>
+                  <Button
+                    variant={isTermSelected("S1+S2") ? "solid" : "ghost"}
+                    onPress={() => handleFilterSelect("term", "S1+S2")}
+                  >
+                    S1+S2 (Full Year)
+                  </Button>
+                </ButtonGroup>
               </ModalBody>
 
               <ModalFooter>
@@ -157,8 +186,9 @@ import PropTypes from "prop-types";
 
 FilterModal.propTypes = {
   selectedFilters: PropTypes.shape({
-    period: PropTypes.arrayOf(PropTypes.number),
+    periods: PropTypes.arrayOf(PropTypes.number),
     location: PropTypes.arrayOf(PropTypes.string),
+    term: PropTypes.arrayOf(PropTypes.string),
   }).isRequired,
   setSelectedFilters: PropTypes.func.isRequired,
   isOpen: PropTypes.bool.isRequired,
