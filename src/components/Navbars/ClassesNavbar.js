@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import {
   Navbar,
   NavbarBrand,
@@ -11,102 +12,121 @@ import {
 import { Image } from "@nextui-org/image";
 import { Link } from "@nextui-org/link";
 import { Divider } from "@nextui-org/divider";
+import { useDisclosure } from "@nextui-org/use-disclosure";
 import { Icon } from "@iconify/react";
 
 import Pages from "@/constants/Pages";
+import ScheduleWarningModal from "@/components/Modals/ScheduleWarningModal";
 
 export default function ReviewNavbar() {
+  const navigate = useNavigate();
+  const { isOpen, onOpen, onOpenChange } = useDisclosure();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [addedClasses] = useState(() => {
+    return JSON.parse(localStorage.getItem("addedClasses")) || [];
+  });
+
+  const handleSchedule = () => {
+    if (addedClasses.length === 0 || addedClasses.length < 8) {
+      onOpen(); // Show the modal
+    } else {
+      navigate(Pages.SCHEDULER);
+    }
+  };
 
   return (
-    <Navbar isBordered shouldHideOnScroll onMenuOpenChange={setIsMenuOpen}>
-      {/* Logo */}
-      <NavbarContent>
-        <NavbarMenuToggle aria-label={isMenuOpen ? "Close menu" : "Open menu"} className="md:hidden" />
-        <NavbarBrand>
-          <Link color="foreground" href={Pages.HOME}>
-            <Image src="/Logo.png" alt="Model Scheduler" width={32} height={32} className="rounded-none" />
-            <span className="font-bold test-inherit ml-2">Model Scheduler</span>
-          </Link>
-        </NavbarBrand>
-      </NavbarContent>
+    <>
+      <ScheduleWarningModal isOpen={isOpen} onOpenChange={onOpenChange} addedClasses={addedClasses} />
 
-      {/* Mobile Links */}
-      <NavbarMenu>
-        <NavbarMenuItem>
-          <Link color="foreground" href={Pages.HOME}>
-            Home
-          </Link>
-        </NavbarMenuItem>
-        <NavbarMenuItem>
-          <Link color="foreground" href={Pages.CLASSES}>
-            Schedule
-          </Link>
-        </NavbarMenuItem>
-        <NavbarMenuItem>
-          <Link color="foreground" href={Pages.GUIDE}>
-            Guides
-          </Link>
-        </NavbarMenuItem>
-        <NavbarMenuItem>
-          <Link color="foreground" href={Pages.FAQ}>
-            FAQ
-          </Link>
-        </NavbarMenuItem>
+      <Navbar isBordered shouldHideOnScroll onMenuOpenChange={setIsMenuOpen}>
+        {/* Logo */}
+        <NavbarContent>
+          <NavbarMenuToggle aria-label={isMenuOpen ? "Close menu" : "Open menu"} className="md:hidden" />
+          <NavbarBrand>
+            <Link color="foreground" href={Pages.HOME}>
+              <Image src="/Logo.png" alt="Model Scheduler" width={32} height={32} className="rounded-none" />
+              <span className="font-bold test-inherit ml-2">Model Scheduler</span>
+            </Link>
+          </NavbarBrand>
+        </NavbarContent>
 
-        <Divider className="my-2" />
+        {/* Mobile Links */}
+        <NavbarMenu>
+          <NavbarMenuItem>
+            <Link color="foreground" href={Pages.HOME}>
+              Home
+            </Link>
+          </NavbarMenuItem>
+          <NavbarMenuItem>
+            <Link color="foreground" href={Pages.CLASSES}>
+              Schedule
+            </Link>
+          </NavbarMenuItem>
+          <NavbarMenuItem>
+            <Link color="foreground" href={Pages.GUIDE}>
+              Guides
+            </Link>
+          </NavbarMenuItem>
+          <NavbarMenuItem>
+            <Link color="foreground" href={Pages.FAQ}>
+              FAQ
+            </Link>
+          </NavbarMenuItem>
 
-        <NavbarMenuItem className="flex items-center mr-4">
-          <Link color="foreground" href={Pages.SCHEDULER}>
-            Next
-          </Link>
-          <Icon icon="bx:bx-chevron-right" fontSize="1.25rem" />
-        </NavbarMenuItem>
-      </NavbarMenu>
+          <Divider className="my-2" />
 
-      {/* Desktop Links */}
-      <NavbarContent
-        className="hidden md:flex h-11 rounded-full border-medium border-default-200/50 bg-default-100/50 px-4 shadow-medium"
-        justify="center"
-      >
-        {/* Home */}
-        <NavbarItem>
-          <Link color="foreground" href={Pages.HOME}>
-            Home
-          </Link>
-        </NavbarItem>
+          <NavbarMenuItem className="flex items-center mr-4">
+            <Link color="foreground" className="cursor-pointer" onPress={handleSchedule}>
+              Next
+            </Link>
+            <Icon icon="bx:bx-chevron-right" fontSize="1.25rem" />
+          </NavbarMenuItem>
+        </NavbarMenu>
 
-        {/* Schedule */}
-        <NavbarItem>
-          <Link color="foreground" href={Pages.CLASSES}>
-            Schedule
-          </Link>
-        </NavbarItem>
+        {/* Desktop Links */}
+        <NavbarContent
+          className="hidden md:flex h-11 rounded-full border-medium border-default-200/50 bg-default-100/50 px-4 shadow-medium"
+          justify="center"
+        >
+          {/* Home */}
+          <NavbarItem>
+            <Link color="foreground" href={Pages.HOME}>
+              Home
+            </Link>
+          </NavbarItem>
 
-        {/* Guide */}
-        <NavbarItem>
-          <Link color="foreground" href={Pages.GUIDE}>
-            Guides
-          </Link>
-        </NavbarItem>
+          {/* Schedule */}
+          <NavbarItem>
+            <Link color="foreground" href={Pages.CLASSES}>
+              Schedule
+            </Link>
+          </NavbarItem>
 
-        {/* FAQ */}
-        <NavbarItem>
-          <Link color="foreground" href={Pages.FAQ}>
-            FAQ
-          </Link>
-        </NavbarItem>
-      </NavbarContent>
+          {/* Guide */}
+          <NavbarItem>
+            <Link color="foreground" href={Pages.GUIDE}>
+              Guides
+            </Link>
+          </NavbarItem>
 
-      <NavbarContent justify="end" className="hidden md:flex gap-0">
-        {/* Next */}
-        <NavbarItem className="flex items-center mr-4">
-          <Link color="foreground" href={Pages.SCHEDULER}>
-            Next
-          </Link>
-          <Icon icon="bx:bx-chevron-right" fontSize="1.25rem" />
-        </NavbarItem>
-      </NavbarContent>
-    </Navbar>
+          {/* FAQ */}
+          <NavbarItem>
+            <Link color="foreground" href={Pages.FAQ}>
+              FAQ
+            </Link>
+          </NavbarItem>
+        </NavbarContent>
+
+        <NavbarContent justify="end" className="hidden md:flex gap-0">
+          {/* Next */}
+          <NavbarItem className="flex items-center mr-4">
+            <Link color="foreground" className="cursor-pointer" onPress={handleSchedule}>
+              Next
+            </Link>
+            <Icon icon="bx:bx-chevron-right" fontSize="1.25rem" />
+          </NavbarItem>
+        </NavbarContent>
+      </Navbar>
+    </>
   );
 }

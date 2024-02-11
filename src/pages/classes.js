@@ -6,7 +6,7 @@ import ClassesNavbar from "@/components/Navbars/ClassesNavbar";
 import ClassesLayout from "@/components/Layout/ClassesLayout";
 import ClassCardList from "@/components/Cards/ClassCardList";
 import SearchBar from "@/components/Inputs/SearchBar";
-import { FilterButton, ScheduleButton } from "@/components/Buttons";
+import FilterButton from "@/components/Buttons/FilterButton";
 import { useDisclosure } from "@nextui-org/use-disclosure";
 
 import exampleTestClasses from "@/temp_data.json";
@@ -123,8 +123,6 @@ export default function Classes() {
           >
             Remove class
           </Button>
-
-          <ScheduleButton addedClasses={addedClasses} color="primary" variant="ghost" />
         </div>
 
         {/* Right side (Added classes) */}

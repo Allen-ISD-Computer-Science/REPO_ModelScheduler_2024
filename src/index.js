@@ -33,8 +33,8 @@ const router = createBrowserRouter(
 );
 
 const App = () => {
-  const [version, setVersion] = useState(localStorage.getItem("version") || undefined);
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
+  const [version, setVersion] = useState(localStorage.getItem("version") || undefined);
 
   const isCurrentPath = (path) => {
     return location.pathname === path;
