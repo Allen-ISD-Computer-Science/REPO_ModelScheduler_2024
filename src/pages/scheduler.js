@@ -2,11 +2,11 @@ import { useState, useEffect } from "react";
 import { DragDropContext } from "@hello-pangea/dnd";
 
 import SchedulerLayout from "@/components/Layout/SchedulerLayout";
-import { DefaultNavbar } from "@/components/Navbars";
 import { DragDropClassCardList, DragDropClassSchedule } from "@/components/Cards";
 import { onDragStart, onDragEnd } from "@/utils/onDrag";
 
 import Semesters from "@/constants/Semesters";
+import SchedulerNavbar from "@/components/Navbars/SchedulerNavbar";
 
 export default function Scheduler() {
   const [addedClasses, setAddedClasses] = useState(() => {
@@ -72,60 +72,60 @@ export default function Scheduler() {
 
   return (
     <>
-    <DefaultNavbar />
-    <DragDropContext
-      onDragStart={(result) =>
-        onDragStart(
-          result,
-          springSemesterScheduledClasses,
-          fallSemesterScheduledClasses,
-          setUnavailablePeriods,
-          setConflictPeriods
-        )
-      }
-      onDragEnd={(result) =>
-        onDragEnd(
-          result,
-          setAddedClasses,
-          setSpringSemesterScheduledClasses,
-          setFallSemesterScheduledClasses,
-          setUnavailablePeriods,
-          setConflictPeriods
-        )
-      }
-    >
-      <SchedulerLayout>
-        {/* Left side (Spring Semester) */}
-        <div className="flex flex-col h-5/6 md:h-11/12 md:w-1/3">
-          <DragDropClassSchedule
-            semester="Spring"
-            classes={springSemesterScheduledClasses}
-            unavailablePeriods={unavailablePeriods}
-            conflictPeriods={conflictPeriods}
-          />
-        </div>
+      <SchedulerNavbar />
+      <DragDropContext
+        onDragStart={(result) =>
+          onDragStart(
+            result,
+            springSemesterScheduledClasses,
+            fallSemesterScheduledClasses,
+            setUnavailablePeriods,
+            setConflictPeriods
+          )
+        }
+        onDragEnd={(result) =>
+          onDragEnd(
+            result,
+            setAddedClasses,
+            setSpringSemesterScheduledClasses,
+            setFallSemesterScheduledClasses,
+            setUnavailablePeriods,
+            setConflictPeriods
+          )
+        }
+      >
+        <SchedulerLayout>
+          {/* Left side (Spring Semester) */}
+          <div className="flex flex-col h-5/6 md:h-11/12 md:w-1/3">
+            <DragDropClassSchedule
+              semester="Spring"
+              classes={springSemesterScheduledClasses}
+              unavailablePeriods={unavailablePeriods}
+              conflictPeriods={conflictPeriods}
+            />
+          </div>
 
-        {/* Middle (List of classes) */}
-        <div className="flex flex-col h-5/6 md:h-11/12 md:w-1/4">
-          {/* List of classes */}
-          <DragDropClassCardList
-            droppableId="droppable-class-list"
-            classes={addedClasses}
-            className="h-full bg-default-100/50 overflow-y-auto"
-          />
-        </div>
+          {/* Middle (List of classes) */}
+          <div className="flex flex-col h-5/6 md:h-11/12 md:w-1/4">
+            {/* List of classes */}
+            <DragDropClassCardList
+              droppableId="droppable-class-list"
+              classes={addedClasses}
+              className="h-full bg-default-100/50 overflow-y-auto"
+            />
+          </div>
 
-        {/* Right side (Fall Semester) */}
-        <div className="flex flex-col h-5/6 md:h-11/12 md:w-1/3">
-          <DragDropClassSchedule
-            semester="Fall"
-            classes={fallSemesterScheduledClasses}
-            unavailablePeriods={unavailablePeriods}
-            conflictPeriods={conflictPeriods}
-          />
-        </div>
-      </SchedulerLayout>
-    </DragDropContext>
+          {/* Right side (Fall Semester) */}
+          <div className="flex flex-col h-5/6 md:h-11/12 md:w-1/3">
+            <DragDropClassSchedule
+              semester="Fall"
+              classes={fallSemesterScheduledClasses}
+              unavailablePeriods={unavailablePeriods}
+              conflictPeriods={conflictPeriods}
+            />
+          </div>
+        </SchedulerLayout>
+      </DragDropContext>
     </>
   );
 }

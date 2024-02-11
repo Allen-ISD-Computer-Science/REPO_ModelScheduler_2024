@@ -4,7 +4,7 @@ import { DefaultNavbar } from "@/components/Navbars";
 const Guide = () => {
   return (
     <>
-    <DefaultNavbar />
+      <DefaultNavbar />
       <GuideLayout>
         <div>Guide Placeholder</div>
       </GuideLayout>

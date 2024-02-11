@@ -70,74 +70,73 @@ export default function Classes() {
 
   return (
     <>
-    <DefaultNavbar />
+      <DefaultNavbar />
 
-    <ClassesLayout>
+      <ClassesLayout>
+        {/* Max classes reached modal */}
+        <MaxClassesReachedModal isOpen={isOpen} onOpenChange={onOpenChange} />
 
-      {/* Max classes reached modal */}
-      <MaxClassesReachedModal isOpen={isOpen} onOpenChange={onOpenChange} />
+        {/* Left side (List of all classes excluding added) */}
+        <div className="flex flex-col justify-center h-3/4 md:h-5/6 w-full md:w-5/12 lg:w-1/3 self-center">
+          <div className="flex flex-row justify-between gap-2 mb-4">
+            {/* Search bar */}
+            <SearchBar
+              classes={exampleTestClasses}
+              setClasses={setClasses}
+              className="w-2/3"
+              classNames={{ inputWrapper: "bg-default-50/30" }}
+            />
 
-      {/* Left side (List of all classes excluding added) */}
-      <div className="flex flex-col justify-center h-3/4 md:h-5/6 w-full md:w-5/12 lg:w-1/3 self-center">
-        <div className="flex flex-row justify-between gap-2 mb-4">
-          {/* Search bar */}
-          <SearchBar
-            classes={exampleTestClasses}
-            setClasses={setClasses}
-            className="w-2/3"
-            classNames={{ inputWrapper: "bg-default-50/30" }}
-          />
+            {/* Filter */}
+            <FilterButton
+              classes={exampleTestClasses}
+              setClasses={setClasses}
+              className="self-center w-1/2 lg:w-1/3 text-neutral-400 bg-default-50/30"
+            />
+          </div>
 
-          {/* Filter */}
-          <FilterButton
-            classes={exampleTestClasses}
-            setClasses={setClasses}
-            className="self-center w-1/2 lg:w-1/3 text-neutral-400 bg-default-50/30"
+          {/* List of classes */}
+          <ClassCardList
+            classes={availableClasses}
+            classSelected={selectedClassID}
+            onClassSelected={handleClassSelect}
+            className="h-full bg-default-100/50 overflow-y-auto"
           />
         </div>
 
-        {/* List of classes */}
-        <ClassCardList
-          classes={availableClasses}
-          classSelected={selectedClassID}
-          onClassSelected={handleClassSelect}
-          className="h-full bg-default-100/50 overflow-y-auto"
-        />
-      </div>
+        {/* Middle (Buttons) */}
+        <div className="flex flex-col justify-center gap-6 mx-8 my-4">
+          <Button
+            color="success"
+            variant="ghost"
+            isDisabled={selectedClassID === null || checkIfAddedClassesHasClass(selectedClassID)}
+            onPress={() => handleAddClass(selectedClassID)} // Add class object to addedClasses
+          >
+            Add class
+          </Button>
 
-      {/* Middle (Buttons) */}
-      <div className="flex flex-col justify-center gap-6 mx-8 my-4">
-        <Button
-          color="success"
-          variant="ghost"
-          isDisabled={selectedClassID === null || checkIfAddedClassesHasClass(selectedClassID)}
-          onPress={() => handleAddClass(selectedClassID)} // Add class object to addedClasses
-        >
-          Add class
-        </Button>
+          <Button
+            color="danger"
+            variant="ghost"
+            isDisabled={selectedClassID === null || !checkIfAddedClassesHasClass(selectedClassID)}
+            onPress={() => handleRemoveClass()} // Remove class object from addedClasses
+          >
+            Remove class
+          </Button>
 
-        <Button
-          color="danger"
-          variant="ghost"
-          isDisabled={selectedClassID === null || !checkIfAddedClassesHasClass(selectedClassID)}
-          onPress={() => handleRemoveClass()} // Remove class object from addedClasses
-        >
-          Remove class
-        </Button>
+          <ScheduleButton addedClasses={addedClasses} color="primary" variant="ghost" />
+        </div>
 
-        <ScheduleButton addedClasses={addedClasses} color="primary" variant="ghost" />
-      </div>
-
-      {/* Right side (Added classes) */}
-      <div className="flex flex-col justify-center h-3/4 md:h-5/6 w-full md:w-5/12 lg:w-1/3 self-center">
-        <ClassCardList
-          classes={addedClasses}
-          classSelected={selectedClassID}
-          onClassSelected={handleClassSelect}
-          className="h-full bg-default-100/50 overflow-y-auto"
-        />
-      </div>
-    </ClassesLayout>
+        {/* Right side (Added classes) */}
+        <div className="flex flex-col justify-center h-3/4 md:h-5/6 w-full md:w-5/12 lg:w-1/3 self-center">
+          <ClassCardList
+            classes={addedClasses}
+            classSelected={selectedClassID}
+            onClassSelected={handleClassSelect}
+            className="h-full bg-default-100/50 overflow-y-auto"
+          />
+        </div>
+      </ClassesLayout>
     </>
   );
 }
