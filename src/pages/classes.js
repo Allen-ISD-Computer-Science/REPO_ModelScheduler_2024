@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Button } from "@nextui-org/button";
 
 import MaxClassesReachedModal from "@/components/Modals/MaxClassesReachedModal";
+import ClassesNavbar from "@/components/Navbars/ClassesNavbar";
 import ClassesLayout from "@/components/Layout/ClassesLayout";
 import ClassCardList from "@/components/Cards/ClassCardList";
 import SearchBar from "@/components/Inputs/SearchBar";
@@ -9,7 +10,6 @@ import { FilterButton, ScheduleButton } from "@/components/Buttons";
 import { useDisclosure } from "@nextui-org/use-disclosure";
 
 import exampleTestClasses from "@/temp_data.json";
-import { DefaultNavbar } from "@/components/Navbars";
 
 export default function Classes() {
   const [classes, setClasses] = useState(exampleTestClasses);
@@ -70,7 +70,7 @@ export default function Classes() {
 
   return (
     <>
-      <DefaultNavbar />
+      <ClassesNavbar />
 
       <ClassesLayout>
         {/* Max classes reached modal */}

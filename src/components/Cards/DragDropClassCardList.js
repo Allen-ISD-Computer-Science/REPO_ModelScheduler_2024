@@ -12,10 +12,10 @@ export default function DroppableClassCardList({ droppableId, classes, ...props 
             {classes.length === 0 ? (
               <div className="flex flex-col h-full justify-center items-center p-8">
                 <p className="text-2xl text-center font-bold text-neutral-200 animate-fade-down animate-ease-in-out">
-                  No classes added
+                  No classes available
                 </p>
                 <p className="text-md text-center text-neutral-400 animate-fade-up animate-delay-200">
-                  Go back and add classes
+                  Drag and drop classes here
                 </p>
               </div>
             ) : (

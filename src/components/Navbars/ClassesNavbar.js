@@ -10,10 +10,11 @@ import {
 } from "@nextui-org/navbar";
 import { Image } from "@nextui-org/image";
 import { Link } from "@nextui-org/link";
-import { Icon } from "@iconify/react";
 import { Divider } from "@nextui-org/divider";
 
-export default function SchedulerNavbar() {
+import { Icon } from "@iconify/react";
+
+export default function ReviewNavbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
@@ -23,7 +24,7 @@ export default function SchedulerNavbar() {
         <NavbarMenuToggle aria-label={isMenuOpen ? "Close menu" : "Open menu"} className="md:hidden" />
         <NavbarBrand>
           <Link color="foreground" href="/home">
-            <Image src="/Logo.png" alt="Model Scheduler" width={32} height={32} className="shrink-0 rounded-none" />
+            <Image src="/Logo.png" alt="Model Scheduler" width={32} height={32} className="rounded-none" />
             <span className="font-bold test-inherit ml-2">Model Scheduler</span>
           </Link>
         </NavbarBrand>
@@ -55,14 +56,7 @@ export default function SchedulerNavbar() {
         <Divider className="my-2" />
 
         <NavbarMenuItem className="flex items-center mr-4">
-          <Icon icon="bx:bx-chevron-left" fontSize="1.25rem" />
-          <Link color="foreground" href="/classes">
-            Previous
-          </Link>
-
-          <Divider orientation="vertical" className="h-6 mx-2" />
-
-          <Link color="foreground" href="/review">
+          <Link color="foreground" href="/scheduler">
             Next
           </Link>
           <Icon icon="bx:bx-chevron-right" fontSize="1.25rem" />
@@ -104,19 +98,9 @@ export default function SchedulerNavbar() {
       </NavbarContent>
 
       <NavbarContent justify="end" className="hidden md:flex gap-0">
-        {/* Previous */}
-        <NavbarItem className="flex items-center">
-          <Icon icon="bx:bx-chevron-left" fontSize="1.25rem" />
-          <Link color="foreground" href="/classes">
-            Previous
-          </Link>
-        </NavbarItem>
-
-        <Divider orientation="vertical" className="h-8 mx-4" />
-
         {/* Next */}
         <NavbarItem className="flex items-center mr-4">
-          <Link color="foreground" href="/review">
+          <Link color="foreground" href="/scheduler">
             Next
           </Link>
           <Icon icon="bx:bx-chevron-right" fontSize="1.25rem" />

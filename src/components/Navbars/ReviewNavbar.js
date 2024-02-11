@@ -133,7 +133,7 @@ export default function ReviewNavbar() {
         <NavbarItem className="flex items-center mr-4">
           <Icon icon="bx:bx-chevron-left" fontSize="1.25rem" />
           <Link color="foreground" href="/scheduler">
-            Go Back
+            Previous
           </Link>
         </NavbarItem>
 

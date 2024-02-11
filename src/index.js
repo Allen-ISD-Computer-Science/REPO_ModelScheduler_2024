@@ -52,9 +52,11 @@ const App = () => {
     // If the user is on a small screen, open the warning modal
     if (
       window.innerWidth < 768 &&
-      (isCurrentPath("/classes") || isCurrentPath("/scheduler") || isCurrentPath("/review"))
+      (isCurrentPath("/classes") || isCurrentPath("/scheduler") || isCurrentPath("/review")) &&
+      !sessionStorage.getItem("warningModalShown")
     ) {
       onOpen();
+      sessionStorage.setItem("warningModalShown", "true");
     }
 
     // If localStorage version is outdated, reset it
