@@ -1,9 +1,9 @@
 import { useNavigate } from "react-router-dom";
 import { Button } from "@nextui-org/button";
 import { useDisclosure } from "@nextui-org/use-disclosure";
+import { Icon } from "@iconify/react";
 
 import ScheduleWarningModal from "@/components/Modals/ScheduleWarningModal";
-import { Icon } from "@iconify/react";
 
 export default function ScheduleButton({ addedClasses, ...props }) {
   const navigate = useNavigate();

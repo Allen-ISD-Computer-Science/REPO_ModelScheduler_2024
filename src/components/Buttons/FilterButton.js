@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 import { Button } from "@nextui-org/button";
 import { useDisclosure } from "@nextui-org/use-disclosure";
+import { Icon } from "@iconify/react";
 
 import FilterModal from "@/components/Modals/FilterModal";
-import { Icon } from "@iconify/react";
 
 export default function FilterButton({ classes, setClasses, ...props }) {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();

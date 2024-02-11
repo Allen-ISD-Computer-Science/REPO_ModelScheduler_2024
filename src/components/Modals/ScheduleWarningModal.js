@@ -1,7 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { Modal, ModalContent, ModalBody, ModalFooter, ModalHeader } from "@nextui-org/modal";
 import { Button } from "@nextui-org/button";
-
 import { Icon } from "@iconify/react";
 
 export default function ScheduleWarningModal({ isOpen, onOpenChange, addedClasses }) {

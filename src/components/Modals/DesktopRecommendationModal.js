@@ -1,6 +1,5 @@
 import { Modal, ModalContent, ModalBody, ModalFooter, ModalHeader } from "@nextui-org/modal";
 import { Button } from "@nextui-org/button";
-
 import { Icon } from "@iconify/react";
 
 export default function DesktopRecommendationModal({ isOpen, onOpenChange }) {

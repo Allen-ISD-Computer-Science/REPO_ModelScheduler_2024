@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { Input } from "@nextui-org/input";
-
 import { Icon } from "@iconify/react";
 
 export default function SearchBar({ classes, setClasses, ...props }) {

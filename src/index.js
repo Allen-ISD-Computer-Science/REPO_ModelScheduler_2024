@@ -8,7 +8,6 @@ import { NextUIProvider } from "@nextui-org/react";
 import { useDisclosure } from "@nextui-org/use-disclosure";
 
 import Home from "@/pages/index";
-import Homepage from "@/pages/homepage";
 import Classes from "@/pages/classes";
 import Scheduler from "@/pages/scheduler";
 import Review from "@/pages/review";
@@ -25,7 +24,6 @@ const router = createBrowserRouter(
     { path: "/classes", element: <Classes /> },
     { path: "/scheduler", element: <Scheduler /> },
     { path: "/review", element: <Review /> },
-    { path: "/home", element: <Homepage /> },
     { path: "/guide", element: <Guide /> },
     { path: "/faq", element: <FAQ /> },
   ],
