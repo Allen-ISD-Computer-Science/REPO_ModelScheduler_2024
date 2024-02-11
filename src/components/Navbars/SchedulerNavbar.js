@@ -89,25 +89,23 @@ export default function SchedulerNavbar() {
 
       <NavbarContent justify="end" className="hidden md:flex gap-0">
         {/* Previous */}
-        <NavbarItem className="flex items-center mr-4">
+        <NavbarItem className="flex items-center">
           <Icon icon="bx:bx-chevron-left" fontSize="1.25rem" />
           <Link color="foreground" href="/classes">
             Go Back
           </Link>
         </NavbarItem>
+
+        <Divider orientation="vertical" className="h-8 mx-4" />
+
+        {/* Next */}
+        <NavbarItem className="flex items-center mr-4">
+          <Link color="foreground" href="/review">
+            Next
+          </Link>
+          <Icon icon="bx:bx-chevron-right" fontSize="1.25rem" />
+        </NavbarItem>
       </NavbarContent>
-
-      <Divider orientation="vertical" className="h-8 mx-1" />
-
-      {/* Next */}
-      <NavbarItem className="flex items-center mr-4">
-        <Link color="foreground" href="/review">
-          Next
-        </Link>
-        <Icon icon="bx:bx-chevron-right" fontSize="1.25rem" />
-      </NavbarItem>
-
-      <NavbarContent justify="end" className="hidden md:flex gap-0" />
     </Navbar>
   );
 }
