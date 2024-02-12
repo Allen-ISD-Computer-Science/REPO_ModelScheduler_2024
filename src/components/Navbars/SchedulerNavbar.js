@@ -38,16 +38,13 @@ export default function SchedulerNavbar() {
             Home
           </Link>
         </NavbarMenuItem>
+
         <NavbarMenuItem>
           <Link color="foreground" href={Pages.CLASSES}>
             Schedule
           </Link>
         </NavbarMenuItem>
-        <NavbarMenuItem>
-          <Link color="foreground" href={Pages.GUIDE}>
-            Guides
-          </Link>
-        </NavbarMenuItem>
+
         <NavbarMenuItem>
           <Link color="foreground" href={Pages.FAQ}>
             FAQ
@@ -76,28 +73,18 @@ export default function SchedulerNavbar() {
         className="hidden md:flex h-11 rounded-full border-medium border-default-200/50 bg-default-100/50 px-4 shadow-medium"
         justify="center"
       >
-        {/* Home */}
         <NavbarItem>
           <Link color="foreground" href={Pages.HOME}>
             Home
           </Link>
         </NavbarItem>
 
-        {/* Schedule */}
         <NavbarItem>
           <Link color="foreground" href={Pages.CLASSES}>
             Schedule
           </Link>
         </NavbarItem>
 
-        {/* Guide */}
-        <NavbarItem>
-          <Link color="foreground" href={Pages.GUIDE}>
-            Guides
-          </Link>
-        </NavbarItem>
-
-        {/* FAQ */}
         <NavbarItem>
           <Link color="foreground" href={Pages.FAQ}>
             FAQ
@@ -106,7 +93,6 @@ export default function SchedulerNavbar() {
       </NavbarContent>
 
       <NavbarContent justify="end" className="hidden md:flex gap-0">
-        {/* Previous */}
         <NavbarItem className="flex items-center">
           <Icon icon="bx:bx-chevron-left" fontSize="1.25rem" />
           <Link color="foreground" href={Pages.CLASSES}>
@@ -116,7 +102,6 @@ export default function SchedulerNavbar() {
 
         <Divider orientation="vertical" className="h-8 mx-4" />
 
-        {/* Next */}
         <NavbarItem className="flex items-center mr-4">
           <Link color="foreground" href={Pages.REVIEW}>
             Next

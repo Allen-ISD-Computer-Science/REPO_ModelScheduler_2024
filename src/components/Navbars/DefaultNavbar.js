@@ -36,16 +36,13 @@ export default function DefaultNavbar() {
             Home
           </Link>
         </NavbarMenuItem>
+
         <NavbarMenuItem>
           <Link color="foreground" href={Pages.CLASSES}>
             Schedule
           </Link>
         </NavbarMenuItem>
-        <NavbarMenuItem>
-          <Link color="foreground" href={Pages.GUIDE}>
-            Guides
-          </Link>
-        </NavbarMenuItem>
+
         <NavbarMenuItem>
           <Link color="foreground" href={Pages.FAQ}>
             FAQ
@@ -58,28 +55,18 @@ export default function DefaultNavbar() {
         className="hidden md:flex h-11 rounded-full border-medium border-default-200/50 bg-default-100/50 px-4 shadow-medium"
         justify="center"
       >
-        {/* Home */}
         <NavbarItem>
           <Link color="foreground" href={Pages.HOME}>
             Home
           </Link>
         </NavbarItem>
 
-        {/* Schedule */}
         <NavbarItem>
           <Link color="foreground" href={Pages.CLASSES}>
             Schedule
           </Link>
         </NavbarItem>
 
-        {/* Guide */}
-        <NavbarItem>
-          <Link color="foreground" href={Pages.GUIDE}>
-            Guides
-          </Link>
-        </NavbarItem>
-
-        {/* FAQ */}
         <NavbarItem>
           <Link color="foreground" href={Pages.FAQ}>
             FAQ

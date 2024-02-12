@@ -46,8 +46,7 @@ export default function FAQ() {
             }}
           >
             You can start by visiting the Scheduling Tool page by clicking on the &quot;Schedule&quot; link in the
-            navigation bar. There, you can add your classes and generate a printable schedule. If you need help, you can
-            always visit the &quot;Guide&quot; page in the navigation bar.
+            navigation bar. There, you can add your classes and generate a printable schedule.
           </AccordionItem>
           <AccordionItem
             title="How do I save my schedule?"
