@@ -74,6 +74,12 @@ export default function ReviewNavbar() {
           </Link>
         </NavbarMenuItem>
 
+        <NavbarMenuItem>
+          <Link isExternal showAnchorIcon color="foreground" href="https://forms.gle/qS7zVPAt9CwijjmQA">
+            Feedback
+          </Link>
+        </NavbarMenuItem>
+
         <Divider className="my-2" />
 
         <NavbarMenuItem className="flex items-center mr-4">
@@ -119,6 +125,12 @@ export default function ReviewNavbar() {
         <NavbarItem>
           <Link color="foreground" href={Pages.FAQ}>
             FAQ
+          </Link>
+        </NavbarItem>
+
+        <NavbarItem>
+          <Link isExternal showAnchorIcon color="foreground" href="https://forms.gle/qS7zVPAt9CwijjmQA">
+            Feedback
           </Link>
         </NavbarItem>
       </NavbarContent>

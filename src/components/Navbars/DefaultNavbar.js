@@ -50,7 +50,7 @@ export default function DefaultNavbar() {
         </NavbarMenuItem>
 
         <NavbarMenuItem>
-          <Link color="foreground" target="_blank" href={"https://docs.google.com/forms/d/1XtDsZ7d6eBfM4vSMnm87VbJUJsEhXmuGIeEi9enjfdo/"}>
+          <Link isExternal showAnchorIcon color="foreground" href="https://forms.gle/qS7zVPAt9CwijjmQA">
             Feedback
           </Link>
         </NavbarMenuItem>
@@ -79,11 +79,11 @@ export default function DefaultNavbar() {
           </Link>
         </NavbarItem>
 
-        <NavbarMenuItem>
-          <Link color="foreground" target="_blank" href={"https://docs.google.com/forms/d/1XtDsZ7d6eBfM4vSMnm87VbJUJsEhXmuGIeEi9enjfdo/"}>
+        <NavbarItem>
+          <Link isExternal showAnchorIcon color="foreground" href="https://forms.gle/qS7zVPAt9CwijjmQA">
             Feedback
           </Link>
-        </NavbarMenuItem>
+        </NavbarItem>
       </NavbarContent>
 
       <NavbarContent justify="end" className="hidden md:flex gap-0" />
