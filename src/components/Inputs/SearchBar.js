@@ -1,18 +1,19 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Input } from "@nextui-org/input";
+import { Icon } from "@iconify/react";
 
-import UilSearchAlt from "@iconscout/react-unicons/icons/uil-search-alt";
-
-const SearchBar = ({ classes, setClasses, ...props }) => {
+export default function SearchBar({ classes, setClasses, ...props }) {
   const [searchQuery, setSearchQuery] = useState("");
 
-  useEffect(() => {
+  const onSearchQueryChange = (value) => {
+    setSearchQuery(value);
+
     // Filter classes based on search query
     const filteredClasses = classes.filter((classObj) =>
-      classObj.courseName.toLowerCase().includes(searchQuery.toLowerCase())
+      classObj.courseName.toLowerCase().includes(value.toLowerCase())
     );
     setClasses(filteredClasses);
-  }, [searchQuery, classes, setClasses]);
+  };
 
   return (
     <>
@@ -23,15 +24,13 @@ const SearchBar = ({ classes, setClasses, ...props }) => {
         placeholder="Search for a class"
         variant="faded"
         value={searchQuery}
-        startContent={<UilSearchAlt className="text-neutral-400" />}
-        onValueChange={(value) => setSearchQuery(value)}
+        startContent={<Icon icon="uil:search-alt" fontSize="1.25rem" className="text-neutral-400" />}
+        onValueChange={onSearchQueryChange}
         {...props}
       />
     </>
   );
-};
-
-export default SearchBar;
+}
 
 import PropTypes from "prop-types";
 

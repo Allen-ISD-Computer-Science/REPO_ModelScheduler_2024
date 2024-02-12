@@ -8,6 +8,9 @@ module.exports = {
   ],
   theme: {
     extend: {},
+    fontFamily: {
+      'sans': ['Space Grotesk', 'ui-sans-serif', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'Noto Sans', 'sans-serif'],
+    },
   },
   darkMode: "class",
   plugins: [
@@ -15,7 +18,6 @@ module.exports = {
       themes: {
         dark: {
           colors: {
-            background: "#121212",
             success: "#38A169",
             danger: "#E53E3E"
           }
