@@ -19,7 +19,7 @@ export default function Homepage() {
 
       {/* Contains link to: FAQ, Classes, Scheduler(?), Feedback */}
       <HomeLayout>
-        <div className="w-full h-full absolute bottom-0 flex place-items-center flex-col space-y-10 pt-40 font-sans font-thin tracking-wide">
+        <div className="w-full h-full absolute bottom-0 flex place-items-center flex-col space-y-10 pt-52 font-sans font-thin tracking-wide">
           <Image src="/AllenISDLogo.png" alt="AllenISD Logo" className="my-auto mx-auto" style={{ blockSize: 300 }} />
 
           <div className="flex place-items-center justify-center mx-auto w-9/12 text-center rounded-lg tracking-wide">
@@ -40,8 +40,8 @@ export default function Homepage() {
         </div>
 
         <div className="w-full h-32 flex justify-center mb-auto font-thin">
-          <div className="flex place-items-center justify-center mx-auto w-10/12 text-3xl tracking-wide space-x-20">
-            <Button
+         <div className="flex place-items-center justify-center mx-auto w-10/12 text-3xl tracking-wide space-x-20">
+{/*         <Button
               style={{ backgroundColor: "#121212" }}
               className="border px-16 py-8 w-1/3 font-thin tracking-wide text-3xl"
               onPress={() => NavigateToPage("classes")}
@@ -56,14 +56,14 @@ export default function Homepage() {
               Guide
             </Button>
           </div>
-
+  */}
           <div
             style={{ backgroundColor: "#1C1C1C" }}
             className="rounded-3xl px-48 h-24 flex place-self-center items-center tracking-wide text-6xl font-thin"
           >
             Welcome
           </div>
-
+{/*
           <div className="flex place-items-center justify-center mx-auto w-10/12 text-3xl text-center tracking-wide space-x-20">
             <Button
               style={{ backgroundColor: "#121212" }}
@@ -80,7 +80,7 @@ export default function Homepage() {
               }
             >
               Feedback
-            </Button>
+            </Button> */}
           </div>
         </div>
       </HomeLayout>

@@ -48,6 +48,12 @@ export default function DefaultNavbar() {
             FAQ
           </Link>
         </NavbarMenuItem>
+
+        <NavbarMenuItem>
+          <Link color="foreground" target="_blank" href={"https://docs.google.com/forms/d/1XtDsZ7d6eBfM4vSMnm87VbJUJsEhXmuGIeEi9enjfdo/"}>
+            Feedback
+          </Link>
+        </NavbarMenuItem>
       </NavbarMenu>
 
       {/* Desktop Links */}
@@ -72,6 +78,12 @@ export default function DefaultNavbar() {
             FAQ
           </Link>
         </NavbarItem>
+
+        <NavbarMenuItem>
+          <Link color="foreground" target="_blank" href={"https://docs.google.com/forms/d/1XtDsZ7d6eBfM4vSMnm87VbJUJsEhXmuGIeEi9enjfdo/"}>
+            Feedback
+          </Link>
+        </NavbarMenuItem>
       </NavbarContent>
 
       <NavbarContent justify="end" className="hidden md:flex gap-0" />
