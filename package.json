@@ -17,8 +17,9 @@
   },
   "scripts": {
     "dev": "craco start",
-    "build": "craco build",
+    "build": "craco build --stats",
     "start": "serve -s build",
+    "analyze": "webpack-bundle-analyzer build/bundle-stats.json",
     "lint": "eslint src --ext js,jsx,ts,tsx",
     "lint:fix": "eslint src --fix --ext js,jsx,ts,tsx",
     "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}",
@@ -53,6 +54,7 @@
     "prop-types": "^15.8.1",
     "serve": "^14.2.1",
     "tailwindcss": "^3.3.6",
-    "tailwindcss-animated": "^1.0.1"
+    "tailwindcss-animated": "^1.0.1",
+    "webpack-bundle-analyzer": "^4.10.1"
   }
 }

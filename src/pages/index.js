@@ -40,13 +40,13 @@ export default function Homepage() {
         </div>
 
         <div className="w-full h-32 flex justify-center mb-auto font-thin">
-         <div className="flex place-items-center justify-center mx-auto w-10/12 text-3xl tracking-wide space-x-20">
-          <div
-            style={{ backgroundColor: "#1C1C1C" }}
-            className="rounded-3xl px-48 h-24 flex place-self-center items-center tracking-wide text-6xl font-thin"
-          >
-            Welcome
-          </div>
+          <div className="flex place-items-center justify-center mx-auto w-10/12 text-3xl tracking-wide space-x-20">
+            <div
+              style={{ backgroundColor: "#1C1C1C" }}
+              className="rounded-3xl px-48 h-24 flex place-self-center items-center tracking-wide text-6xl font-thin"
+            >
+              Welcome
+            </div>
           </div>
         </div>
       </HomeLayout>
