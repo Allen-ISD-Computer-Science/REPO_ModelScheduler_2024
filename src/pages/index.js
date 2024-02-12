@@ -41,46 +41,12 @@ export default function Homepage() {
 
         <div className="w-full h-32 flex justify-center mb-auto font-thin">
          <div className="flex place-items-center justify-center mx-auto w-10/12 text-3xl tracking-wide space-x-20">
-{/*         <Button
-              style={{ backgroundColor: "#121212" }}
-              className="border px-16 py-8 w-1/3 font-thin tracking-wide text-3xl"
-              onPress={() => NavigateToPage("classes")}
-            >
-              Add Classes
-            </Button>
-            <Button
-              style={{ backgroundColor: "#121212" }}
-              className="border px-16 py-8 w-1/3 font-thin tracking-wide text-3xl"
-              onPress={() => NavigateToPage("guide")}
-            >
-              Guide
-            </Button>
-          </div>
-  */}
           <div
             style={{ backgroundColor: "#1C1C1C" }}
             className="rounded-3xl px-48 h-24 flex place-self-center items-center tracking-wide text-6xl font-thin"
           >
             Welcome
           </div>
-{/*
-          <div className="flex place-items-center justify-center mx-auto w-10/12 text-3xl text-center tracking-wide space-x-20">
-            <Button
-              style={{ backgroundColor: "#121212" }}
-              className="border px-16 py-8 w-1/3 font-thin tracking-wide text-3xl"
-              onPress={() => NavigateToPage("faq")}
-            >
-              FAQ
-            </Button>
-            <Button
-              style={{ backgroundColor: "#121212" }}
-              className="border px-16 py-8 w-1/3 font-thin tracking-wide text-3xl"
-              onPress={() =>
-                window.open("https://docs.google.com/forms/d/1XtDsZ7d6eBfM4vSMnm87VbJUJsEhXmuGIeEi9enjfdo/")
-              }
-            >
-              Feedback
-            </Button> */}
           </div>
         </div>
       </HomeLayout>
