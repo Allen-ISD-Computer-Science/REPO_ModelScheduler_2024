@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { Button } from "@nextui-org/button";
 import { Image } from "@nextui-org/image";
+import { Divider } from "@nextui-org/react";
 
 import DefaultNavbar from "@/components/Navbars/DefaultNavbar";
 import HomeLayout from "@/components/Layout/HomeLayout";
@@ -23,6 +24,16 @@ export default function Homepage() {
           <Image src="/AllenISDLogo.png" alt="AllenISD Logo" className="my-auto mx-auto" style={{ blockSize: 300 }} />
 
           <div className="flex place-items-center justify-center mx-auto w-9/12 text-center rounded-lg tracking-wide">
+            <Button
+              style={{ backgroundColor: "#121212" }}
+              className="border p-8 text-3xl font-thin"
+              onPress={() => NavigateToPage("classes")}
+            >
+              Pick Classes
+            </Button>
+
+            <Divider orientation="vertical" className="h-8 mx-1" />
+
             <Button
               style={{ backgroundColor: "#121212" }}
               className="border p-8 text-3xl font-thin"
