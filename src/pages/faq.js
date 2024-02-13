@@ -1,8 +1,10 @@
 import { Accordion, AccordionItem } from "@nextui-org/accordion";
+import { Icon } from "@iconify/react";
 
+import Pages from "@/constants/Pages";
 import FAQLayout from "@/components/Layout/FAQLayout";
 import DefaultNavbar from "@/components/Navbars/DefaultNavbar";
-import { Icon } from "@iconify/react";
+import Hyperlink from "@/components/Buttons/Hyperlink";
 
 export default function FAQ() {
   return (
@@ -45,8 +47,9 @@ export default function FAQ() {
               trigger: "flex-row-reverse",
             }}
           >
-            You can start by visiting the Scheduling Tool page by clicking on the &quot;Schedule&quot; link in the
-            navigation bar. There, you can add your classes and generate a printable schedule.
+            You can start by visiting the <Hyperlink text="Classes page" href={Pages.CLASSES} /> by clicking on the
+            &quot;Schedule&quot; link in the navigation bar. There, you can add your classes and generate a printable
+            schedule.
           </AccordionItem>
           <AccordionItem
             title="How do I save my schedule?"
@@ -69,8 +72,37 @@ export default function FAQ() {
               trigger: "flex-row-reverse",
             }}
           >
-            You can print your schedule by clicking on the &quot;Download&quot; button on the Review page inside the
-            navigation bar. This will generate a PDF file that you can print.
+            You can print your schedule by clicking on the &quot;Download&quot; button on the{" "}
+            <Hyperlink text="Review page" href={Pages.REVIEW} /> inside the navigation bar. This will generate a PDF
+            file that you can print.
+          </AccordionItem>
+          <AccordionItem
+            title="How do I add a class to my schedule?"
+            indicator={<Icon icon="lucide:plus" width="1.5em" />}
+            className="py-2 text-base text-default-500"
+            classNames={{
+              title: "text-xl",
+              trigger: "flex-row-reverse",
+            }}
+          >
+            You can add a class to your schedule by visiting the <Hyperlink text="Classes page" href={Pages.CLASSES} />{" "}
+            and select a class and then clicking on the &quot;Add Class&quot; button. You can also search for a class
+            and add it to your schedule.
+            <img src="/GUIDE - Classes.gif" alt="Guide - Classes" width={500} height={300} />
+          </AccordionItem>
+          <AccordionItem
+            title="How do I make my class schedule?"
+            indicator={<Icon icon="lucide:plus" width="1.5em" />}
+            className="py-2 text-base text-default-500"
+            classNames={{
+              title: "text-xl",
+              trigger: "flex-row-reverse",
+            }}
+          >
+            You can make your class schedule by visiting the <Hyperlink text="Scheduler page" href={Pages.SCHEDULER} />{" "}
+            and start dragging your classes. Once you have dragged over all your desired classes, you can click on the
+            &quot;Next&quot; button in the navigation bar to see your final schedule.
+            <img src="/GUIDE - Scheduler.gif" alt="Guide - Scheduler" width={500} height={300} />
           </AccordionItem>
         </Accordion>
       </FAQLayout>
