@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import {
   Navbar,
@@ -22,9 +22,21 @@ export default function ReviewNavbar() {
   const navigate = useNavigate();
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [addedClasses] = useState(() => {
+  const [addedClasses, setAddedClasses] = useState(() => {
     return JSON.parse(localStorage.getItem("addedClasses")) || [];
   });
+
+  useEffect(() => {
+    const handleStorageChange = () => {
+      setAddedClasses(JSON.parse(localStorage.getItem("addedClasses")) || []);
+    };
+
+    window.addEventListener("storage", handleStorageChange);
+
+    return () => {
+      window.removeEventListener("storage", handleStorageChange);
+    };
+  }, []);
 
   const handleSchedule = () => {
     if (addedClasses.length === 0 || addedClasses.length < 8) {

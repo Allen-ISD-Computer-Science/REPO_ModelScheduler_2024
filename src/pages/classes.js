@@ -66,6 +66,7 @@ export default function Classes() {
   // Update localStorage on addedClasses change
   useEffect(() => {
     localStorage.setItem("addedClasses", JSON.stringify(addedClasses));
+    dispatchEvent(new Event("storage")); // Trigger storage event
   }, [addedClasses]);
 
   return (
