@@ -22,7 +22,7 @@ export default function Homepage() {
       <HomeLayout>
         <div className="w-full h-full absolute bottom-0 flex place-items-center place-content-center flex-col space-y-10 pt-52 font-sans font-thin tracking-wide">
             <div
-              style={{ backgroundColor: "#1C1C1C" }}
+              style={{ backgroundColor: "#141414" }}
               className="rounded-3xl px-48 h-24 flex place-self-center items-center tracking-wide text-6xl font-thin"
             >
               Welcome
