@@ -8,6 +8,7 @@ import ClassCardList from "@/components/Cards/ClassCardList";
 import SearchBar from "@/components/Inputs/SearchBar";
 import FilterButton from "@/components/Buttons/FilterButton";
 import { useDisclosure } from "@nextui-org/use-disclosure";
+import { Icon } from "@iconify/react";
 
 import exampleTestClasses from "@/temp_data.json";
 
@@ -66,6 +67,7 @@ export default function Classes() {
   // Update localStorage on addedClasses change
   useEffect(() => {
     localStorage.setItem("addedClasses", JSON.stringify(addedClasses));
+    dispatchEvent(new Event("storage")); // Trigger storage event
   }, [addedClasses]);
 
   return (
@@ -110,7 +112,9 @@ export default function Classes() {
             color="success"
             variant="ghost"
             isDisabled={selectedClassID === null || checkIfAddedClassesHasClass(selectedClassID)}
+            endContent={<Icon icon="bx:bx-chevron-right" fontSize="1.5rem" />}
             onPress={() => handleAddClass(selectedClassID)} // Add class object to addedClasses
+            className="gap-0"
           >
             Add class
           </Button>
@@ -119,7 +123,9 @@ export default function Classes() {
             color="danger"
             variant="ghost"
             isDisabled={selectedClassID === null || !checkIfAddedClassesHasClass(selectedClassID)}
+            startContent={<Icon icon="bx:bx-chevron-left" fontSize="1.5rem" />}
             onPress={() => handleRemoveClass()} // Remove class object from addedClasses
+            className="gap-0"
           >
             Remove class
           </Button>

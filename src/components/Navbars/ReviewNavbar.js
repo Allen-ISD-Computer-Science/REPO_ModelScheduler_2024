@@ -10,17 +10,12 @@ import {
 } from "@nextui-org/navbar";
 import { Image } from "@nextui-org/image";
 import { Link } from "@nextui-org/link";
-import { Button } from "@nextui-org/button";
 import { Divider } from "@nextui-org/divider";
 import { Icon } from "@iconify/react";
 
+const PDFDownloadButton = React.lazy(() => import("@/components/Buttons/PDFDownloadButton"));
 import Pages from "@/constants/Pages";
 import Semesters from "@/constants/Semesters";
-import SchedulePDF from "@/components/Printables/SchedulePDF";
-
-const PDFDownloadLink = React.lazy(() =>
-  import("@react-pdf/renderer").then((module) => ({ default: module.PDFDownloadLink }))
-);
 
 export default function ReviewNavbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -74,6 +69,12 @@ export default function ReviewNavbar() {
           </Link>
         </NavbarMenuItem>
 
+        <NavbarMenuItem>
+          <Link isExternal showAnchorIcon color="foreground" href="https://forms.gle/qS7zVPAt9CwijjmQA">
+            Feedback
+          </Link>
+        </NavbarMenuItem>
+
         <Divider className="my-2" />
 
         <NavbarMenuItem className="flex items-center mr-4">
@@ -84,18 +85,7 @@ export default function ReviewNavbar() {
         </NavbarMenuItem>
 
         <NavbarMenuItem>
-          <PDFDownloadLink document={<SchedulePDF classes={uniqueClasses} />} fileName="schedule.pdf">
-            {({ loading }) => (
-              <Button
-                variant="light"
-                isLoading={loading}
-                startContent={!loading && <Icon icon="ph:download-simple-bold" fontSize="1.25rem" />}
-                className="p-0 text-md"
-              >
-                Download
-              </Button>
-            )}
-          </PDFDownloadLink>
+          <PDFDownloadButton classes={uniqueClasses} />
         </NavbarMenuItem>
       </NavbarMenu>
 
@@ -121,6 +111,12 @@ export default function ReviewNavbar() {
             FAQ
           </Link>
         </NavbarItem>
+
+        <NavbarItem>
+          <Link isExternal showAnchorIcon color="foreground" href="https://forms.gle/qS7zVPAt9CwijjmQA">
+            Feedback
+          </Link>
+        </NavbarItem>
       </NavbarContent>
 
       <NavbarContent justify="end" className="hidden md:flex gap-0">
@@ -134,17 +130,7 @@ export default function ReviewNavbar() {
         <Divider orientation="vertical" className="h-8 mx-1" />
 
         <NavbarItem>
-          <PDFDownloadLink document={<SchedulePDF classes={uniqueClasses} />} fileName="schedule.pdf">
-            {({ loading }) => (
-              <Button
-                variant="light"
-                isLoading={loading}
-                startContent={!loading && <Icon icon="ph:download-simple-bold" fontSize="1.25rem" />}
-              >
-                Download
-              </Button>
-            )}
-          </PDFDownloadLink>
+          <PDFDownloadButton classes={uniqueClasses} />
         </NavbarItem>
       </NavbarContent>
     </Navbar>

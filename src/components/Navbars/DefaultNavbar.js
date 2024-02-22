@@ -48,6 +48,12 @@ export default function DefaultNavbar() {
             FAQ
           </Link>
         </NavbarMenuItem>
+
+        <NavbarMenuItem>
+          <Link isExternal showAnchorIcon color="foreground" href="https://forms.gle/qS7zVPAt9CwijjmQA">
+            Feedback
+          </Link>
+        </NavbarMenuItem>
       </NavbarMenu>
 
       {/* Desktop Links */}
@@ -70,6 +76,12 @@ export default function DefaultNavbar() {
         <NavbarItem>
           <Link color="foreground" href={Pages.FAQ}>
             FAQ
+          </Link>
+        </NavbarItem>
+
+        <NavbarItem>
+          <Link isExternal showAnchorIcon color="foreground" href="https://forms.gle/qS7zVPAt9CwijjmQA">
+            Feedback
           </Link>
         </NavbarItem>
       </NavbarContent>

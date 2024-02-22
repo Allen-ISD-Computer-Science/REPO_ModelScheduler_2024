@@ -1,7 +1,9 @@
 import { Card, CardBody } from "@nextui-org/card";
 import { Chip } from "@nextui-org/chip";
+import { Icon } from "@iconify/react";
 
 import numberToOrdinal from "@/utils/numberToOrdinal";
+import ClassLocationChipIcons from "@/constants/ClassLocationChipIcons";
 import ClassLocationChipColors from "@/constants/ClassLocationChipColors";
 import SemesterChipColors from "@/constants/SemesterChipColors";
 
@@ -17,7 +19,14 @@ export default function ClassCard({ courseName, courseCode, periods, term, locat
           {!compact && (
             <div className="flex items-center flex-wrap">
               {/* Location */}
-              <Chip color={ClassLocationChipColors[location]} radius="sm" variant="bordered" className="mr-2 mb-2">
+              <Chip
+                size="md"
+                radius="sm"
+                variant="bordered"
+                color={ClassLocationChipColors[location]}
+                startContent={<Icon icon={ClassLocationChipIcons[location]} className="ml-2" />}
+                className="mr-2 mb-2"
+              >
                 {location}
               </Chip>
 

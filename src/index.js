@@ -15,15 +15,16 @@ import FAQ from "@/pages/faq";
 import reportWebVitals from "@/reportWebVitals";
 
 import DesktopRecommendationModal from "@/components/Modals/DesktopRecommendationModal";
+import Pages from "@/constants/Pages";
 import Versions from "@/constants/Versions";
 
 const router = createBrowserRouter(
   [
-    { path: "/", element: <Home /> },
-    { path: "/classes", element: <Classes /> },
-    { path: "/scheduler", element: <Scheduler /> },
-    { path: "/review", element: <Review /> },
-    { path: "/faq", element: <FAQ /> },
+    { path: Pages.HOME, element: <Home /> },
+    { path: Pages.CLASSES, element: <Classes /> },
+    { path: Pages.SCHEDULER, element: <Scheduler /> },
+    { path: Pages.REVIEW, element: <Review /> },
+    { path: Pages.FAQ, element: <FAQ /> },
   ],
   {
     basename: process.env.PUBLIC_URL ? `${process.env.PUBLIC_URL}/` : "/",
@@ -48,7 +49,7 @@ const App = () => {
     // If the user is on a small screen, open the warning modal
     if (
       window.innerWidth < 768 &&
-      (isCurrentPath("/classes") || isCurrentPath("/scheduler") || isCurrentPath("/review")) &&
+      (isCurrentPath(Pages.CLASSES) || isCurrentPath(Pages.SCHEDULER) || isCurrentPath(Pages.SCHEDULER)) &&
       !sessionStorage.getItem("warningModalShown")
     ) {
       onOpen();
@@ -83,7 +84,10 @@ window.addEventListener("error", function (e) {
   const resizeObserverErrDiv = document.getElementById("webpack-dev-server-client-overlay-div");
   const resizeObserverErr = document.getElementById("webpack-dev-server-client-overlay");
 
-  if (e.message === "ResizeObserver loop completed with undelivered notifications.") {
+  if (
+    e.message === "ResizeObserver loop completed with undelivered notifications." ||
+    e.message === "ResizeObserver loop limit exceeded"
+  ) {
     console.log(e);
     // prevent React's listener from firing
     e.stopImmediatePropagation();
