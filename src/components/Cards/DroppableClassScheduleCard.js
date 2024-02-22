@@ -1,10 +1,12 @@
 import { Card } from "@nextui-org/card";
 import { Chip } from "@nextui-org/chip";
 import { Droppable, Draggable } from "@hello-pangea/dnd";
+import { Icon } from "@iconify/react";
 
 import bellSchedule from "@/utils/bellSchedule";
 import numberToOrdinal from "@/utils/numberToOrdinal";
 import ClassLocationChipColors from "@/constants/ClassLocationChipColors";
+import ClassLocationChipIcons from "@/constants/ClassLocationChipIcons";
 
 export default function DroppableClassScheduleCard({ droppableId, semester, course, period, disableDrag, ...props }) {
   return (
@@ -34,9 +36,11 @@ export default function DroppableClassScheduleCard({ droppableId, semester, cour
                       <p className="text-center font-bold mb-1">{course.courseName}</p>
                       <div className="flex flex-row items-center justify-center">
                         <Chip
-                          size="sm"
+                          size="md"
+                          radius="sm"
                           color={ClassLocationChipColors[course.location]}
-                          variant="flat"
+                          startContent={<Icon icon={ClassLocationChipIcons[course.location]} className="ml-2" />}
+                          variant="bordered"
                           className="mr-1"
                         >
                           {course.location}
