@@ -19,14 +19,14 @@ export default function Homepage() {
               <br />
               <span className="bg-gradient-to-r from-purple-500 to-pink-500 text-transparent bg-clip-text">
                 Schedule
-              </span> your Classes
+              </span>{" "}
+              your Classes
             </h1>
 
             <p className="mt-6 text-lg tracking-tight text-gray-300">
               Plan and create your classes with ease for the upcoming school year.
               <br />
-              Streamline your class scheduling process with our intuitive tool,
-              built by students for students.
+              Streamline your class scheduling process with our intuitive tool, built by students for students.
             </p>
 
             <div className="mt-10 flex flex-wrap gap-x-6 gap-y-3 justify-center">

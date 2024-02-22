@@ -3,4 +3,4 @@ export default {
   STEAM: "tdesign:system-sum",
   LFC: "mdi:sprout",
   CTC: "fa6-solid:graduation-cap",
-}
+};
