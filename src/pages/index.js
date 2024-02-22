@@ -2,6 +2,7 @@ import DefaultNavbar from "@/components/Navbars/DefaultNavbar";
 import HomeLayout from "@/components/Layout/HomeLayout";
 import { Button } from "@nextui-org/button";
 import { Link } from "@nextui-org/link";
+import { Image } from "@nextui-org/image";
 import { Icon } from "@iconify/react";
 
 import Pages from "@/constants/Pages";
@@ -11,13 +12,15 @@ export default function Homepage() {
     <>
       <DefaultNavbar />
 
+      <Image src="/bg-hero.png" alt="Hero Image" className="fixed inset-0 w-full h-full object-cover opacity-50" />
+
       <HomeLayout>
         <div className="mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl gap-16 sm:gap-y-24 flex flex-col">
           <div className="relative text-center">
             <h1 className="text-5xl font-bold tracking-tight text-white sm:text-7xl">
               Effortlessly
               <br />
-              <span className="bg-gradient-to-r from-purple-500 to-pink-500 text-transparent bg-clip-text">
+              <span className="bg-gradient-to-b from-violet-600 to-violet-300 text-transparent bg-clip-text">
                 Schedule
               </span>{" "}
               your Classes
