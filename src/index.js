@@ -84,7 +84,7 @@ window.addEventListener("error", function (e) {
   const resizeObserverErrDiv = document.getElementById("webpack-dev-server-client-overlay-div");
   const resizeObserverErr = document.getElementById("webpack-dev-server-client-overlay");
 
-  if (e.message === "ResizeObserver loop completed with undelivered notifications.") {
+  if (e.message === "ResizeObserver loop completed with undelivered notifications." || e.message === "ResizeObserver loop limit exceeded") {
     console.log(e);
     // prevent React's listener from firing
     e.stopImmediatePropagation();
