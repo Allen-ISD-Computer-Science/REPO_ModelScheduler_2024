@@ -61,7 +61,7 @@ export default function FAQ() {
             }}
           >
             Your schedule is automatically saved in the browser you used. If you want to save it as a PDF, you can click
-            on the &quot;Download&quot; button in the Review page.
+      on the &quot;Download&quot; button in the <Hyperlink text="Review page" href={Pages.REVIEW} />.
           </AccordionItem>
           <AccordionItem
             title="How do I print my schedule?"
@@ -88,7 +88,7 @@ export default function FAQ() {
             You can add a class to your schedule by visiting the <Hyperlink text="Classes page" href={Pages.CLASSES} />{" "}
             and select a class and then clicking on the &quot;Add Class&quot; button. You can also search for a class
             and add it to your schedule.
-            <img src="/GUIDE - Classes.gif" alt="Guide - Classes" width={500} height={300} />
+            <img src={process.env.PUBLIC_URL + "/guide-classes.gif"} alt="Guide - Classes" width={500} height={300} />
           </AccordionItem>
           <AccordionItem
             title="How do I make my class schedule?"
@@ -102,7 +102,7 @@ export default function FAQ() {
             You can make your class schedule by visiting the <Hyperlink text="Scheduler page" href={Pages.SCHEDULER} />{" "}
             and start dragging your classes. Once you have dragged over all your desired classes, you can click on the
             &quot;Next&quot; button in the navigation bar to see your final schedule.
-            <img src="/GUIDE - Scheduler.gif" alt="Guide - Scheduler" width={500} height={300} />
+            <img src={process.env.PUBLIC_URL + "/guide-scheduler.gif"} alt="Guide - Scheduler" width={500} height={300} />
           </AccordionItem>
         </Accordion>
       </FAQLayout>

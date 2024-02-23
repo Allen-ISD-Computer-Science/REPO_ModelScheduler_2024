@@ -3,6 +3,8 @@ import { Modal, ModalContent, ModalBody, ModalFooter, ModalHeader } from "@nextu
 import { Button } from "@nextui-org/button";
 import { Icon } from "@iconify/react";
 
+import Pages from "@/constants/Pages";
+
 export default function ScheduleWarningModal({ isOpen, onOpenChange, addedClasses }) {
   const navigate = useNavigate();
 
@@ -28,7 +30,7 @@ export default function ScheduleWarningModal({ isOpen, onOpenChange, addedClasse
               </ModalBody>
 
               <ModalFooter>
-                <Button color="warning" variant="ghost" onPress={() => navigate("/scheduler")}>
+                <Button color="warning" variant="ghost" onPress={() => navigate(Pages.SCHEDULER)}>
                   I understand
                 </Button>
 

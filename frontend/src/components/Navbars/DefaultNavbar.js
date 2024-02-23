@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import {
   Navbar,
   NavbarBrand,
@@ -10,31 +10,11 @@ import {
 } from "@nextui-org/navbar";
 import { Image } from "@nextui-org/image";
 import { Link } from "@nextui-org/link";
-import { Divider } from "@nextui-org/divider";
-import { Icon } from "@iconify/react";
 
-const PDFDownloadButton = React.lazy(() => import("@/components/Buttons/PDFDownloadButton"));
 import Pages from "@/constants/Pages";
-import Semesters from "@/constants/Semesters";
 
-export default function ReviewNavbar() {
+export default function DefaultNavbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [scheduledClasses] = useState(() => {
-    return (
-      JSON.parse(localStorage.getItem("scheduledClasses")) || {
-        [Semesters.S1]: [],
-        [Semesters.S2]: [],
-      }
-    );
-  });
-
-  const combinedClasses = [
-    ...Object.values(scheduledClasses[Semesters.S1]),
-    ...Object.values(scheduledClasses[Semesters.S2]),
-  ];
-  const uniqueClasses = combinedClasses
-    .filter((item, index, array) => array.findIndex((obj) => obj.id === item.id) === index)
-    .sort((a, b) => a.periods[0] - b.periods[0]);
 
   return (
     <Navbar isBordered shouldHideOnScroll onMenuOpenChange={setIsMenuOpen}>
@@ -43,7 +23,7 @@ export default function ReviewNavbar() {
         <NavbarMenuToggle aria-label={isMenuOpen ? "Close menu" : "Open menu"} className="md:hidden" />
         <NavbarBrand>
           <Link color="foreground" href={Pages.HOME}>
-            <Image src="/Logo.png" alt="Model Scheduler" width={32} height={32} className="rounded-none" />
+            <Image src={process.env.PUBLIC_URL + "/Logo.png"} alt="Model Scheduler" width={32} height={32} className="shrink-0 rounded-none" />
             <span className="font-bold test-inherit ml-2">Model Scheduler</span>
           </Link>
         </NavbarBrand>
@@ -73,19 +53,6 @@ export default function ReviewNavbar() {
           <Link isExternal showAnchorIcon color="foreground" href="https://forms.gle/qS7zVPAt9CwijjmQA">
             Feedback
           </Link>
-        </NavbarMenuItem>
-
-        <Divider className="my-2" />
-
-        <NavbarMenuItem className="flex items-center mr-4">
-          <Icon icon="bx:bx-chevron-left" fontSize="1.25rem" />
-          <Link color="foreground" href={Pages.SCHEDULER}>
-            Previous
-          </Link>
-        </NavbarMenuItem>
-
-        <NavbarMenuItem>
-          <PDFDownloadButton classes={uniqueClasses} />
         </NavbarMenuItem>
       </NavbarMenu>
 
@@ -119,20 +86,7 @@ export default function ReviewNavbar() {
         </NavbarItem>
       </NavbarContent>
 
-      <NavbarContent justify="end" className="hidden md:flex gap-0">
-        <NavbarItem className="flex items-center mr-4">
-          <Icon icon="bx:bx-chevron-left" fontSize="1.25rem" />
-          <Link color="foreground" href={Pages.SCHEDULER}>
-            Previous
-          </Link>
-        </NavbarItem>
-
-        <Divider orientation="vertical" className="h-8 mx-1" />
-
-        <NavbarItem>
-          <PDFDownloadButton classes={uniqueClasses} />
-        </NavbarItem>
-      </NavbarContent>
+      <NavbarContent justify="end" className="hidden md:flex gap-0" />
     </Navbar>
   );
 }
