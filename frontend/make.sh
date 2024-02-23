@@ -67,6 +67,7 @@ if [ ! -d "$viewFolder" ]; then
 fi
 
 mv -f build/index.html ../backend/Resources/Views
+rm -rf ../backend/Public/*
 mv -f build/* ../backend/Public
 
 echo "File move completed."
