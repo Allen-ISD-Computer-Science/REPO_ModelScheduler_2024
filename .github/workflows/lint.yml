@@ -1,18 +1,24 @@
 name: Lint
 
-on: [push, pull_request]
+on:
+  push:
+    paths:
+      - 'frontend/**'
+  pull_request:
+    paths:
+      - 'frontend/**'
 
 jobs:
   build:
     name: Lint
     runs-on: ubuntu-latest
     steps:
-        - uses: actions/checkout@v4
-        - uses: actions/setup-node@v4
-          with:
-            node-version: 20
-            cache: 'npm'
-        - name: Install dependencies
-          run: npm install
-        - name: Run lint
-          run: npm run lint
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+      - name: Install dependencies
+        run: npm install
+      - name: Run lint
+        run: npm run lint
