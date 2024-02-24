@@ -1,12 +1,6 @@
 name: Lint
 
-on:
-  push:
-    paths:
-      - 'frontend/**'
-  pull_request:
-    paths:
-      - 'frontend/**'
+on: [push, pull_request]
 
 jobs:
   build:
@@ -21,5 +15,7 @@ jobs:
           cache-dependency-path: 'frontend/package-lock.json'
       - name: Install dependencies
         run: npm install
+        working-directory: ./frontend
       - name: Run lint
         run: npm run lint
+        working-directory: ./frontend
