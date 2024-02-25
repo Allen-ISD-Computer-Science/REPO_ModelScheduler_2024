@@ -52,7 +52,7 @@ export default function SchedulePDF({ classes }) {
 
   const Title = () => (
     <View style={styles.titleContainer}>
-      <Image style={styles.image} src="/Logo.png" />
+      <Image style={styles.image} src="/Logo.webp" />
       <Text style={styles.title}>Model Scheduler</Text>
     </View>
   );

@@ -13,7 +13,7 @@ export default function Homepage() {
       <DefaultNavbar />
 
       <Image
-        src={process.env.PUBLIC_URL + "/bg-hero.png"}
+        src={process.env.PUBLIC_URL + "/bg-hero.webp"}
         alt="Hero Image"
         className="fixed inset-0 h-full w-full object-cover opacity-50"
       />

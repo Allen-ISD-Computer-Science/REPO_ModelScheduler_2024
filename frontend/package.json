@@ -8,10 +8,12 @@
     "@iconify/react": "^4.1.1",
     "@nextui-org/react": "^2.2.9",
     "@react-pdf/renderer": "^3.3.7",
+    "clsx": "^2.1.0",
     "framer-motion": "^10.16.14",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.20.1",
+    "tailwind-merge": "^2.2.1",
     "virtua": "^0.20.3",
     "web-vitals": "^2.1.4"
   },

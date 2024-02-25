@@ -24,7 +24,7 @@ export default function DefaultNavbar() {
         <NavbarBrand>
           <Link color="foreground" href={Pages.HOME}>
             <Image
-              src={process.env.PUBLIC_URL + "/Logo.png"}
+              src={process.env.PUBLIC_URL + "/Logo.webp"}
               alt="Model Scheduler"
               width={32}
               height={32}
