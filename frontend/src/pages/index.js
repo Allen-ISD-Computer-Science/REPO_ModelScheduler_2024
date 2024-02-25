@@ -12,7 +12,11 @@ export default function Homepage() {
     <>
       <DefaultNavbar />
 
-      <Image src={process.env.PUBLIC_URL + "/bg-hero.png"} alt="Hero Image" className="fixed inset-0 h-full w-full object-cover opacity-50" />
+      <Image
+        src={process.env.PUBLIC_URL + "/bg-hero.png"}
+        alt="Hero Image"
+        className="fixed inset-0 h-full w-full object-cover opacity-50"
+      />
 
       <HomeLayout>
         <div className="mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl gap-16 sm:gap-y-24 flex flex-col">

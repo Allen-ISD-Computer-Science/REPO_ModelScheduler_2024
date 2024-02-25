@@ -21,7 +21,7 @@ import Versions from "@/constants/Versions";
 const router = createBrowserRouter(
   [
     { path: Pages.HOME, element: <Home /> },
-    { path: Pages.CLASSES,  element: <Classes /> },
+    { path: Pages.CLASSES, element: <Classes /> },
     { path: Pages.SCHEDULER, element: <Scheduler /> },
     { path: Pages.REVIEW, element: <Review /> },
     { path: Pages.FAQ, element: <FAQ /> },
