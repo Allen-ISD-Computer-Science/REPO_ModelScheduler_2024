@@ -1,3 +1,4 @@
+
 /*
 VaporShell provides a minimal framework for starting Igis projects.
 Copyright (C) 2021, 2022 CoderMerlin.com
@@ -14,7 +15,6 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
 import Vapor
-
 import Fluent
 import FluentMySQLDriver
 
@@ -42,5 +42,39 @@ func routes(_ app: Application) throws {
 
     app.get("faq") { req in
         return try await renderIndex(req)
+    }
+
+    struct CoursesData : Content {
+        var id : Int
+        var courseCode : String
+        var courseName : String
+        var term : String
+        var department : String
+        var periods : [Int]
+        var doubleBlockPeriod : Int?
+        var location : String
+    }
+
+    /*app.get("courses") { req async throws /*-> EventLoopFuture<[Course]>*/ in
+        /*        if let courseIDs = req.query["id"] as [String]? {
+                  // Handle when course IDs are specified
+                  let courseIDsArray = courseIDs.flatMap { $0.components(separatedBy: ",") }
+                  return Courses.query(on: req.db)
+                  .filter(\.$id ~~ courseIDsArray)
+                  .all()
+                  } else {*/
+        // Handle when course IDs are not specified
+        let courses = try await Courses.query(on: req.db)
+          .all()
+        print(type(of: courses))
+
+        return courses
+        
+        //        }
+    }*/
+    
+    app.get("api", "courses") { req async throws /*-> [CoursesData]*/ in
+        return try await Courses.query(on: req.db)
+          .all()
     }
 }
