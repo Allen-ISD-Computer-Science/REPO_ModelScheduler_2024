@@ -10,11 +10,11 @@ import { DragDropClassCardList, DragDropClassSchedule } from "@/components/Cards
 import { onDragStart, onDragEnd } from "@/utils/onDrag";
 import fetcher from "@/utils/fetcher";
 
-preload("/api/courses", fetcher);
+preload(process.env.PUBLIC_URL + "/api/courses", fetcher);
 
 export default function Scheduler() {
   const [classes, setClasses] = useState([]);
-  const { error, isLoading } = useSWR("/api/courses", fetcher, {
+  const { error, isLoading } = useSWR(process.env.PUBLIC_URL + "/api/courses", fetcher, {
     revalidateOnMount: true,
     revalidateOnFocus: false,
     revalidateOnReconnect: false,

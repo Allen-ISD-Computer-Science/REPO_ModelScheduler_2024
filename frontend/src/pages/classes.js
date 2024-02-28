@@ -13,12 +13,12 @@ import SearchBar from "@/components/Inputs/SearchBar";
 import FilterButton from "@/components/Buttons/FilterButton";
 import fetcher from "@/utils/fetcher";
 
-preload("/api/courses", fetcher);
+preload(process.env.PUBLIC_URL + "/api/courses", fetcher);
 
 export default function Classes() {
   const [classes, setClasses] = useState([]);
   const [staticClasses, setStaticClasses] = useState([]);
-  const { error, isLoading } = useSWR("/api/courses", fetcher, {
+  const { error, isLoading } = useSWR(process.env.PUBLIC_URL + "/api/courses", fetcher, {
     revalidateOnMount: true,
     revalidateOnFocus: false,
     revalidateOnReconnect: false,

@@ -19,5 +19,6 @@ yarn-error.log*
 
 # Vapor
 backend/Public/static/
+backend/Public/bundle-stats.json
 backend/Public/asset-manifest.json
 backend/Resources/Views/index.html
