@@ -1,5 +1,5 @@
 import { Fragment } from "react";
-import { Image, Text, View, Page, Document, StyleSheet, Font } from "@react-pdf/renderer"; // TODO: Lazy load this
+import { Image, Text, View, Page, Document, StyleSheet, Font } from "@react-pdf/renderer";
 
 Font.register({
   family: "ChakraPetch",

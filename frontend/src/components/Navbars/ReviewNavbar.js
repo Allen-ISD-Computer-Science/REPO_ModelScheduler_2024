@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState, lazy } from "react";
 import {
   Navbar,
   NavbarBrand,
@@ -13,7 +13,7 @@ import { Link } from "@nextui-org/link";
 import { Divider } from "@nextui-org/divider";
 import { Icon } from "@iconify/react";
 
-const PDFDownloadButton = React.lazy(() => import("@/components/Buttons/PDFDownloadButton"));
+const PDFDownloadButton = lazy(() => import("@/components/Buttons/PDFDownloadButton"));
 import Pages from "@/constants/Pages";
 import Semesters from "@/constants/Semesters";
 

@@ -1,6 +1,7 @@
 import { Card } from "@nextui-org/card";
 import { VList } from "virtua";
 
+import cn from "@/utils/cn";
 import ClassCard from "@/components/Cards/ClassCard";
 
 export default function ClassCardList({ classes, classSelected, onClassSelected, ...props }) {
@@ -28,9 +29,22 @@ export default function ClassCardList({ classes, classSelected, onClassSelected,
                   periods={classObj.periods}
                   term={classObj.term}
                   location={classObj.location}
-                  className={`grow mx-2 mt-2 border-2 border-transparent bg-default-200/25 overflow-visible animate-fade animate-duration-200 hover:border-neutral-500 hover:transition hover:duration-300 ${
-                    classSelected === classObj.id && "border-neutral-400"
-                  } ${index === classes.length - 1 && "mb-2"}`}
+                  className={cn(
+                    "grow",
+                    "mx-2",
+                    "mt-2",
+                    "border-2",
+                    "border-transparent",
+                    "bg-default-200/25",
+                    "overflow-visible",
+                    "animate-fade",
+                    "animate-duration-200",
+                    "hover:border-neutral-500",
+                    "hover:transition",
+                    "hover:duration-300",
+                    classSelected === classObj.id && "border-neutral-400",
+                    index === classes.length - 1 && "mb-2"
+                  )}
                   onPress={() => onClassSelected(classObj.id)}
                 />
               </div>

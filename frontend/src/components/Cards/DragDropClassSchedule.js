@@ -1,5 +1,6 @@
 import { Card } from "@nextui-org/card";
 
+import cn from "@/utils/cn";
 import DroppableClassScheduleCard from "@/components/Cards/DroppableClassScheduleCard";
 
 export default function DragDropClassSchedule({ semester, classes, unavailablePeriods, conflictPeriods }) {
@@ -35,7 +36,7 @@ export default function DragDropClassSchedule({ semester, classes, unavailablePe
           course={classes["1"]}
           period={1}
           disableDrag={disableDragByPeriod(1)}
-          className={`bg-default-300/25 col-span-2 row-span-2 ${getColorFromClassAvailability(1) || ""}`}
+          className={cn("bg-default-300/25 col-span-2 row-span-2", getColorFromClassAvailability(1))}
         />
 
         {/* 2nd Period */}
@@ -45,7 +46,7 @@ export default function DragDropClassSchedule({ semester, classes, unavailablePe
           course={classes["2"]}
           period={2}
           disableDrag={disableDragByPeriod(2)}
-          className={`bg-default-300/25 col-span-1 row-span-2 ${getColorFromClassAvailability(2) || ""}`}
+          className={cn("bg-default-300/25 col-span-1 row-span-2", getColorFromClassAvailability(2))}
         />
 
         {/* 5th Period */}
@@ -55,7 +56,7 @@ export default function DragDropClassSchedule({ semester, classes, unavailablePe
           course={classes["5"]}
           period={5}
           disableDrag={disableDragByPeriod(5)}
-          className={`bg-default-300/25 col-span-1 row-span-2 ${getColorFromClassAvailability(5) || ""}`}
+          className={cn("bg-default-300/25 col-span-1 row-span-2", getColorFromClassAvailability(5))}
         />
 
         {/* 3rd Period */}
@@ -65,7 +66,7 @@ export default function DragDropClassSchedule({ semester, classes, unavailablePe
           course={classes["3"]}
           period={3}
           disableDrag={disableDragByPeriod(3)}
-          className={`bg-default-300/25 col-span-1 row-span-2 ${getColorFromClassAvailability(3) || ""}`}
+          className={cn("bg-default-300/25 col-span-1 row-span-2", getColorFromClassAvailability(3))}
         />
 
         {/* 6th Period */}
@@ -75,7 +76,7 @@ export default function DragDropClassSchedule({ semester, classes, unavailablePe
           course={classes["6"]}
           period={6}
           disableDrag={disableDragByPeriod(6)}
-          className={`bg-default-300/25 col-span-1 row-span-2 ${getColorFromClassAvailability(6) || ""}`}
+          className={cn("bg-default-300/25 col-span-1 row-span-2", getColorFromClassAvailability(6))}
         />
 
         {/* 4th Period */}
@@ -85,7 +86,7 @@ export default function DragDropClassSchedule({ semester, classes, unavailablePe
           course={classes["4"]}
           period={4}
           disableDrag={disableDragByPeriod(4)}
-          className={`bg-default-300/25 col-span-1 row-span-2 ${getColorFromClassAvailability(4) || ""}`}
+          className={cn("bg-default-300/25 col-span-1 row-span-2", getColorFromClassAvailability(4))}
         />
 
         {/* 7th Period */}
@@ -95,7 +96,7 @@ export default function DragDropClassSchedule({ semester, classes, unavailablePe
           course={classes["7"]}
           period={7}
           disableDrag={disableDragByPeriod(7)}
-          className={`bg-default-300/25 col-span-1 row-span-2 ${getColorFromClassAvailability(7) || ""}`}
+          className={cn("bg-default-300/25 col-span-1 row-span-2", getColorFromClassAvailability(7))}
         />
 
         {/* 8th Period */}
@@ -105,7 +106,7 @@ export default function DragDropClassSchedule({ semester, classes, unavailablePe
           course={classes["8"]}
           period={8}
           disableDrag={disableDragByPeriod(8)}
-          className={`bg-default-300/25 col-span-2 row-span-2 ${getColorFromClassAvailability(8) || ""}`}
+          className={cn("bg-default-300/25 col-span-1 row-span-2", getColorFromClassAvailability(8))}
         />
       </div>
     </>
