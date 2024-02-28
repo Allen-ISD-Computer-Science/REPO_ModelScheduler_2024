@@ -1,17 +1,17 @@
 import "./styles/index.css";
 import "./styles/tailwind.css";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, lazy } from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { NextUIProvider } from "@nextui-org/react";
 import { useDisclosure } from "@nextui-org/use-disclosure";
 
-import Home from "@/pages/index";
-import Classes from "@/pages/classes";
-import Scheduler from "@/pages/scheduler";
-import Review from "@/pages/review";
-import FAQ from "@/pages/faq";
+const Home = lazy(() => import("@/pages/index"));
+const Classes = lazy(() => import("@/pages/classes"));
+const Scheduler = lazy(() => import("@/pages/scheduler"));
+const Review = lazy(() => import("@/pages/review"));
+const FAQ = lazy(() => import("@/pages/faq"));
 import reportWebVitals from "@/reportWebVitals";
 
 import DesktopRecommendationModal from "@/components/Modals/DesktopRecommendationModal";
