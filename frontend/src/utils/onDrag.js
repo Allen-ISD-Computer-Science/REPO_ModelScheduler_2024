@@ -1,6 +1,5 @@
 import checkClassConflicts from "@/utils/checkClassConflicts";
 import checkUnavailablePeriods from "@/utils/checkUnavailablePeriods";
-import exampleTestClasses from "@/temp_data.json";
 import Semesters from "@/constants/Semesters";
 import AllPeriods from "@/constants/AllPeriods";
 
@@ -17,6 +16,7 @@ function getSameClassesInSemester(classId, schedule) {
 /**
  *
  * @param {Object} result - Result object from react-beautiful-dnd
+ * @param {Array<Object>} classes - The list of classes
  * @param {Array<Object>} springSemesterSelectedClasses - The spring semester selected classes
  * @param {Array<Object>} fallSemesterSelectedClasses - The fall semester selected classes
  * @param {Function} setUnavailablePeriods - Setter for the list of unavailable periods
@@ -24,13 +24,14 @@ function getSameClassesInSemester(classId, schedule) {
  */
 export function onDragStart(
   result,
+  classes,
   springSemesterSelectedClasses,
   fallSemesterSelectedClasses,
   setUnavailablePeriods,
   setConflictPeriods
 ) {
   const classId = Number(result.draggableId.split("-")[2]);
-  const classObj = exampleTestClasses.find((class_) => class_.id == classId);
+  const classObj = classes.find((class_) => class_.id == classId);
 
   if (classObj.term == Semesters.SPRING) {
     setUnavailablePeriods({
@@ -67,6 +68,7 @@ export function onDragStart(
 
 /**
  * @param {Object} result - Result object from react-beautiful-dnd
+ * @param {Array<Object>} classes - The list of classes
  * @param {Function} setAddedClasses - Setter for the list of classes that are available to be added to the schedule
  * @param {Function} setSpringSemesterSelectedClasses - Setter for the spring semester selected classes
  * @param {Function} setFallSemesterSelectedClasses - Setter for the fall semester selected classes
@@ -76,6 +78,7 @@ export function onDragStart(
  */
 export function onDragEnd(
   result,
+  classes,
   setAddedClasses,
   setSpringSemesterSelectedClasses,
   setFallSemesterSelectedClasses,
@@ -85,7 +88,7 @@ export function onDragEnd(
   const { source, destination } = result;
   const classId = result.draggableId.split("-")[2];
   const destinationPeriod = destination ? Number(destination.droppableId.split("-")[2]) : null;
-  const classObj = exampleTestClasses.find((class_) => class_.id == classId);
+  const classObj = classes.find((class_) => class_.id == classId);
 
   // Reset the list of unavailable periods and conflicts
   setUnavailablePeriods({});

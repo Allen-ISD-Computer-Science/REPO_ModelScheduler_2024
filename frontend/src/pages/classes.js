@@ -1,22 +1,35 @@
 import { useState, useEffect } from "react";
+import useSWR, { preload } from "swr";
 import { Button } from "@nextui-org/button";
+import { useDisclosure } from "@nextui-org/use-disclosure";
+import { Icon } from "@iconify/react";
 
+import Loading from "@/pages/loading";
 import MaxClassesReachedModal from "@/components/Modals/MaxClassesReachedModal";
 import ClassesNavbar from "@/components/Navbars/ClassesNavbar";
 import ClassesLayout from "@/components/Layout/ClassesLayout";
 import ClassCardList from "@/components/Cards/ClassCardList";
 import SearchBar from "@/components/Inputs/SearchBar";
 import FilterButton from "@/components/Buttons/FilterButton";
-import { useDisclosure } from "@nextui-org/use-disclosure";
-import { Icon } from "@iconify/react";
+import fetcher from "@/utils/fetcher";
 
-import exampleTestClasses from "@/temp_data.json";
+preload("/api/courses", fetcher);
 
 export default function Classes() {
-  const [classes, setClasses] = useState(exampleTestClasses);
+  const [classes, setClasses] = useState([]);
+  const [staticClasses, setStaticClasses] = useState([]);
+  const { error, isLoading } = useSWR("/api/courses", fetcher, {
+    revalidateOnMount: true,
+    revalidateOnFocus: false,
+    revalidateOnReconnect: false,
+    onSuccess: (data) => {
+      setClasses(data);
+      setStaticClasses(data);
+    },
+  });
   const [selectedClassID, setSelectedClassID] = useState(null);
   const [addedClasses, setAddedClasses] = useState(() => {
-    return JSON.parse(localStorage.getItem("addedClasses")) || [];
+    return JSON.parse(localStorage.getItem("addedClasses")) ?? [];
   });
   const [availableClasses, setAvailableClasses] = useState([]);
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
@@ -70,6 +83,9 @@ export default function Classes() {
     dispatchEvent(new Event("storage")); // Trigger storage event
   }, [addedClasses]);
 
+  if (error) return <p>Failed to load</p>;
+  if (isLoading) return <Loading />;
+
   return (
     <>
       <ClassesNavbar />
@@ -83,7 +99,7 @@ export default function Classes() {
           <div className="flex flex-row justify-between gap-2 mb-4">
             {/* Search bar */}
             <SearchBar
-              classes={exampleTestClasses}
+              classes={staticClasses}
               setClasses={setClasses}
               className="w-2/3"
               classNames={{ inputWrapper: "bg-default-50/30" }}
@@ -91,7 +107,7 @@ export default function Classes() {
 
             {/* Filter */}
             <FilterButton
-              classes={exampleTestClasses}
+              classes={staticClasses}
               setClasses={setClasses}
               className="self-center w-1/2 lg:w-1/3 text-neutral-400 bg-default-50/30"
             />

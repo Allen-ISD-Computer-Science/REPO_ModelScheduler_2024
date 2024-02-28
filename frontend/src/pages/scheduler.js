@@ -1,16 +1,29 @@
 import { useState, useEffect } from "react";
+import useSWR, { preload } from "swr";
 import { DragDropContext } from "@hello-pangea/dnd";
 
+import Loading from "@/pages/loading";
 import SchedulerLayout from "@/components/Layout/SchedulerLayout";
-import { DragDropClassCardList, DragDropClassSchedule } from "@/components/Cards";
-import { onDragStart, onDragEnd } from "@/utils/onDrag";
-
 import Semesters from "@/constants/Semesters";
 import SchedulerNavbar from "@/components/Navbars/SchedulerNavbar";
+import { DragDropClassCardList, DragDropClassSchedule } from "@/components/Cards";
+import { onDragStart, onDragEnd } from "@/utils/onDrag";
+import fetcher from "@/utils/fetcher";
+
+preload("/api/courses", fetcher);
 
 export default function Scheduler() {
+  const [classes, setClasses] = useState([]);
+  const { error, isLoading } = useSWR("/api/courses", fetcher, {
+    revalidateOnMount: true,
+    revalidateOnFocus: false,
+    revalidateOnReconnect: false,
+    onSuccess: (data) => {
+      setClasses(data);
+    },
+  });
   const [addedClasses, setAddedClasses] = useState(() => {
-    return JSON.parse(localStorage.getItem("addedClasses")) || [];
+    return JSON.parse(localStorage.getItem("addedClasses")) ?? [];
   });
   const [springSemesterScheduledClasses, setSpringSemesterScheduledClasses] = useState(
     localStorage.getItem("scheduledClasses") ? JSON.parse(localStorage.getItem("scheduledClasses"))[Semesters.S1] : {}
@@ -70,6 +83,9 @@ export default function Scheduler() {
     );
   }, [springSemesterScheduledClasses, fallSemesterScheduledClasses]);
 
+  if (error) return <p>Failed to load</p>;
+  if (isLoading) return <Loading />;
+
   return (
     <>
       <SchedulerNavbar />
@@ -77,6 +93,7 @@ export default function Scheduler() {
         onDragStart={(result) =>
           onDragStart(
             result,
+            classes,
             springSemesterScheduledClasses,
             fallSemesterScheduledClasses,
             setUnavailablePeriods,
@@ -86,6 +103,7 @@ export default function Scheduler() {
         onDragEnd={(result) =>
           onDragEnd(
             result,
+            classes,
             setAddedClasses,
             setSpringSemesterScheduledClasses,
             setFallSemesterScheduledClasses,
