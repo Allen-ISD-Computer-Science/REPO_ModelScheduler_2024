@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'Space Grotesk';
+  src: local('Space Grotesk'), url(../fonts/SpaceGrotesk.woff2) format('woff2');
+}
+
 /* Don't display scrollbars */
 body {
   scrollbar-width: none; /* Firefox */
