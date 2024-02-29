@@ -19,24 +19,24 @@ export default function Homepage() {
       />
 
       <HomeLayout>
-        <div className="mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl gap-16 sm:gap-y-24 flex flex-col">
+        <div className="mx-auto flex max-w-7xl flex-col gap-16 px-4 sm:gap-y-24 sm:px-6 lg:px-8">
           <div className="relative text-center">
             <h1 className="text-5xl font-bold tracking-tight text-white sm:text-7xl">
               Effortlessly
               <br />
-              <span className="bg-gradient-to-b from-violet-600 to-violet-300 text-transparent bg-clip-text">
+              <span className="bg-gradient-to-b from-violet-600 to-violet-300 bg-clip-text text-transparent">
                 Schedule
               </span>{" "}
               your Classes
             </h1>
 
             <p className="mt-6 text-lg tracking-tight text-gray-300">
-              Plan and create your classes with ease for the upcoming school year.
+              Plan and create your schedules with ease for the upcoming school year.
               <br />
               Streamline your class scheduling process with our intuitive tool, built by students for students.
             </p>
 
-            <div className="mt-10 flex flex-wrap gap-x-6 gap-y-3 justify-center">
+            <div className="mt-10 flex flex-wrap justify-center gap-x-6 gap-y-3">
               <Button
                 as={Link}
                 href={Pages.CLASSES}

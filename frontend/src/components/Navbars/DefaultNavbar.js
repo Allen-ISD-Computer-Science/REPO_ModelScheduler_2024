@@ -30,7 +30,7 @@ export default function DefaultNavbar() {
               height={32}
               className="shrink-0 rounded-none"
             />
-            <span className="font-bold test-inherit ml-2">Model Scheduler</span>
+            <span className="test-inherit ml-2 font-bold">Model Scheduler</span>
           </Link>
         </NavbarBrand>
       </NavbarContent>
@@ -64,7 +64,7 @@ export default function DefaultNavbar() {
 
       {/* Desktop Links */}
       <NavbarContent
-        className="hidden md:flex h-11 rounded-full border-medium border-default-200/50 bg-default-100/50 px-4 shadow-medium"
+        className="hidden h-11 rounded-full border-medium border-default-200/50 bg-default-100/50 px-4 shadow-medium md:flex"
         justify="center"
       >
         <NavbarItem>
@@ -92,7 +92,7 @@ export default function DefaultNavbar() {
         </NavbarItem>
       </NavbarContent>
 
-      <NavbarContent justify="end" className="hidden md:flex gap-0" />
+      <NavbarContent justify="end" className="hidden gap-0 md:flex" />
     </Navbar>
   );
 }

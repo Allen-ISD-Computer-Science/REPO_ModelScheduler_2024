@@ -10,11 +10,11 @@ export default function DroppableClassCardList({ droppableId, classes, ...props 
         {(provided) => (
           <Card ref={provided.innerRef} {...props} {...provided.droppableProps}>
             {classes.length === 0 ? (
-              <div className="flex flex-col h-full justify-center items-center p-8">
-                <p className="text-2xl text-center font-bold text-neutral-200 animate-fade-down animate-ease-in-out">
+              <div className="flex h-full flex-col items-center justify-center p-8">
+                <p className="animate-fade-down text-center text-2xl font-bold text-neutral-200 animate-ease-in-out">
                   No classes available
                 </p>
-                <p className="text-md text-center text-neutral-400 animate-fade-up animate-delay-200">
+                <p className="text-md animate-fade-up text-center text-neutral-400 animate-delay-200">
                   Drag and drop classes here
                 </p>
               </div>
@@ -36,7 +36,7 @@ export default function DroppableClassCardList({ droppableId, classes, ...props 
                         periods={classObj.periods}
                         term={classObj.term}
                         location={classObj.location}
-                        className="grow mx-2 mt-2 bg-default-200/25 overflow-visible animate-fade animate-duration-200"
+                        className="mx-2 mt-2 grow animate-fade overflow-visible bg-default-200/25 animate-duration-200"
                       />
                     </div>
                   )}
