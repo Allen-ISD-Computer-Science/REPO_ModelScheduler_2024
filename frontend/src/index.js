@@ -1,7 +1,7 @@
 import "./styles/index.css";
 import "./styles/tailwind.css";
 
-import React, { useState, useEffect, lazy } from "react";
+import React, { useState, useEffect, Suspense, lazy } from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { NextUIProvider } from "@nextui-org/react";
@@ -12,6 +12,7 @@ const Classes = lazy(() => import("@/pages/classes"));
 const Scheduler = lazy(() => import("@/pages/scheduler"));
 const Review = lazy(() => import("@/pages/review"));
 const FAQ = lazy(() => import("@/pages/faq"));
+import Loading from "@/pages/loading";
 import reportWebVitals from "@/reportWebVitals";
 
 import DesktopRecommendationModal from "@/components/Modals/DesktopRecommendationModal";
@@ -70,7 +71,9 @@ const App = () => {
       <NextUIProvider>
         <main>
           <DesktopRecommendationModal isOpen={isOpen} onOpenChange={onOpenChange} />
-          <RouterProvider router={router} />
+          <Suspense fallback={<Loading />}>
+            <RouterProvider router={router} />
+          </Suspense>
         </main>
       </NextUIProvider>
     </React.StrictMode>
