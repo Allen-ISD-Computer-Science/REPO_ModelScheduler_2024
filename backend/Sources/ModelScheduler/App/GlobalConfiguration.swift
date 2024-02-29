@@ -28,12 +28,6 @@ struct GlobalConfiguration {
         }
     }()
 
-    // Vapor
-//    let vaporLocalHost: String
-//    let vaporLocalPort: Int
-//    let vaporServerPublicURL: URL
-
-    // Database
     let mysqlHostname: String
     let mysqlPort: Int
     let mysqlUsername: String
@@ -41,12 +35,6 @@ struct GlobalConfiguration {
     let mysqlDatabase: String
 
     private init() throws {
-        // Vapor 
-//        vaporLocalHost = try Self.readEnvironmentVariable(key: "VAPOR_LOCAL_HOST", asType: String.self)
-//        vaporLocalPort = try Self.readEnvironmentVariable(key: "VAPOR_LOCAL_PORT", asType: Int.self)
-//        vaporServerPublicURL = try Self.readEnvironmentVariable(key: "VAPOR_SERVER_PUBLIC_URL", asType: URL.self)
-
-        // Database
         mysqlHostname = try Self.readEnvironmentVariable(key: "MYSQL_HOSTNAME", asType: String.self)
         mysqlPort = try Self.readEnvironmentVariable(key: "MYSQL_PORT", asType: Int.self)
         mysqlUsername = try Self.readEnvironmentVariable(key: "MYSQL_USERNAME", asType: String.self)
