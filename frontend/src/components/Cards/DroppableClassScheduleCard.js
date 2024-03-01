@@ -27,13 +27,13 @@ export default function DroppableClassScheduleCard({ droppableId, semester, cour
                 {(provided) => (
                   <div
                     ref={provided.innerRef}
-                    className="h-full bg-default-50/20 rounded-lg"
+                    className="h-full rounded-lg bg-default-50/20"
                     {...provided.draggableProps}
                     {...provided.dragHandleProps}
                   >
                     {/* Course Details */}
-                    <div className="flex flex-col h-full items-center justify-center">
-                      <p className="text-center font-bold mb-1">{course.courseName}</p>
+                    <div className="flex h-full flex-col items-center justify-center">
+                      <p className="mb-1 text-center font-bold">{course.courseName}</p>
                       <div className="flex flex-row items-center justify-center">
                         <Chip
                           size="md"
@@ -52,8 +52,8 @@ export default function DroppableClassScheduleCard({ droppableId, semester, cour
                 )}
               </Draggable>
             ) : (
-              <div className="flex flex-col justify-center h-full">
-                <p className="text-center text-neutral-300/50 font-bold animate-fade">
+              <div className="flex h-full flex-col justify-center">
+                <p className="animate-fade text-center font-bold text-neutral-300/50">
                   {numberToOrdinal(period)} Period
                 </p>
               </div>

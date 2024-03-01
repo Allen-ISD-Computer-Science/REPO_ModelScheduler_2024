@@ -42,8 +42,8 @@ export default function FilterModal({ selectedFilters, setSelectedFilters, isOpe
 
               <ModalBody>
                 {/* Period filter */}
-                <p className="text-lg font-bold mb-2">Periods</p>
-                <div className="flex flex-col gap-2 items-center">
+                <p className="mb-2 text-lg font-bold">Periods</p>
+                <div className="flex flex-col items-center gap-2">
                   <div className="flex gap-2">
                     <Checkbox
                       value="1"
@@ -115,7 +115,7 @@ export default function FilterModal({ selectedFilters, setSelectedFilters, isOpe
                 <Divider />
 
                 {/* Location filter (on select, change variant to solid)*/}
-                <p className="text-lg font-bold mb-2">Locations</p>
+                <p className="mb-2 text-lg font-bold">Locations</p>
                 <ButtonGroup variant="ghost">
                   <Button
                     variant={isLocationSelected("AHS") ? "solid" : "ghost"}
@@ -146,7 +146,7 @@ export default function FilterModal({ selectedFilters, setSelectedFilters, isOpe
                 <Divider />
 
                 {/* Term filter */}
-                <p className="text-lg font-bold mb-2">Terms/Semesters</p>
+                <p className="mb-2 text-lg font-bold">Terms/Semesters</p>
                 <ButtonGroup variant="ghost">
                   <Button
                     variant={isTermSelected("S1") ? "solid" : "ghost"}

@@ -5,43 +5,43 @@ import ClassScheduleCard from "@/components/Cards/ClassScheduleCard";
 export default function ClassSchedule({ semester, classes }) {
   return (
     <>
-      <div className="h-full grid grid-cols-2 grid-rows-12 gap-2">
+      <div className="grid h-full grid-cols-2 grid-rows-12 gap-2">
         {/* Semester Header */}
-        <Card className="col-span-2 row-span-1 border-2 border-neutral-600 bg-default-200/30 text-center font-bold flex items-center justify-center">
+        <Card className="col-span-2 row-span-1 flex items-center justify-center border-2 border-neutral-600 bg-default-200/30 text-center font-bold">
           {semester} Semester
         </Card>
 
         {/* A/B Day Header */}
-        <Card className="col-span-1 row-span-1 bg-red-500 text-center font-bold flex items-center justify-center">
+        <Card className="col-span-1 row-span-1 flex items-center justify-center bg-red-500 text-center font-bold">
           A Day
         </Card>
-        <Card className="col-span-1 row-span-1 bg-blue-600 text-center font-bold flex items-center justify-center">
+        <Card className="col-span-1 row-span-1 flex items-center justify-center bg-blue-600 text-center font-bold">
           B Day
         </Card>
 
         {/* 1st Period */}
-        <ClassScheduleCard course={classes?.["1"]} period={1} className="bg-default-200/30 col-span-2 row-span-2" />
+        <ClassScheduleCard course={classes?.["1"]} period={1} className="col-span-2 row-span-2 bg-default-200/30" />
 
         {/* 2nd Period */}
-        <ClassScheduleCard course={classes?.["2"]} period={2} className="bg-default-200/30 col-span-1 row-span-2" />
+        <ClassScheduleCard course={classes?.["2"]} period={2} className="col-span-1 row-span-2 bg-default-200/30" />
 
         {/* 5th Period */}
-        <ClassScheduleCard course={classes?.["5"]} period={5} className="bg-default-200/30 col-span-1 row-span-2" />
+        <ClassScheduleCard course={classes?.["5"]} period={5} className="col-span-1 row-span-2 bg-default-200/30" />
 
         {/* 3rd Period */}
-        <ClassScheduleCard course={classes?.["3"]} period={3} className="bg-default-200/30 col-span-1 row-span-2" />
+        <ClassScheduleCard course={classes?.["3"]} period={3} className="col-span-1 row-span-2 bg-default-200/30" />
 
         {/* 6th Period */}
-        <ClassScheduleCard course={classes?.["6"]} period={6} className="bg-default-200/30 col-span-1 row-span-2" />
+        <ClassScheduleCard course={classes?.["6"]} period={6} className="col-span-1 row-span-2 bg-default-200/30" />
 
         {/* 4th Period */}
-        <ClassScheduleCard course={classes?.["4"]} period={4} className="bg-default-200/30 col-span-1 row-span-2" />
+        <ClassScheduleCard course={classes?.["4"]} period={4} className="col-span-1 row-span-2 bg-default-200/30" />
 
         {/* 7th Period */}
-        <ClassScheduleCard course={classes?.["7"]} period={7} className="bg-default-200/30 col-span-1 row-span-2" />
+        <ClassScheduleCard course={classes?.["7"]} period={7} className="col-span-1 row-span-2 bg-default-200/30" />
 
         {/* 8th Period */}
-        <ClassScheduleCard course={classes?.["8"]} period={8} className="bg-default-200/30 col-span-2 row-span-2" />
+        <ClassScheduleCard course={classes?.["8"]} period={8} className="col-span-2 row-span-2 bg-default-200/30" />
       </div>
     </>
   );

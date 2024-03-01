@@ -32,7 +32,7 @@ export default function SchedulerNavbar() {
               height={32}
               className="shrink-0 rounded-none"
             />
-            <span className="font-bold test-inherit ml-2">Model Scheduler</span>
+            <span className="test-inherit ml-2 font-bold">Model Scheduler</span>
           </Link>
         </NavbarBrand>
       </NavbarContent>
@@ -65,13 +65,13 @@ export default function SchedulerNavbar() {
 
         <Divider className="my-2" />
 
-        <NavbarMenuItem className="flex items-center mr-4">
+        <NavbarMenuItem className="mr-4 flex items-center">
           <Icon icon="bx:bx-chevron-left" fontSize="1.25rem" />
           <Link color="foreground" href={Pages.CLASSES}>
             Previous
           </Link>
 
-          <Divider orientation="vertical" className="h-6 mx-2" />
+          <Divider orientation="vertical" className="mx-2 h-6" />
 
           <Link color="foreground" href={Pages.REVIEW}>
             Next
@@ -82,7 +82,7 @@ export default function SchedulerNavbar() {
 
       {/* Desktop Links */}
       <NavbarContent
-        className="hidden md:flex h-11 rounded-full border-medium border-default-200/50 bg-default-100/50 px-4 shadow-medium"
+        className="hidden h-11 rounded-full border-medium border-default-200/50 bg-default-100/50 px-4 shadow-medium md:flex"
         justify="center"
       >
         <NavbarItem>
@@ -110,7 +110,7 @@ export default function SchedulerNavbar() {
         </NavbarItem>
       </NavbarContent>
 
-      <NavbarContent justify="end" className="hidden md:flex gap-0">
+      <NavbarContent justify="end" className="hidden gap-0 md:flex">
         <NavbarItem className="flex items-center">
           <Icon icon="bx:bx-chevron-left" fontSize="1.25rem" />
           <Link color="foreground" href={Pages.CLASSES}>
@@ -118,9 +118,9 @@ export default function SchedulerNavbar() {
           </Link>
         </NavbarItem>
 
-        <Divider orientation="vertical" className="h-8 mx-4" />
+        <Divider orientation="vertical" className="mx-4 h-8" />
 
-        <NavbarItem className="flex items-center mr-4">
+        <NavbarItem className="mr-4 flex items-center">
           <Link color="foreground" href={Pages.REVIEW}>
             Next
           </Link>

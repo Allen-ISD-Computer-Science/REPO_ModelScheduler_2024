@@ -114,7 +114,7 @@ export default function Scheduler() {
       >
         <SchedulerLayout>
           {/* Left side (Spring Semester) */}
-          <div className="flex flex-col h-5/6 md:h-11/12 md:w-1/3">
+          <div className="md:h-11/12 flex h-5/6 flex-col md:w-1/3">
             <DragDropClassSchedule
               semester="Spring"
               classes={springSemesterScheduledClasses}
@@ -124,17 +124,17 @@ export default function Scheduler() {
           </div>
 
           {/* Middle (List of classes) */}
-          <div className="flex flex-col h-5/6 md:h-11/12 md:w-1/4">
+          <div className="md:h-11/12 flex h-5/6 flex-col md:w-1/4">
             {/* List of classes */}
             <DragDropClassCardList
               droppableId="droppable-class-list"
               classes={addedClasses}
-              className="h-full bg-default-100/50 overflow-y-auto"
+              className="h-full overflow-y-auto bg-default-100/50"
             />
           </div>
 
           {/* Right side (Fall Semester) */}
-          <div className="flex flex-col h-5/6 md:h-11/12 md:w-1/3">
+          <div className="md:h-11/12 flex h-5/6 flex-col md:w-1/3">
             <DragDropClassSchedule
               semester="Fall"
               classes={fallSemesterScheduledClasses}

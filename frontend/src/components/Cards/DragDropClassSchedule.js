@@ -19,15 +19,15 @@ export default function DragDropClassSchedule({ semester, classes, unavailablePe
 
   return (
     <>
-      <div className="h-full grid grid-cols-2 grid-rows-12 gap-2">
+      <div className="grid h-full grid-cols-2 grid-rows-12 gap-2">
         {/* Semester Header */}
-        <Card className="col-span-2 row-span-1 border-2 border-neutral-600 bg-default-200/30 text-center font-bold justify-center">
+        <Card className="col-span-2 row-span-1 justify-center border-2 border-neutral-600 bg-default-200/30 text-center font-bold">
           {semester} Semester
         </Card>
 
         {/* A/B Day Header */}
-        <Card className="col-span-1 row-span-1 bg-red-500 text-center font-bold justify-center">A Day</Card>
-        <Card className="col-span-1 row-span-1 bg-blue-600 text-center font-bold justify-center">B Day</Card>
+        <Card className="col-span-1 row-span-1 justify-center bg-red-500 text-center font-bold">A Day</Card>
+        <Card className="col-span-1 row-span-1 justify-center bg-blue-600 text-center font-bold">B Day</Card>
 
         {/* 1st Period */}
         <DroppableClassScheduleCard
@@ -36,7 +36,7 @@ export default function DragDropClassSchedule({ semester, classes, unavailablePe
           course={classes["1"]}
           period={1}
           disableDrag={disableDragByPeriod(1)}
-          className={cn("bg-default-300/25 col-span-2 row-span-2", getColorFromClassAvailability(1))}
+          className={cn("col-span-2 row-span-2 bg-default-300/25", getColorFromClassAvailability(1))}
         />
 
         {/* 2nd Period */}
@@ -46,7 +46,7 @@ export default function DragDropClassSchedule({ semester, classes, unavailablePe
           course={classes["2"]}
           period={2}
           disableDrag={disableDragByPeriod(2)}
-          className={cn("bg-default-300/25 col-span-1 row-span-2", getColorFromClassAvailability(2))}
+          className={cn("col-span-1 row-span-2 bg-default-300/25", getColorFromClassAvailability(2))}
         />
 
         {/* 5th Period */}
@@ -56,7 +56,7 @@ export default function DragDropClassSchedule({ semester, classes, unavailablePe
           course={classes["5"]}
           period={5}
           disableDrag={disableDragByPeriod(5)}
-          className={cn("bg-default-300/25 col-span-1 row-span-2", getColorFromClassAvailability(5))}
+          className={cn("col-span-1 row-span-2 bg-default-300/25", getColorFromClassAvailability(5))}
         />
 
         {/* 3rd Period */}
@@ -66,7 +66,7 @@ export default function DragDropClassSchedule({ semester, classes, unavailablePe
           course={classes["3"]}
           period={3}
           disableDrag={disableDragByPeriod(3)}
-          className={cn("bg-default-300/25 col-span-1 row-span-2", getColorFromClassAvailability(3))}
+          className={cn("col-span-1 row-span-2 bg-default-300/25", getColorFromClassAvailability(3))}
         />
 
         {/* 6th Period */}
@@ -76,7 +76,7 @@ export default function DragDropClassSchedule({ semester, classes, unavailablePe
           course={classes["6"]}
           period={6}
           disableDrag={disableDragByPeriod(6)}
-          className={cn("bg-default-300/25 col-span-1 row-span-2", getColorFromClassAvailability(6))}
+          className={cn("col-span-1 row-span-2 bg-default-300/25", getColorFromClassAvailability(6))}
         />
 
         {/* 4th Period */}
@@ -86,7 +86,7 @@ export default function DragDropClassSchedule({ semester, classes, unavailablePe
           course={classes["4"]}
           period={4}
           disableDrag={disableDragByPeriod(4)}
-          className={cn("bg-default-300/25 col-span-1 row-span-2", getColorFromClassAvailability(4))}
+          className={cn("col-span-1 row-span-2 bg-default-300/25", getColorFromClassAvailability(4))}
         />
 
         {/* 7th Period */}
@@ -96,7 +96,7 @@ export default function DragDropClassSchedule({ semester, classes, unavailablePe
           course={classes["7"]}
           period={7}
           disableDrag={disableDragByPeriod(7)}
-          className={cn("bg-default-300/25 col-span-1 row-span-2", getColorFromClassAvailability(7))}
+          className={cn("col-span-1 row-span-2 bg-default-300/25", getColorFromClassAvailability(7))}
         />
 
         {/* 8th Period */}
@@ -106,7 +106,7 @@ export default function DragDropClassSchedule({ semester, classes, unavailablePe
           course={classes["8"]}
           period={8}
           disableDrag={disableDragByPeriod(8)}
-          className={cn("bg-default-300/25 col-span-1 row-span-2", getColorFromClassAvailability(8))}
+          className={cn("col-span-1 row-span-2 bg-default-300/25", getColorFromClassAvailability(8))}
         />
       </div>
     </>

@@ -12,12 +12,12 @@ export default function ClassCard({ courseName, courseCode, periods, term, locat
     <>
       <Card disableRipple {...props}>
         <CardBody>
-          <p className="text-2xl font-bold mb-1">{courseName}</p>
+          <p className="mb-1 text-2xl font-bold">{courseName}</p>
 
-          <p className="absolute top-1 right-1 text-sm font-bold text-neutral-500">{courseCode}</p>
+          <p className="absolute right-1 top-1 text-sm font-bold text-neutral-500">{courseCode}</p>
 
           {!compact && (
-            <div className="flex items-center flex-wrap">
+            <div className="flex flex-wrap items-center">
               {/* Location */}
               <Chip
                 size="md"
@@ -25,7 +25,7 @@ export default function ClassCard({ courseName, courseCode, periods, term, locat
                 variant="bordered"
                 color={ClassLocationChipColors[location]}
                 startContent={<Icon icon={ClassLocationChipIcons[location]} className="ml-2" />}
-                className="mr-2 mb-2"
+                className="mb-2 mr-2"
               >
                 {location}
               </Chip>
@@ -34,7 +34,7 @@ export default function ClassCard({ courseName, courseCode, periods, term, locat
               <Chip
                 radius="sm"
                 variant="bordered"
-                className="mr-2 mb-2"
+                className="mb-2 mr-2"
                 classNames={{
                   base: SemesterChipColors[term],
                 }}
@@ -44,7 +44,7 @@ export default function ClassCard({ courseName, courseCode, periods, term, locat
 
               {/* Periods */}
               {periods.map((period, index) => (
-                <Chip key={index} color="default" radius="sm" variant="bordered" className="mr-2 mb-2">
+                <Chip key={index} color="default" radius="sm" variant="bordered" className="mb-2 mr-2">
                   {numberToOrdinal(period)}
                 </Chip>
               ))}

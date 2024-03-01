@@ -95,8 +95,8 @@ export default function Classes() {
         <MaxClassesReachedModal isOpen={isOpen} onOpenChange={onOpenChange} />
 
         {/* Left side (List of all classes excluding added) */}
-        <div className="flex flex-col justify-center h-3/4 md:h-5/6 w-full md:w-5/12 lg:w-1/3 self-center">
-          <div className="flex flex-row justify-between gap-2 mb-4">
+        <div className="flex h-3/4 w-full flex-col justify-center self-center md:h-5/6 md:w-5/12 lg:w-1/3">
+          <div className="mb-4 flex flex-row justify-between gap-2">
             {/* Search bar */}
             <SearchBar
               classes={staticClasses}
@@ -109,7 +109,7 @@ export default function Classes() {
             <FilterButton
               classes={staticClasses}
               setClasses={setClasses}
-              className="self-center w-1/2 lg:w-1/3 text-neutral-400 bg-default-50/30"
+              className="w-1/2 self-center bg-default-50/30 text-neutral-400 lg:w-1/3"
             />
           </div>
 
@@ -118,12 +118,12 @@ export default function Classes() {
             classes={availableClasses}
             classSelected={selectedClassID}
             onClassSelected={handleClassSelect}
-            className="h-full bg-default-100/50 overflow-y-auto"
+            className="h-full overflow-y-auto bg-default-100/50"
           />
         </div>
 
         {/* Middle (Buttons) */}
-        <div className="flex flex-col justify-center gap-6 mx-8 my-4">
+        <div className="mx-8 my-4 flex flex-col justify-center gap-6">
           <Button
             color="success"
             variant="ghost"
@@ -148,12 +148,12 @@ export default function Classes() {
         </div>
 
         {/* Right side (Added classes) */}
-        <div className="flex flex-col justify-center h-3/4 md:h-5/6 w-full md:w-5/12 lg:w-1/3 self-center">
+        <div className="flex h-3/4 w-full flex-col justify-center self-center md:h-5/6 md:w-5/12 lg:w-1/3">
           <ClassCardList
             classes={addedClasses}
             classSelected={selectedClassID}
             onClassSelected={handleClassSelect}
-            className="h-full bg-default-100/50 overflow-y-auto"
+            className="h-full overflow-y-auto bg-default-100/50"
           />
         </div>
       </ClassesLayout>

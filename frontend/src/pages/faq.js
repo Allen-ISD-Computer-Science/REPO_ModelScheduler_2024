@@ -25,7 +25,7 @@ export default function FAQ() {
         </div>
 
         {/* Questions */}
-        <Accordion className="px-2 w-full gap-3" selectionMode="multiple">
+        <Accordion className="w-full gap-3 px-2" selectionMode="multiple">
           <AccordionItem
             title="What is this website for?"
             indicator={<Icon icon="lucide:plus" width="1.5em" />}
