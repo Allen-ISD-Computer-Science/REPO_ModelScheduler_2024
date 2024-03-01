@@ -15,7 +15,12 @@ export default function Homepage() {
       <Image
         src={process.env.PUBLIC_URL + "/bg-hero.webp"}
         alt="Hero Image"
-        className="fixed inset-0 h-full w-full object-cover opacity-50"
+        loading="eager"
+        removeWrapper
+        className="fixed inset-0 h-full w-full object-cover !duration-1000"
+        classNames={{
+          img: "z-10 opacity-0 shadow-black/5 data-[loaded=true]:opacity-75 rounded-large"
+        }}
       />
 
       <HomeLayout>
