@@ -106,7 +106,7 @@ export default function DragDropClassSchedule({ semester, classes, unavailablePe
           course={classes["8"]}
           period={8}
           disableDrag={disableDragByPeriod(8)}
-          className={cn("col-span-1 row-span-2 bg-default-300/25", getColorFromClassAvailability(8))}
+          className={cn("col-span-2 row-span-2 bg-default-300/25", getColorFromClassAvailability(8))}
         />
       </div>
     </>
