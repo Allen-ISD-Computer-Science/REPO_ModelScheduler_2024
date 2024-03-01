@@ -4,7 +4,7 @@ import FluentMySQLDriver
 import Crypto
 
 final class Courses: Model, Content {
-    static let schema = "CoursesView"
+    static let schema = "Courses_2024"
 
     @ID(custom: "id", generatedBy: .database)
     var id: Int?
