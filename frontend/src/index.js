@@ -12,6 +12,7 @@ const Classes = lazy(() => import("@/pages/classes"));
 const Scheduler = lazy(() => import("@/pages/scheduler"));
 const Review = lazy(() => import("@/pages/review"));
 const FAQ = lazy(() => import("@/pages/faq"));
+const Test = lazy(() => import("@/pages/test"));
 import Loading from "@/pages/loading";
 import reportWebVitals from "@/reportWebVitals";
 
@@ -26,6 +27,7 @@ const router = createBrowserRouter(
     { path: Pages.SCHEDULER, element: <Scheduler /> },
     { path: Pages.REVIEW, element: <Review /> },
     { path: Pages.FAQ, element: <FAQ /> },
+    { path: Pages.TEST, element: <Test /> },
   ],
   {
     basename: "/",
