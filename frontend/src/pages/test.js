@@ -21,18 +21,19 @@ export default function Test() {
         return () => clearInterval(countdownInterval);
     }, []);
 
-    return (
-	    
-        <>
-	       <DefaultNavbar />
+  return (
+    <>
 
-	       <TestLayout>
-                 <div>
-                   <h2>Test</h2>
-                   <h2>Junior Priority 1 Countdown</h2>
-                   <p>{countdown}</p>
-                   </div>
-               </TestLayout>
-	    </>
-    );
+    <DefaultNavbar />
+
+    <TestLayout>
+        <div>
+            <h2>Test</h2>
+            <h2>Junior Priority 1 Countdown</h2>
+            <p>{countdown}</p>
+        </div>
+    </TestLayout>
+
+    </>
+  );
 }
