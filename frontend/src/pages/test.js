@@ -22,7 +22,8 @@ export default function Test() {
     }, []);
 
     return (
-	    <>
+	    
+        <>
 	       <DefaultNavbar />
 
 	       <TestLayout>
