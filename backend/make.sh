@@ -14,7 +14,5 @@
 # along with this program.  If not, see https://www.gnu.org/licenses/.
 set -eu
 
-# Run from backend directory
-pushd backend
-run
-popd
+# Build
+makeSwift "$@"
