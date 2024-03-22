@@ -3,7 +3,7 @@ import { Image, Text, View, Page, Document, StyleSheet, Font } from "@react-pdf/
 
 Font.register({
   family: "ChakraPetch",
-  src: "/fonts/ChakraPetch-Bold.ttf",
+  src: process.env.PUBLIC_URL + "/fonts/ChakraPetch-Bold.ttf",
 });
 
 export default function SchedulePDF({ classes }) {
@@ -52,7 +52,7 @@ export default function SchedulePDF({ classes }) {
 
   const Title = () => (
     <View style={styles.titleContainer}>
-      <Image style={styles.image} src="/Logo.png" />
+      <Image style={styles.image} src={process.env.PUBLIC_URL + "/Logo.png"} />
       <Text style={styles.title}>Model Scheduler</Text>
     </View>
   );
